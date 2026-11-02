@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>富集在海水中的元素——氯 · 互动课件（三册合一）</title>
+<style>
+  :root{
+    --bg:#f4f8f7; --card:#ffffff; --ink:#1e293b; --muted:#64748b;
+    --primary:#0d9488; --primary-soft:#ccfbf1; --accent:#f59e0b;
+    --red:#dc2626; --green:#16a34a; --line:#e2e8f0;
+    --cl2:#65a30d; --cl2-soft:#ecfccb;
+    --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.75;
+  }
+  header{
+    background:linear-gradient(135deg,#115e59,#0d9488 55%,#2dd4bf);
+    color:#fff; padding:24px 20px 20px; text-align:center;
+  }
+  header h1{font-size:1.65rem; letter-spacing:1px;}
+  header p{opacity:.92; font-size:.93rem; margin-top:6px;}
+  /* 顶部三大目录 */
+  nav#topnav{
+    position:sticky; top:0; z-index:60;
+    background:#fff; border-bottom:1px solid var(--line);
+    display:flex; flex-wrap:wrap; justify-content:center; gap:6px;
+    padding:8px 10px; box-shadow:0 2px 10px rgba(15,23,42,.07);
+  }
+  nav#topnav button{
+    border:none; background:transparent; cursor:pointer;
+    padding:9px 16px; border-radius:999px; font-size:.95rem; color:var(--muted);
+    transition:all .2s; font-weight:bold;
+  }
+  nav#topnav button:hover{background:var(--primary-soft); color:var(--primary);}
+  nav#topnav button.active{background:var(--primary); color:#fff;}
+  /* 册内小节导航 */
+  .subnav{
+    display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px;
+    background:#fff; border:1px solid var(--line); border-radius:12px; padding:8px;
+  }
+  .subnav button{
+    border:1px solid transparent; background:#f1f5f9; cursor:pointer;
+    padding:6px 12px; border-radius:8px; font-size:.85rem; color:var(--muted); transition:all .2s;
+  }
+  .subnav button:hover{background:var(--primary-soft); color:var(--primary);}
+  .subnav button.active{background:var(--primary); color:#fff;}
+  main{max-width:1000px; margin:0 auto; padding:22px 16px 80px;}
+  section.book{display:none; animation:fadeIn .35s ease;}
+  section.book.active{display:block;}
+  @keyframes fadeIn{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;}}
+  h2.book-title{
+    font-size:1.3rem; color:var(--primary); margin:6px 0 14px;
+    padding-left:12px; border-left:5px solid var(--primary);
+  }
+  h3.sec{
+    font-size:1.08rem; margin:26px 0 12px; color:#0f766e;
+    display:flex; align-items:center; gap:8px;
+  }
+  h3.sec::before{
+    content:""; width:8px; height:8px; border-radius:50%; background:var(--cl2);
+  }
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:16px 18px; margin-bottom:14px; box-shadow:0 1px 4px rgba(15,23,42,.05);
+  }
+  .card h4{font-size:1rem; margin-bottom:8px; color:#0f172a;}
+  .eq{
+    font-family:"Cambria Math",Consolas,serif;
+    background:#f1f5f9; border-left:4px solid var(--primary);
+    border-radius:8px; padding:10px 14px; margin:8px 0; font-size:1.05rem; letter-spacing:.4px;
+  }
+  .eq.hot{border-left-color:var(--red); background:#fef2f2;}
+  .eq.gas{border-left-color:var(--cl2); background:var(--cl2-soft);}
+  sub{font-size:.72em;}
+  sup{font-size:.72em;}
+  .reveal-btn{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--primary); color:#fff; border:none; cursor:pointer;
+    padding:7px 16px; border-radius:999px; font-size:.88rem; transition:all .2s;
+  }
+  .reveal-btn:hover{filter:brightness(1.1);}
+  .answer{
+    display:none; margin-top:10px; background:#ecfdf5;
+    border:1px dashed var(--green); border-radius:10px; padding:11px 14px; font-size:.95rem;
+  }
+  .answer.show{display:block; animation:fadeIn .3s ease;}
+  .think{
+    background:#fffbeb; border:1px solid #fde68a; border-radius:10px;
+    padding:11px 14px; margin-top:10px; font-size:.93rem;
+  }
+  .warn{
+    background:#fef2f2; border:1px solid #fecaca; border-radius:10px;
+    padding:11px 14px; margin:10px 0; font-size:.93rem; color:#7f1d1d;
+  }
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px;}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px;}
+  .fact{
+    background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:12px 14px; font-size:.94rem;
+  }
+  .fact b{color:var(--primary);}
+  .pill{
+    display:inline-block; background:var(--primary-soft); color:#115e59;
+    font-size:.8rem; padding:2px 10px; border-radius:999px; margin:2px 4px 2px 0;
+  }
+  table{width:100%; border-collapse:collapse; font-size:.92rem; margin-top:8px;}
+  th,td{border:1px solid var(--line); padding:8px 10px; text-align:center; vertical-align:middle;}
+  th{background:var(--primary-soft); color:#115e59;}
+  tr:hover td{background:#f8fafc;}
+  td.l{text-align:left;}
+  /* 时间轴 */
+  .timeline{position:relative; padding-left:26px;}
+  .timeline::before{content:""; position:absolute; left:8px; top:6px; bottom:6px; width:2px; background:var(--primary-soft);}
+  .tl-item{position:relative; margin-bottom:14px;}
+  .tl-item::before{
+    content:""; position:absolute; left:-22px; top:8px; width:10px; height:10px;
+    border-radius:50%; background:var(--primary); box-shadow:0 0 0 3px var(--primary-soft);
+  }
+  .tl-year{font-weight:bold; color:var(--primary);}
+  /* 反应卡 */
+  .rxn{
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    padding:13px 15px; margin-bottom:10px; transition:all .2s;
+  }
+  .rxn:hover{border-color:var(--primary);}
+  .rxn .t{font-weight:bold; font-size:.98rem;}
+  .rxn .detail{display:none; margin-top:10px;}
+  .rxn.open .detail{display:block; animation:fadeIn .25s;}
+  .rxn .clickhint{font-size:.8rem; color:var(--muted); cursor:pointer;}
+  .ph{color:#b45309;} /* 现象 */
+  /* 判断卡 */
+  .method{
+    background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:11px 14px; cursor:pointer; transition:all .2s; font-size:.95rem;
+  }
+  .method:hover{border-color:var(--primary); transform:translateY(-2px); box-shadow:0 4px 10px rgba(13,148,136,.12);}
+  .method .verdict{display:none; margin-top:8px; font-size:.88rem; border-top:1px dashed var(--line); padding-top:8px;}
+  .method.open .verdict{display:block; animation:fadeIn .25s;}
+  .ok{color:var(--green); font-weight:bold;}
+  .no{color:var(--red); font-weight:bold;}
+  /* 粒子卡 */
+  .particles{display:flex; flex-wrap:wrap; gap:10px; justify-content:center;}
+  .pt{
+    border:2px solid var(--line); background:#fff; border-radius:14px;
+    padding:10px 16px; cursor:pointer; text-align:center; min-width:96px; transition:all .2s;
+    font-family:"Cambria Math",Consolas,serif; font-size:1.05rem; font-weight:bold;
+  }
+  .pt:hover{border-color:var(--primary); transform:translateY(-3px);}
+  .pt.mol{border-color:#f59e0b; background:#fffbeb;}
+  .pt.ion{border-color:#3b82f6; background:#eff6ff;}
+  .pt.sel{box-shadow:0 0 0 3px var(--primary-soft);}
+  #ptInfo{
+    margin-top:12px; background:#f8fafc; border:1px dashed var(--line); border-radius:10px;
+    padding:12px 14px; min-height:60px; font-size:.95rem;
+  }
+  /* 试管模拟器 */
+  .lab{display:grid; grid-template-columns:150px 1fr; gap:18px; align-items:start;}
+  @media(max-width:640px){.lab{grid-template-columns:1fr;}}
+  .tube-box{text-align:center;}
+  .tube{
+    width:78px; height:230px; margin:0 auto; border:3px solid #cbd5e1;
+    border-top:none; border-radius:0 0 42px 42px; position:relative; overflow:hidden;
+    background:#fff; transition:background .8s;
+  }
+  .tube .liquid{
+    position:absolute; bottom:0; width:100%; height:72%;
+    background:linear-gradient(#d9f99d,#a3e635); border-radius:0 0 38px 38px;
+    transition:all .8s;
+  }
+  .tube .bub{position:absolute; bottom:10px; width:8px; height:8px; border-radius:50%;
+    background:rgba(255,255,255,.85); opacity:0;}
+  .tube.bubbling .bub{animation:rise 1.6s linear infinite;}
+  .tube.bubbling .bub:nth-child(2){animation-delay:.5s; left:38px;}
+  .tube.bubbling .bub:nth-child(3){animation-delay:1s; left:56px;}
+  @keyframes rise{
+    0%{bottom:12px; opacity:0; transform:scale(.6);}
+    20%{opacity:1;}
+    100%{bottom:150px; opacity:0; transform:scale(1.2);}
+  }
+  .tube .cloth{
+    position:absolute; top:38%; left:50%; transform:translateX(-50%);
+    width:44px; height:44px; background:#e11d48; border-radius:4px; transition:background .8s;
+  }
+  .reagents{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0;}
+  .reagents button{
+    border:1px solid var(--line); background:#fff; border-radius:999px;
+    padding:7px 13px; cursor:pointer; font-size:.88rem; transition:all .2s;
+  }
+  .reagents button:hover{background:var(--primary-soft); border-color:var(--primary);}
+  #labOut{
+    background:#f0fdfa; border:1px solid var(--primary-soft); border-radius:10px;
+    padding:12px 14px; margin-top:10px; min-height:76px; font-size:.95rem;
+  }
+  #labOut b{color:var(--primary);}
+  /* 装置 SVG */
+  .app-wrap{background:#f8fafc; border:1px solid var(--line); border-radius:12px; padding:10px;}
+  .app-wrap svg{width:100%; height:auto; display:block;}
+  .app-type{
+    border:2px solid var(--line); background:#fff; border-radius:12px; padding:10px;
+    cursor:pointer; transition:all .2s; text-align:center;
+  }
+  .app-type:hover{border-color:var(--primary);}
+  .app-type.sel{border-color:var(--primary); background:var(--primary-soft);}
+  /* 装置搭建 */
+  .slot{
+    background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin-bottom:10px;
+  }
+  .slot .st{font-weight:bold; color:var(--primary); font-size:.96rem;}
+  .slot .opts{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;}
+  .slot .opts button{
+    border:1px solid var(--line); background:#fff; border-radius:8px; padding:7px 12px;
+    cursor:pointer; font-size:.88rem; transition:all .15s;
+  }
+  .slot .opts button:hover{border-color:var(--primary);}
+  .slot .opts button.correct{background:#ecfdf5; border-color:var(--green); color:#166534;}
+  .slot .opts button.wrong{background:#fef2f2; border-color:var(--red); color:#991b1b;}
+  .slot .tip{display:none; margin-top:8px; font-size:.88rem; background:#f8fafc; border-radius:8px; padding:8px 12px;}
+  .slot.done .tip{display:block; animation:fadeIn .25s;}
+  /* 测验 */
+  .quiz{
+    background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-bottom:12px;
+  }
+  .quiz .q{font-weight:bold; margin-bottom:8px; font-size:.97rem;}
+  .opt{
+    display:block; width:100%; text-align:left; background:#fff;
+    border:1px solid var(--line); border-radius:10px; padding:9px 13px;
+    margin:6px 0; cursor:pointer; font-size:.93rem; transition:all .15s;
+  }
+  .opt:hover{border-color:var(--primary);}
+  .opt.correct{background:#ecfdf5; border-color:var(--green); color:#166534;}
+  .opt.wrong{background:#fef2f2; border-color:var(--red); color:#991b1b;}
+  .quiz .expl{
+    display:none; margin-top:8px; font-size:.88rem; color:var(--muted);
+    background:#f8fafc; border-radius:8px; padding:8px 12px;
+  }
+  .quiz.done .expl{display:block;}
+  .score{
+    background:linear-gradient(135deg,#115e59,#0d9488); color:#fff; border-radius:12px;
+    padding:12px 16px; font-weight:bold; text-align:center; margin-top:6px;
+  }
+  /* 常见气体表 */
+  .gasrow{cursor:pointer;}
+  .gasrow .detail{display:none;}
+  .gasrow.open .detail{display:table-cell;}
+  .gasrow.open td{background:#f0fdfa;}
+  .page-nav{display:flex; justify-content:space-between; margin-top:26px; gap:10px;}
+  .page-nav button{
+    border:1px solid var(--line); background:#fff; border-radius:999px;
+    padding:10px 20px; cursor:pointer; font-size:.94rem; color:var(--ink); transition:all .2s;
+  }
+  .page-nav button:hover{background:var(--primary); color:#fff; border-color:var(--primary);}
+  .credit{text-align:center; font-size:.75rem; color:var(--muted); margin-top:26px;}
+  .credit .aigc{
+    display:inline-block; padding:1px 8px; border-radius:4px;
+    background:#94a3b8; color:#fff; font-size:.75rem; font-weight:bold; letter-spacing:1px;
+  }
+  select{
+    border:1px solid var(--line); border-radius:8px; padding:7px 10px; font-size:.9rem;
+    background:#fff; color:var(--ink);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>富集在海水中的元素 —— 氯</h1>
+  <p>高一化学 · 三册合一互动课件：性质与用途 / 氯水成分探究 / 实验室制法</p>
+</header>
+
+<nav id="topnav">
+  <button data-page="b1" class="active">① 氯气的性质和用途</button>
+  <button data-page="b2">② 氯水的成分探究</button>
+  <button data-page="b3">③ 氯气的实验室制法</button>
+</nav>
+
+<main>
+
+<!-- ===================== 第一册 ===================== -->
+<section id="b1" class="book active">
+  <h2 class="book-title">第一册 · 氯气的性质和用途</h2>
+  <div class="subnav">
+    <button data-t="s1">1. 氯气的发现</button>
+    <button data-t="s2">2. 泄漏处理</button>
+    <button data-t="s3">3. 物理性质</button>
+    <button data-t="s4">4. 化学性质</button>
+    <button data-t="s5">5. 用途</button>
+    <button data-t="s6">6. 闯关测验</button>
+  </div>
+
+  <h3 class="sec" id="s1">一、氯气的发现</h3>
+  <div class="card">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1774 年 · 瑞典 · 舍勒 (Scheele)</div>
+        <div>用二氧化锰与浓盐酸共热，制得一种<b>黄绿色、有刺激性气味</b>的气体，但受当时"燃素说"影响，误认为它是"氧化盐酸"。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1810 年 · 英国 · 戴维 (Davy)</div>
+        <div>用电池加热等种种方法都不能使它分解，确认它是一种<b>新元素</b>，并命名为 chlorine（源自希腊文"黄绿色"）。中文"氯"取"气"字头表状态、"彔"表绿色。</div>
+      </div>
+    </div>
+    <button class="reveal-btn" onclick="toggleAns(this)">写出舍勒制氯气的方程式</button>
+    <div class="answer">
+      <div class="eq gas">MnO<sub>2</sub> + 4HCl(浓) <b style="color:#dc2626">△</b> MnCl<sub>2</sub> + Cl<sub>2</sub>↑ + 2H<sub>2</sub>O</div>
+      这也是今天实验室制 Cl<sub>2</sub> 的<b>经典方法</b>——发现史与实验室制法在此交汇。
+    </div>
+    <div class="think">💡 <b>思考：</b>舍勒制得的气体其实混有 HCl 气体和水蒸气，如何得到纯净干燥的 Cl<sub>2</sub>？（提示：先通过饱和食盐水，再通过浓硫酸 —— 详见第三册）</div>
+  </div>
+
+  <h3 class="sec" id="s2">二、氯气的泄漏处理</h3>
+  <div class="card">
+    <p style="font-size:.95rem">情景：某化工厂液氯储罐泄漏，黄绿色气体向四周弥漫。下列做法对吗？<b>点击卡片看结论。</b></p>
+    <div class="grid2" style="margin-top:12px">
+      <div class="method" onclick="toggleVerdict(this)">① 用湿毛巾（最好蘸肥皂水或 Na<sub>2</sub>CO<sub>3</sub> 稀溶液）捂住口鼻，逆风向、向高处撤离
+        <div class="verdict"><span class="ok">✔ 正确</span>：Cl<sub>2</sub> 能与碱性物质反应而被吸收；Cl<sub>2</sub> 密度比空气大，会向低洼处聚集，所以要向<b>高处、逆风（或侧风）</b>方向撤离。</div>
+      </div>
+      <div class="method" onclick="toggleVerdict(this)">② 赶紧躲到低洼的地下室、下水道里
+        <div class="verdict"><span class="no">✘ 错误</span>：M(Cl<sub>2</sub>)=71 &gt; 29，氯气沉在低处，低洼处浓度最高，最危险！</div>
+      </div>
+      <div class="method" onclick="toggleVerdict(this)">③ 顺着风向拼命奔跑逃离
+        <div class="verdict"><span class="no">✘ 错误</span>：顺风跑等于追着毒气跑，应<b>逆风</b>或<b>垂直于风向</b>撤离。</div>
+      </div>
+      <div class="method" onclick="toggleVerdict(this)">④ 消防员向泄漏区上空喷洒稀 NaOH 溶液或石灰水
+        <div class="verdict"><span class="ok">✔ 正确</span>：Cl<sub>2</sub> + 2NaOH = NaCl + NaClO + H<sub>2</sub>O，用碱液吸收、形成"水幕"降毒。</div>
+      </div>
+      <div class="method" onclick="toggleVerdict(this)">⑤ 立即打电话报警，并向上风向居民区疏散人群
+        <div class="verdict"><span class="ok">✔ 正确</span>：专业处置 + 有序疏散，避免恐慌性拥堵。</div>
+      </div>
+      <div class="method" onclick="toggleVerdict(this)">⑥ 在家紧闭门窗，认为氯气进不来
+        <div class="verdict"><span class="no">✘ 不完整</span>：门窗缝隙挡不住气体；应<b>撤离</b>而非滞留。若无法撤离，可用<b>湿毛巾/湿被褥封堵门缝</b>并在上风房间等待救援。</div>
+      </div>
+    </div>
+    <div class="warn">⚠ <b>两条底层原理：</b>① 密度比空气大 → 往高处、逆风走；② 能与碱反应 → 用碱性溶液吸收（湿毛巾、石灰水、稀 NaOH）。</div>
+  </div>
+
+  <h3 class="sec" id="s3">三、氯气的物理性质</h3>
+  <div class="grid3">
+    <div class="fact"><b>颜色</b><br>黄绿色</div>
+    <div class="fact"><b>气味</b><br>刺激性气味（有毒！）</div>
+    <div class="fact"><b>密度</b><br>比空气<b>大</b>（71 vs 29）</div>
+    <div class="fact"><b>溶解性</b><br>能溶于水，1 体积水约溶 <b>2</b> 体积 Cl<sub>2</sub></div>
+    <div class="fact"><b>液化</b><br>易液化（沸点 −34.6 ℃）→ 液氯</div>
+    <div class="fact"><b>状态</b><br>常温常压下为气体</div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h4>闻气体气味的正确操作（扇闻法）</h4>
+    <p style="font-size:.95rem">氯气有毒，绝不可把鼻子凑到瓶口直接闻。正确做法：瓶口远离鼻孔，用手在瓶口<b>轻轻扇动</b>，仅使极少量气体飘入鼻孔。</p>
+    <button class="reveal-btn" onclick="toggleAns(this)">想一想：为什么收集 Cl₂ 可用向上排空气法？能用排水法吗？</button>
+    <div class="answer">
+      <b>向上排空气法 ✔</b>：Cl<sub>2</sub> 密度大于空气，且常温下不与 O<sub>2</sub>、N<sub>2</sub> 反应。<br>
+      <b>排水法 ✘（一般不用）</b>：Cl<sub>2</sub> 能溶于水且与水反应。<br>
+      <b>但可用「排饱和食盐水法」</b>：饱和食盐水中 Cl<sup>−</sup> 浓度大，抑制 Cl<sub>2</sub> + H<sub>2</sub>O ⇌ H<sup>+</sup> + Cl<sup>−</sup> + HClO 正向进行，大大降低 Cl<sub>2</sub> 的溶解损失。
+    </div>
+  </div>
+
+  <h3 class="sec" id="s4">四、氯气的化学性质</h3>
+  <div class="card">Cl<sub>2</sub> 最核心的身份是<b>强氧化剂</b>（Cl 元素化合价 0 → −1）。<span style="color:var(--muted);font-size:.88rem">点击每张卡，展开现象与方程式。</span></div>
+
+  <div class="rxn" onclick="toggleRxn(this)">
+    <div class="t">① 与金属钠反应 —— 剧烈燃烧<span class="clickhint">（点击展开）</span></div>
+    <div class="detail">
+      <div class="eq hot">2Na + Cl<sub>2</sub> <span style="color:#dc2626">点燃</span> 2NaCl</div>
+      <div class="ph">现象：</div>钠在氯气中剧烈燃烧，产生<b>黄色火焰</b>，生成<b>白烟</b>（NaCl 固体小颗粒），瓶壁附着白色固体。
+    </div>
+  </div>
+
+  <div class="rxn" onclick="toggleRxn(this)">
+    <div class="t">② 与铁反应 —— 生成高价铁<span class="clickhint">（点击展开）</span></div>
+    <div class="detail">
+      <div class="eq hot">2Fe + 3Cl<sub>2</sub> <span style="color:#dc2626">点燃</span> 2FeCl<sub>3</sub></div>
+      <div class="ph">现象：</div>铁丝在氯气中燃烧，产生<b>棕褐色（棕黄色）的烟</b>，加水后溶液呈<b>黄色</b>。<br>
+      <div class="ph">关键结论：</div>与变价金属反应，Cl<sub>2</sub> 生成<b>高价态</b>氯化物（FeCl<sub>3</sub> 而非 FeCl<sub>2</sub>），说明 Cl<sub>2</sub> <b>氧化性很强</b>。对比：S 与 Fe 反应只得 FeS（低价）。<br>
+      <div class="warn" style="margin-top:8px">⚠ 常温下<b>干燥</b>的 Cl<sub>2</sub> 与铁不反应，所以液氯可用<b>钢瓶</b>储运。</div>
+    </div>
+  </div>
+
+  <div class="rxn" onclick="toggleRxn(this)">
+    <div class="t">③ 与铜反应 —— 棕黄色的烟<span class="clickhint">（点击展开）</span></div>
+    <div class="detail">
+      <div class="eq hot">Cu + Cl<sub>2</sub> <span style="color:#dc2626">点燃</span> CuCl<sub>2</sub></div>
+      <div class="ph">现象：</div>红热的铜丝在氯气中剧烈燃烧，产生<b>棕黄色的烟</b>；加水后，浓溶液呈<b>绿色</b>，稀释后呈<b>蓝色</b>（[Cu(H<sub>2</sub>O)<sub>4</sub>]<sup>2+</sup> 与 [CuCl<sub>4</sub>]<sup>2−</sup> 共存所致，了解即可）。<br>
+      <div class="ph">辨析：</div>"烟"是<b>固体小颗粒</b>，"雾"是<b>小液滴</b>。CuCl<sub>2</sub> 烟是固体颗粒，故称"烟"。
+    </div>
+  </div>
+
+  <div class="rxn" onclick="toggleRxn(this)">
+    <div class="t">④ 与氢气反应 —— 燃烧 vs 爆炸<span class="clickhint">（点击展开）</span></div>
+    <div class="detail">
+      <div class="eq hot">H<sub>2</sub> + Cl<sub>2</sub> <span style="color:#dc2626">点燃</span> 2HCl　　H<sub>2</sub> + Cl<sub>2</sub> <span style="color:#dc2626">光照</span> 2HCl</div>
+      <div class="ph">点燃：</div>H<sub>2</sub> 在 Cl<sub>2</sub> 中<b>安静燃烧</b>，发出<b>苍白色火焰</b>，瓶口有<b>白雾</b>（HCl 遇空气中水蒸气形成盐酸小液滴）。工业上用此反应制盐酸。<br>
+      <div class="ph">光照（混合气体）：</div><b>剧烈爆炸</b>。<br>
+      <div class="ph">结论：</div>反应条件不同，现象可能不同；燃烧<b>不一定</b>需要氧气参加（任何发光发热的剧烈化学反应都是燃烧）。
+    </div>
+  </div>
+
+  <div class="rxn" onclick="toggleRxn(this)">
+    <div class="t">⑤ 与水反应 —— 氯水的由来<span class="clickhint">（点击展开）</span></div>
+    <div class="detail">
+      <div class="eq gas">Cl<sub>2</sub> + H<sub>2</sub>O ⇌ HCl + HClO　（可逆反应）</div>
+      <div class="ph">要点：</div>Cl<sub>2</sub> 既是氧化剂又是还原剂（<b>歧化反应</b>）；生成物 HClO 具有<b>强氧化性（漂白、杀菌）</b>。<br>
+      <div class="ph">提示：</div>本册只做初步认识，详细成分探究见<b>第二册</b>。
+    </div>
+  </div>
+
+  <div class="rxn" onclick="toggleRxn(this)">
+    <div class="t">⑥ 与碱反应 —— 漂白液与漂白粉<span class="clickhint">（点击展开）</span></div>
+    <div class="detail">
+      <div class="eq">Cl<sub>2</sub> + 2NaOH = NaCl + NaClO + H<sub>2</sub>O　（制<b>漂白液</b>，84 消毒液主要成分 NaClO）</div>
+      <div class="eq">2Cl<sub>2</sub> + 2Ca(OH)<sub>2</sub> = CaCl<sub>2</sub> + Ca(ClO)<sub>2</sub> + 2H<sub>2</sub>O　（制<b>漂白粉</b>）</div>
+      <div class="ph">漂白粉：</div>主要成分 CaCl<sub>2</sub> 与 Ca(ClO)<sub>2</sub>，<b>有效成分是 Ca(ClO)<sub>2</sub></b>。<br>
+      <div class="ph">漂白原理：</div>Ca(ClO)<sub>2</sub> + CO<sub>2</sub> + H<sub>2</sub>O = CaCO<sub>3</sub>↓ + 2HClO（强酸制弱酸：H<sub>2</sub>CO<sub>3</sub> &gt; HClO）<br>
+      <div class="ph">失效原因：</div>2HClO <span style="color:#dc2626">光照</span> 2HCl + O<sub>2</sub>↑ → 所以漂白粉要<b>密封、避光、干燥</b>保存。<br>
+      <div class="warn" style="margin-top:8px">⚠ 生活安全：84 消毒液（NaClO）<b>不能与洁厕灵（HCl）混用</b>！<br>NaClO + 2HCl = NaCl + Cl<sub>2</sub>↑ + H<sub>2</sub>O，会放出有毒氯气。</div>
+    </div>
+  </div>
+
+  <div class="rxn" onclick="toggleRxn(this)">
+    <div class="t">⑦ 与还原性物质反应 —— 强氧化性的体现<span class="clickhint">（点击展开）</span></div>
+    <div class="detail">
+      <div class="eq">Cl<sub>2</sub> + 2FeCl<sub>2</sub> = 2FeCl<sub>3</sub>　（溶液由浅绿色变黄色）</div>
+      <div class="eq">Cl<sub>2</sub> + 2KI = 2KCl + I<sub>2</sub>　（无色→棕褐色；遇淀粉变蓝，用于<b>验满 Cl<sub>2</sub></b>）</div>
+      <div class="eq">Cl<sub>2</sub> + SO<sub>2</sub> + 2H<sub>2</sub>O = H<sub>2</sub>SO<sub>4</sub> + 2HCl　（氯水与 SO<sub>2</sub> 混合后漂白性<b>减弱甚至消失</b>）</div>
+      <div class="ph">规律：</div>Cl<sub>2</sub> 遇还原性离子（Fe<sup>2+</sup>、I<sup>−</sup>、Br<sup>−</sup>、S<sup>2−</sup>、SO<sub>3</sub><sup>2−</sup>）时，优先表现<b>氧化性</b>，本身被还原为 Cl<sup>−</sup>。
+    </div>
+  </div>
+
+  <h3 class="sec" id="s5">五、氯气的用途</h3>
+  <div class="grid3">
+    <div class="fact"><b>💧 自来水消毒</b><br>Cl<sub>2</sub> 通入水中生成 HClO，杀菌消毒</div>
+    <div class="fact"><b>🧻 漂白</b><br>漂白纸浆、棉麻织物（制漂白粉/漂白液）</div>
+    <div class="fact"><b>🧪 制盐酸</b><br>H<sub>2</sub> + Cl<sub>2</sub> → HCl 溶于水</div>
+    <div class="fact"><b>🧴 农药与医药</b><br>合成农药、药物中间体</div>
+    <div class="fact"><b>🏗 有机化工原料</b><br>制聚氯乙烯(PVC)、氯仿、四氯化碳等</div>
+    <div class="fact"><b>🎨 染料与溶剂</b><br>染料工业、有机溶剂合成</div>
+  </div>
+  <div class="think">💡 <b>辩证看氯：</b>它既是消毒功臣，又是有毒气体（第一次世界大战曾被用作化学武器）。化学的价值取决于人类如何使用。</div>
+
+  <h3 class="sec" id="s6">六、第一册 · 闯关测验</h3>
+  <div id="q1box">
+    <div class="quiz" data-ans="C">
+      <div class="q">1. 下列有关氯气物理性质的说法正确的是：</div>
+      <button class="opt" data-v="A">A. 无色无味、密度比空气小</button>
+      <button class="opt" data-v="B">B. 黄绿色、难溶于水</button>
+      <button class="opt" data-v="C">C. 黄绿色、有刺激性气味、密度比空气大、能溶于水</button>
+      <button class="opt" data-v="D">D. 黄绿色、能使干燥有色布条褪色</button>
+      <div class="expl">答案 <b>C</b>。Cl<sub>2</sub> 黄绿色、刺激性气味、ρ 大于空气、1:2 溶于水。<b>D 错</b>：<b>干燥</b>的 Cl<sub>2</sub> 无漂白性，起漂白作用的是 HClO。</div>
+    </div>
+    <div class="quiz" data-ans="B">
+      <div class="q">2. 铁丝在氯气中燃烧，产物的化学式与现象分别是：</div>
+      <button class="opt" data-v="A">A. FeCl<sub>2</sub>，白烟</button>
+      <button class="opt" data-v="B">B. FeCl<sub>3</sub>，棕褐色的烟</button>
+      <button class="opt" data-v="C">C. FeCl<sub>2</sub>，棕黄色的烟</button>
+      <button class="opt" data-v="D">D. FeCl<sub>3</sub>，白雾</button>
+      <div class="expl">答案 <b>B</b>。Cl<sub>2</sub> 氧化性强，把 Fe 氧化到 <b>+3 价</b>；固体颗粒称"烟"。</div>
+    </div>
+    <div class="quiz" data-ans="D">
+      <div class="q">3. 氢气在氯气中燃烧的现象是：</div>
+      <button class="opt" data-v="A">A. 淡蓝色火焰，瓶口白雾</button>
+      <button class="opt" data-v="B">B. 黄色火焰，产生白烟</button>
+      <button class="opt" data-v="C">C. 苍白色火焰，产生白烟</button>
+      <button class="opt" data-v="D">D. 苍白色火焰，瓶口有白雾</button>
+      <div class="expl">答案 <b>D</b>。HCl 气体遇水蒸气形成盐酸小液滴 → <b>白雾</b>（液滴为"雾"，固体颗粒为"烟"）。</div>
+    </div>
+    <div class="quiz" data-ans="C">
+      <div class="q">4. 漂白粉的有效成分及失效原理是：</div>
+      <button class="opt" data-v="A">A. CaCl<sub>2</sub>；与 CO<sub>2</sub> 反应失效</button>
+      <button class="opt" data-v="B">B. Ca(ClO)<sub>2</sub>；吸水潮解失效</button>
+      <button class="opt" data-v="C">C. Ca(ClO)<sub>2</sub>；先与 CO<sub>2</sub>、水生成 HClO，HClO 光照分解而失效</button>
+      <button class="opt" data-v="D">D. HClO；挥发而失效</button>
+      <div class="expl">答案 <b>C</b>。Ca(ClO)<sub>2</sub> + CO<sub>2</sub> + H<sub>2</sub>O = CaCO<sub>3</sub>↓ + 2HClO；2HClO <span>光照</span> 2HCl + O<sub>2</sub>↑。</div>
+    </div>
+    <div class="quiz" data-ans="B">
+      <div class="q">5. 液氯泄漏时，下列做法<b>错误</b>的是：</div>
+      <button class="opt" data-v="A">A. 用蘸有 Na<sub>2</sub>CO<sub>3</sub> 溶液的湿毛巾捂口鼻</button>
+      <button class="opt" data-v="B">B. 迅速跑到低洼处躲避</button>
+      <button class="opt" data-v="C">C. 逆风向高处撤离</button>
+      <button class="opt" data-v="D">D. 消防员喷洒稀碱液吸收</button>
+      <div class="expl">答案 <b>B</b>。Cl<sub>2</sub> 密度大于空气，会沉积在低洼处，越躲越危险。</div>
+    </div>
+    <div class="score" id="q1score">答对 0 / 5 题</div>
+  </div>
+
+  <div class="page-nav">
+    <button onclick="go('b3')" style="visibility:hidden">上一册</button>
+    <button onclick="go('b2')">下一册：氯水的成分探究 →</button>
+  </div>
+</section>
+
+<!-- ===================== 第二册 ===================== -->
+<section id="b2" class="book">
+  <h2 class="book-title">第二册 · 氯水的成分探究</h2>
+  <div class="subnav">
+    <button data-t="t1">1. 新制氯水成分</button>
+    <button data-t="t2">2. 实验探究台</button>
+    <button data-t="t3">3. 久置氯水</button>
+    <button data-t="t4">4. 液氯·氯水对比</button>
+    <button data-t="t5">5. 次氯酸的性质</button>
+    <button data-t="t6">6. 闯关测验</button>
+  </div>
+
+  <h3 class="sec" id="t1">一、新制氯水的成分（三分子四离子）</h3>
+  <div class="card">
+    <div class="eq gas">Cl<sub>2</sub> + H<sub>2</sub>O ⇌ HCl + HClO　　HCl = H<sup>+</sup> + Cl<sup>−</sup>　　HClO ⇌ H<sup>+</sup> + ClO<sup>−</sup></div>
+    <p style="font-size:.95rem;margin-top:8px">新制氯水呈<b>浅黄绿色</b>（因含 Cl<sub>2</sub> 分子）。点击下面的粒子，看看它带来什么性质、用什么检验：</p>
+    <div class="particles" style="margin-top:12px">
+      <div class="pt mol" data-k="cl2">Cl<sub>2</sub></div>
+      <div class="pt mol" data-k="h2o">H<sub>2</sub>O</div>
+      <div class="pt mol" data-k="hclo">HClO</div>
+      <div class="pt ion" data-k="h">H<sup>+</sup></div>
+      <div class="pt ion" data-k="cl">Cl<sup>−</sup></div>
+      <div class="pt ion" data-k="clo">ClO<sup>−</sup></div>
+      <div class="pt ion" data-k="oh">OH<sup>−</sup></div>
+    </div>
+    <div id="ptInfo">👆 点击任一粒子，查看它的性质与检验方法。</div>
+    <div class="think">💡 <b>数量关系小结：</b>新制氯水中 <b>c(Cl<sup>−</sup>) &gt; c(H<sup>+</sup>) &gt; c(ClO<sup>−</sup>)</b>；含氯微粒以 Cl<sub>2</sub> 为主（因为 Cl<sub>2</sub> 与水的反应是可逆的、程度不大）。</div>
+  </div>
+
+  <h3 class="sec" id="t2">二、实验探究台（动手滴一滴）</h3>
+  <div class="card">
+    <div class="lab">
+      <div class="tube-box">
+        <div class="tube" id="tube">
+          <div class="liquid" id="liquid"></div>
+          <div class="cloth" id="cloth" style="display:none"></div>
+          <div class="bub" style="left:20px"></div>
+          <div class="bub"></div>
+          <div class="bub"></div>
+        </div>
+        <div style="font-size:.82rem;color:var(--muted);margin-top:6px">新制氯水</div>
+      </div>
+      <div>
+        <p style="font-size:.95rem">向试管中的新制氯水里加入下列试剂，观察现象并推断成分：<span style="color:var(--muted);font-size:.85rem">（点击按钮）</span></p>
+        <div class="reagents">
+          <button onclick="addReagent('litmus')">紫色石蕊试液</button>
+          <button onclick="addReagent('agno3')">AgNO<sub>3</sub> 溶液</button>
+          <button onclick="addReagent('nahco3')">NaHCO<sub>3</sub> 固体</button>
+          <button onclick="addReagent('cloth')">有色布条</button>
+          <button onclick="addReagent('fecl2')">FeCl<sub>2</sub> + KSCN</button>
+          <button onclick="addReagent('ki')">淀粉-KI 溶液</button>
+          <button onclick="addReagent('light')">强光照射</button>
+          <button onclick="resetTube()">↺ 复位</button>
+        </div>
+        <div id="labOut">🔬 准备就绪：试管中是<b>新制氯水</b>（浅黄绿色）。</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sec" id="t3">三、久置氯水</h3>
+  <div class="card">
+    <div class="eq hot">2HClO <span style="color:#dc2626">光照</span> 2HCl + O<sub>2</sub>↑</div>
+    <p style="font-size:.95rem">HClO 不断分解，促使 Cl<sub>2</sub> + H<sub>2</sub>O ⇌ HCl + HClO <b>平衡右移</b>，Cl<sub>2</sub> 最终消耗殆尽。所以：</p>
+    <div class="grid2" style="margin-top:10px">
+      <div class="fact"><b>久置氯水</b><br>浅黄绿色褪去 → <b>无色</b>；成分相当于<b>稀盐酸</b>：H<sub>2</sub>O、H<sup>+</sup>、Cl<sup>−</sup>、OH<sup>−</sup>（<b>无</b> Cl<sub>2</sub>、HClO、ClO<sup>−</sup>）</div>
+      <div class="fact"><b>失去的性质</b><br>不再有<b>漂白性</b>、不再有 Cl<sub>2</sub> 的强氧化性；只保留<b>酸性</b>和 Cl<sup>−</sup></div>
+    </div>
+    <div class="warn">⚠ <b>实验室保存新制氯水：</b>盛放在<b>棕色试剂瓶</b>中，置于<b>冷暗处</b>，现用现配。</div>
+    <button class="reveal-btn" onclick="toggleAns(this)">思考：为什么氯水久置后酸性增强？</button>
+    <div class="answer">1 mol Cl<sub>2</sub> 与水反应只生成 1 mol HCl 和 1 mol HClO；而 1 mol HClO 分解又生成 1 mol HCl。<br>总结果：Cl<sub>2</sub> + H<sub>2</sub>O → 2HCl + ½O<sub>2</sub>↑（即 <b>2Cl<sub>2</sub> + 2H<sub>2</sub>O = 4HCl + O<sub>2</sub>↑</b>），H<sup>+</sup> 浓度<b>增大</b>，pH 变小。</div>
+  </div>
+
+  <h3 class="sec" id="t4">四、液氯 · 新制氯水 · 久置氯水</h3>
+  <table>
+    <tr><th style="width:110px">对比项</th><th>液氯</th><th>新制氯水</th><th>久置氯水</th></tr>
+    <tr><td>类别</td><td>纯净物</td><td>混合物</td><td>混合物</td></tr>
+    <tr><td>主要微粒</td><td class="l">只有 Cl<sub>2</sub> 分子</td><td class="l">三分子：Cl<sub>2</sub>、H<sub>2</sub>O、HClO<br>四离子：H<sup>+</sup>、Cl<sup>−</sup>、ClO<sup>−</sup>、OH<sup>−</sup></td><td class="l">H<sub>2</sub>O、H<sup>+</sup>、Cl<sup>−</sup>、OH<sup>−</sup></td></tr>
+    <tr><td>颜色</td><td>黄绿色</td><td>浅黄绿色</td><td>无色</td></tr>
+    <tr><td>漂白性</td><td><b class="no">无</b>（干燥时不漂白）</td><td><b class="ok">有</b></td><td><b class="no">无</b></td></tr>
+    <tr><td>酸性</td><td>无</td><td>有（弱酸性）</td><td>有（相当于稀盐酸）</td></tr>
+    <tr><td>保存</td><td>钢瓶（干燥时不腐蚀铁）</td><td>棕色瓶、冷暗处</td><td>普通试剂瓶</td></tr>
+  </table>
+  <div class="think">💡 <b>经典陷阱：</b>"液氯"是<b>纯净物</b>，"氯水"是<b>混合物</b>。干燥的氯气<b>不能</b>使有色布条褪色——真正起作用的是 HClO，必须有水参与。</div>
+
+  <h3 class="sec" id="t5">五、次氯酸 (HClO) 的性质</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>① 弱酸性</h4>
+      <div class="eq">HClO ⇌ H<sup>+</sup> + ClO<sup>−</sup></div>
+      <p style="font-size:.94rem">酸性很弱，比碳酸还弱：<b>H<sub>2</sub>CO<sub>3</sub> &gt; HClO &gt; HCO<sub>3</sub><sup>−</sup></b>。<br>故：NaClO + CO<sub>2</sub> + H<sub>2</sub>O = NaHCO<sub>3</sub> + HClO（产物是 <b>NaHCO<sub>3</sub></b>，不是 Na<sub>2</sub>CO<sub>3</sub>）。</p>
+    </div>
+    <div class="card">
+      <h4>② 强氧化性（漂白、杀菌）</h4>
+      <p style="font-size:.94rem">HClO 能把有色物质<b>氧化</b>为无色物质，属于<b>永久性、不可逆</b>漂白；还能使蛋白质变性，用于杀菌消毒。</p>
+    </div>
+    <div class="card">
+      <h4>③ 不稳定性</h4>
+      <div class="eq hot">2HClO <span style="color:#dc2626">光照</span> 2HCl + O<sub>2</sub>↑</div>
+      <p style="font-size:.94rem">见光易分解，故氯水、漂白粉都要<b>避光密封</b>保存。</p>
+    </div>
+    <div class="card">
+      <h4>④ 三种漂白原理大比拼</h4>
+      <table style="font-size:.85rem">
+        <tr><th>类型</th><th>原理</th><th>是否可逆</th></tr>
+        <tr><td>HClO / Na<sub>2</sub>O<sub>2</sub> / O<sub>3</sub></td><td class="l">氧化有色物质</td><td>不可逆（永久）</td></tr>
+        <tr><td>SO<sub>2</sub></td><td class="l">与色素化合生成不稳定无色物</td><td>可逆（加热复色）</td></tr>
+        <tr><td>活性炭</td><td class="l">物理吸附</td><td>物理变化</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h3 class="sec" id="t6">六、第二册 · 闯关测验</h3>
+  <div id="q2box">
+    <div class="quiz" data-ans="D">
+      <div class="q">1. 新制氯水中不存在的微粒是：</div>
+      <button class="opt" data-v="A">A. Cl<sub>2</sub></button>
+      <button class="opt" data-v="B">B. HClO</button>
+      <button class="opt" data-v="C">C. ClO<sup>−</sup></button>
+      <button class="opt" data-v="D">D. HCl 分子</button>
+      <div class="expl">答案 <b>D</b>。HCl 是强电解质，在水中<b>完全电离</b>为 H<sup>+</sup> 和 Cl<sup>−</sup>，不存在 HCl 分子。新制氯水含三分子四离子：<b>Cl<sub>2</sub>、H<sub>2</sub>O、HClO</b> 与 <b>H<sup>+</sup>、Cl<sup>−</sup>、ClO<sup>−</sup>、OH<sup>−</sup></b>。</div>
+    </div>
+    <div class="quiz" data-ans="B">
+      <div class="q">2. 向新制氯水中滴入紫色石蕊试液，现象是：</div>
+      <button class="opt" data-v="A">A. 只变红</button>
+      <button class="opt" data-v="B">B. 先变红后褪色</button>
+      <button class="opt" data-v="C">C. 只褪色</button>
+      <button class="opt" data-v="D">D. 先变蓝后褪色</button>
+      <div class="expl">答案 <b>B</b>。H<sup>+</sup> 使之变红（酸性），随后 HClO 的强氧化性将其<b>漂白褪色</b>。</div>
+    </div>
+    <div class="quiz" data-ans="C">
+      <div class="q">3. 下列能证明新制氯水中含有 Cl<sup>−</sup> 的实验是：</div>
+      <button class="opt" data-v="A">A. 加 NaHCO<sub>3</sub>，产生气泡</button>
+      <button class="opt" data-v="B">B. 加有色布条，布条褪色</button>
+      <button class="opt" data-v="C">C. 加稀硝酸酸化的 AgNO<sub>3</sub> 溶液，产生白色沉淀</button>
+      <button class="opt" data-v="D">D. 观察溶液呈浅黄绿色</button>
+      <div class="expl">答案 <b>C</b>。Ag<sup>+</sup> + Cl<sup>−</sup> = AgCl↓（白色，不溶于稀硝酸）。A 证明 H<sup>+</sup>，B 证明 HClO，D 证明 Cl<sub>2</sub>。</div>
+    </div>
+    <div class="quiz" data-ans="A">
+      <div class="q">4. 关于久置氯水，说法正确的是：</div>
+      <button class="opt" data-v="A">A. 相当于稀盐酸，无漂白性</button>
+      <button class="opt" data-v="B">B. 仍含有大量 Cl<sub>2</sub> 分子</button>
+      <button class="opt" data-v="C">C. 颜色加深为黄绿色</button>
+      <button class="opt" data-v="D">D. 酸性减弱</button>
+      <div class="expl">答案 <b>A</b>。2HClO 光照分解，平衡右移，Cl<sub>2</sub>、HClO 耗尽，最终成稀盐酸，<b>酸性增强</b>、<b>漂白性消失</b>。</div>
+    </div>
+    <div class="quiz" data-ans="B">
+      <div class="q">5. 干燥的氯气不能使有色布条褪色，湿氯气可以。说明：</div>
+      <button class="opt" data-v="A">A. Cl<sub>2</sub> 本身有漂白性</button>
+      <button class="opt" data-v="B">B. 真正起漂白作用的是 Cl<sub>2</sub> 与水反应生成的 HClO</button>
+      <button class="opt" data-v="C">C. 水有漂白性</button>
+      <button class="opt" data-v="D">D. 布条只有在溶液中才能被氧化</button>
+      <div class="expl">答案 <b>B</b>。这是教材经典对照实验，证明漂白性来自 <b>HClO</b> 而非 Cl<sub>2</sub>。同理，<b>液氯无漂白性</b>。</div>
+    </div>
+    <div class="score" id="q2score">答对 0 / 5 题</div>
+  </div>
+
+  <div class="page-nav">
+    <button onclick="go('b1')">← 上一册：氯气的性质和用途</button>
+    <button onclick="go('b3')">下一册：氯气的实验室制法 →</button>
+  </div>
+</section>
+
+<!-- ===================== 第三册 ===================== -->
+<section id="b3" class="book">
+  <h2 class="book-title">第三册 · 氯气的实验室制法</h2>
+  <div class="subnav">
+    <button data-t="u1">1. 装置选择依据</button>
+    <button data-t="u2">2. 发生装置三型</button>
+    <button data-t="u3">3. 收集方法判定</button>
+    <button data-t="u4">4. 常见气体制法</button>
+    <button data-t="u5">5. 搭一套制氯装置</button>
+    <button data-t="u6">6. Cl⁻ 的检验</button>
+    <button data-t="u7">7. 闯关测验</button>
+  </div>
+
+  <h3 class="sec" id="u1">一、气体制备装置的四大模块与选择依据</h3>
+  <div class="card">
+    <table>
+      <tr><th style="width:110px">模块</th><th>选择依据</th><th>常见形式</th></tr>
+      <tr><td><b>① 发生装置</b></td><td class="l"><b>反应物的状态</b> + <b>反应条件</b>（是否加热）</td><td class="l">固固加热 / 固液不加热 / 固(液)液加热</td></tr>
+      <tr><td><b>② 净化装置</b></td><td class="l">杂质气体的性质（能否被某试剂吸收而不损失目标气体）</td><td class="l">洗气瓶（长进短出）、干燥管 / U 形管</td></tr>
+      <tr><td><b>③ 收集装置</b></td><td class="l"><b>溶解性</b>（能否与水反应）+ <b>密度</b>（相对空气 29）+ 是否与空气成分反应</td><td class="l">排水法 / 向上排空气 / 向下排空气</td></tr>
+      <tr><td><b>④ 尾气处理</b></td><td class="l">气体的<b>毒性</b>与<b>化学性质</b>（酸碱性、可燃性）</td><td class="l">溶液吸收（NaOH 等）、点燃（CO）、气球收集</td></tr>
+    </table>
+    <div class="think">💡 <b>口诀：</b>「发生看状态与条件，净化看杂质，收集看溶解与密度，尾气看毒性。」</div>
+  </div>
+
+  <h3 class="sec" id="u2">二、发生装置的三种基本类型</h3>
+  <div class="grid3">
+    <div class="app-type" onclick="pickType(this)">
+      <svg viewBox="0 0 200 170">
+        <rect x="10" y="150" width="180" height="4" fill="#94a3b8"/>
+        <line x1="60" y1="150" x2="60" y2="40" stroke="#64748b" stroke-width="4"/>
+        <path d="M75 45 L150 62 L145 78 L70 62 Z" fill="#fff" stroke="#0d9488" stroke-width="3"/>
+        <path d="M75 45 L150 62" stroke="#0d9488" stroke-width="3"/>
+        <rect x="60" y="95" width="60" height="30" rx="4" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+        <path d="M85 95 q5 -12 10 0" fill="none" stroke="#dc2626" stroke-width="3"/>
+        <text x="100" y="166" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="bold">固 + 固，加热</text>
+      </svg>
+      <div style="font-size:.88rem;margin-top:6px"><b>试管口略向下倾斜</b><br>适用于：O<sub>2</sub>（KMnO<sub>4</sub>/KClO<sub>3</sub>）、NH<sub>3</sub></div>
+    </div>
+    <div class="app-type" onclick="pickType(this)">
+      <svg viewBox="0 0 200 170">
+        <rect x="10" y="150" width="180" height="4" fill="#94a3b8"/>
+        <path d="M70 60 L90 60 L105 130 L55 130 Z" fill="#fff" stroke="#0d9488" stroke-width="3"/>
+        <rect x="76" y="30" width="26" height="30" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+        <line x1="89" y1="60" x2="89" y2="80" stroke="#3b82f6" stroke-width="2"/>
+        <path d="M89 80 q25 10 45 8" fill="none" stroke="#0d9488" stroke-width="3"/>
+        <text x="100" y="166" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="bold">固 + 液，不加热</text>
+      </svg>
+      <div style="font-size:.88rem;margin-top:6px">分液漏斗（控制速率）<br>适用于：H<sub>2</sub>、CO<sub>2</sub>、H<sub>2</sub>S、SO<sub>2</sub>、C<sub>2</sub>H<sub>2</sub></div>
+    </div>
+    <div class="app-type" onclick="pickType(this)">
+      <svg viewBox="0 0 200 170">
+        <rect x="10" y="150" width="180" height="4" fill="#94a3b8"/>
+        <line x1="40" y1="150" x2="40" y2="45" stroke="#64748b" stroke-width="4"/>
+        <circle cx="95" cy="95" r="28" fill="#fff" stroke="#0d9488" stroke-width="3"/>
+        <rect x="88" y="45" width="24" height="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+        <line x1="100" y1="71" x2="100" y2="80" stroke="#3b82f6" stroke-width="2"/>
+        <path d="M120 95 q28 6 45 6" fill="none" stroke="#0d9488" stroke-width="3"/>
+        <rect x="60" y="128" width="70" height="6" fill="#cbd5e1"/>
+        <rect x="82" y="134" width="26" height="16" rx="3" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+        <path d="M92 134 q3 -10 6 0" fill="none" stroke="#dc2626" stroke-width="3"/>
+        <text x="100" y="166" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="bold">固(液) + 液，加热</text>
+      </svg>
+      <div style="font-size:.88rem;margin-top:6px">需<b>石棉网</b>、温度计（控温）<br>适用于：Cl<sub>2</sub>、HCl、SO<sub>2</sub>(浓H<sub>2</sub>SO<sub>4</sub>+Cu)、C<sub>2</sub>H<sub>4</sub></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <div class="eq gas">实验室制 Cl<sub>2</sub>：<b>MnO<sub>2</sub> + 4HCl(浓) <span style="color:#dc2626">△</span> MnCl<sub>2</sub> + Cl<sub>2</sub>↑ + 2H<sub>2</sub>O</b></div>
+    <div class="eq">KMnO<sub>4</sub> 法（<b>不需加热</b>）：2KMnO<sub>4</sub> + 16HCl(浓) = 2KCl + 2MnCl<sub>2</sub> + 5Cl<sub>2</sub>↑ + 8H<sub>2</sub>O</div>
+    <div class="eq">其他：KClO<sub>3</sub> + 6HCl(浓) = KCl + 3Cl<sub>2</sub>↑ + 3H<sub>2</sub>O；Ca(ClO)<sub>2</sub> + 4HCl(浓) = CaCl<sub>2</sub> + 2Cl<sub>2</sub>↑ + 2H<sub>2</sub>O</div>
+    <div class="warn">⚠ 三个易错点：<br>① 必须用<b>浓</b>盐酸，稀盐酸还原性弱、MnO<sub>2</sub> 氧化不了；<br>② 随反应进行盐酸变稀，反应<b>自行停止</b>，故盐酸须过量；<br>③ 1 mol MnO<sub>2</sub> 最多氧化 <b>2 mol</b> HCl 生成 Cl<sub>2</sub>，另 2 mol HCl 起<b>酸性</b>作用成盐。</div>
+  </div>
+
+  <h3 class="sec" id="u3">三、收集方法判定器</h3>
+  <div class="card">
+    <div class="grid3">
+      <div><label style="font-size:.9rem">在水中的溶解性：</label><br>
+        <select id="selSol">
+          <option value="insol">难溶/不溶于水，不与水反应</option>
+          <option value="sol">能溶或易溶于水</option>
+        </select>
+      </div>
+      <div><label style="font-size:.9rem">密度与空气（29）比较：</label><br>
+        <select id="selDen">
+          <option value="heavy">比空气大</option>
+          <option value="light">比空气小</option>
+          <option value="close">接近空气</option>
+        </select>
+      </div>
+      <div><label style="font-size:.9rem">是否与空气成分反应：</label><br>
+        <select id="selAir">
+          <option value="no">不反应</option>
+          <option value="yes">会反应（如 NO 与 O₂）</option>
+        </select>
+      </div>
+    </div>
+    <div style="margin-top:12px"><button class="reveal-btn" onclick="judgeCollect()">判定收集方法</button></div>
+    <div id="collectOut" style="margin-top:10px;background:#f0fdfa;border:1px solid var(--primary-soft);border-radius:10px;padding:12px 14px;min-height:60px;font-size:.95rem">👉 设定条件后点击判定。</div>
+    <div class="think">💡 <b>特例提醒：</b>Cl<sub>2</sub> 可用<b>向上排空气法</b>，也可用<b>排饱和食盐水法</b>；NO 只能用<b>排水法</b>（2NO + O<sub>2</sub> = 2NO<sub>2</sub>）；NH<sub>3</sub> 只能用<b>向下排空气法</b>（极易溶于水）。</div>
+  </div>
+
+  <h3 class="sec" id="u4">四、高中常见气体的实验室制法</h3>
+  <table>
+    <tr><th style="width:64px">气体</th><th>反应原理（点击行展开）</th><th style="width:110px">发生</th><th style="width:110px">收集</th></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>O<sub>2</sub></b></td><td class="l">点击展开方程式…
+      <div class="detail"><div class="eq">2KClO<sub>3</sub> <span style="color:#dc2626">MnO<sub>2</sub>,△</span> 2KCl + 3O<sub>2</sub>↑</div><div class="eq">2KMnO<sub>4</sub> <span style="color:#dc2626">△</span> K<sub>2</sub>MnO<sub>4</sub> + MnO<sub>2</sub> + O<sub>2</sub>↑</div><div class="eq">2H<sub>2</sub>O<sub>2</sub> <span style="color:#dc2626">MnO<sub>2</sub></span> 2H<sub>2</sub>O + O<sub>2</sub>↑</div></div></td><td>固固加热 / 固液不加热</td><td>排水法或向上排空气</td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>H<sub>2</sub></b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq">Zn + H<sub>2</sub>SO<sub>4</sub>(稀) = ZnSO<sub>4</sub> + H<sub>2</sub>↑</div></div></td><td>固液不加热</td><td>排水法或向下排空气</td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>CO<sub>2</sub></b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq">CaCO<sub>3</sub> + 2HCl = CaCl<sub>2</sub> + CO<sub>2</sub>↑ + H<sub>2</sub>O</div><span style="font-size:.88rem;color:var(--muted)">不用 H<sub>2</sub>SO<sub>4</sub>（生成微溶 CaSO<sub>4</sub> 覆盖石灰石，反应停止）</span></div></td><td>固液不加热</td><td>向上排空气法</td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>Cl<sub>2</sub></b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq gas">MnO<sub>2</sub> + 4HCl(浓) <span style="color:#dc2626">△</span> MnCl<sub>2</sub> + Cl<sub>2</sub>↑ + 2H<sub>2</sub>O</div></div></td><td>固液加热</td><td>向上排空气 / 排饱和食盐水</td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>NH<sub>3</sub></b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq">2NH<sub>4</sub>Cl + Ca(OH)<sub>2</sub> <span style="color:#dc2626">△</span> CaCl<sub>2</sub> + 2NH<sub>3</sub>↑ + 2H<sub>2</sub>O</div><div class="eq">浓氨水 + NaOH 固体（或 CaO）→ NH<sub>3</sub>↑</div></div></td><td>固固加热 / 固液不加热</td><td>向下排空气法（唯一）</td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>SO<sub>2</sub></b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq">Na<sub>2</sub>SO<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub>(浓) = Na<sub>2</sub>SO<sub>4</sub> + SO<sub>2</sub>↑ + H<sub>2</sub>O</div><div class="eq">Cu + 2H<sub>2</sub>SO<sub>4</sub>(浓) <span style="color:#dc2626">△</span> CuSO<sub>4</sub> + SO<sub>2</sub>↑ + 2H<sub>2</sub>O</div></div></td><td>固液不加热 / 固液加热</td><td>向上排空气法</td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>NO</b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq">3Cu + 8HNO<sub>3</sub>(稀) = 3Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO↑ + 4H<sub>2</sub>O</div></div></td><td>固液不加热</td><td><b>只能用排水法</b></td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>NO<sub>2</sub></b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq">Cu + 4HNO<sub>3</sub>(浓) = Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO<sub>2</sub>↑ + 2H<sub>2</sub>O</div></div></td><td>固液不加热</td><td>向上排空气法</td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>C<sub>2</sub>H<sub>4</sub></b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq">CH<sub>3</sub>CH<sub>2</sub>OH <span style="color:#dc2626">浓H<sub>2</sub>SO<sub>4</sub>,170℃</span> CH<sub>2</sub>=CH<sub>2</sub>↑ + H<sub>2</sub>O</div><span style="font-size:.88rem;color:var(--muted)">温度计水银球插入液面下，控温 170 ℃</span></div></td><td>液液加热</td><td>排水法</td></tr>
+    <tr class="gasrow" onclick="toggleRow(this)"><td><b>C<sub>2</sub>H<sub>2</sub></b></td><td class="l">点击展开…
+      <div class="detail"><div class="eq">CaC<sub>2</sub> + 2H<sub>2</sub>O → Ca(OH)<sub>2</sub> + C<sub>2</sub>H<sub>2</sub>↑</div><span style="font-size:.88rem;color:var(--muted)">用<b>饱和食盐水</b>代替水以减缓反应速率</span></div></td><td>固液不加热</td><td>排水法</td></tr>
+  </table>
+
+  <h3 class="sec" id="u5">五、动手搭一套"制氯装置"</h3>
+  <div class="card">
+    <p style="font-size:.95rem">目标：用 MnO<sub>2</sub> + 浓盐酸制<b>纯净干燥</b>的 Cl<sub>2</sub>，并完成收集与尾气处理。请为五个位置选择正确装置：</p>
+
+    <div class="slot" id="slot1">
+      <div class="st">位置 1 · 发生装置</div>
+      <div class="opts">
+        <button data-ok="1">圆底烧瓶 + 分液漏斗 + 酒精灯（石棉网）</button>
+        <button data-ok="0">大试管口略向下倾斜 + 酒精灯</button>
+        <button data-ok="0">锥形瓶 + 分液漏斗（不加热）</button>
+      </div>
+      <div class="tip">✔ 反应物是<b>固体 + 液体</b>，条件需<b>加热</b> → 选"固液加热型"：圆底烧瓶、分液漏斗（盛浓盐酸）、酒精灯 + 石棉网。</div>
+    </div>
+
+    <div class="slot" id="slot2">
+      <div class="st">位置 2 · 除去 HCl 气体</div>
+      <div class="opts">
+        <button data-ok="1">饱和食盐水（洗气）</button>
+        <button data-ok="0">饱和 NaHCO<sub>3</sub> 溶液</button>
+        <button data-ok="0">NaOH 溶液</button>
+        <button data-ok="0">水</button>
+      </div>
+      <div class="tip">✔ 浓盐酸挥发产生 HCl 杂质。用<b>饱和食盐水</b>：HCl 极易溶被吸收，而 Cl<sup>−</sup> 抑制 Cl<sub>2</sub> 溶解（减少损失）。<br>✘ NaHCO<sub>3</sub> 会与 HCl 反应产生新杂质 CO<sub>2</sub>，也会吸收 Cl<sub>2</sub>；✘ NaOH 会把目标气体 Cl<sub>2</sub> 一起吸收掉。</div>
+    </div>
+
+    <div class="slot" id="slot3">
+      <div class="st">位置 3 · 干燥（除水蒸气）</div>
+      <div class="opts">
+        <button data-ok="1">浓硫酸（洗气瓶）</button>
+        <button data-ok="0">碱石灰（干燥管）</button>
+        <button data-ok="0">无水 CuSO<sub>4</sub></button>
+      </div>
+      <div class="tip">✔ 浓硫酸有吸水性且<b>不与 Cl<sub>2</sub> 反应</b>。<br>✘ 碱石灰（NaOH + CaO）是碱性干燥剂，会吸收 Cl<sub>2</sub>：Cl<sub>2</sub> + 2NaOH = NaCl + NaClO + H<sub>2</sub>O；✘ 无水 CuSO<sub>4</sub> 吸水能力弱，一般只作<b>检验水</b>的试剂。<br><b>顺序提醒：</b>先除 HCl（饱和食盐水）<b>后</b>干燥（浓硫酸），颠倒则除杂后又带入水蒸气。</div>
+    </div>
+
+    <div class="slot" id="slot4">
+      <div class="st">位置 4 · 收集装置</div>
+      <div class="opts">
+        <button data-ok="1">向上排空气法（导管长进短出）</button>
+        <button data-ok="1">排饱和食盐水法</button>
+        <button data-ok="0">排水法</button>
+        <button data-ok="0">向下排空气法</button>
+      </div>
+      <div class="tip">✔ Cl<sub>2</sub> 密度大于空气 → 向上排空气（长导管伸入瓶底，口部放浸 NaOH 的棉花团或用<b>湿润淀粉-KI 试纸</b>验满，试纸变蓝即满）。<br>✘ 排水法会因 Cl<sub>2</sub> 溶于水而损失；✘ 向下排空气法方向完全反了。</div>
+    </div>
+
+    <div class="slot" id="slot5">
+      <div class="st">位置 5 · 尾气吸收</div>
+      <div class="opts">
+        <button data-ok="1">NaOH 溶液（导管口接倒扣漏斗防倒吸）</button>
+        <button data-ok="0">水</button>
+        <button data-ok="0">澄清石灰水</button>
+      </div>
+      <div class="tip">✔ Cl<sub>2</sub> 有毒，必须用<b>NaOH 浓溶液</b>吸收：Cl<sub>2</sub> + 2NaOH = NaCl + NaClO + H<sub>2</sub>O。<br>✘ 水吸收不完全；✘ 澄清石灰水中 Ca(OH)<sub>2</sub> 浓度太小，吸收不彻底。</div>
+    </div>
+
+    <div class="score" id="buildScore">装置完成度：0 / 5</div>
+  </div>
+
+  <h3 class="sec" id="u6">六、Cl<sup>−</sup>（氯离子）的检验</h3>
+  <div class="card">
+    <h4>标准操作</h4>
+    <div class="flow" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0">
+      <div style="background:#fff;border:2px solid var(--primary-soft);border-radius:12px;padding:10px 14px;text-align:center;font-size:.92rem"><b>取少量待测液</b></div>
+      <div style="align-self:center;color:var(--primary);font-weight:bold">→</div>
+      <div style="background:#fff;border:2px solid var(--primary-soft);border-radius:12px;padding:10px 14px;text-align:center;font-size:.92rem"><b>加稀 HNO<sub>3</sub> 酸化</b></div>
+      <div style="align-self:center;color:var(--primary);font-weight:bold">→</div>
+      <div style="background:#fff;border:2px solid var(--primary-soft);border-radius:12px;padding:10px 14px;text-align:center;font-size:.92rem"><b>滴加 AgNO<sub>3</sub> 溶液</b></div>
+      <div style="align-self:center;color:var(--primary);font-weight:bold">→</div>
+      <div style="background:#ecfdf5;border:2px solid var(--green);border-radius:12px;padding:10px 14px;text-align:center;font-size:.92rem"><b>白色沉淀 → 含 Cl<sup>−</sup></b></div>
+    </div>
+    <div class="eq">Ag<sup>+</sup> + Cl<sup>−</sup> = AgCl↓（白色，<b>不溶于稀硝酸</b>）</div>
+    <div class="warn">⚠ <b>为什么要先加稀硝酸酸化？</b><br>排除 CO<sub>3</sub><sup>2−</sup>、SO<sub>3</sub><sup>2−</sup>、PO<sub>4</sub><sup>3−</sup>、SO<sub>4</sub><sup>2−</sup>、OH<sup>−</sup> 等的干扰 —— 它们与 Ag<sup>+</sup> 生成的沉淀（Ag<sub>2</sub>CO<sub>3</sub>、Ag<sub>2</sub>SO<sub>3</sub>、Ag<sub>3</sub>PO<sub>4</sub>、AgOH 等）都会<b>溶于稀硝酸</b>，而 AgCl <b>不溶</b>。<br>⚠ 不能用<b>盐酸</b>酸化（会引入 Cl<sup>−</sup>），也不能用<b>硫酸</b>（Ag<sub>2</sub>SO<sub>4</sub> 微溶，可能干扰）。</div>
+    <div class="grid2" style="margin-top:10px">
+      <div class="fact"><b>干扰离子示例</b><br>CO<sub>3</sub><sup>2−</sup>：Ag<sub>2</sub>CO<sub>3</sub>↓ 白 → <b>溶于</b>稀 HNO<sub>3</sub> 并放气泡<br>Br<sup>−</sup>：AgBr↓ <b>淡黄色</b>，不溶于稀 HNO<sub>3</sub><br>I<sup>−</sup>：AgI↓ <b>黄色</b>，不溶于稀 HNO<sub>3</sub></div>
+      <div class="fact"><b>延伸：卤化银的颜色与用途</b><br>AgCl（白）、AgBr（淡黄）、AgI（黄）<br>三者均<b>不溶于稀硝酸</b>，且见光易分解（2AgBr <span>光照</span> 2Ag + Br<sub>2</sub>）→ 用于<b>照相底片</b>、变色眼镜。</div>
+    </div>
+  </div>
+
+  <h3 class="sec" id="u7">七、第三册 · 闯关测验</h3>
+  <div id="q3box">
+    <div class="quiz" data-ans="B">
+      <div class="q">1. 实验室用 MnO<sub>2</sub> 和浓盐酸制 Cl<sub>2</sub>，发生装置应选择：</div>
+      <button class="opt" data-v="A">A. 固固加热型（试管口略向下倾斜）</button>
+      <button class="opt" data-v="B">B. 固液加热型（烧瓶 + 分液漏斗 + 酒精灯）</button>
+      <button class="opt" data-v="C">C. 固液不加热型</button>
+      <button class="opt" data-v="D">D. 液液加热型（需温度计）</button>
+      <div class="expl">答案 <b>B</b>。MnO<sub>2</sub>(固) + 浓盐酸(液)，需加热 → 固液加热型。</div>
+    </div>
+    <div class="quiz" data-ans="C">
+      <div class="q">2. 制得的 Cl<sub>2</sub> 中混有 HCl 和水蒸气，除杂的正确顺序与试剂是：</div>
+      <button class="opt" data-v="A">A. 先浓硫酸，后饱和食盐水</button>
+      <button class="opt" data-v="B">B. 先 NaOH 溶液，后浓硫酸</button>
+      <button class="opt" data-v="C">C. 先饱和食盐水，后浓硫酸</button>
+      <button class="opt" data-v="D">D. 先饱和 NaHCO<sub>3</sub>，后浓硫酸</button>
+      <div class="expl">答案 <b>C</b>。先除 HCl（饱和食盐水，抑制 Cl<sub>2</sub> 溶解），后干燥（浓硫酸）。<b>顺序不能颠倒</b>，否则又带出水蒸气。NaOH/NaHCO<sub>3</sub> 会消耗 Cl<sub>2</sub>。</div>
+    </div>
+    <div class="quiz" data-ans="D">
+      <div class="q">3. 检验氯气是否收集满，最常用的方法是：</div>
+      <button class="opt" data-v="A">A. 将带火星的木条放在瓶口</button>
+      <button class="opt" data-v="B">B. 将燃着的木条放在瓶口</button>
+      <button class="opt" data-v="C">C. 用湿润的红色石蕊试纸放瓶口</button>
+      <button class="opt" data-v="D">D. 用湿润的淀粉-KI 试纸放瓶口，观察是否变蓝</button>
+      <div class="expl">答案 <b>D</b>。Cl<sub>2</sub> + 2KI = 2KCl + I<sub>2</sub>，I<sub>2</sub> 遇淀粉变蓝。（也可用湿润蓝色石蕊试纸先变红后褪色。）</div>
+    </div>
+    <div class="quiz" data-ans="B">
+      <div class="q">4. 检验某溶液中是否含 Cl<sup>−</sup>，正确的操作是：</div>
+      <button class="opt" data-v="A">A. 直接滴加 AgNO<sub>3</sub> 溶液，看是否有白色沉淀</button>
+      <button class="opt" data-v="B">B. 先加稀硝酸酸化，再滴加 AgNO<sub>3</sub> 溶液</button>
+      <button class="opt" data-v="C">C. 先加盐酸酸化，再滴加 AgNO<sub>3</sub> 溶液</button>
+      <button class="opt" data-v="D">D. 先加 BaCl<sub>2</sub> 溶液，再加稀硝酸</button>
+      <div class="expl">答案 <b>B</b>。稀硝酸排除 CO<sub>3</sub><sup>2−</sup>、SO<sub>3</sub><sup>2−</sup> 等干扰。<b>C 错</b>：加盐酸会引入 Cl<sup>−</sup>，无论原溶液有无 Cl<sup>−</sup> 都产生沉淀。</div>
+    </div>
+    <div class="quiz" data-ans="A">
+      <div class="q">5. 下列气体中，只能用排水法收集的是：</div>
+      <button class="opt" data-v="A">A. NO</button>
+      <button class="opt" data-v="B">B. NH<sub>3</sub></button>
+      <button class="opt" data-v="C">C. Cl<sub>2</sub></button>
+      <button class="opt" data-v="D">D. HCl</button>
+      <div class="expl">答案 <b>A</b>。NO 与空气中 O<sub>2</sub> 反应（2NO + O<sub>2</sub> = 2NO<sub>2</sub>）→ 不能用排空气法；NO 难溶于水 → 用排水法。NH<sub>3</sub> 只能用向下排空气法。</div>
+    </div>
+    <div class="score" id="q3score">答对 0 / 5 题</div>
+  </div>
+
+  <div class="page-nav">
+    <button onclick="go('b2')">← 上一册：氯水的成分探究</button>
+    <button onclick="go('b1')" style="visibility:hidden">下一册</button>
+  </div>
+</section>
+
+</main>
+
+<div class="credit">
+  高一化学 · 氯及其化合物互动课件 · 三册合一 &nbsp;<span class="aigc">AIGC</span>&nbsp; 内容仅供参考，以教材与课堂为准
+</div>
+
+<script>
+  /* ---------- 三大册切换 ---------- */
+  function go(id){
+    document.querySelectorAll('section.book').forEach(function(s){
+      s.classList.toggle('active', s.id === id);
+    });
+    document.querySelectorAll('#topnav button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.page === id);
+    });
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  document.querySelectorAll('#topnav button').forEach(function(b){
+    b.addEventListener('click', function(){ go(b.dataset.page); });
+  });
+  /* 册内小节锚点 */
+  document.querySelectorAll('.subnav button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var el = document.getElementById(b.dataset.t);
+      if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      b.parentNode.querySelectorAll('button').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+    });
+  });
+
+  /* ---------- 通用展开 ---------- */
+  function toggleAns(btn){
+    var a = btn.nextElementSibling;
+    if(a && a.classList.contains('answer')){
+      a.classList.toggle('show');
+      btn.textContent = a.classList.contains('show') ? '收起答案' : (btn.dataset.label || btn.textContent);
+      if(!a.classList.contains('show')){ btn.textContent = btn.dataset.label || '查看答案'; }
+    }
+  }
+  document.querySelectorAll('.reveal-btn').forEach(function(b){
+    if(!b.dataset.label) b.dataset.label = b.textContent;
+  });
+  function toggleVerdict(el){ el.classList.toggle('open'); }
+  function toggleRxn(el){ el.classList.toggle('open'); }
+  function toggleRow(tr){ tr.classList.toggle('open'); }
+  function pickType(el){ el.classList.toggle('sel'); }
+
+  /* ---------- 粒子卡 ---------- */
+  var PT = {
+    cl2:['Cl₂（氯分子）','<b>性质：</b>强氧化性；使氯水呈<b>浅黄绿色</b>。<br><b>检验：</b>① 观察浅黄绿色；② 加淀粉-KI 溶液变蓝；③ 加 FeCl₂ + KSCN 变血红。'],
+    h2o:['H₂O（水分子）','<b>溶剂。</b>氯水中含量最多的微粒。干燥 Cl₂ 无漂白性，必须有水生成 HClO 才表现漂白性。'],
+    hclo:['HClO（次氯酸分子）','<b>性质：</b>弱酸性、强氧化性（漂白、杀菌）、不稳定性（光照分解）。<br><b>检验：</b>使有色布条/品红溶液<b>褪色</b>（永久、不可逆）；紫色石蕊<b>先变红后褪色</b>。'],
+    h:['H⁺（氢离子）','<b>性质：</b>酸性。<br><b>检验：</b>① 紫色石蕊变红；② 加 NaHCO₃ 或 Na₂CO₃ 产生<b>无色无味气泡</b>（CO₂）；③ pH 试纸。'],
+    cl:['Cl⁻（氯离子）','<b>检验：</b>加<b>稀硝酸酸化</b>的 AgNO₃ 溶液，产生<b>不溶于稀硝酸的白色沉淀</b> AgCl。注意：氯水中的 Cl⁻ 来自 HCl 的电离。'],
+    clo:['ClO⁻（次氯酸根离子）','<b>性质：</b>强氧化性（漂白性），水解使溶液呈碱性（NaClO 溶液）。<br>与酸反应生成 HClO：ClO⁻ + H⁺ = HClO；遇浓盐酸放出 Cl₂：ClO⁻ + Cl⁻ + 2H⁺ = Cl₂↑ + H₂O。'],
+    oh:['OH⁻（氢氧根离子）','<b>来源：</b>水的电离，含量<b>极微</b>。<br>酸性溶液中 c(OH⁻) 很小，但理论上存在。']
+  };
+  document.querySelectorAll('.pt').forEach(function(p){
+    p.addEventListener('click', function(){
+      document.querySelectorAll('.pt').forEach(function(x){x.classList.remove('sel');});
+      p.classList.add('sel');
+      var info = PT[p.dataset.k];
+      document.getElementById('ptInfo').innerHTML = '<b style="color:var(--primary);font-size:1.02rem">' + info[0] + '</b><br>' + info[1];
+    });
+  });
+
+  /* ---------- 试管模拟 ---------- */
+  var RG = {
+    litmus:{out:'<b>现象：</b>溶液<b>先变红，随后红色褪去</b>。<br><b>结论：</b>先变红说明含 <b>H⁺</b>（酸性）；后褪色说明含 <b>HClO</b>（漂白性）。',
+      liquid:'linear-gradient(#fca5a5,#ef4444)', cloth:null, bub:false},
+    agno3:{out:'<b>现象：</b>产生<b>白色沉淀</b>（AgCl），加稀硝酸沉淀不溶解。<br><b>结论：</b>含 <b>Cl⁻</b>。Ag⁺ + Cl⁻ = AgCl↓',
+      liquid:'linear-gradient(#f1f5f9,#cbd5e1)', cloth:null, bub:false},
+    nahco3:{out:'<b>现象：</b>固体溶解，产生<b>无色无味气泡</b>（CO₂）。<br><b>结论：</b>含 <b>H⁺</b>，酸性比碳酸强。H⁺ + HCO₃⁻ = CO₂↑ + H₂O',
+      liquid:'linear-gradient(#d9f99d,#a3e635)', cloth:null, bub:true},
+    cloth:{out:'<b>现象：</b>有色布条<b>褪色</b>（永久，加热不复色）。<br><b>结论：</b>含 <b>HClO</b>，氧化性漂白。注意：<b>干燥 Cl₂ 或液氯无此性质</b>。',
+      liquid:'linear-gradient(#d9f99d,#a3e635)', cloth:'#f8fafc', bub:false, showCloth:true},
+    fecl2:{out:'<b>现象：</b>溶液变<b>血红色</b>（Fe³⁺ 遇 SCN⁻）。<br><b>结论：</b>含 <b>Cl₂</b>（强氧化性）。2Fe²⁺ + Cl₂ = 2Fe³⁺ + 2Cl⁻',
+      liquid:'linear-gradient(#dc2626,#991b1b)', cloth:null, bub:false},
+    ki:{out:'<b>现象：</b>溶液变<b>蓝色</b>（淀粉遇 I₂）。<br><b>结论：</b>含 <b>Cl₂</b>。Cl₂ + 2I⁻ = 2Cl⁻ + I₂ —— 这也是<b>验满 Cl₂</b> 的原理。',
+      liquid:'linear-gradient(#60a5fa,#1e3a8a)', cloth:null, bub:false},
+    light:{out:'<b>现象：</b>黄绿色逐渐<b>变浅直至无色</b>，有无色气泡（O₂）逸出，溶液酸性<b>增强</b>。<br><b>结论：</b>2HClO <b>光照</b> 2HCl + O₂↑，HClO 分解促使平衡右移 → 久置氯水变稀盐酸。',
+      liquid:'linear-gradient(#f8fafc,#e2e8f0)', cloth:null, bub:true}
+  };
+  function addReagent(k){
+    var r = RG[k];
+    var tube = document.getElementById('tube');
+    var liq = document.getElementById('liquid');
+    liq.style.background = r.liquid;
+    tube.classList.toggle('bubbling', !!r.bub);
+    var cloth = document.getElementById('cloth');
+    if(r.showCloth){ cloth.style.display='block'; cloth.style.background='#e11d48';
+      setTimeout(function(){ cloth.style.background = (r.cloth||'#f8fafc'); }, 400); }
+    else { cloth.style.display='none'; }
+    document.getElementById('labOut').innerHTML = r.out;
+  }
+  function resetTube(){
+    document.getElementById('liquid').style.background = 'linear-gradient(#d9f99d,#a3e635)';
+    document.getElementById('tube').classList.remove('bubbling');
+    document.getElementById('cloth').style.display='none';
+    document.getElementById('labOut').innerHTML = '🔬 已复位：试管中是<b>新制氯水</b>（浅黄绿色）。';
+  }
+
+  /* ---------- 收集方法判定 ---------- */
+  function judgeCollect(){
+    var s = document.getElementById('selSol').value;
+    var d = document.getElementById('selDen').value;
+    var a = document.getElementById('selAir').value;
+    var txt = '';
+    if(a === 'yes'){
+      txt = '⚠ 该气体<b>会与空气成分反应</b>，<span class="no">不能用排空气法</span>；' +
+            (s === 'insol' ? '应选用 <b>排水法</b> 收集。典型代表：<b>NO</b>（2NO + O₂ = 2NO₂）。'
+                           : '若还能溶于水，则需改用<b>排特殊液体法</b>或直接研究其他收集方案（高中一般不要求）。');
+    } else if(s === 'insol'){
+      txt = '✔ 首选 <b>排水法</b>（收集到的气体较纯、且便于观察是否集满）。' +
+            (d === 'heavy' ? ' 也可用 <b>向上排空气法</b>。' : (d === 'light' ? ' 也可用 <b>向下排空气法</b>。' : ' 密度接近空气，<b>不宜</b>用排空气法。'));
+    } else {
+      if(d === 'heavy'){ txt = '✔ 该气体能溶于水 → <b>不能用排水法</b>；密度比空气大 → 用 <b>向上排空气法</b>（导管伸入瓶底）。典型：<b>Cl₂、CO₂、SO₂、NO₂、HCl</b>。若目标气体是 Cl₂，还可用 <b>排饱和食盐水法</b>。'; }
+      else if(d === 'light'){ txt = '✔ 能溶于水 → <b>不能用排水法</b>；密度比空气小 → 用 <b>向下排空气法</b>（导管伸入瓶底，瓶口向下）。典型：<b>NH₃</b>。'; }
+      else { txt = '⚠ 能溶于水且密度接近空气 → 排空气法与排水法都不理想，需特殊方法（如排特殊溶液）。典型：<b>CO、N₂</b>（用排水法，因其难溶）。'; }
+    }
+    document.getElementById('collectOut').innerHTML = txt;
+  }
+
+  /* ---------- 装置搭建 ---------- */
+  var built = {slot1:false,slot2:false,slot3:false,slot4:false,slot5:false};
+  document.querySelectorAll('.slot').forEach(function(slot){
+    slot.querySelectorAll('.opts button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var ok = btn.dataset.ok === '1';
+        btn.classList.add(ok ? 'correct' : 'wrong');
+        slot.classList.add('done');
+        if(ok && !built[slot.id]){
+          built[slot.id] = true;
+          slot.querySelectorAll('.opts button').forEach(function(b2){ if(b2.dataset.ok !== '1') b2.style.opacity=.45; });
+        }
+        var n = Object.values(built).filter(Boolean).length;
+        document.getElementById('buildScore').textContent = '装置完成度：' + n + ' / 5' + (n===5 ? ' —— 🎉 搭建成功，可以通气啦！' : '');
+      });
+    });
+  });
+
+  /* ---------- 测验 ---------- */
+  ['q1box','q2box','q3box'].forEach(function(boxId){
+    var box = document.getElementById(boxId);
+    var qs = box.querySelectorAll('.quiz');
+    var scoreEl = box.querySelector('.score');
+    var done = {};
+    qs.forEach(function(q, idx){
+      var ans = q.dataset.ans;
+      q.querySelectorAll('.opt').forEach(function(o){
+        o.addEventListener('click', function(){
+          if(q.classList.contains('done')) return;
+          var v = o.dataset.v;
+          if(v === ans){ o.classList.add('correct'); if(!done[idx]){ done[idx] = true; } }
+          else { o.classList.add('wrong'); q.querySelectorAll('.opt').forEach(function(x){ if(x.dataset.v === ans) x.classList.add('correct'); }); }
+          q.classList.add('done');
+          var n = Object.keys(done).length;
+          scoreEl.textContent = '答对 ' + n + ' / ' + qs.length + ' 题' + (n === qs.length ? ' —— 🎉 全对，厉害！' : '');
+        });
+      });
+    });
+  });
+</script>
+</body>
+</html>

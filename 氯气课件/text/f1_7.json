@@ -1,0 +1,348 @@
+{
+ "anim_count": 9,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 22,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00012f",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 53,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000130",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 2,
+   "preset_class": 1,
+   "preset_id": 53,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000132",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 3,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000141",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 4,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000136",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 5,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00013c",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 6,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000135",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 7,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000131",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 8,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00013f",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "00000c",
+ "page_index": 7,
+ "shape_count": 17,
+ "shapes": [
+  {
+   "h": 45,
+   "id": "00012b",
+   "img": "pptx:\\ppt\\slides\\media\\image41.png/hcnui3",
+   "type": "picture",
+   "w": 222,
+   "x": 738,
+   "y": 0
+  },
+  {
+   "h": 45,
+   "id": "00012c",
+   "img": "pptx:\\ppt\\slides\\media\\image42.jpg/hcnui3",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "宋体",
+   "font_size": 27.99,
+   "h": 47,
+   "id": "00012d",
+   "text": "1.氯气与金属单质的反应\r",
+   "type": "shape",
+   "w": 365,
+   "x": 4,
+   "y": 58
+  },
+  {
+   "h": 171,
+   "id": "00012e",
+   "img": "pptx:\\ppt\\slides\\media\\image43.png/hcnui3",
+   "type": "picture",
+   "w": 303,
+   "x": 35,
+   "y": 187
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "宋体",
+   "font_size": 27.99,
+   "h": 79,
+   "id": "00012f",
+   "text": "剧烈燃烧，火焰呈黄色，产生大量白烟\r",
+   "type": "shape",
+   "w": 287,
+   "x": 51,
+   "y": 358
+  },
+  {
+   "h": 59,
+   "id": "000130",
+   "type": "picture",
+   "w": 247,
+   "x": 52,
+   "y": 427
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "楷体",
+   "font_size": 27.99,
+   "h": 98,
+   "id": "000131",
+   "text": "  氯气能与大多数金属化合生成金属氯化物，如果金属有变价，一般得到高价态氯化物\r",
+   "type": "shape",
+   "w": 855,
+   "x": 52,
+   "y": 89
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "楷体",
+   "font_size": 27.99,
+   "h": 47,
+   "id": "000132",
+   "text": "（白烟）\r",
+   "type": "shape",
+   "w": 136,
+   "x": 179,
+   "y": 480
+  },
+  {
+   "h": 169,
+   "id": "000133",
+   "img": "pptx:\\ppt\\slides\\media\\image44.png/hcnui3",
+   "type": "picture",
+   "w": 234,
+   "x": 679,
+   "y": 187
+  },
+  {
+   "h": 171,
+   "id": "000134",
+   "img": "pptx:\\ppt\\slides\\media\\image45.png/hcnui3",
+   "type": "picture",
+   "w": 242,
+   "x": 386,
+   "y": 187
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "楷体",
+   "font_size": 27.99,
+   "h": 47,
+   "id": "000135",
+   "text": "（棕黄色烟）\r",
+   "type": "shape",
+   "w": 188,
+   "x": 701,
+   "y": 466
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "楷体",
+   "font_size": 27.99,
+   "h": 47,
+   "id": "000136",
+   "text": "（棕褐色烟）\r",
+   "type": "shape",
+   "w": 191,
+   "x": 438,
+   "y": 466
+  },
+  {
+   "children": [
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 1.5,
+     "h": 2,
+     "id": "000137",
+     "text": "\r",
+     "type": "shape",
+     "w": 27,
+     "x": 114,
+     "y": 19
+    },
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 1.5,
+     "h": 2,
+     "id": "000138",
+     "text": "\r",
+     "type": "shape",
+     "w": 27,
+     "x": 114,
+     "y": 22
+    },
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 1.5,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 14,
+     "id": "000139",
+     "text": "\r",
+     "type": "shape",
+     "w": 16,
+     "x": 119,
+     "y": 2
+    },
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 0.75,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 40,
+     "id": "00013a",
+     "text": "\r",
+     "type": "shape",
+     "w": 231,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 40,
+   "id": "00013b",
+   "type": "group",
+   "w": 231,
+   "x": 679,
+   "y": 413
+  },
+  {
+   "h": 54,
+   "id": "00013c",
+   "type": "picture",
+   "w": 222,
+   "x": 685,
+   "y": 406
+  },
+  {
+   "children": [
+    {
+     "border_color": "87FA7E",
+     "border_width": 4.5,
+     "fill": "00B0F0",
+     "fill_alpha": 2,
+     "h": 197,
+     "id": "00013d",
+     "text": "\r",
+     "type": "shape",
+     "w": 530,
+     "x": 0,
+     "y": 0
+    },
+    {
+     "fill": "none",
+     "font_color": "FFFFFF",
+     "font_name": "微软雅黑",
+     "font_size": 30.0,
+     "h": 161,
+     "id": "00013e",
+     "text": "思考：氯气制得FeCl3，盐酸却只得FeCl2？\r\r",
+     "type": "shape",
+     "w": 347,
+     "x": 73,
+     "y": 10
+    }
+   ],
+   "h": 197,
+   "id": "00013f",
+   "type": "group",
+   "w": 530,
+   "x": 430,
+   "y": 66
+  },
+  {
+   "border_color": "FFFFFF",
+   "border_width": 1.5,
+   "h": 2,
+   "id": "000140",
+   "text": "\r",
+   "type": "shape",
+   "w": 27,
+   "x": 568,
+   "y": 512
+  },
+  {
+   "h": 54,
+   "id": "000141",
+   "type": "picture",
+   "w": 222,
+   "x": 396,
+   "y": 414
+  }
+ ],
+ "version": 0
+}

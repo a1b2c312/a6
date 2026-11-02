@@ -1,0 +1,248 @@
+{
+ "anim_count": 4,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00017f",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000182",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 2,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000185",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 3,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000188",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "00000e",
+ "page_index": 9,
+ "shape_count": 9,
+ "shapes": [
+  {
+   "h": 227,
+   "id": "00017c",
+   "img": "pptx:\\ppt\\slides\\media\\image2.png/hcnui3",
+   "type": "picture",
+   "w": 303,
+   "x": 544,
+   "y": 291
+  },
+  {
+   "children": [
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 0.75,
+     "fill": "F2F2F2",
+     "h": 48,
+     "id": "00017d",
+     "text": "\r",
+     "type": "shape",
+     "w": 936,
+     "x": 0,
+     "y": 4
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 28.0,
+     "h": 89,
+     "id": "00017e",
+     "text": "实验现象1：纯净的H2在Cl2中安静地燃烧，发出苍白色火焰，瓶口有白雾。\r",
+     "type": "shape",
+     "w": 936,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 89,
+   "id": "00017f",
+   "type": "group",
+   "w": 936,
+   "x": 24,
+   "y": 185
+  },
+  {
+   "children": [
+    {
+     "fill": "none",
+     "font_color": "FF0000",
+     "font_name": "Times New Roman",
+     "font_size": 35.0,
+     "h": 65,
+     "id": "000180",
+     "text": "H2 + Cl2 === 2HCl\r",
+     "type": "shape",
+     "w": 341,
+     "x": 0,
+     "y": 14
+    },
+    {
+     "fill": "none",
+     "font_color": "FF0000",
+     "font_name": "微软雅黑",
+     "font_size": 24.0,
+     "h": 51,
+     "id": "000181",
+     "text": "点燃\r",
+     "type": "shape",
+     "w": 95,
+     "x": 123,
+     "y": 0
+    }
+   ],
+   "h": 78,
+   "id": "000182",
+   "type": "group",
+   "w": 341,
+   "x": 90,
+   "y": 239
+  },
+  {
+   "children": [
+    {
+     "fill": "none",
+     "font_color": "FF0000",
+     "font_name": "Times New Roman",
+     "font_size": 35.0,
+     "h": 65,
+     "id": "000183",
+     "text": "H2 + Cl2 === 2HCl\r",
+     "type": "shape",
+     "w": 306,
+     "x": 0,
+     "y": 13
+    },
+    {
+     "fill": "none",
+     "font_color": "FF0000",
+     "font_name": "微软雅黑",
+     "font_size": 24.0,
+     "h": 51,
+     "id": "000184",
+     "text": "光照\r",
+     "type": "shape",
+     "w": 77,
+     "x": 135,
+     "y": 0
+    }
+   ],
+   "h": 78,
+   "id": "000185",
+   "type": "group",
+   "w": 306,
+   "x": 91,
+   "y": 320
+  },
+  {
+   "children": [
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 0.75,
+     "fill": "F2F2F2",
+     "h": 50,
+     "id": "000186",
+     "text": "\r",
+     "type": "shape",
+     "w": 420,
+     "x": 0,
+     "y": 0
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 24.0,
+     "h": 88,
+     "id": "000187",
+     "text": "实验现象2：剧烈反应，发生爆炸。\r",
+     "type": "shape",
+     "w": 420,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 88,
+   "id": "000188",
+   "type": "group",
+   "w": 420,
+   "x": 43,
+   "y": 418
+  },
+  {
+   "fill": "none",
+   "font_color": "C00000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 88,
+   "id": "000189",
+   "text": "点燃安静地烧，光照却爆炸？\r\r",
+   "type": "shape",
+   "w": 271,
+   "x": 32,
+   "y": 101
+  },
+  {
+   "border_alpha": 100,
+   "border_color": "FFFFFF",
+   "border_width": 0.75,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "font_color": "000000",
+   "font_name": "宋体",
+   "font_size": 27.99,
+   "h": 46,
+   "id": "00018a",
+   "text": "2.氯气与非金属单质的反应\r",
+   "type": "shape",
+   "w": 437,
+   "x": -29,
+   "y": 55
+  },
+  {
+   "h": 45,
+   "id": "00018b",
+   "img": "pptx:\\ppt\\slides\\media\\image3.png/hcnui3",
+   "type": "picture",
+   "w": 222,
+   "x": 738,
+   "y": 0
+  },
+  {
+   "h": 45,
+   "id": "00018c",
+   "img": "pptx:\\ppt\\slides\\media\\image4.jpg/hcnui3",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  }
+ ],
+ "version": 0
+}

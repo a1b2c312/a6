@@ -1,0 +1,55 @@
+{
+  "p1": {
+    "file_id": "9FDD1BF3-A9CC-494E-9DD6-ACC6415BA94D",
+    "items": [
+      { "page": 1,  "shape": "00004c", "note": "学习目标" },
+      { "page": 2,  "shape": "00005a", "note": "页3 阅读P44 -> 新闻情境" },
+      { "page": 3,  "shape": "0000ac", "note": "页4 舍勒" },
+      { "page": 3,  "shape": "0000ad", "note": "页4 戴维" },
+      { "page": 4,  "shape": "0000d1", "note": "页5 思考与交流" },
+      { "page": 5,  "shape": "0000f5", "note": "页6 闻气体的方法" },
+      { "page": 6,  "shape": "00012f", "note": "页7 原子结构" },
+      { "page": 7,  "shape": "000183", "note": "页8 思考 FeCl3" },
+      { "page": 9,  "shape": "0001e8", "note": "页10 H2反应实验标题" },
+      { "page": 10, "shape": "000209", "note": "页11 燃烧本质" },
+      { "page": 11, "shape": "000233", "note": "页12 氯水消毒" },
+      { "page": 12, "shape": "00025d", "note": "页13 褪色原因" },
+      { "page": 13, "shape": "0002a8", "note": "页14 石蕊先红后褪色" },
+      { "page": 14, "shape": "0002c4", "note": "页15 例3" }
+    ]
+  },
+  "p2": {
+    "file_id": "58CFAD98-AC4B-4CE9-B338-F242415CA283",
+    "items": [
+      { "page": 1,  "shape": "000040", "note": "学习目标" },
+      { "page": 2,  "shape": "000066", "note": "页3 氯水微粒" },
+      { "page": 3,  "shape": "0000c4", "note": "页4 不稳定性" },
+      { "page": 4,  "shape": "0000ed", "note": "页5 阅读P48" },
+      { "page": 4,  "shape": "0000f1", "note": "页5 氯水久置" },
+      { "page": 5,  "shape": "000114", "note": "页6 三兄弟比较" },
+      { "page": 6,  "shape": "000157", "note": "页7 练习导入" },
+      { "page": 7,  "shape": "0001a8", "note": "页8 阅读P47" },
+      { "page": 7,  "shape": "0001a5", "note": "页8 问题1" },
+      { "page": 8,  "shape": "0001c7", "note": "页9 问题2 84消毒液" },
+      { "page": 9,  "shape": "000210", "note": "页10 问题3 漂白粉" }
+    ]
+  },
+  "p3": {
+    "file_id": "90F25DF8-232C-47E0-B6B5-6823EF1CB50F",
+    "items": [
+      { "page": 1,  "shape": "000056", "note": "教学目标" },
+      { "page": 2,  "shape": "00008d", "note": "页3 阅读P48" },
+      { "page": 3,  "shape": "0000f4", "note": "页4 思考1 稀盐酸" },
+      { "page": 3,  "shape": "0000f3", "note": "页4 思考2 产量偏低" },
+      { "page": 5,  "shape": "000178", "note": "页6 杂质" },
+      { "page": 6,  "shape": "0001ae", "note": "页7 除杂顺序" },
+      { "page": 8,  "shape": "000233", "note": "页9 什么作用" },
+      { "page": 9,  "shape": "000260", "note": "页10 长进短出" },
+      { "page": 9,  "shape": "000263", "note": "页10 澄清石灰水" },
+      { "page": 10, "shape": "000284", "note": "页11 方法导引" },
+      { "page": 12, "shape": "0002af", "note": "页13 拓展思考" },
+      { "page": 13, "shape": "0002cd", "note": "页14 阅读P49" },
+      { "page": 13, "shape": "0002ce", "note": "页14 问题串" }
+    ]
+  }
+}

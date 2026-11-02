@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>化学小屋 · 课件导航</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+    min-height:100vh; color:#1f2d3d;
+    background:radial-gradient(1200px 600px at 15% -10%, #e0f2fe 0%, transparent 60%),
+               radial-gradient(1000px 500px at 90% 0%, #d1fae5 0%, transparent 55%),
+               #f1f5f9;
+  }
+  /* 漂浮分子装饰 */
+  .blob { position:fixed; border-radius:50%; filter:blur(8px); opacity:.35; z-index:0; }
+  .b1 { width:160px;height:160px; background:#38bdf8; top:12%; left:6%; animation:float 9s ease-in-out infinite; }
+  .b2 { width:110px;height:110px; background:#34d399; bottom:14%; right:8%; animation:float 11s ease-in-out infinite reverse; }
+  .b3 { width:80px;height:80px; background:#a78bfa; top:60%; left:12%; animation:float 13s ease-in-out infinite; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-26px)} }
+
+  .wrap { position:relative; z-index:1; max-width:1080px; margin:0 auto; padding:54px 22px 60px; }
+  .head { text-align:center; margin-bottom:14px; }
+  .head .badge {
+    display:inline-block; padding:6px 18px; border-radius:30px; font-size:14px; letter-spacing:2px;
+    background:rgba(56,189,248,.15); color:#0369a1; border:1px solid rgba(56,189,248,.4); margin-bottom:14px;
+  }
+  .head h1 { font-size:46px; letter-spacing:6px; background:linear-gradient(90deg,#0ea5e9,#10b981); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .head p { color:#64748b; font-size:17px; margin-top:10px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px; margin-top:38px; }
+  .card {
+    position:relative; background:#fff; border-radius:18px; padding:26px 24px 22px; overflow:hidden;
+    box-shadow:0 6px 22px rgba(15,23,42,.08); border:1px solid #e2e8f0;
+    transition:transform .25s ease, box-shadow .25s ease; text-decoration:none; color:inherit; display:block;
+  }
+  .card:hover { transform:translateY(-6px); box-shadow:0 14px 32px rgba(14,165,233,.22); }
+  .card .ic {
+    width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+    font-size:30px; margin-bottom:16px; background:linear-gradient(135deg,#e0f2fe,#d1fae5);
+  }
+  .card h3 { font-size:21px; color:#0f172a; margin-bottom:8px; }
+  .card .desc { font-size:14.5px; color:#64748b; line-height:1.6; min-height:44px; }
+  .card .go {
+    margin-top:16px; display:inline-flex; align-items:center; gap:6px; font-size:15px; font-weight:600; color:#0284c7;
+  }
+  .card .tag {
+    position:absolute; top:18px; right:18px; font-size:12px; padding:3px 10px; border-radius:20px;
+    background:#f1f5f9; color:#94a3b8;
+  }
+  .card.ppt .ic { background:linear-gradient(135deg,#fef3c7,#fee2e2); }
+  .card.res .ic { background:linear-gradient(135deg,#ede9fe,#e0e7ff); }
+
+  .foot { text-align:center; color:#94a3b8; font-size:13.5px; margin-top:46px; line-height:1.8; }
+  .foot b { color:#475569; }
+</style>
+</head>
+<body>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+
+  <div class="wrap">
+    <div class="head">
+      <div class="badge">CHEM HOUSE</div>
+      <h1>化 学 小 屋</h1>
+      <p>高一化学课件导航 · 点击卡片即可进入对应课件</p>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="./氯气互动课件/index.html">
+        <span class="tag">互动网页</span>
+        <div class="ic">🟢</div>
+        <h3>氯气互动课件</h3>
+        <div class="desc">氯气三册合一互动课件：性质、实验室制法、用途，边学边练。</div>
+        <span class="go">进入课件 →</span>
+      </a>
+
+      <a class="card" href="./化学互动课堂/index.html">
+        <span class="tag">互动网页</span>
+        <div class="ic">🧪</div>
+        <h3>化学互动课堂</h3>
+        <div class="desc">通用化学互动课堂练习，含多章节随堂训练。</div>
+        <span class="go">进入课件 →</span>
+      </a>
+
+      <a class="card" href="./化学月考课件/index.html">
+        <span class="tag">互动网页</span>
+        <div class="ic">📝</div>
+        <h3>高一化学月考讲评（网页版）</h3>
+        <div class="desc">第一次月考试卷讲评：选择题逐题点按出答案，非选择题逐大题展开。</div>
+        <span class="go">进入课件 →</span>
+      </a>
+
+      <a class="card ppt" href="./化学月考课件PPT/高一化学第一次月考讲评.pptx">
+        <span class="tag">PPT 文件</span>
+        <div class="ic">📊</div>
+        <h3>高一化学月考讲评（PPT 版）</h3>
+        <div class="desc">可在 PowerPoint / WPS 中放映，含原卷图示与点击出现答案动画。</div>
+        <span class="go">下载 / 打开 PPT →</span>
+      </a>
+
+      <a class="card" href="./钠及其化合物互动课件/钠及其化合物-互动课件.html">
+        <span class="tag">互动网页</span>
+        <div class="ic">🔥</div>
+        <h3>钠及其化合物互动课件</h3>
+        <div class="desc">钠、氧化钠、过氧化钠、碳酸钠与碳酸氢钠的互动讲解。</div>
+        <span class="go">进入课件 →</span>
+      </a>
+
+      <a class="card res" href="./氯气课件/">
+        <span class="tag">素材库</span>
+        <div class="ic">📁</div>
+        <h3>氯气课件（素材库）</h3>
+        <div class="desc">氯气相关图片、文本等备课素材集合，便于二次加工。</div>
+        <span class="go">浏览素材 →</span>
+      </a>
+    </div>
+
+    <div class="foot">
+      <b>化学小屋</b> · 瑞昌一中 高一化学备课资源<br>
+      本页为课件总入口，建议收藏；课件内容版权归命题与整理者所有。
+    </div>
+  </div>
+</body>
+</html>

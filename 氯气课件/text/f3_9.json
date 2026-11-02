@@ -1,0 +1,236 @@
+{
+ "anim_count": 4,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000212",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000215",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 2,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000218",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 3,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00020f",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "00000e",
+ "page_index": 9,
+ "shape_count": 9,
+ "shapes": [
+  {
+   "fill": "none",
+   "font_color": "FFFFFF",
+   "font_name": "微软雅黑",
+   "font_size": 1.0,
+   "h": 26,
+   "id": "00020a",
+   "text": "作者编号：35005\r",
+   "type": "shape",
+   "w": 16,
+   "x": 48,
+   "y": 481
+  },
+  {
+   "h": 1,
+   "id": "00020b",
+   "img": "pptx:\\ppt\\slides\\media\\image2.png/gedry8",
+   "type": "picture",
+   "w": 1,
+   "x": 66,
+   "y": 29
+  },
+  {
+   "h": 389,
+   "id": "00020c",
+   "img": "pptx:\\ppt\\slides\\media\\image3.png/gedry8",
+   "type": "picture",
+   "w": 848,
+   "x": 66,
+   "y": 97
+  },
+  {
+   "children": [
+    {
+     "border_color": "6096E6",
+     "border_width": 1.0,
+     "fill": "F7FAFD",
+     "h": 65,
+     "id": "00020d",
+     "text": "\r",
+     "type": "shape",
+     "w": 848,
+     "x": 0,
+     "y": 19
+    },
+    {
+     "fill": "none",
+     "font_color": "156389",
+     "font_name": "Times New Roman",
+     "font_size": 24.0,
+     "h": 96,
+     "id": "00020e",
+     "text": "       尾气处理时，不能用澄清石灰水吸收氯气，因为澄清石灰水中Ca(OH)2的含量少，吸收不完全。\r",
+     "type": "shape",
+     "w": 848,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 96,
+   "id": "00020f",
+   "type": "group",
+   "w": 848,
+   "x": 66,
+   "y": 422
+  },
+  {
+   "children": [
+    {
+     "border_color": "595959",
+     "border_width": 0.75,
+     "fill": "FF9700",
+     "h": 73,
+     "id": "000210",
+     "text": "\r",
+     "type": "shape",
+     "w": 246,
+     "x": 0,
+     "y": 0
+    },
+    {
+     "fill": "none",
+     "font_color": "FFFFFF",
+     "font_name": "微软雅黑",
+     "font_size": 24.0,
+     "h": 73,
+     "id": "000211",
+     "text": "仪器组装顺序：\r自下而上、从左到右\r",
+     "type": "shape",
+     "w": 239,
+     "x": 3,
+     "y": 0
+    }
+   ],
+   "h": 74,
+   "id": "000212",
+   "type": "group",
+   "w": 246,
+   "x": 244,
+   "y": 44
+  },
+  {
+   "children": [
+    {
+     "border_color": "404040",
+     "border_width": 0.75,
+     "fill": "00B0F0",
+     "h": 97,
+     "id": "000213",
+     "text": "\r",
+     "type": "shape",
+     "w": 239,
+     "x": 0,
+     "y": 0
+    },
+    {
+     "fill": "none",
+     "font_color": "FFFFFF",
+     "font_name": "微软雅黑",
+     "font_size": 24.0,
+     "h": 102,
+     "id": "000214",
+     "text": "为什么要“长进短出”？\r反过来接会怎样？\r\r",
+     "type": "shape",
+     "w": 230,
+     "x": 4,
+     "y": 1
+    }
+   ],
+   "h": 103,
+   "id": "000215",
+   "type": "group",
+   "w": 239,
+   "x": 683,
+   "y": 58
+  },
+  {
+   "children": [
+    {
+     "border_color": "595959",
+     "border_width": 0.75,
+     "fill": "F8F63E",
+     "h": 74,
+     "id": "000216",
+     "text": "\r",
+     "type": "shape",
+     "w": 239,
+     "x": 0,
+     "y": 0
+    },
+    {
+     "fill": "none",
+     "font_color": "262626",
+     "font_name": "微软雅黑",
+     "font_size": 24.0,
+     "h": 102,
+     "id": "000217",
+     "text": "能用澄清石灰水代替烧碱吗？为什么？\r\r",
+     "type": "shape",
+     "w": 232,
+     "x": 3,
+     "y": 0
+    }
+   ],
+   "h": 102,
+   "id": "000218",
+   "type": "group",
+   "w": 239,
+   "x": 721,
+   "y": 208
+  },
+  {
+   "h": 46,
+   "id": "000219",
+   "img": "pptx:\\ppt\\slides\\media\\image4.png/gedry8",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "h": 45,
+   "id": "00021a",
+   "img": "pptx:\\ppt\\slides\\media\\image5.png/gedry8",
+   "type": "picture",
+   "w": 222,
+   "x": 738,
+   "y": 0
+  }
+ ],
+ "version": 0
+}

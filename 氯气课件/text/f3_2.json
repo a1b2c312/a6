@@ -1,0 +1,815 @@
+{
+ "anim_count": 24,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000063",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000070",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 2,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000066",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 3,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000071",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 4,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000069",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 5,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000072",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 6,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00006c",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 7,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00006f",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 8,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000073",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 9,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000089",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 10,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000088",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 11,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000087",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 12,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000076",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 13,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000083",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 14,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000079",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 15,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000084",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 16,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00007c",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 17,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000085",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 18,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00007f",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 19,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000086",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 20,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000082",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 21,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00008a",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 22,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00008b",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 23,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00008c",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "000007",
+ "page_index": 2,
+ "shape_count": 29,
+ "shapes": [
+  {
+   "fill": "none",
+   "font_color": "FFFFFF",
+   "font_name": "微软雅黑",
+   "font_size": 1.0,
+   "h": 26,
+   "id": "00005f",
+   "text": "作者编号：35005\r",
+   "type": "shape",
+   "w": 16,
+   "x": 48,
+   "y": 481
+  },
+  {
+   "h": 1,
+   "id": "000060",
+   "img": "pptx:\\ppt\\slides\\media\\image36.png/gedry8",
+   "type": "picture",
+   "w": 1,
+   "x": 66,
+   "y": 29
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 54,
+     "id": "000061",
+     "text": "\r",
+     "type": "shape",
+     "w": 81,
+     "x": 0,
+     "y": 12
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "Times New Roman",
+     "font_size": 20.0,
+     "h": 70,
+     "id": "000062",
+     "text": "18世纪\r70年代\r",
+     "type": "shape",
+     "w": 81,
+     "x": 2,
+     "y": 0
+    }
+   ],
+   "h": 70,
+   "id": "000063",
+   "type": "group",
+   "w": 83,
+   "x": 76,
+   "y": 125
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 54,
+     "id": "000064",
+     "text": "\r",
+     "type": "shape",
+     "w": 101,
+     "x": 0,
+     "y": 9
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 20.0,
+     "h": 63,
+     "id": "000065",
+     "text": "瑞典化学家舍勒\r",
+     "type": "shape",
+     "w": 101,
+     "x": 2,
+     "y": 0
+    }
+   ],
+   "h": 63,
+   "id": "000066",
+   "type": "group",
+   "w": 104,
+   "x": 190,
+   "y": 128
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 96,
+     "id": "000067",
+     "text": "\r",
+     "type": "shape",
+     "w": 170,
+     "x": 0,
+     "y": 11
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 20.0,
+     "h": 126,
+     "id": "000068",
+     "text": "将软锰矿（主要成分为MnO2）与浓盐酸混合加热\r",
+     "type": "shape",
+     "w": 170,
+     "x": 1,
+     "y": 0
+    }
+   ],
+   "h": 126,
+   "id": "000069",
+   "type": "group",
+   "w": 172,
+   "x": 325,
+   "y": 107
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 98,
+     "id": "00006a",
+     "text": "\r",
+     "type": "shape",
+     "w": 128,
+     "x": 0,
+     "y": 11
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 20.0,
+     "h": 111,
+     "id": "00006b",
+     "text": "产生一种黄绿色、有刺激性气味的气体\r",
+     "type": "shape",
+     "w": 128,
+     "x": 4,
+     "y": 0
+    }
+   ],
+   "h": 111,
+   "id": "00006c",
+   "type": "group",
+   "w": 133,
+   "x": 514,
+   "y": 106
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 47,
+     "id": "00006d",
+     "text": "\r",
+     "type": "shape",
+     "w": 76,
+     "x": 0,
+     "y": 15
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "Times New Roman",
+     "font_size": 20.0,
+     "h": 70,
+     "id": "00006e",
+     "text": " 未能\r 确认\r",
+     "type": "shape",
+     "w": 76,
+     "x": 2,
+     "y": 0
+    }
+   ],
+   "h": 70,
+   "id": "00006f",
+   "type": "group",
+   "w": 78,
+   "x": 676,
+   "y": 122
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 2,
+   "id": "000070",
+   "text": "\r",
+   "type": "shape",
+   "w": 34,
+   "x": 157,
+   "y": 164
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 0,
+   "id": "000071",
+   "text": "\r",
+   "type": "shape",
+   "w": 34,
+   "x": 292,
+   "y": 164
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 1,
+   "id": "000072",
+   "text": "\r",
+   "type": "shape",
+   "w": 34,
+   "x": 481,
+   "y": 165
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 0,
+   "id": "000073",
+   "text": "\r",
+   "type": "shape",
+   "w": 34,
+   "x": 643,
+   "y": 164
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 54,
+     "id": "000074",
+     "text": "\r",
+     "type": "shape",
+     "w": 81,
+     "x": 0,
+     "y": 1
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "Times New Roman",
+     "font_size": 20.0,
+     "h": 49,
+     "id": "000075",
+     "text": "1810年\r",
+     "type": "shape",
+     "w": 81,
+     "x": 2,
+     "y": 0
+    }
+   ],
+   "h": 55,
+   "id": "000076",
+   "type": "group",
+   "w": 83,
+   "x": 76,
+   "y": 277
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 54,
+     "id": "000077",
+     "text": "\r",
+     "type": "shape",
+     "w": 101,
+     "x": 0,
+     "y": 9
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 20.0,
+     "h": 63,
+     "id": "000078",
+     "text": "英国化学家戴维\r",
+     "type": "shape",
+     "w": 101,
+     "x": 2,
+     "y": 0
+    }
+   ],
+   "h": 63,
+   "id": "000079",
+   "type": "group",
+   "w": 104,
+   "x": 190,
+   "y": 270
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 68,
+     "id": "00007a",
+     "text": "\r",
+     "type": "shape",
+     "w": 142,
+     "x": 0,
+     "y": 1
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 20.0,
+     "h": 61,
+     "id": "00007b",
+     "text": "重做上述实验\r",
+     "type": "shape",
+     "w": 142,
+     "x": 3,
+     "y": 0
+    }
+   ],
+   "h": 68,
+   "id": "00007c",
+   "type": "group",
+   "w": 145,
+   "x": 325,
+   "y": 271
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 68,
+     "id": "00007d",
+     "text": "\r",
+     "type": "shape",
+     "w": 142,
+     "x": 0,
+     "y": 1
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 20.0,
+     "h": 61,
+     "id": "00007e",
+     "text": "得出同样结果\r",
+     "type": "shape",
+     "w": 142,
+     "x": 3,
+     "y": 0
+    }
+   ],
+   "h": 68,
+   "id": "00007f",
+   "type": "group",
+   "w": 145,
+   "x": 501,
+   "y": 271
+  },
+  {
+   "children": [
+    {
+     "border_color": "002060",
+     "border_width": 1.0,
+     "fill": "FFFFFF",
+     "fill_alpha": 100,
+     "h": 47,
+     "id": "000080",
+     "text": "\r",
+     "type": "shape",
+     "w": 80,
+     "x": 0,
+     "y": 12
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 20.0,
+     "h": 63,
+     "id": "000081",
+     "text": "确认为氯气\r",
+     "type": "shape",
+     "w": 80,
+     "x": 2,
+     "y": 0
+    }
+   ],
+   "h": 63,
+   "id": "000082",
+   "type": "group",
+   "w": 82,
+   "x": 678,
+   "y": 267
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 2,
+   "id": "000083",
+   "text": "\r",
+   "type": "shape",
+   "w": 34,
+   "x": 157,
+   "y": 306
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 0,
+   "id": "000084",
+   "text": "\r",
+   "type": "shape",
+   "w": 34,
+   "x": 292,
+   "y": 306
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 0,
+   "id": "000085",
+   "text": "\r",
+   "type": "shape",
+   "w": 34,
+   "x": 467,
+   "y": 306
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 0,
+   "id": "000086",
+   "text": "\r",
+   "type": "shape",
+   "w": 34,
+   "x": 644,
+   "y": 306
+  },
+  {
+   "border_color": "002060",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 0,
+   "id": "000087",
+   "rot": 90.0,
+   "text": "\r",
+   "type": "shape",
+   "w": 88,
+   "x": 72,
+   "y": 235
+  },
+  {
+   "fill": "none",
+   "font_color": "2C72B0",
+   "font_name": "Times New Roman",
+   "font_size": 20.0,
+   "h": 46,
+   "id": "000088",
+   "text": "30多年后\r",
+   "type": "shape",
+   "w": 123,
+   "x": 116,
+   "y": 214
+  },
+  {
+   "h": 163,
+   "id": "000089",
+   "img": "pptx:\\ppt\\slides\\media\\image37.png/gedry8",
+   "type": "picture",
+   "w": 134,
+   "x": 771,
+   "y": 87
+  },
+  {
+   "h": 158,
+   "id": "00008a",
+   "img": "pptx:\\ppt\\slides\\media\\image38.png/gedry8",
+   "type": "picture",
+   "w": 130,
+   "x": 74,
+   "y": 349
+  },
+  {
+   "fill": "none",
+   "font_color": "C00000",
+   "font_name": "Times New Roman",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "00008b",
+   "text": "MnO2＋4HCl(浓) === MnCl2＋Cl2↑＋2H2O \r",
+   "type": "shape",
+   "w": 541,
+   "x": 280,
+   "y": 418
+  },
+  {
+   "border_color": "C00000",
+   "border_width": 1.5,
+   "fill": "FFFFFF",
+   "fill_alpha": 100,
+   "h": 17,
+   "id": "00008c",
+   "text": "\r",
+   "type": "shape",
+   "w": 23,
+   "x": 508,
+   "y": 412
+  },
+  {
+   "fill": "none",
+   "font_color": "C00000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "00008d",
+   "text": "换作你是舍勒，怎么制出氯气？\r\r",
+   "type": "shape",
+   "w": 462,
+   "x": 34,
+   "y": 59
+  },
+  {
+   "h": 46,
+   "id": "00008e",
+   "img": "pptx:\\ppt\\slides\\media\\image39.png/gedry8",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "h": 46,
+   "id": "00008f",
+   "img": "pptx:\\ppt\\slides\\media\\image40.png/gedry8",
+   "type": "picture",
+   "w": 207,
+   "x": 753,
+   "y": 0
+  }
+ ],
+ "version": 0
+}

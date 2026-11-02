@@ -1,0 +1,253 @@
+{
+ "anim_count": 9,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00011d",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00011e",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 2,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00011f",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 3,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000120",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 4,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000121",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 5,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000122",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 6,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000123",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 7,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000124",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 8,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000125",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "00000b",
+ "page_index": 6,
+ "shape_count": 13,
+ "shapes": [
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 30.0,
+   "h": 226,
+   "id": "000119",
+   "text": "[练习] 你化身“氯水成分调查员”。请通过以下实验，揪出幕后的粒子嫌疑人：\r(1)观察氯水颜色，发现氯水呈浅黄绿色，证明氯水中含有的粒子是______(填化学式，下同)。\r(2)向氯水中滴入碳酸钠溶液，有气体生成，说明氯水中含有的粒子是__________。\r(3)在盛有氯水的试管中的有色布条褪色，说明氯水中含有的粒子是_________。\r\r",
+   "type": "shape",
+   "w": 964,
+   "x": 0,
+   "y": 46
+  },
+  {
+   "h": 46,
+   "id": "00011a",
+   "img": "pptx:\\ppt\\slides\\media\\image23.png/yzdbsz",
+   "type": "picture",
+   "w": 201,
+   "x": 759,
+   "y": 0
+  },
+  {
+   "h": 46,
+   "id": "00011b",
+   "img": "pptx:\\ppt\\slides\\media\\image24.jpg/yzdbsz",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "Times New Roman",
+   "font_size": 24.0,
+   "h": 263,
+   "id": "00011c",
+   "text": "(4)将紫色石蕊溶液滴入新制氯水中，溶液显红色，起作用的微粒是_______，过一会儿，溶液的颜色褪去，起作用的微粒是________。\r(5)向氯水中滴加AgNO3溶液有白色沉淀生成，证明氯水中含有的粒子是________。\r(6)氯水经光照后，颜色逐渐消失，并放出的气体是______，溶液的酸性_______(填“增强”“不变”或“减弱”)\r(7)将Cl2通入水中，溶液中具有氧化性的微粒是___________________。\r",
+   "type": "shape",
+   "w": 934,
+   "x": 0,
+   "y": 259
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 34.0,
+   "h": 63,
+   "id": "00011d",
+   "text": "Cl2\r",
+   "type": "shape",
+   "w": 134,
+   "x": 708,
+   "y": 97
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 34.0,
+   "h": 84,
+   "id": "00011e",
+   "text": "H+\r",
+   "type": "shape",
+   "w": 95,
+   "x": 759,
+   "y": 148
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 34.0,
+   "h": 84,
+   "id": "00011f",
+   "text": "HClO\r",
+   "type": "shape",
+   "w": 179,
+   "x": 708,
+   "y": 198
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 34.0,
+   "h": 63,
+   "id": "000120",
+   "text": "H+\r",
+   "type": "shape",
+   "w": 85,
+   "x": 724,
+   "y": 259
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 34.0,
+   "h": 84,
+   "id": "000121",
+   "text": "HClO\r",
+   "type": "shape",
+   "w": 179,
+   "x": 410,
+   "y": 282
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 34.0,
+   "h": 84,
+   "id": "000122",
+   "text": "Cl—\r",
+   "type": "shape",
+   "w": 135,
+   "x": 767,
+   "y": 319
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 34.0,
+   "h": 84,
+   "id": "000123",
+   "text": "O2\r",
+   "type": "shape",
+   "w": 85,
+   "x": 548,
+   "y": 361
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 32.0,
+   "h": 80,
+   "id": "000124",
+   "text": "增强\r",
+   "type": "shape",
+   "w": 117,
+   "x": 754,
+   "y": 371
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 34.0,
+   "h": 151,
+   "id": "000125",
+   "text": "Cl2、ClO—、HClO\r\r",
+   "type": "shape",
+   "w": 321,
+   "x": 502,
+   "y": 440
+  }
+ ],
+ "version": 0
+}

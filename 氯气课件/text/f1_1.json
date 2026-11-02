@@ -1,0 +1,55 @@
+{
+ "anim_count": 1,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00004c",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "000006",
+ "page_index": 1,
+ "shape_count": 3,
+ "shapes": [
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "黑体",
+   "font_size": 48.0,
+   "h": 80,
+   "id": "00004b",
+   "text": "学习目标\r",
+   "type": "shape",
+   "w": 265,
+   "x": 51,
+   "y": 117
+  },
+  {
+   "fill": "none",
+   "font_color": "312A21",
+   "font_name": "微软雅黑",
+   "font_size": 32.0,
+   "h": 208,
+   "id": "00004c",
+   "text": "1. 通过实验探究氯气的化学性质，培养证据推理意识——用证据说话，别靠猜。\r2. 从氧化还原反应、离子反应角度认识氯气的性质，并能用化学方程式正确表达。\r\r",
+   "type": "shape",
+   "w": 908,
+   "x": 51,
+   "y": 198
+  },
+  {
+   "h": 49,
+   "id": "00004d",
+   "img": "pptx:\\ppt\\slides\\media\\image22.png/hcnui3",
+   "type": "picture",
+   "w": 960,
+   "x": 0,
+   "y": 0
+  }
+ ],
+ "version": 0
+}

@@ -1,0 +1,490 @@
+{
+ "anim_count": 12,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00004f",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000057",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 2,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00005c",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 3,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000058",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 4,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000052",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 5,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000059",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 6,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000056",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 7,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000060",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 8,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000062",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 9,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000063",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 10,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000066",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 11,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000067",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "000007",
+ "page_index": 2,
+ "shape_count": 19,
+ "shapes": [
+  {
+   "h": 46,
+   "id": "000049",
+   "img": "pptx:\\ppt\\slides\\media\\image12.png/yzdbsz",
+   "type": "picture",
+   "w": 207,
+   "x": 753,
+   "y": 0
+  },
+  {
+   "h": 46,
+   "id": "00004a",
+   "img": "pptx:\\ppt\\slides\\media\\image13.jpg/yzdbsz",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 36.0,
+   "h": 80,
+   "id": "00004b",
+   "text": "氯气的化学性质：\r",
+   "type": "shape",
+   "w": 317,
+   "x": 25,
+   "y": 93
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "00004c",
+   "text": "（1）与金属单质反应\r",
+   "type": "shape",
+   "w": 388,
+   "x": 40,
+   "y": 173
+  },
+  {
+   "children": [
+    {
+     "fill": "none",
+     "font_color": "0070C0",
+     "font_name": "Times New Roman",
+     "font_size": 28.0,
+     "h": 56,
+     "id": "00004d",
+     "text": "2Na+Cl2 = 2NaCl\r",
+     "type": "shape",
+     "w": 297,
+     "x": 0,
+     "y": 6
+    },
+    {
+     "fill": "none",
+     "font_color": "0070C0",
+     "font_name": "微软雅黑",
+     "font_size": 28.0,
+     "h": 56,
+     "id": "00004e",
+     "text": "△\r",
+     "type": "shape",
+     "w": 67,
+     "x": 107,
+     "y": 0
+    }
+   ],
+   "h": 62,
+   "id": "00004f",
+   "type": "group",
+   "w": 297,
+   "x": 85,
+   "y": 217
+  },
+  {
+   "children": [
+    {
+     "fill": "none",
+     "font_color": "0070C0",
+     "font_name": "Times New Roman",
+     "font_size": 28.0,
+     "h": 56,
+     "id": "000050",
+     "text": "Cu+Cl2 = CuCl2\r",
+     "type": "shape",
+     "w": 278,
+     "x": 0,
+     "y": 6
+    },
+    {
+     "fill": "none",
+     "font_color": "0070C0",
+     "font_name": "微软雅黑",
+     "font_size": 28.0,
+     "h": 56,
+     "id": "000051",
+     "text": "△\r",
+     "type": "shape",
+     "w": 67,
+     "x": 93,
+     "y": 0
+    }
+   ],
+   "h": 62,
+   "id": "000052",
+   "type": "group",
+   "w": 278,
+   "x": 713,
+   "y": 217
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "000053",
+   "text": "（2）与非金属单质反应\r",
+   "type": "shape",
+   "w": 379,
+   "x": 35,
+   "y": 333
+  },
+  {
+   "children": [
+    {
+     "fill": "none",
+     "font_color": "0070C0",
+     "font_name": "Times New Roman",
+     "font_size": 28.0,
+     "h": 56,
+     "id": "000054",
+     "text": "H2＋Cl2===2HCl\r",
+     "type": "shape",
+     "w": 233,
+     "x": 0,
+     "y": 7
+    },
+    {
+     "fill": "none",
+     "font_color": "0070C0",
+     "font_name": "微软雅黑",
+     "font_size": 16.0,
+     "h": 42,
+     "id": "000055",
+     "text": "点燃\r",
+     "type": "shape",
+     "w": 70,
+     "x": 99,
+     "y": 0
+    }
+   ],
+   "h": 63,
+   "id": "000056",
+   "type": "group",
+   "w": 233,
+   "x": 368,
+   "y": 324
+  },
+  {
+   "fill": "none",
+   "font_color": "009459",
+   "font_name": "黑体",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "000057",
+   "text": "(火焰呈黄色，生成白色晶体 )\r",
+   "type": "shape",
+   "w": 416,
+   "x": 49,
+   "y": 275
+  },
+  {
+   "fill": "none",
+   "font_color": "009459",
+   "font_name": "黑体",
+   "font_size": 28.0,
+   "h": 82,
+   "id": "000058",
+   "text": "（铁丝剧烈燃烧，产生棕褐色的烟）\r",
+   "type": "shape",
+   "w": 482,
+   "x": 343,
+   "y": 180
+  },
+  {
+   "fill": "none",
+   "font_color": "008651",
+   "font_name": "黑体",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "000059",
+   "text": "（产生棕黄色的烟,溶液呈蓝绿色）\r",
+   "type": "shape",
+   "w": 471,
+   "x": 523,
+   "y": 267
+  },
+  {
+   "children": [
+    {
+     "fill": "none",
+     "font_color": "0070C0",
+     "font_name": "Times New Roman",
+     "font_size": 28.0,
+     "h": 56,
+     "id": "00005a",
+     "text": "2Fe+3Cl2 = 2FeCl3\r",
+     "type": "shape",
+     "w": 264,
+     "x": 0,
+     "y": 10
+    },
+    {
+     "fill": "none",
+     "font_color": "0070C0",
+     "font_name": "微软雅黑",
+     "font_size": 28.0,
+     "h": 56,
+     "id": "00005b",
+     "text": "△\r",
+     "type": "shape",
+     "w": 66,
+     "x": 114,
+     "y": 0
+    }
+   ],
+   "h": 66,
+   "id": "00005c",
+   "type": "group",
+   "w": 264,
+   "x": 378,
+   "y": 214
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "00005d",
+   "text": "（3）与水反应\r",
+   "type": "shape",
+   "w": 379,
+   "x": 40,
+   "y": 393
+  },
+  {
+   "children": [
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 0.75,
+     "h": 41,
+     "id": "00005e",
+     "text": "\r",
+     "type": "shape",
+     "w": 406,
+     "x": 0,
+     "y": 4
+    },
+    {
+     "fill": "none",
+     "font_color": "FFFFFF",
+     "font_name": "Calibri",
+     "font_size": 18.0,
+     "h": 41,
+     "id": "00005f",
+     "text": " \r",
+     "type": "shape",
+     "w": 406,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 45,
+   "id": "000060",
+   "type": "group",
+   "w": 406,
+   "x": 322,
+   "y": 389
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 36.0,
+   "h": 80,
+   "id": "000061",
+   "text": "温故知新\r",
+   "type": "shape",
+   "w": 178,
+   "x": 35,
+   "y": 33
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "000062",
+   "text": "思考：氯水里住着哪些“居民”？\r\r",
+   "type": "shape",
+   "w": 474,
+   "x": 35,
+   "y": 449
+  },
+  {
+   "h": 154,
+   "id": "000063",
+   "img": "pptx:\\ppt\\slides\\media\\image15.png/yzdbsz",
+   "type": "picture",
+   "w": 206,
+   "x": 750,
+   "y": 78
+  },
+  {
+   "children": [
+    {
+     "border_color": "AF5E20",
+     "border_width": 1.0,
+     "fill": "EE822F",
+     "h": 37,
+     "id": "000064",
+     "text": "\r",
+     "type": "shape",
+     "w": 206,
+     "x": 0,
+     "y": 8
+    },
+    {
+     "fill": "none",
+     "font_color": "FFFFFF",
+     "font_name": "微软雅黑",
+     "font_size": 24.0,
+     "h": 44,
+     "id": "000065",
+     "text": "浅黄绿色\r",
+     "type": "shape",
+     "w": 206,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 44,
+   "id": "000066",
+   "type": "group",
+   "w": 206,
+   "x": 750,
+   "y": 34
+  },
+  {
+   "fill": "none",
+   "font_color": "C00000",
+   "font_name": "Times New Roman",
+   "font_size": 28.0,
+   "h": 82,
+   "id": "000067",
+   "text": "Cl2 、H2O 、HClO 、 \rH+ 、Cl- 、ClO-、OH- \r",
+   "type": "shape",
+   "w": 470,
+   "x": 523,
+   "y": 434
+  }
+ ],
+ "version": 0
+}

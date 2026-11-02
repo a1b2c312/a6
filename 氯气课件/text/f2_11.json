@@ -1,0 +1,73 @@
+{
+ "anim_count": 1,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001ed",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "000010",
+ "page_index": 11,
+ "shape_count": 5,
+ "shapes": [
+  {
+   "h": 46,
+   "id": "0001e9",
+   "img": "pptx:\\ppt\\slides\\media\\image8.png/yzdbsz",
+   "type": "picture",
+   "w": 194,
+   "x": 767,
+   "y": 0
+  },
+  {
+   "h": 46,
+   "id": "0001ea",
+   "img": "pptx:\\ppt\\slides\\media\\image9.jpg/yzdbsz",
+   "type": "picture",
+   "w": 762,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "h": 413,
+   "id": "0001eb",
+   "img": "pptx:\\ppt\\slides\\media\\image10.png/yzdbsz",
+   "type": "picture",
+   "w": 824,
+   "x": 28,
+   "y": 64
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 30.0,
+   "h": 116,
+   "id": "0001ec",
+   "text": "大练P56\r",
+   "type": "shape",
+   "w": 105,
+   "x": 841,
+   "y": 46
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 30.0,
+   "h": 63,
+   "id": "0001ed",
+   "text": "D\r",
+   "type": "shape",
+   "w": 47,
+   "x": 258,
+   "y": 238
+  }
+ ],
+ "version": 0
+}

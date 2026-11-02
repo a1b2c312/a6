@@ -1,0 +1,15 @@
+=== boot pid=14864 ts=2026-10-27 15:28:00.428 cwd=D:\Users\何xing\2026-10-21-19-14-25\氯气课件\text argv=C:\Users\何xing\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js screenshot "C:/Users/何xing/Desktop/氯气课件-情境优化版/2.2.1氯气 第一课时（情境优化版）.pptx" --page-index 14 --out D:/Users/何xing/2026-10-21-19-14-25/氯气课件/shots/fix2_p15.png ===
+[2026-10-27 15:28:00.426] [INFO ] [pid=14864] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-10-27 15:28:00.473] [INFO ] [pid=14864] [slide-version] fileId=A0D9A552 version=0 filePath=C:\Users\何xing\Desktop\氯气课件-情境优化版\2.2.1氯气 第一课时（情境优化版）.pptx
+=== boot pid=19204 ts=2026-10-27 15:28:02.733 cwd=D:\Users\何xing\2026-10-21-19-14-25\氯气课件\text argv=C:\Users\何xing\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js screenshot "C:/Users/何xing/Desktop/氯气课件-情境优化版/2.2.1氯气 第一课时（情境优化版）.pptx" --page-index 7 --out D:/Users/何xing/2026-10-21-19-14-25/氯气课件/shots/fix2_p8.png ===
+[2026-10-27 15:28:02.731] [INFO ] [pid=19204] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-10-27 15:28:02.776] [INFO ] [pid=19204] [slide-version] fileId=A0D9A552 version=0 filePath=C:\Users\何xing\Desktop\氯气课件-情境优化版\2.2.1氯气 第一课时（情境优化版）.pptx
+=== boot pid=13340 ts=2026-10-27 15:31:41.618 cwd=D:\Users\何xing\2026-10-21-19-14-25\氯气课件\text argv=C:\Users\何xing\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js screenshot "C:/Users/何xing/Desktop/氯气课件-情境优化版/2.2.1氯气 第一课时（情境优化版）.pptx" --page-index 14 --out D:/Users/何xing/2026-10-21-19-14-25/氯气课件/shots/final_p1p15.png ===
+[2026-10-27 15:31:41.616] [INFO ] [pid=13340] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-10-27 15:31:41.666] [INFO ] [pid=13340] [slide-version] fileId=A0D9A552 version=0 filePath=C:\Users\何xing\Desktop\氯气课件-情境优化版\2.2.1氯气 第一课时（情境优化版）.pptx
+=== boot pid=6548 ts=2026-10-27 15:31:44.062 cwd=D:\Users\何xing\2026-10-21-19-14-25\氯气课件\text argv=C:\Users\何xing\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js screenshot "C:/Users/何xing/Desktop/氯气课件-情境优化版/2.2.1氯气 第一课时（情境优化版）.pptx" --page-index 7 --out D:/Users/何xing/2026-10-21-19-14-25/氯气课件/shots/final_p1p8.png ===
+[2026-10-27 15:31:44.060] [INFO ] [pid=6548] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-10-27 15:31:44.105] [INFO ] [pid=6548] [slide-version] fileId=A0D9A552 version=0 filePath=C:\Users\何xing\Desktop\氯气课件-情境优化版\2.2.1氯气 第一课时（情境优化版）.pptx
+=== boot pid=10984 ts=2026-10-27 15:31:47.309 cwd=D:\Users\何xing\2026-10-21-19-14-25\氯气课件\text argv=C:\Users\何xing\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js screenshot "C:/Users/何xing/Desktop/氯气课件-情境优化版/2.2.2氯气 第二课时（情境优化版）.pptx" --page-index 9 --out D:/Users/何xing/2026-10-21-19-14-25/氯气课件/shots/final_p2p10.png ===
+[2026-10-27 15:31:47.307] [INFO ] [pid=10984] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-10-27 15:31:47.355] [INFO ] [pid=10984] [slide-version] fileId=45D3073B version=0 filePath=C:\Users\何xing\Desktop\氯气课件-情境优化版\2.2.2氯气 第二课时（情境优化版）.pptx

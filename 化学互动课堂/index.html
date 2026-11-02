@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高中化学互动课堂 · 在线学习</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#fff; --ink:#1e293b; --muted:#64748b;
+    --primary:#2563eb; --primary-soft:#dbeafe; --accent:#f59e0b; --line:#e2e8f0;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.7;}
+  header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a 45%,#2563eb);
+    color:#fff; padding:44px 20px 38px; text-align:center; position:relative; overflow:hidden;
+  }
+  header .sym{
+    position:absolute; font-size:5rem; opacity:.10; font-weight:bold; user-select:none;
+  }
+  header h1{font-size:2rem; letter-spacing:3px; position:relative;}
+  header p{opacity:.92; margin-top:8px; font-size:1rem; position:relative;}
+  .wrap{max-width:980px; margin:0 auto; padding:28px 16px 70px;}
+  .sec-title{font-size:1.15rem; color:var(--primary); margin:26px 0 14px; display:flex; align-items:center; gap:8px;}
+  .sec-title::before{content:""; width:5px; height:20px; background:var(--primary); border-radius:3px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px;
+    box-shadow:0 1px 4px rgba(15,23,42,.05); transition:all .22s; text-decoration:none; color:inherit; display:block;
+  }
+  a.card:hover{transform:translateY(-4px); box-shadow:0 10px 22px rgba(37,99,235,.15); border-color:var(--primary);}
+  .card .ico{font-size:1.7rem;}
+  .card h3{font-size:1.05rem; margin:6px 0 6px;}
+  .card p{font-size:.9rem; color:var(--muted);}
+  .tags{margin-top:10px;}
+  .tags span{
+    display:inline-block; background:var(--primary-soft); color:var(--primary);
+    font-size:.76rem; padding:2px 9px; border-radius:999px; margin:3px 4px 0 0;
+  }
+  .card.soon{opacity:.62; cursor:default;}
+  .card.soon:hover{transform:none; box-shadow:0 1px 4px rgba(15,23,42,.05); border-color:var(--line);}
+  .badge{
+    display:inline-block; background:var(--accent); color:#fff; font-size:.72rem;
+    padding:2px 9px; border-radius:999px; vertical-align:middle; margin-left:6px;
+  }
+  /* 速查表 */
+  .cheat{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden;}
+  .cheat summary{
+    cursor:pointer; padding:14px 18px; font-weight:bold; font-size:1rem; list-style:none;
+  }
+  .cheat summary::-webkit-details-marker{display:none;}
+  .cheat summary::after{content:"▾"; float:right; color:var(--primary);}
+  .cheat[open] summary::after{content:"▴";}
+  .cheat .body{padding:0 18px 16px; font-size:.95rem;}
+  .cheat .body div{
+    border-top:1px dashed var(--line); padding:8px 0;
+    font-family:"Cambria Math",Consolas,serif;
+  }
+  sub{font-size:.72em;}
+  .tip{
+    background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:12px 16px;
+    font-size:.92rem; margin-top:20px;
+  }
+  footer{text-align:center; color:var(--muted); font-size:.85rem; padding:20px;}
+  .credit{font-size:.78rem; color:var(--muted);}
+  .credit .aigc{display:inline-block; padding:1px 8px; border-radius:4px; background:#94a3b8; color:#fff; font-weight:bold; font-size:.75rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="sym" style="left:6%; top:10%;">Na</span>
+  <span class="sym" style="right:8%; top:38%;">Cl</span>
+  <span class="sym" style="left:24%; bottom:-8%;">O</span>
+  <h1>高中化学 · 互动课堂</h1>
+  <p>点击进入课件，边看边练 —— 随时随地都能学</p>
+</header>
+
+<div class="wrap">
+
+  <div class="sec-title">📚 互动课件</div>
+  <div class="grid">
+    <a class="card" href="https://workbuddy.link/p/OfxLaCvIPXgPWQBGWE6iRP" target="_blank">
+      <div class="ico">⚗️</div>
+      <h3>钠及其化合物 <span class="badge">已上线</span></h3>
+      <p>过氧化钠、饱和碳酸钠通 CO₂、侯氏制碱法、碳酸钠与碳酸氢钠、钠露置空气的变化、钠的转化网络。</p>
+      <div class="tags">
+        <span>双线桥动画</span><span>点击揭晓答案</span><span>转化关系图</span><span>随堂测验</span>
+      </div>
+    </a>
+
+    <a class="card soon">
+      <div class="ico">🧪</div>
+      <h3>氯及其化合物 <span class="badge" style="background:#94a3b8;">敬请期待</span></h3>
+      <p>氯气的性质、实验室制法、氯离子的检验、漂白粉 —— 正在建设中。</p>
+      <div class="tags"><span>即将更新</span></div>
+    </a>
+
+    <a class="card soon">
+      <div class="ico">📐</div>
+      <h3>物质的量 <span class="badge" style="background:#94a3b8;">敬请期待</span></h3>
+      <p>阿伏加德罗常数、气体摩尔体积、一定物质的量浓度溶液的配制。</p>
+      <div class="tags"><span>即将更新</span></div>
+    </a>
+  </div>
+
+  <div class="sec-title">⚡ 钠核心方程式速查</div>
+  <details class="cheat">
+    <summary>点击展开 / 收起（共 10 条，考试高频）</summary>
+    <div class="body">
+      <div>2Na + 2H<sub>2</sub>O ＝ 2NaOH + H<sub>2</sub>↑　<span style="color:var(--muted);font-family:inherit;">（浮、熔、游、响、红）</span></div>
+      <div>4Na + O<sub>2</sub> ＝ 2Na<sub>2</sub>O　<span style="color:var(--muted);font-family:inherit;">（常温，白色）</span></div>
+      <div>2Na + O<sub>2</sub> —点燃→ Na<sub>2</sub>O<sub>2</sub>　<span style="color:var(--muted);font-family:inherit;">（淡黄色）</span></div>
+      <div>2Na<sub>2</sub>O<sub>2</sub> + 2H<sub>2</sub>O ＝ 4NaOH + O<sub>2</sub>↑</div>
+      <div>2Na<sub>2</sub>O<sub>2</sub> + 2CO<sub>2</sub> ＝ 2Na<sub>2</sub>CO<sub>3</sub> + O<sub>2</sub>　<span style="color:var(--muted);font-family:inherit;">（供氧剂）</span></div>
+      <div>Na<sub>2</sub>O + H<sub>2</sub>O ＝ 2NaOH</div>
+      <div>2NaOH + CO<sub>2</sub> ＝ Na<sub>2</sub>CO<sub>3</sub> + H<sub>2</sub>O</div>
+      <div>NaOH + CO<sub>2</sub>（过量）＝ NaHCO<sub>3</sub></div>
+      <div>Na<sub>2</sub>CO<sub>3</sub> + CO<sub>2</sub> + H<sub>2</sub>O ＝ 2NaHCO<sub>3</sub>↓</div>
+      <div>2NaHCO<sub>3</sub> —Δ→ Na<sub>2</sub>CO<sub>3</sub> + H<sub>2</sub>O + CO<sub>2</sub>↑</div>
+    </div>
+  </details>
+
+  <div class="tip">
+    💡 <b>学习建议：</b>先自己推导每一个方程式（抓住"价态变化 + 守恒"），再用课件里的互动环节检验；<br>
+    最后做一遍课件的随堂挑战，能全对就说明这块真的过关了。
+  </div>
+
+  <p class="credit" style="margin-top:18px;">课件内"钠露置空气变化过程"插图由 AI 生成（WorkBuddy）<span class="aigc">AI生成</span>，仅用于教学示意。</p>
+</div>
+
+<footer>高中化学互动课堂 · 供教学与自主学习使用</footer>
+</body>
+</html>

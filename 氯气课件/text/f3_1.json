@@ -1,0 +1,77 @@
+{
+ "anim_count": 0,
+ "animations": [],
+ "page_id": "000006",
+ "page_index": 1,
+ "shape_count": 6,
+ "shapes": [
+  {
+   "fill": "none",
+   "font_color": "FFFFFF",
+   "font_name": "微软雅黑",
+   "font_size": 1.0,
+   "h": 26,
+   "id": "000054",
+   "text": "作者编号：35005\r",
+   "type": "shape",
+   "w": 16,
+   "x": 48,
+   "y": 481
+  },
+  {
+   "h": 1,
+   "id": "000055",
+   "img": "pptx:\\ppt\\slides\\media\\image34.png/gedry8",
+   "type": "picture",
+   "w": 1,
+   "x": 66,
+   "y": 29
+  },
+  {
+   "fill": "none",
+   "font_color": "312A21",
+   "font_name": "微软雅黑",
+   "font_size": 34.0,
+   "h": 222,
+   "id": "000056",
+   "text": "1. 搞懂实验室制取氯气的反应原理，能说清每一步“为什么”。\r2. 会搭一套完整的制气装置：发生→除杂→收集→尾气处理，一步都不能少。\r\r",
+   "type": "shape",
+   "w": 721,
+   "x": 58,
+   "y": 201
+  },
+  {
+   "fill": "none",
+   "h": 62,
+   "id": "000057",
+   "text": "\r",
+   "type": "shape",
+   "w": 510,
+   "x": 36,
+   "y": 98
+  },
+  {
+   "fill": "none",
+   "font_color": "333333",
+   "font_name": "黑体",
+   "font_size": 48.0,
+   "h": 73,
+   "id": "000058",
+   "text": "教学目标\r",
+   "type": "shape",
+   "w": 207,
+   "x": 36,
+   "y": 98
+  },
+  {
+   "h": 49,
+   "id": "000059",
+   "img": "pptx:\\ppt\\slides\\media\\image35.png/gedry8",
+   "type": "picture",
+   "w": 960,
+   "x": 0,
+   "y": 0
+  }
+ ],
+ "version": 0
+}

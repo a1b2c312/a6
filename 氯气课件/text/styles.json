@@ -1,0 +1,951 @@
+{
+ "p1:00004c": {
+  "page": 1,
+  "runs": [
+   {
+    "start": 0,
+    "end": 3,
+    "font_size": 32.0,
+    "font_name": "Times New Roman",
+    "color": "312A21",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 3,
+    "end": 26,
+    "font_size": 32.0,
+    "font_name": "微软雅黑",
+    "color": "312A21",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 26,
+    "end": 27
+   },
+   {
+    "start": 27,
+    "end": 30,
+    "font_size": 32.0,
+    "font_name": "Times New Roman",
+    "color": "312A21",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 30,
+    "end": 44,
+    "font_size": 32.0,
+    "font_name": "微软雅黑",
+    "color": "312A21",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 44,
+    "end": 51,
+    "font_size": 32.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 51,
+    "end": 65,
+    "font_size": 32.0,
+    "font_name": "微软雅黑",
+    "color": "312A21",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 65,
+    "end": 66
+   }
+  ],
+  "length": 66
+ },
+ "p1:00005a": {
+  "page": 2,
+  "runs": [
+   {
+    "start": 0,
+    "end": 1
+   },
+   {
+    "start": 1,
+    "end": 3,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 3,
+    "end": 4,
+    "font_size": 28.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 4,
+    "end": 6,
+    "font_size": 37.24,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 6,
+    "end": 7,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 7,
+    "end": 8,
+    "font_size": 28.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 8,
+    "end": 13,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 13,
+    "end": 14,
+    "font_size": 28.0,
+    "font_name": "Calibri",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 14,
+    "end": 30,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 30,
+    "end": 31,
+    "font_size": 28.0,
+    "font_name": "Calibri",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 31,
+    "end": 44,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 44,
+    "end": 45,
+    "font_size": 28.0,
+    "font_name": "Calibri",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 45,
+    "end": 57,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 57,
+    "end": 58
+   },
+   {
+    "start": 58,
+    "end": 59
+   }
+  ],
+  "length": 59
+ },
+ "p1:0000ac": {
+  "page": 3,
+  "runs": [
+   {
+    "start": 0,
+    "end": 17,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 17,
+    "end": 20,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 20,
+    "end": 21,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 21,
+    "end": 24,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 24,
+    "end": 34,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 34,
+    "end": 48,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 48,
+    "end": 70,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 70,
+    "end": 71
+   }
+  ],
+  "length": 71
+ },
+ "p1:0000ad": {
+  "page": 3,
+  "runs": [
+   {
+    "start": 0,
+    "end": 31,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 31,
+    "end": 33,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 33,
+    "end": 35,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 35,
+    "end": 37,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 37,
+    "end": 38,
+    "font_size": 28.0,
+    "font_name": "仿宋",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 38,
+    "end": 39
+   }
+  ],
+  "length": 39
+ },
+ "p1:0000d1": {
+  "page": 4,
+  "runs": [
+   {
+    "start": 0,
+    "end": 11,
+    "font_size": 29.99,
+    "font_name": "黑体",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 11,
+    "end": 18,
+    "font_size": 29.99,
+    "font_name": "黑体",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 18,
+    "end": 31,
+    "font_size": 29.99,
+    "font_name": "黑体",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 31,
+    "end": 38,
+    "font_size": 29.99,
+    "font_name": "黑体",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 38,
+    "end": 81,
+    "font_size": 29.99,
+    "font_name": "黑体",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 81,
+    "end": 82
+   }
+  ],
+  "length": 82
+ },
+ "p1:0000f5": {
+  "page": 5,
+  "runs": [
+   {
+    "start": 0,
+    "end": 7,
+    "font_size": 28.99,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 7,
+    "end": 8
+   }
+  ],
+  "length": 8
+ },
+ "p1:00012f": {
+  "page": 6,
+  "runs": [
+   {
+    "start": 0,
+    "end": 17,
+    "font_size": 30.99,
+    "font_name": "黑体",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 17,
+    "end": 18
+   }
+  ],
+  "length": 18
+ },
+ "p1:000183": {
+  "page": 7,
+  "runs": [
+   {
+    "start": 0,
+    "end": 3,
+    "font_size": 35.0,
+    "font_name": "微软雅黑",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 3,
+    "end": 8,
+    "font_size": 35.0,
+    "font_name": "Times New Roman",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 8,
+    "end": 9,
+    "font_size": 46.55,
+    "font_name": "Times New Roman",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 9,
+    "end": 10,
+    "font_size": 35.0,
+    "font_name": "微软雅黑",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 10,
+    "end": 14,
+    "font_size": 35.0,
+    "font_name": "Times New Roman",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 14,
+    "end": 15,
+    "font_size": 46.55,
+    "font_name": "Times New Roman",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 15,
+    "end": 31,
+    "font_size": 35.0,
+    "font_name": "微软雅黑",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 31,
+    "end": 32
+   }
+  ],
+  "length": 32
+ },
+ "p1:0001e8": {
+  "page": 9,
+  "runs": [
+   {
+    "start": 0,
+    "end": 4,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 4,
+    "end": 5,
+    "font_size": 46.55,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 5,
+    "end": 9,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 9,
+    "end": 10
+   },
+   {
+    "start": 10,
+    "end": 11
+   }
+  ],
+  "length": 11
+ },
+ "p1:000209": {
+  "page": 10,
+  "runs": [
+   {
+    "start": 0,
+    "end": 1,
+    "font_size": 28.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 1,
+    "end": 3,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 3,
+    "end": 5,
+    "font_size": 28.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 5,
+    "end": 6,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 6,
+    "end": 8,
+    "font_size": 28.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 8,
+    "end": 9,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 9,
+    "end": 11,
+    "font_size": 28.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 11,
+    "end": 12,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 12,
+    "end": 13,
+    "font_size": 28.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 13,
+    "end": 14,
+    "font_size": 37.24,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 14,
+    "end": 38,
+    "font_size": 28.0,
+    "font_name": "微软雅黑",
+    "color": "000000",
+    "bold": false,
+    "italic": false
+   },
+   {
+    "start": 38,
+    "end": 39
+   }
+  ],
+  "length": 39
+ },
+ "p1:000233": {
+  "page": 11,
+  "runs": [
+   {
+    "start": 0,
+    "end": 48,
+    "font_size": 29.99,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 48,
+    "end": 49
+   }
+  ],
+  "length": 49
+ },
+ "p1:00025d": {
+  "page": 12,
+  "runs": [
+   {
+    "start": 0,
+    "end": 33,
+    "font_size": 32.0,
+    "font_name": "微软雅黑",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 33,
+    "end": 37,
+    "font_size": 32.0,
+    "font_name": "Times New Roman",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 37,
+    "end": 43,
+    "font_size": 32.0,
+    "font_name": "微软雅黑",
+    "color": "FFFFFF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 43,
+    "end": 44
+   }
+  ],
+  "length": 44
+ },
+ "p1:0002a8": {
+  "page": 13,
+  "runs": [
+   {
+    "start": 0,
+    "end": 17,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "0000FF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 17,
+    "end": 18,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "0000FF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 18,
+    "end": 27,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 27,
+    "end": 28,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 28,
+    "end": 29,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 29,
+    "end": 30
+   },
+   {
+    "start": 30,
+    "end": 31,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 31,
+    "end": 35,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 35,
+    "end": 36
+   },
+   {
+    "start": 36,
+    "end": 48,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "0000FF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 48,
+    "end": 49,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "0000FF",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 49,
+    "end": 53,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 53,
+    "end": 55,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 55,
+    "end": 62,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 62,
+    "end": 64,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 64,
+    "end": 65,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 65,
+    "end": 66
+   },
+   {
+    "start": 66,
+    "end": 67
+   }
+  ],
+  "length": 67
+ },
+ "p1:0002c4": {
+  "page": 14,
+  "runs": [
+   {
+    "start": 0,
+    "end": 1,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 1,
+    "end": 2,
+    "font_size": 30.0,
+    "font_name": "微软雅黑",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 2,
+    "end": 4,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "FF0000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 4,
+    "end": 58,
+    "font_size": 30.0,
+    "font_name": "宋体",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 58,
+    "end": 59
+   },
+   {
+    "start": 59,
+    "end": 63,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 63,
+    "end": 78,
+    "font_size": 30.0,
+    "font_name": "宋体",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 78,
+    "end": 79
+   },
+   {
+    "start": 79,
+    "end": 80
+   },
+   {
+    "start": 80,
+    "end": 81
+   },
+   {
+    "start": 81,
+    "end": 85,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 85,
+    "end": 103,
+    "font_size": 30.0,
+    "font_name": "宋体",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 103,
+    "end": 104,
+    "font_size": 30.0,
+    "font_name": "Times New Roman",
+    "color": "000000",
+    "bold": true,
+    "italic": false
+   },
+   {
+    "start": 104,
+    "end": 105
+   }
+  ],
+  "length": 105
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "anim_count": 1,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0002dd",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "000015",
+ "page_index": 16,
+ "shape_count": 10,
+ "shapes": [
+  {
+   "fill": "none",
+   "font_color": "FFFFFF",
+   "font_name": "微软雅黑",
+   "font_size": 1.0,
+   "h": 26,
+   "id": "0002d4",
+   "text": "作者编号：35005\r",
+   "type": "shape",
+   "w": 16,
+   "x": 48,
+   "y": 481
+  },
+  {
+   "h": 1,
+   "id": "0002d5",
+   "img": "pptx:\\ppt\\slides\\media\\image30.png/gedry8",
+   "type": "picture",
+   "w": 1,
+   "x": 66,
+   "y": 29
+  },
+  {
+   "h": 960,
+   "id": "0002d6",
+   "img": "pptx:\\ppt\\slides\\media\\image31.png/gedry8",
+   "rot": 90.0,
+   "type": "picture",
+   "w": 540,
+   "x": 210,
+   "y": -209
+  },
+  {
+   "border_alpha": 100,
+   "border_color": "FFFFFF",
+   "border_width": 0.75,
+   "fill": "9DC3E6",
+   "h": 440,
+   "id": "0002d7",
+   "rot": 270.0,
+   "text": "\r",
+   "type": "shape",
+   "w": 55,
+   "x": 712,
+   "y": 292
+  },
+  {
+   "border_alpha": 100,
+   "border_color": "FFFFFF",
+   "border_width": 0.75,
+   "fill": "FFE699",
+   "h": 204,
+   "id": "0002d8",
+   "rot": 249.87178333333333,
+   "text": "\r",
+   "type": "shape",
+   "w": 31,
+   "x": 516,
+   "y": 417
+  },
+  {
+   "border_alpha": 100,
+   "border_color": "FFFFFF",
+   "border_width": 0.75,
+   "fill": "FFFFFF",
+   "h": 58,
+   "id": "0002d9",
+   "text": "\r",
+   "type": "shape",
+   "w": 960,
+   "x": 0,
+   "y": 482
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "Times New Roman",
+   "font_size": 28.0,
+   "h": 473,
+   "id": "0002da",
+   "text": "1.下列检验Cl－的方法正确的是（         ）\r  A.向某溶液中滴加AgNO3溶液，若产生白色沉淀说明该溶液中有Cl－\r  B.向某溶液中先滴加盐酸，再滴加AgNO3溶液，若产生白色沉淀，说\r     明溶液中有Cl－\r C.向某溶液中先滴加AgNO3溶液，产生白色沉淀，再滴加盐酸，沉淀\r    不消失，说明溶液中有Cl－\r D.向某溶液中滴加用HNO3酸化的AgNO3溶液，若产生白色沉淀，说\r     明溶液中有Cl－\r",
+   "type": "shape",
+   "w": 902,
+   "x": 31,
+   "y": 53
+  },
+  {
+   "h": 46,
+   "id": "0002db",
+   "img": "pptx:\\ppt\\slides\\media\\image32.png/gedry8",
+   "type": "picture",
+   "w": 738,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "h": 46,
+   "id": "0002dc",
+   "img": "pptx:\\ppt\\slides\\media\\image33.png/gedry8",
+   "type": "picture",
+   "w": 201,
+   "x": 759,
+   "y": 0
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 30.0,
+   "h": 57,
+   "id": "0002dd",
+   "text": "D\r",
+   "type": "shape",
+   "w": 58,
+   "x": 458,
+   "y": 68
+  }
+ ],
+ "version": 0
+}

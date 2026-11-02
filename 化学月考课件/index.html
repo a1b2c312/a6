@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高一化学第一次月考 · 试卷讲评课件</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background:#eef2f7; color:#24303f; line-height:1.7;
+  }
+  .sub { font-size:.72em; vertical-align:-.25em; }
+  .sup { font-size:.72em; vertical-align:.45em; }
+  /* ===== 封面 ===== */
+  .cover {
+    min-height:88vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 55%,#0ea5e9 100%);
+    color:#fff; text-align:center; padding:40px 20px;
+  }
+  .cover .school { font-size:28px; letter-spacing:8px; opacity:.9; margin-bottom:18px; }
+  .cover h1 { font-size:52px; letter-spacing:4px; margin-bottom:14px; }
+  .cover h2 { font-size:30px; font-weight:400; letter-spacing:10px; margin-bottom:34px; }
+  .cover .meta { font-size:19px; opacity:.92; line-height:2.1; }
+  .cover .badge {
+    margin-top:34px; display:inline-block; padding:10px 30px; border:2px solid rgba(255,255,255,.6);
+    border-radius:40px; font-size:18px; letter-spacing:3px;
+  }
+  /* ===== 导航 ===== */
+  nav {
+    position:sticky; top:0; z-index:99; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.08);
+    display:flex; align-items:center; gap:14px; padding:10px 26px; flex-wrap:wrap;
+  }
+  nav .brand { font-weight:700; color:#1e3a8a; font-size:17px; margin-right:8px; }
+  nav a {
+    text-decoration:none; color:#334155; font-size:15px; padding:6px 14px; border-radius:20px; transition:.2s;
+  }
+  nav a:hover { background:#e0e9ff; color:#1e3a8a; }
+  nav .ctrl { margin-left:auto; display:flex; gap:8px; }
+  nav .ctrl button {
+    border:1px solid #cbd5e1; background:#fff; color:#334155; padding:6px 14px; border-radius:20px;
+    font-size:14px; cursor:pointer; transition:.2s;
+  }
+  nav .ctrl button:hover { background:#1e3a8a; color:#fff; border-color:#1e3a8a; }
+  /* ===== 主体 ===== */
+  .wrap { max-width:1000px; margin:0 auto; padding:34px 20px 80px; }
+  .sec-title {
+    display:flex; align-items:center; gap:14px; margin:46px 0 8px;
+  }
+  .sec-title .bar { width:8px; height:34px; border-radius:4px; background:linear-gradient(#2563eb,#0ea5e9); }
+  .sec-title h2 { font-size:26px; color:#1e3a8a; }
+  .sec-note { color:#64748b; font-size:15px; margin:0 0 20px 22px; }
+  /* ===== 题卡 ===== */
+  .card {
+    background:#fff; border-radius:14px; padding:24px 28px; margin-bottom:22px;
+    box-shadow:0 2px 12px rgba(30,58,138,.07); border-left:6px solid #2563eb;
+  }
+  .card.bigq { border-left-color:#0d9488; }
+  .qhead { display:flex; align-items:baseline; gap:10px; margin-bottom:10px; }
+  .qnum {
+    background:#2563eb; color:#fff; font-weight:700; border-radius:8px; padding:1px 12px; font-size:18px;
+  }
+  .card.bigq .qnum { background:#0d9488; }
+  .qscore { color:#94a3b8; font-size:14px; }
+  .stem { font-size:16.5px; margin-bottom:12px; white-space:pre-line; }
+  .opts { display:grid; grid-template-columns:1fr 1fr; gap:6px 24px; font-size:16px; margin-bottom:14px; }
+  .opts.one { grid-template-columns:1fr; }
+  .opts div { padding:2px 0; }
+  table.qtab { border-collapse:collapse; margin:8px 0 14px; font-size:15px; }
+  table.qtab th, table.qtab td { border:1px solid #cbd5e1; padding:6px 14px; text-align:center; }
+  table.qtab th { background:#f1f5f9; }
+  /* ===== 按钮 ===== */
+  .btn {
+    display:inline-flex; align-items:center; gap:8px; border:none; cursor:pointer;
+    background:linear-gradient(135deg,#2563eb,#3b82f6); color:#fff; font-size:16px; font-weight:600;
+    padding:10px 26px; border-radius:10px; transition:.25s; box-shadow:0 3px 10px rgba(37,99,235,.3);
+  }
+  .btn:hover { transform:translateY(-2px); box-shadow:0 6px 16px rgba(37,99,235,.4); }
+  .btn.open { background:linear-gradient(135deg,#d97706,#f59e0b); box-shadow:0 3px 10px rgba(217,119,6,.3); }
+  .btn .arr { transition:.25s; display:inline-block; }
+  .btn.open .arr { transform:rotate(180deg); }
+  /* ===== 答案区 ===== */
+  .ans { display:none; margin-top:18px; }
+  .ans.show { display:block; animation:fadeUp .35s ease; }
+  @keyframes fadeUp { from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;} }
+  .ans-key {
+    background:#ecfdf5; border:1.5px solid #10b981; color:#065f46; border-radius:10px;
+    padding:10px 18px; font-size:17px; font-weight:700; margin-bottom:12px;
+  }
+  .ans-key .lab { background:#10b981; color:#fff; border-radius:6px; padding:1px 10px; margin-right:10px; font-size:15px; }
+  .ans-exp {
+    background:#f8fafc; border:1.5px dashed #94a3b8; border-radius:10px; padding:14px 18px; font-size:15.5px;
+  }
+  .ans-exp .lab { color:#1e3a8a; font-weight:700; margin-right:8px; }
+  .ans-exp p { margin:6px 0; }
+  .ans-exp .wrong { color:#b91c1c; }
+  .ans-exp .right { color:#047857; font-weight:600; }
+  .eq {
+    display:block; background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:6px 14px;
+    margin:8px 0; font-size:16px; font-family:"Times New Roman", serif;
+  }
+  .blank-a { color:#047857; font-weight:700; }
+  .ans-line { margin:10px 0 4px; font-weight:600; color:#334155; }
+  .tip { background:#fffbeb; border-left:4px solid #f59e0b; padding:8px 14px; border-radius:0 8px 8px 0; margin-top:10px; font-size:14.5px; color:#78350f; }
+  /* 答案速查 */
+  .quick { display:none; flex-wrap:wrap; gap:8px; margin:14px 0 6px; }
+  .quick.show { display:flex; }
+  .quick span {
+    background:#fff; border:1.5px solid #cbd5e1; border-radius:8px; padding:4px 12px; font-size:15px;
+  }
+  .quick b { color:#1e3a8a; margin-right:6px; }
+  .quick em { font-style:normal; color:#0d9488; font-weight:700; }
+  /* 打印 */
+  @media print {
+    nav, .btn { display:none !important; }
+    .ans { display:block !important; }
+    body { background:#fff; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 封面 ============ -->
+<div class="cover">
+  <div class="school">瑞 昌 一 中</div>
+  <h1>2026—2027 学年上学期第一次月考</h1>
+  <h2>高 一 化 学 · 试卷讲评</h2>
+  <div class="meta">
+    命题人：何孟君 &nbsp;|&nbsp; 审题人：陈才<br>
+    满分 100 分 &nbsp;·&nbsp; 考试时间 75 分钟 &nbsp;·&nbsp; 2026 年 10 月
+  </div>
+  <div class="badge">点击每题按钮，查看答案与解析</div>
+</div>
+
+<nav>
+  <span class="brand">📐 化学月考讲评</span>
+  <a href="#sec1">Ⅰ 选择题（1—14）</a>
+  <a href="#sec2">Ⅱ 非选择题（15—18）</a>
+  <div class="ctrl">
+    <button onclick="toggleAll(true)">全部展开</button>
+    <button onclick="toggleAll(false)">全部收起</button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ 选择题 ============ -->
+<div class="sec-title" id="sec1"><span class="bar"></span><h2>第Ⅰ卷 · 选择题（共 42 分）</h2></div>
+<p class="sec-note">本题共 14 个小题，每小题 3 分。每小题只有一项符合题意。讲评时先让学生说思路，再点按钮核对。</p>
+
+<div class="quick" id="quickAns">
+  <span><b>1</b><em>B</em></span><span><b>2</b><em>C</em></span><span><b>3</b><em>D</em></span><span><b>4</b><em>A</em></span><span><b>5</b><em>B</em></span><span><b>6</b><em>C</em></span><span><b>7</b><em>D</em></span><span><b>8</b><em>C</em></span><span><b>9</b><em>A</em></span><span><b>10</b><em>A</em></span><span><b>11</b><em>D</em></span><span><b>12</b><em>C</em></span><span><b>13</b><em>B</em></span><span><b>14</b><em>D</em></span>
+</div>
+<div style="margin-bottom:18px"><button class="btn" style="font-size:14px;padding:7px 18px" onclick="document.getElementById('quickAns').classList.toggle('show')">显示 / 隐藏答案速查表</button></div>
+
+<!-- Q1 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">1</span><span class="qscore">3分 · 化学变化与物理变化</span></div>
+  <div class="stem">生活处处是化学，下列过程不涉及化学变化的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．米饭变酸　　B．绳锯木断　　C．铁刀生锈　　D．蜡炬成灰</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>B</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="wrong">A 米饭变酸</span>——食物腐败变质，有新物质生成，是化学变化；</p>
+      <p><span class="right">B 绳锯木断</span>——只是木料形状、位置发生改变，<b>没有新物质生成</b>，属于物理变化，选 B；</p>
+      <p><span class="wrong">C 铁刀生锈</span>——铁被氧气、水氧化生成铁锈，是化学变化；</p>
+      <p><span class="wrong">D 蜡炬成灰</span>——石蜡燃烧生成 CO<sub>2</sub> 和 H<sub>2</sub>O，是化学变化。</p>
+      <div class="tip">判断关键：是否有<b>新物质生成</b>。发光、放热、形状改变都不足以判断化学变化。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q2 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">2</span><span class="qscore">3分 · 胶体</span></div>
+  <div class="stem">关于胶体的下列说法正确的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．溶液、胶体、浊液均属于化合物
+B．胶体区别于其他分散系的本质特征是丁达尔效应
+C．实验室向沸水中滴加 FeCl<sub>3</sub> 饱和溶液至液体呈红褐色制备 Fe(OH)<sub>3</sub> 胶体
+D．用激光分别照射 CuSO<sub>4</sub> 溶液和 Fe(OH)<sub>3</sub> 胶体时，均可以看见一条光亮的通路</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>C</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="wrong">A</span> 三种分散系都是<b>混合物</b>，不是化合物；</p>
+      <p><span class="wrong">B</span> 本质特征是<b>分散质粒子直径在 1～100 nm 之间</b>，丁达尔效应只是区分溶液和胶体的<b>方法</b>；</p>
+      <p><span class="right">C ✔</span> 向沸水中滴加饱和 FeCl<sub>3</sub> 溶液、继续煮沸至红褐色，即得 Fe(OH)<sub>3</sub> 胶体，操作正确；</p>
+      <p><span class="wrong">D</span> 溶液<b>没有</b>丁达尔效应，只有 Fe(OH)<sub>3</sub> 胶体中能看到光亮通路。</p>
+      <div class="tip">Fe(OH)<sub>3</sub> 胶体制备口诀："沸水、滴加、红褐停"，不能搅拌、不能久沸。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q3 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">3</span><span class="qscore">3分 · 物质分类与电解质</span></div>
+  <div class="stem">下列关于纯净物、混合物、电解质、非电解质的正确组合为（&nbsp;&nbsp;&nbsp;&nbsp;）</div>
+  <table class="qtab">
+    <tr><th></th><th>纯净物</th><th>混合物</th><th>电解质</th><th>非电解质</th></tr>
+    <tr><td>A</td><td>盐酸</td><td>澄清石灰水</td><td>硫酸</td><td>干冰</td></tr>
+    <tr><td>B</td><td>冰水混合物</td><td>酒精溶液</td><td>碳酸钙</td><td>氯气</td></tr>
+    <tr><td>C</td><td>氨水</td><td>Fe(OH)<sub>3</sub> 胶体</td><td>铜</td><td>硫酸钡</td></tr>
+    <tr><td>D</td><td>胆矾</td><td>食盐水</td><td>氯化铜</td><td>氨气</td></tr>
+  </table>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>D</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="right">D ✔</span> 胆矾 CuSO<sub>4</sub>·5H<sub>2</sub>O 是<b>纯净物</b>（结晶水合物）；食盐水是<b>混合物</b>；CuCl<sub>2</sub> 是<b>电解质</b>；NH<sub>3</sub> 自身不能电离，是<b>非电解质</b>。</p>
+      <p><span class="wrong">A</span> 盐酸是 HCl 的水溶液，属于混合物，不是纯净物；</p>
+      <p><span class="wrong">B</span> 氯气是<b>单质</b>——单质既不是电解质也不是非电解质；</p>
+      <p><span class="wrong">C</span> 氨水是混合物；铜是单质不是电解质；BaSO<sub>4</sub> 虽难溶，但熔融状态能导电，是电解质。</p>
+      <div class="tip">易错点：①结晶水合物是纯净物；②单质和混合物既不是电解质也不是非电解质；③"难溶≠非电解质"，BaSO<sub>4</sub>、CaCO<sub>3</sub> 都是电解质。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q4 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">4</span><span class="qscore">3分 · 离子共存</span></div>
+  <div class="stem">下列各组中的离子，能在溶液中大量共存的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．H<sup class="sup">+</sup>、Ag<sup class="sup">+</sup>、Na<sup class="sup">+</sup>、NO<sub>3</sub><sup class="sup">−</sup>
+B．K<sup class="sup">+</sup>、Ca<sup class="sup">2+</sup>、Cl<sup class="sup">−</sup>、CO<sub>3</sub><sup class="sup">2−</sup>
+C．Ca<sup class="sup">2+</sup>、Cl<sup class="sup">−</sup>、OH<sup class="sup">−</sup>、NO<sub>3</sub><sup class="sup">−</sup>
+D．Na<sup class="sup">+</sup>、Cu<sup class="sup">2+</sup>、SO<sub>4</sub><sup class="sup">2−</sup>、OH<sup class="sup">−</sup></div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>A</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="right">A ✔</span> 四种离子之间不发生反应，可以大量共存；</p>
+      <p><span class="wrong">B</span> Ca<sup class="sup">2+</sup> + CO<sub>3</sub><sup class="sup">2−</sup> = CaCO<sub>3</sub>↓，生成沉淀，不能共存；</p>
+      <p><span class="wrong">C</span> Ca<sup class="sup">2+</sup> 与 OH<sup class="sup">−</sup> 生成微溶物 Ca(OH)<sub>2</sub>，不能大量共存；</p>
+      <p><span class="wrong">D</span> Cu<sup class="sup">2+</sup> + 2OH<sup class="sup">−</sup> = Cu(OH)<sub>2</sub>↓，生成蓝色沉淀，不能共存。</p>
+      <div class="tip">共存口诀：一查沉淀（溶度积）、二查气体、三查弱电解质（水、弱碱、弱酸）。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q5 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">5</span><span class="qscore">3分 · 离子方程式正误判断</span></div>
+  <div class="stem">下列化学方程式或离子方程式中，正确的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．铜与硝酸银溶液反应：Cu + Ag<sup class="sup">+</sup> = Cu<sup class="sup">2+</sup> + Ag
+B．少量 SO<sub>2</sub> 与 NaOH 溶液的反应：SO<sub>2</sub> + 2OH<sup class="sup">−</sup> = SO<sub>3</sub><sup class="sup">2−</sup> + H<sub>2</sub>O
+C．石灰乳与盐酸反应：H<sup class="sup">+</sup> + OH<sup class="sup">−</sup> = H<sub>2</sub>O
+D．稀硝酸与铜片的反应：Cu + 4HNO<sub>3</sub>(稀) = Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO<sub>2</sub>↑ + 2H<sub>2</sub>O</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>B</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="wrong">A</span> 电荷不守恒，应为 <b>Cu + 2Ag<sup class="sup">+</sup> = Cu<sup class="sup">2+</sup> + 2Ag</b>；</p>
+      <p><span class="right">B ✔</span> SO<sub>2</sub> 少量、NaOH 过量，产物为正盐 SO<sub>3</sub><sup class="sup">2−</sup>，方程式正确；</p>
+      <p><span class="wrong">C</span> 石灰乳是浊液，Ca(OH)<sub>2</sub> 应<b>写化学式</b>，应为 Ca(OH)<sub>2</sub> + 2H<sup class="sup">+</sup> = Ca<sup class="sup">2+</sup> + 2H<sub>2</sub>O；</p>
+      <p><span class="wrong">D</span> 稀硝酸的还原产物是 <b>NO</b> 而不是 NO<sub>2</sub>，应为 Cu + 4HNO<sub>3</sub>(稀) = Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO↑ + 2H<sub>2</sub>O。</p>
+      <div class="tip">查离子方程式四步：拆对了吗 → 守恒吗（电荷、质量）→ 产物对吗 → 与"量"匹配吗。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q6 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">6</span><span class="qscore">3分 · Fe(OH)₃胶体制备与性质</span></div>
+  <div class="stem">某同学在实验室完成了 Fe(OH)<sub>3</sub> 胶体的制备与性质实验后有以下实验记录，其中恰当的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．将饱和 FeCl<sub>3</sub> 溶液滴加到 NaOH 溶液中可制得 Fe(OH)<sub>3</sub> 胶体
+B．Fe(OH)<sub>3</sub> 胶体带正电，FeCl<sub>3</sub> 溶液呈电中性
+C．向 Fe(OH)<sub>3</sub> 胶体中滴加稀盐酸，先有红褐色沉淀生成，后沉淀消失
+D．用滤纸过滤 Fe(OH)<sub>3</sub> 胶体，滤纸上得到红褐色沉淀</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>C</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="wrong">A</span> 滴入 NaOH 溶液直接生成 Fe(OH)<sub>3</sub><b>沉淀</b>；制胶体必须滴入<b>沸水</b>中；</p>
+      <p><span class="wrong">B</span> 胶体整体呈<b>电中性</b>，是"胶体<b>粒子</b>带正电荷"，表述偷换概念；</p>
+      <p><span class="right">C ✔</span> 电解质溶液使胶体<b>聚沉</b>生成红褐色沉淀；盐酸过量后 Fe(OH)<sub>3</sub> 与酸反应溶解，变为 FeCl<sub>3</sub> 溶液，"先聚沉后溶解"正确；</p>
+      <p><span class="wrong">D</span> 胶体粒子<b>能透过</b>滤纸，过滤得不到沉淀（半透膜才能渗析）。</p>
+      <div class="tip">对比：胶粒能透过滤纸、不能透过半透膜；加入电解质、加热、搅拌都可聚沉。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q7 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">7</span><span class="qscore">3分 · 混盐与复盐</span></div>
+  <div class="stem">"混盐"是指一种金属离子与多种酸根阴离子构成的盐，如氯化硝酸钙 [Ca(NO<sub>3</sub>)Cl]。"复盐"是指多种简单阳离子和一种酸根阴离子构成的盐，如 KAl(SO<sub>4</sub>)<sub>2</sub>。下列化合物中属于"复盐"的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．CaOCl<sub>2</sub>　　B．Cu<sub>2</sub>(OH)<sub>2</sub>CO<sub>3</sub>　　C．Ca(ClO)Cl　　D．(NH<sub>4</sub>)<sub>2</sub>Fe(SO<sub>4</sub>)<sub>2</sub></div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>D</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="right">D ✔</span> (NH<sub>4</sub>)<sub>2</sub>Fe(SO<sub>4</sub>)<sub>2</sub>（硫酸亚铁铵）含有 <b>NH<sub>4</sub><sup class="sup">+</sup>、Fe<sup class="sup">2+</sup></b> 两种阳离子和<b>一种</b>酸根 SO<sub>4</sub><sup class="sup">2−</sup>，是典型的复盐（莫尔盐）；</p>
+      <p><span class="wrong">A</span> CaOCl<sub>2</sub> 含 Cl<sup class="sup">−</sup> 与 ClO<sup class="sup">−</sup> 两种酸根，属混盐（与 C 本质相同）；</p>
+      <p><span class="wrong">B</span> Cu<sub>2</sub>(OH)<sub>2</sub>CO<sub>3</sub>（碱式碳酸铜）含 OH<sup class="sup">−</sup> 和 CO<sub>3</sub><sup class="sup">2−</sup>，属于碱式盐；</p>
+      <p><span class="wrong">C</span> Ca(ClO)Cl 是一种阳离子对两种酸根，属<b>混盐</b>。</p>
+      <div class="tip">抓定义关键词：复盐 = "多种<b>阳</b>离子 + 一种<b>酸根</b>"；混盐 = "一种阳离子 + 多种酸根"。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q8 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">8</span><span class="qscore">3分 · 元素转化关系推断</span></div>
+  <div class="stem">A、B、C、D、E 中都含有同一种元素，它们之间的相互转化关系如图所示（A —H₂O→ B；A —硝酸→ C；B —盐酸→ D；C、D —Na₂CO₃/AgNO₃溶液→ E；E —高温→ A；E 为中心），其中所含的相同元素是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．碳　　B．铜　　C．钙　　D．铁</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>C（元素：钙）</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p>突破口：E 高温分解生成 A，A 与水化合生成 B——联想 <b>CaCO<sub>3</sub> 高温分解 → CaO → Ca(OH)<sub>2</sub></b>。</p>
+      <p>A = CaO，B = Ca(OH)<sub>2</sub>，D = CaCl<sub>2</sub>（B 与盐酸反应），C = Ca(NO<sub>3</sub>)<sub>2</sub>（D 与 AgNO<sub>3</sub> 溶液反应），E = CaCO<sub>3</sub>（A、B、D 与 Na<sub>2</sub>CO<sub>3</sub> 反应均可生成）。</p>
+      <p class="eq">A(CaO) + H<sub>2</sub>O → B[Ca(OH)<sub>2</sub>]；　B + 2HCl → D(CaCl<sub>2</sub>) + 2H<sub>2</sub>O</p>
+      <p class="eq">E(CaCO<sub>3</sub>) <b>高温</b> → A(CaO) + CO<sub>2</sub>↑；　C、D + Na<sub>2</sub>CO<sub>3</sub> → E↓</p>
+      <p>五种物质都含钙元素，故选 <b>C</b>。</p>
+      <div class="tip">"高温分解 + 与水化合放热"是钙三角（CaCO<sub>3</sub>–CaO–Ca(OH)<sub>2</sub>）的标志性特征。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q9 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">9</span><span class="qscore">3分 · 电子转移方向与数目</span></div>
+  <div class="stem">下列氧化还原反应中，电子转移的方向和数目均正确的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．10KI + 2KMnO<sub>4</sub> + 8H<sub>2</sub>SO<sub>4</sub> = 5I<sub>2</sub> + 6K<sub>2</sub>SO<sub>4</sub> + 2MnSO<sub>4</sub> + 8H<sub>2</sub>O（Mn→I₂ 得 2×5e⁻，I 失 10×e⁻）
+B．Cu + 2H<sub>2</sub>SO<sub>4</sub>(浓) =(Δ)= CuSO<sub>4</sub> + SO<sub>2</sub>↑ + 2H<sub>2</sub>O（2e⁻ 标注于 Cu 与 H₂SO₄ 之间）
+C．2CO + O<sub>2</sub> =(点燃)= 2CO<sub>2</sub>（失去 2e⁻ / 得到 2e⁻）
+D．2Na + 2H<sub>2</sub>O = 2NaOH + H<sub>2</sub>↑（e⁻）</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>A</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="right">A ✔</span> 10 个 I<sup class="sup">−</sup>（−1→0）共失去 <b>10×e<sup class="sup">−</sup></b>；2 个 Mn（+7→+2）共得到 <b>2×5e<sup class="sup">−</sup></b>，得失电子相等，方向、数目均正确；</p>
+      <p><span class="wrong">B</span> 2H<sub>2</sub>SO<sub>4</sub> 中只有 1 个 S 被还原（+6→+4），电子转移应标在 <b>Cu 与被还原的 S（→SO<sub>2</sub>）</b>之间，图中指向错误；</p>
+      <p><span class="wrong">C</span> 2 个 C（0→+4）应"失去 <b>2×2e<sup class="sup">−</sup></b>"，标 2e⁻ 数目不对；</p>
+      <p><span class="wrong">D</span> 2 个 Na（0→+1）共失 2e⁻，应标"<b>2×e<sup class="sup">−</sup></b>"，只标 e⁻ 数目不对。</p>
+      <div class="tip">双线桥口诀："桥连同种元素，得失分开标，数目乘系数"。每条线两端必须是<b>同一种元素</b>的价态。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q10 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">10</span><span class="qscore">3分 · 气体制备装置选择</span></div>
+  <div class="stem">实验室用 FeS 固体和稀硫酸反应制取 H<sub>2</sub>S 气体，反应的方程式为：FeS + H<sub>2</sub>SO<sub>4</sub> = FeSO<sub>4</sub> + H<sub>2</sub>S↑。H<sub>2</sub>S 是一种有毒气体，密度大于空气，可溶于水形成酸性溶液，下列说法合理的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．可用过氧化氢制氧气的发生装置制取 H<sub>2</sub>S 气体
+B．收集 H<sub>2</sub>S 气体可用排水法
+C．可用向下排空气法收集 H<sub>2</sub>S 气体
+D．可用 NaCl 溶液吸收 H<sub>2</sub>S 气体，防止污染空气</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>A</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="right">A ✔</span> "固 + 液 → 气、不加热"，与 H<sub>2</sub>O<sub>2</sub> 分解制 O<sub>2</sub> 的发生装置<b>同型</b>（固液不加热型）；</p>
+      <p><span class="wrong">B</span> H<sub>2</sub>S <b>可溶于水</b>，不能用排水法收集；</p>
+      <p><span class="wrong">C</span> H<sub>2</sub>S 密度<b>大于</b>空气，应用<b>向上</b>排空气法；</p>
+      <p><span class="wrong">D</span> NaCl 溶液不与 H<sub>2</sub>S 反应，不能吸收；应选用 <b>CuSO<sub>4</sub> 溶液或 NaOH 溶液</b>进行尾气处理。</p>
+      <div class="tip">气体制备三步曲：发生装置看"状态+条件"，收集看"密度+溶解性"，尾气看"毒性+酸碱性"。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q11 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">11</span><span class="qscore">3分 · 黑火药反应分析</span></div>
+  <div class="stem">火药是我国古代四大发明之一，引爆时发生 S + 2KNO<sub>3</sub> + 3C = K<sub>2</sub>S + N<sub>2</sub>↑ + 3X 反应，下列说法正确的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．X 是空气的成分之一，有毒性
+B．该反应是氧化还原反应，发生化合价变化的有两种元素
+C．S 得电子，发生的是氧化反应
+D．每生成 1 个 N<sub>2</sub> 分子转移 12 个电子</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>D</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p>由原子守恒，X 为 <b>CO<sub>2</sub></b>。化合价变化：S：0→−2；N：+5→0；C：0→+4。</p>
+      <p><span class="wrong">A</span> CO<sub>2</sub> 是空气成分，但<b>无毒</b>；</p>
+      <p><span class="wrong">B</span> 化合价变化的元素有 <b>S、N、C 三种</b>；</p>
+      <p><span class="wrong">C</span> S 得电子、化合价降低，被还原，发生<b>还原反应</b>；</p>
+      <p><span class="right">D ✔</span> 3 个 C 共失去 3×4 = 12e⁻（N 得 10e⁻ + S 得 2e⁻ = 12e⁻），即每生成 1 个 N<sub>2</sub> 转移 <b>12 个电子</b>。</p>
+      <div class="tip">电子守恒是"算转移电子数"最快的路径：<b>失电子总数 = 得电子总数 = 转移电子数</b>。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q12 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">12</span><span class="qscore">3分 · 氧化剂与还原剂之比</span></div>
+  <div class="stem">某温度下，将氯气通入 NaOH 溶液中，反应得到 NaCl、NaClO、NaClO<sub>3</sub> 的混合液，经测定 ClO<sup class="sup">−</sup> 与 ClO<sub>3</sub><sup class="sup">−</sup> 的物质的量之比为 1:1，则氯气与 NaOH 溶液反应时氧化剂与还原剂的物质的量之比为（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．21:5　　B．13:3　　C．3:1　　D．3:13</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>C</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p>歧化反应中氧化剂、还原剂都是 Cl<sub>2</sub>。设 n(ClO<sup class="sup">−</sup>) = n(ClO<sub>3</sub><sup class="sup">−</sup>) = n mol：</p>
+      <p>· 被氧化：Cl（0→+1）失 1e⁻，Cl（0→+5）失 5e⁻，共失 <b>6n e⁻</b>，被氧化的 Cl 为 2n mol（作<b>还原剂</b>）；</p>
+      <p>· 被还原：Cl（0→−1）每个得 1e⁻，需 6n mol Cl（作<b>氧化剂</b>）；</p>
+      <p>· 氧化剂 : 还原剂 = 6n : 2n = <b>3 : 1</b>，选 C。</p>
+      <div class="tip">同一元素的歧化反应，直接用<b>电子守恒</b>列式最快，不必写完整方程式。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q13 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">13</span><span class="qscore">3分 · 工艺流程与氧化还原</span></div>
+  <div class="stem">KMnO<sub>4</sub> 是常见的氧化剂，实验室以 MnO<sub>2</sub> 等为原料制取少量 KMnO<sub>4</sub>：MnO<sub>2</sub> —（KClO₃、KOH，熔融）→ K₂MnO<sub>4</sub> —（水，溶解）→ —（通 CO₂，K₂MnO₄歧化）→ 过滤（得 MnO₂ 循环）→ 结晶 → KMnO₄粗品。下列说法不正确的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．"熔融"过程中氧化剂是 KClO<sub>3</sub>，还原剂是 MnO<sub>2</sub>
+B．"溶解"后的溶液中存在大量的 K<sup class="sup">+</sup>、Cl<sup class="sup">−</sup>、MnO<sub>4</sub><sup class="sup">−</sup>
+C．流程中 MnO<sub>2</sub> 可以循环使用
+D．"K<sub>2</sub>MnO<sub>4</sub> 歧化"时氧化剂与还原剂的物质的分子个数比为 1:2</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>B</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p>熔融反应：<span class="eq">3MnO<sub>2</sub> + KClO<sub>3</sub> + 6KOH <b>(熔融)</b> = 3K<sub>2</sub>MnO<sub>4</sub> + KCl + 3H<sub>2</sub>O</span></p>
+      <p><span class="right">A ✔</span> KClO<sub>3</sub> 中 Cl：+5→−1 被还原，作氧化剂；MnO<sub>2</sub> 中 Mn：+4→+6 被氧化，作还原剂；</p>
+      <p><span class="wrong">B ✘</span> "K<sub>2</sub>MnO<sub>4</sub>"中锰酸根是 <b>MnO<sub>4</sub><sup class="sup">2−</sup></b>（绿色），不是 MnO<sub>4</sub><sup class="sup">−</sup>（紫色高锰酸根），B 错误，选 B；</p>
+      <p><span class="right">C ✔</span> 歧化生成的 MnO<sub>2</sub> 过滤后可返回"熔融"步骤循环使用；</p>
+      <p><span class="right">D ✔</span> 歧化反应 <span class="eq">3K<sub>2</sub>MnO<sub>4</sub> + 2CO<sub>2</sub> = 2KMnO<sub>4</sub> + MnO<sub>2</sub>↓ + 2K<sub>2</sub>CO<sub>3</sub></span> 中，作氧化剂（→MnO<sub>2</sub>）与作还原剂（→MnO<sub>4</sub><sup class="sup">−</sup>）的 K<sub>2</sub>MnO<sub>4</sub> 个数比为 <b>1 : 2</b>。</p>
+      <div class="tip">MnO<sub>4</sub><sup class="sup">2−</sup>（锰酸根，绿）与 MnO<sub>4</sub><sup class="sup">−</sup>（高锰酸根，紫）一字之差、价态不同，是最经典的设错点。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q14 -->
+<div class="card">
+  <div class="qhead"><span class="qnum">14</span><span class="qscore">3分 · 标准电极电势信息题</span></div>
+  <div class="stem">化学常用标准电极电势 E<sup>θ</sup>（氧化型/还原型）比较物质氧化能力：E<sup>θ</sup> 值越高，氧化型物质的氧化能力越强；E<sup>θ</sup> 值越低，还原型物质的还原能力越强。
+数据（酸性条件）：PbO₂/PbSO₄ 1.685 V，MnO₄⁻/Mn²⁺ 1.51 V，Fe³⁺/Fe²⁺ 0.77 V，Cl₂/Cl⁻ 1.36 V，Co³⁺/Co²⁺ 1.92 V。下列说法错误的是（&nbsp;&nbsp;&nbsp;&nbsp;）
+A．酸性条件下氧化性强弱顺序为 Co³⁺ > PbO₂ > Cl₂ > Fe³⁺
+B．PbO<sub>2</sub> 与浓盐酸反应可以制备 Cl<sub>2</sub>
+C．酸性环境下 Cl<sup class="sup">−</sup> 的还原性比 Co<sup class="sup">2+</sup> 强
+D．硫酸酸化的足量 KMnO<sub>4</sub> 溶液与 FeCl<sub>2</sub> 溶液反应的离子方程式为 MnO<sub>4</sub><sup class="sup">−</sup> + 5Fe<sup class="sup">2+</sup> + 8H<sup class="sup">+</sup> = 5Fe<sup class="sup">3+</sup> + Mn<sup class="sup">2+</sup> + 4H<sub>2</sub>O</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">答案</span>D</div>
+    <div class="ans-exp"><span class="lab">解析</span>
+      <p><span class="right">A ✔</span> 按 E<sup>θ</sup> 排序：Co³⁺(1.92) > PbO₂(1.685) > Cl₂(1.36) > Fe³⁺(0.77)，正确；</p>
+      <p><span class="right">B ✔</span> E<sup>θ</sup>(PbO₂/PbSO₄) = 1.685 V &gt; E<sup>θ</sup>(Cl₂/Cl⁻) = 1.36 V，PbO₂ 能把 Cl⁻ 氧化成 Cl₂；</p>
+      <p><span class="right">C ✔</span> E<sup>θ</sup> 越低还原型还原能力越强：Cl⁻（1.36）&gt; Co²⁺（1.92），正确；</p>
+      <p><span class="wrong">D ✘</span> FeCl<sub>2</sub> 电离出的 <b>Cl⁻ 也具有还原性</b>，E<sup>θ</sup>(MnO₄⁻/Mn²⁺) = 1.51 V &gt; 1.36 V，足量酸性 KMnO₄ 会把 Cl⁻ 一并氧化，该离子方程式漏掉了 Cl⁻ 被氧化，<b>错误</b>。实验中应改用 FeSO₄ 等不含 Cl⁻ 的亚铁盐。</p>
+      <div class="tip">信息题要"用足信息"：比较氧化性/还原性时，别忘了<b>共存的还原性离子（Cl⁻）会"抢"氧化剂</b>。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 非选择题 ============ -->
+<div class="sec-title" id="sec2"><span class="bar" style="background:linear-gradient(#0d9488,#34d399)"></span><h2>第Ⅱ卷 · 非选择题（共 58 分）</h2></div>
+<p class="sec-note">本题共 4 个小题（除标注外每空 2 分）。每大题设一个按钮，点击展开本题完整答案与解析。</p>
+
+<!-- Q15 -->
+<div class="card bigq">
+  <div class="qhead"><span class="qnum">15</span><span class="qscore">物质的分类 · 电解质 · 离子方程式</span></div>
+  <div class="stem">准确掌握化学基本概念和研究方法是学好化学的重要手段。
+(1) 有以下物质：①熔融氯化钠　②铝　③乙醇　④氨水　⑤氯化氢气体　⑥NaHSO<sub>4</sub> 固体　⑦Al(OH)<sub>3</sub> 固体
+　ⅰ．其中能导电的是____；属于电解质的是____；属于非电解质的是____。
+　ⅱ．写出物质①、⑥溶于水时的电离方程式：____、____。
+(2) 关于酸、碱、盐的下列各种说法中，正确的是____（填字母）。
+　A．化合物电离时，生成的阳离子有氢离子的是酸
+　B．化合物电离时，生成的阴离子有氢氧根离子的是碱
+　C．化合物电离时，生成金属阳离子(或铵根离子)和酸根阴离子的是盐
+　D．酸溶液一定显酸性，碱溶液一定显碱性，盐溶液一定显中性
+(3) 写出⑦作为抗酸药和胃酸反应的离子方程式____；④和⑤反应的离子方程式____；NaHCO<sub>3</sub> 和⑥反应的离子方程式____。</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示本题答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">15题答案</span>
+      (1)ⅰ 能导电 <span class="blank-a">①②④</span>；电解质 <span class="blank-a">①⑤⑥⑦</span>；非电解质 <span class="blank-a">③</span>
+      　(2) <span class="blank-a">C</span>
+    </div>
+    <div class="ans-exp">
+      <p class="ans-line">(1)ⅱ 电离方程式：</p>
+      <span class="eq">① NaCl（熔融）= Na<sup class="sup">+</sup> + Cl<sup class="sup">−</sup></span>
+      <span class="eq">⑥ NaHSO<sub>4</sub> = Na<sup class="sup">+</sup> + H<sup class="sup">+</sup> + SO<sub>4</sub><sup class="sup">2−</sup>（水溶液中完全电离）</span>
+      <p><b>逐项分析：</b>①熔融 NaCl 有自由移动的离子，能导电，是电解质；②铝是金属单质，能导电，但单质既不是电解质也不是非电解质；③乙醇不电离、不导电，是非电解质；④氨水是混合物（含 NH<sub>3</sub>·H<sub>2</sub>O），能导电，但混合物不是电解质；⑤HCl 气体溶于水自身完全电离，是电解质；⑥NaHSO<sub>4</sub> 是盐，电解质；⑦Al(OH)<sub>3</sub> 难溶但溶解的部分完全电离，是电解质（弱碱）。</p>
+      <p class="ans-line">(2) 解析：</p>
+      <p><span class="wrong">A、B</span> 错在"有"字——必须是电离出的阳离子<b>全部</b>是 H⁺ 的才是酸（如 NaHSO<sub>4</sub> 电离出 H⁺ 但是盐）、阴离子<b>全部</b>是 OH⁻ 的才是碱；</p>
+      <p><span class="right">C ✔</span> 符合盐的定义；<span class="wrong">D</span> 盐溶液不一定中性，如 Na<sub>2</sub>CO<sub>3</sub> 溶液显碱性。</p>
+      <p class="ans-line">(3) 离子方程式：</p>
+      <span class="eq">Al(OH)<sub>3</sub> + 3H<sup class="sup">+</sup> = Al<sup class="sup">3+</sup> + 3H<sub>2</sub>O</span>
+      <span class="eq">NH<sub>3</sub>·H<sub>2</sub>O + H<sup class="sup">+</sup> = NH<sub>4</sub><sup class="sup">+</sup> + H<sub>2</sub>O（一水合氨是弱碱，写化学式）</span>
+      <span class="eq">HCO<sub>3</sub><sup class="sup">−</sup> + H<sup class="sup">+</sup> = CO<sub>2</sub>↑ + H<sub>2</sub>O</span>
+      <div class="tip">易错提醒：能导电 ≠ 电解质（还要看是不是化合物、是否自身电离）；NH<sub>3</sub>·H<sub>2</sub>O、Al(OH)<sub>3</sub> 等弱电解质在离子方程式中写化学式。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q16 -->
+<div class="card bigq">
+  <div class="qhead"><span class="qnum">16</span><span class="qscore">分类观 · 三酸两碱 · 导电能力曲线</span></div>
+  <div class="stem">Ⅰ．化工生产常用到"三酸两碱"："三酸"指硝酸、硫酸和盐酸，"两碱"指烧碱（NaOH）和纯碱（Na<sub>2</sub>CO<sub>3</sub>）。
+(1) 从物质的分类角度看，类别归属不恰当的一种物质是（填化学式）____。
+(2) "三酸"与"两碱"之间均可反应，酸过量时若用化学方程式表示有六个，若用离子方程式表示却只有两个，请写出这两个离子方程式____、____。
+Ⅱ．现有以下物质：①SiO<sub>2</sub>　②NaOH　③Ba(OH)<sub>2</sub>　④NaHSO<sub>4</sub>。
+(3) 已知①可以溶于②的水溶液中，发生反应：2NaOH + SiO<sub>2</sub> = Na<sub>2</sub>SiO<sub>3</sub> + H<sub>2</sub>O，反应过程中溶液的导电能力可近似地用图中的____（填字母）曲线表示（生成水对溶液体积的影响忽略不计）。
+(4) 利用图甲装置探究③与④在水溶液中的反应：从滴定管中逐滴将④（NaHSO<sub>4</sub>）溶液加入到③（Ba(OH)<sub>2</sub>）溶液中，浑浊度变化如图乙。已知：a 点浑浊度最大，视为 a 点时 Ba<sup class="sup">2+</sup> 与 SO<sub>4</sub><sup class="sup">2−</sup> 恰好完全沉淀，o→a 的过程中，发生反应的离子方程式为____；b 点溶液呈中性，a 点到 b 点过程中，发生反应的化学方程式为____。</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示本题答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">16题答案</span>
+      (1) <span class="blank-a">Na<sub>2</sub>CO<sub>3</sub></span>
+      　(3) <span class="blank-a">b</span>
+    </div>
+    <div class="ans-exp">
+      <p class="ans-line">(1) 解析：</p>
+      <p>纯碱 Na<sub>2</sub>CO<sub>3</sub> 从分类上属于<b>盐</b>（因其水溶液显碱性而得名"纯碱"），把它归为"碱"不恰当。</p>
+      <p class="ans-line">(2) 两个离子方程式：</p>
+      <span class="eq">强酸 + NaOH：H<sup class="sup">+</sup> + OH<sup class="sup">−</sup> = H<sub>2</sub>O</span>
+      <span class="eq">强酸 + Na<sub>2</sub>CO<sub>3</sub>（酸过量）：2H<sup class="sup">+</sup> + CO<sub>3</sub><sup class="sup">2−</sup> = CO<sub>2</sub>↑ + H<sub>2</sub>O</span>
+      <p>盐酸、硫酸、硝酸都是强酸（H<sup class="sup">+</sup>），NaOH 是强碱（OH<sup class="sup">−</sup>），酸过量时碳酸根全部转化为 CO<sub>2</sub>，所以 6 个化学方程式对应 2 个离子方程式。</p>
+      <p class="ans-line">(3) 解析：</p>
+      <p>NaOH 是强电解质，随 SiO<sub>2</sub> 加入，OH<sup class="sup">−</sup> 不断被消耗，离子浓度减小，导电能力<b>逐渐下降</b>；NaOH 反应完后，过量 SiO<sub>2</sub> 不溶也不导电，溶液成分为较低浓度的 Na<sub>2</sub>SiO<sub>3</sub>，离子浓度基本不变，导电能力<b>保持较低水平</b>——对应曲线 <b>b</b>（先降后平）。</p>
+      <p class="ans-line">(4) 答案：</p>
+      <span class="eq">o→a（1:1 恰好沉淀）：Ba<sup class="sup">2+</sup> + H<sup class="sup">+</sup> + OH<sup class="sup">−</sup> + SO<sub>4</sub><sup class="sup">2−</sup> = BaSO<sub>4</sub>↓ + H<sub>2</sub>O</span>
+      <span class="eq">a→b（NaOH 被继续中和）：NaOH + NaHSO<sub>4</sub> = Na<sub>2</sub>SO<sub>4</sub> + H<sub>2</sub>O</span>
+      <p><b>思路：</b>a 点时 n(NaHSO<sub>4</sub>) : n(Ba(OH)<sub>2</sub>) = 1 : 1，Ba²⁺、SO₄²⁻ 恰好全部沉淀，此时溶液中剩余 1 份 OH⁻（即 NaOH）；继续滴加 NaHSO<sub>4</sub> 至 b 点，H⁺ 恰好中和剩余 OH⁻，溶液呈中性。a→b 段没有新沉淀生成，浑浊度基本不变。</p>
+      <div class="tip">"量"对离子方程式的影响：Ba(OH)₂ 与 NaHSO₄ 按 1:1 与 1:2 混合，离子方程式写法完全不同，是高考高频考点。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q17 -->
+<div class="card bigq">
+  <div class="qhead"><span class="qnum">17</span><span class="qscore">胶体 · Fe(OH)₃制备与安全标识</span></div>
+  <div class="stem">由工业明胶制成的胶囊往往含有超标的重金属铬，会对人体造成伤害。明胶是水溶性蛋白质混合物，溶于水形成胶体。
+(1) 已知 Fe(CrO<sub>2</sub>)<sub>2</sub> 中铬元素是 +3 价，则其中铁元素是____价，CrO<sub>2</sub><sup class="sup">−</sup> 是一种酸根离子，则 Fe(CrO<sub>2</sub>)<sub>2</sub> 属于____（填"酸""碱""盐"或"氧化物"）。
+(2) 鉴别明胶的水溶液和 K<sub>2</sub>SO<sub>4</sub> 溶液的简单方法是____。
+(3) 实验室进行 Fe(OH)<sub>3</sub> 胶体的制备实验并检验其性质。
+　① 若将 5~6 滴饱和 FeCl<sub>3</sub> 溶液分别滴入下列物质中，继续煮沸至液体呈红褐色，停止加热，能形成胶体的是____。
+　　A．冷水　　B．沸水　　C．NaOH 浓溶液　　D．NaCl 浓溶液
+　② 实验室常见安全标识：①护目镜　②排风　③热烫　④明火　⑤洗手　⑥锐器。为了实验安全，制备氢氧化铁胶体的实验，应该标注的图标除①⑤外，还应标注的图标有____。
+　③ 制备 Fe(OH)<sub>3</sub> 胶体的化学方程式是____；若向 Fe(OH)<sub>3</sub> 胶体中逐滴滴入过量稀硫酸，先产生红褐色的 Fe(OH)<sub>3</sub> 沉淀，然后沉淀____（填实验现象），变为棕黄色溶液。</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示本题答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">17题答案</span>
+      (1) <span class="blank-a">+2</span>（1分）、<span class="blank-a">盐</span>（1分）
+      　(3)① <span class="blank-a">B</span>（1分）　② <span class="blank-a">②③④</span>　③末空 <span class="blank-a">逐渐溶解（沉淀溶解）</span>（1分）
+    </div>
+    <div class="ans-exp">
+      <p class="ans-line">(1) 解析：</p>
+      <p>CrO<sub>2</sub><sup class="sup">−</sup> 中 O 为 −2 价，则 Cr 为 +3 价；设 Fe 为 x 价：x + 2×(+3) + 4×(−2) = 0，解得 <b>x = +2</b>。Fe(CrO<sub>2</sub>)<sub>2</sub> 由金属阳离子 Fe<sup class="sup">2+</sup> 与酸根 CrO<sub>2</sub><sup class="sup">−</sup> 构成，属于<b>盐</b>（亚铬酸亚铁）。</p>
+      <p class="ans-line">(2) 答案：</p>
+      <p>用一束光分别照射两种液体，从侧面能看到一条光亮"通路"的是明胶水溶液（胶体，<b>丁达尔效应</b>），无此现象的是 K<sub>2</sub>SO<sub>4</sub> 溶液。</p>
+      <p class="ans-line">(3) 解析：</p>
+      <p>① 制备 Fe(OH)<sub>3</sub> 胶体必须把饱和 FeCl<sub>3</sub> 溶液滴入<b>沸水</b>中，选 <b>B</b>。冷水不水解；NaOH 浓溶液生成沉淀；NaCl 浓溶液不能促进水解。</p>
+      <p>② 实验涉及加热至沸腾（<b>③热烫</b>）、酒精灯（<b>④明火</b>）、需通风（<b>②排风</b>），故还应标注 ②③④。</p>
+      <span class="eq">③ FeCl<sub>3</sub> + 3H<sub>2</sub>O <b>(Δ)</b> = Fe(OH)<sub>3</sub>(胶体) + 3HCl</span>
+      <p>滴入过量稀硫酸：电解质使胶体<b>聚沉</b>生成红褐色沉淀；酸过量后发生中和反应，沉淀<b>逐渐溶解</b>，生成棕黄色 Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> 溶液（Fe<sup class="sup">3+</sup> 呈棕黄色）。</p>
+      <div class="tip">书写该化学方程式必须注明"（胶体）"，用"="号不用"⇌"，条件写 Δ——这是阅卷高频扣分点。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Q18 -->
+<div class="card bigq">
+  <div class="qhead"><span class="qnum">18</span><span class="qscore">氧化还原反应综合</span></div>
+  <div class="stem">(1) 下列粒子中，只有还原性的是____（填序号）：①S<sup class="sup">2−</sup>　②Fe<sup class="sup">2+</sup>　③Fe<sup class="sup">3+</sup>　④S　⑤H<sup class="sup">+</sup>　⑥Na<sup class="sup">+</sup>　⑦Mg
+(2) 吸入人体内的氧有 2% 转化为氧化性极强的"活性氧"，它能加速人体衰老，被称为"生命杀手"。服用含硒元素(Se)的化合物亚硒酸钠（Na<sub>2</sub>SeO<sub>3</sub>），能消除人体内的活性氧，由此推断 Na<sub>2</sub>SeO<sub>3</sub> 在反应中作____（填氧化剂或还原剂）。
+(3) 在 Fe + 4HNO<sub>3</sub>(稀) = Fe(NO<sub>3</sub>)<sub>3</sub> + NO↑ + 2H<sub>2</sub>O 的反应中：
+　① HNO<sub>3</sub> 表现了____性和____性。　② 上述反应的离子方程式为____。
+(4) 氯化铵溶液可除去铜器表面的氧化铜：4CuO + 2NH<sub>4</sub>Cl =(Δ)= 3Cu + CuCl<sub>2</sub> + N<sub>2</sub>↑ + 4H<sub>2</sub>O。
+　① 用双线桥标出上述反应中电子转移的方向和数目。　② 氧化剂和还原剂个数之比是____。
+(5) MnO<sub>2</sub> + 4HCl(浓) =(Δ)= MnCl<sub>2</sub> + Cl<sub>2</sub>↑ + 2H<sub>2</sub>O 该反应中氧化剂是____，氧化产物是____；用单线桥标出上述反应中电子转移的方向和数目。</div>
+  <button class="btn" onclick="toggleAns(this)"><span class="arr">▾</span>显示本题答案与解析</button>
+  <div class="ans">
+    <div class="ans-key"><span class="lab">18题答案</span>
+      (1) <span class="blank-a">①⑦</span>
+      　(2) <span class="blank-a">还原剂</span>
+      　(3) <span class="blank-a">氧化</span>性、<span class="blank-a">酸</span>性（各1分）
+      　(4)② <span class="blank-a">3:2</span>
+      　(5) 氧化剂 <span class="blank-a">MnO<sub>2</sub></span>，氧化产物 <span class="blank-a">Cl<sub>2</sub></span>
+    </div>
+    <div class="ans-exp">
+      <p class="ans-line">(1) 解析：</p>
+      <p><b>最低价态只有还原性</b>：①S<sup class="sup">2−</sup>（S 的最低价 −2）、⑦Mg（0 价金属单质）只有还原性，填 ①⑦。中间价态既有氧化性又有还原性（②Fe<sup class="sup">2+</sup>、④S）；最高价态只有氧化性（③Fe<sup class="sup">3+</sup>、⑤H<sup class="sup">+</sup>、⑥Na<sup class="sup">+</sup>）。</p>
+      <p class="ans-line">(2) 解析：</p>
+      <p>"活性氧"氧化性强，Na<sub>2</sub>SeO<sub>3</sub> 把它消除（被还原），说明 Na<sub>2</sub>SeO<sub>3</sub> 失电子，作<b>还原剂</b>（Se：+4→+6）。</p>
+      <p class="ans-line">(3) 答案与解析：</p>
+      <p>① HNO<sub>3</sub> 中部分 N（+5→+2）被还原，表现<b>氧化性</b>；部分 N 化合价不变、生成 Fe(NO<sub>3</sub>)<sub>3</sub>，表现<b>酸性</b>（4 份 HNO<sub>3</sub>：1 份作氧化剂、3 份起酸的作用）。</p>
+      <span class="eq">② Fe + 4H<sup class="sup">+</sup> + NO<sub>3</sub><sup class="sup">−</sup> = Fe<sup class="sup">3+</sup> + NO↑ + 2H<sub>2</sub>O</span>
+      <p class="ans-line">(4) 答案与解析：</p>
+      <p>① 双线桥（箭头由变价元素指向变价元素，数目 = 变价原子数 × 每个转移电子数）：</p>
+      <span class="eq">失 2×3e<sup class="sup">−</sup>：N：−3 → 0（2NH<sub>4</sub>Cl 中的 N 被氧化）<br>
+      得 3×2e<sup class="sup">−</sup>：Cu：+2 → 0（4CuO 中的 3 个 Cu 被还原）</span>
+      <p>② 被还原的 CuO（氧化剂）为 3 份，作还原剂的 NH<sub>4</sub>Cl 为 2 份，氧化剂 : 还原剂 = <b>3 : 2</b>（注意：4 个 CuO 中有 1 个 Cu 转入 CuCl<sub>2</sub> 未变价，不计入氧化剂）。</p>
+      <p class="ans-line">(5) 答案与解析：</p>
+      <p>氧化剂是 <b>MnO<sub>2</sub></b>（Mn：+4→+2），氧化产物是 <b>Cl<sub>2</sub></b>（Cl：−1→0，被氧化）。</p>
+      <span class="eq">单线桥：2e<sup class="sup">−</sup>，由 Cl（−1，4HCl 中的 2 个 Cl⁻）→ Mn（+4）；即 MnO<sub>2</sub> + 4HCl(浓) =(Δ)= MnCl<sub>2</sub> + Cl<sub>2</sub>↑ + 2H<sub>2</sub>O，桥上标"2e<sup class="sup">−</sup>"，箭头从被氧化的 Cl⁻ 指向 MnO₂。</span>
+      <p>注意：4HCl 中只有 2 个 Cl⁻ 被氧化，另外 2 个 Cl⁻ 进入 MnCl<sub>2</sub> 起酸性作用——所以单线桥标 <b>2e<sup class="sup">−</sup></b>，不是 4e⁻。</p>
+      <div class="tip">"部分参与氧化还原"是最大陷阱：先数清<b>有几个原子变价</b>，再乘每个转移的电子数；单线桥只标电子数、不写"得失"。</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+  function toggleAns(btn){
+    var box = btn.nextElementSibling;
+    var open = box.classList.toggle('show');
+    btn.classList.toggle('open', open);
+    btn.innerHTML = (open ? '<span class="arr">▴</span>收起答案与解析' : '<span class="arr">▾</span>显示答案与解析');
+    if(open){ setTimeout(function(){ box.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 100); }
+  }
+  function toggleAll(open){
+    document.querySelectorAll('.ans').forEach(function(a){ a.classList.toggle('show', open); });
+    document.querySelectorAll('.btn').forEach(function(b){
+      if(b.textContent.indexOf('显示') >= 0 || b.textContent.indexOf('收起') >= 0){
+        b.classList.toggle('open', open);
+        b.innerHTML = open ? '<span class="arr">▴</span>收起答案与解析' : '<span class="arr">▾</span>显示答案与解析';
+      }
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+{
+ "anim_count": 8,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000283",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000285",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 2,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000289",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 3,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000286",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 4,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000284",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 5,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000287",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 6,
+   "preset_class": 1,
+   "preset_id": 10,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "000288",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 7,
+   "preset_class": 1,
+   "preset_id": 22,
+   "preset_subtype": 0,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "00028c",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "000013",
+ "page_index": 14,
+ "shape_count": 13,
+ "shapes": [
+  {
+   "fill": "none",
+   "font_color": "FFFFFF",
+   "font_name": "微软雅黑",
+   "font_size": 1.0,
+   "h": 26,
+   "id": "000280",
+   "text": "作者编号：35005\r",
+   "type": "shape",
+   "w": 16,
+   "x": 48,
+   "y": 481
+  },
+  {
+   "h": 1,
+   "id": "000281",
+   "img": "pptx:\\ppt\\slides\\media\\image24.png/gedry8",
+   "type": "picture",
+   "w": 1,
+   "x": 66,
+   "y": 29
+  },
+  {
+   "h": 361,
+   "id": "000282",
+   "type": "table",
+   "w": 876,
+   "x": 50,
+   "y": 80
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 100,
+   "id": "000283",
+   "text": "产生白色沉淀，加入稀硝酸沉淀不溶解\r",
+   "type": "shape",
+   "w": 319,
+   "x": 234,
+   "y": 132
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 100,
+   "id": "000284",
+   "text": "产生白色沉淀，加入稀硝酸后沉淀溶解，产生气泡\r",
+   "type": "shape",
+   "w": 347,
+   "x": 229,
+   "y": 335
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "000285",
+   "text": "Ag＋＋Cl－==AgCl↓\r",
+   "type": "shape",
+   "w": 319,
+   "x": 616,
+   "y": 155
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "000286",
+   "text": "Ag＋＋Cl－==AgCl↓\r",
+   "type": "shape",
+   "w": 295,
+   "x": 616,
+   "y": 254
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "000287",
+   "text": "2Ag＋＋CO32－==Ag2CO3↓\r",
+   "type": "shape",
+   "w": 371,
+   "x": 586,
+   "y": 329
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman Regular",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "000288",
+   "text": "Ag2CO3＋2H+==CO2↑＋H2O\r",
+   "type": "shape",
+   "w": 392,
+   "x": 574,
+   "y": 377
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 100,
+   "id": "000289",
+   "text": "产生白色沉淀，加入稀硝酸沉淀不溶解\r",
+   "type": "shape",
+   "w": 319,
+   "x": 234,
+   "y": 229
+  },
+  {
+   "children": [
+    {
+     "border_color": "BFD5F5",
+     "border_width": 2.25,
+     "fill": "E4CDF3",
+     "h": 75,
+     "id": "00028a",
+     "text": "\r",
+     "type": "shape",
+     "w": 876,
+     "x": 0,
+     "y": 4
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 28.0,
+     "h": 93,
+     "id": "00028b",
+     "text": "实验结论：CO32-的存在会对Cl-的检验造成干扰，因此在检验Cl-时，一般先加入适量稀硝酸，然后再滴加AgNO3溶液。\r",
+     "type": "shape",
+     "w": 876,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 93,
+   "id": "00028c",
+   "type": "group",
+   "w": 876,
+   "x": 50,
+   "y": 447
+  },
+  {
+   "h": 46,
+   "id": "00028d",
+   "img": "pptx:\\ppt\\slides\\media\\image25.png/gedry8",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "h": 45,
+   "id": "00028e",
+   "img": "pptx:\\ppt\\slides\\media\\image26.png/gedry8",
+   "type": "picture",
+   "w": 222,
+   "x": 738,
+   "y": 0
+  }
+ ],
+ "version": 0
+}

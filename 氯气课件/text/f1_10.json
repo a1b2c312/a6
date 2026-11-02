@@ -1,0 +1,122 @@
+{
+ "anim_count": 2,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001a2",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 2,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001a4",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "00000f",
+ "page_index": 10,
+ "shape_count": 6,
+ "shapes": [
+  {
+   "children": [
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 0.75,
+     "fill": "F2F2F2",
+     "h": 44,
+     "id": "00019f",
+     "text": "\r",
+     "type": "shape",
+     "w": 944,
+     "x": 0,
+     "y": 4
+    },
+    {
+     "fill": "none",
+     "font_color": "000000",
+     "font_name": "微软雅黑",
+     "font_size": 28.0,
+     "h": 101,
+     "id": "0001a0",
+     "text": "钠、铁、铜、氢气在没有氧气帮忙的情况下照样烧得旺——我们初中学的“燃烧三条件”是不是写错了？燃烧的本质到底是什么？\r\r",
+     "type": "shape",
+     "w": 944,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 101,
+   "id": "0001a1",
+   "type": "group",
+   "w": 945,
+   "x": 15,
+   "y": 55
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 186,
+   "id": "0001a2",
+   "text": "①燃烧不一定需要氧气。\r②燃烧的本质是还原剂(可燃物)与氧化剂(助燃剂)之间的\r   剧烈的发光发热的氧化还原反应。\r",
+   "type": "shape",
+   "w": 721,
+   "x": 75,
+   "y": 109
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "宋体",
+   "font_size": 27.99,
+   "h": 141,
+   "id": "0001a3",
+   "text": "1.下列说法中，不正确的是（  ）\r  A.燃烧一定伴有发光现象     B.燃烧一定是氧化还原反应\r  C.燃烧一定要有氧气参加     D.燃烧一定会放出热量\r",
+   "type": "shape",
+   "w": 915,
+   "x": 30,
+   "y": 325
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "Times New Roman",
+   "font_size": 30.0,
+   "h": 55,
+   "id": "0001a4",
+   "text": "C\r",
+   "type": "shape",
+   "w": 41,
+   "x": 405,
+   "y": 334
+  },
+  {
+   "h": 46,
+   "id": "0001a5",
+   "img": "pptx:\\ppt\\slides\\media\\image5.png/hcnui3",
+   "type": "picture",
+   "w": 201,
+   "x": 759,
+   "y": 0
+  },
+  {
+   "h": 46,
+   "id": "0001a6",
+   "img": "pptx:\\ppt\\slides\\media\\image6.jpg/hcnui3",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  }
+ ],
+ "version": 0
+}

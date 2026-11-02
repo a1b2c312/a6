@@ -1,0 +1,263 @@
+{
+ "anim_count": 7,
+ "animations": [
+  {
+   "index": 0,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001df",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 1,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001e0",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 2,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001e1",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 3,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001e2",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 4,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001e3",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 5,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001e4",
+   "trigger_id": "kDefaultTriggerId"
+  },
+  {
+   "index": 6,
+   "preset_class": 1,
+   "preset_id": 2,
+   "preset_subtype": 4,
+   "seq_type": "STTLTimeNodeType_mainSeq",
+   "shape_id": "0001e7",
+   "trigger_id": "kDefaultTriggerId"
+  }
+ ],
+ "page_id": "000011",
+ "page_index": 12,
+ "shape_count": 15,
+ "shapes": [
+  {
+   "h": 45,
+   "id": "0001d8",
+   "img": "pptx:\\ppt\\slides\\media\\image12.png/hcnui3",
+   "type": "picture",
+   "w": 222,
+   "x": 738,
+   "y": 0
+  },
+  {
+   "h": 45,
+   "id": "0001d9",
+   "img": "pptx:\\ppt\\slides\\media\\image13.jpg/hcnui3",
+   "type": "picture",
+   "w": 753,
+   "x": 0,
+   "y": 0
+  },
+  {
+   "fill": "none",
+   "font_color": "000000",
+   "font_name": "微软雅黑",
+   "font_size": 28.0,
+   "h": 56,
+   "id": "0001da",
+   "text": "实验2-8\r",
+   "type": "shape",
+   "w": 161,
+   "x": 32,
+   "y": 43
+  },
+  {
+   "h": 297,
+   "id": "0001db",
+   "type": "table",
+   "w": 898,
+   "x": 38,
+   "y": 104
+  },
+  {
+   "h": 122,
+   "id": "0001dc",
+   "img": "pptx:\\ppt\\slides\\media\\image14.png/hcnui3",
+   "type": "picture",
+   "w": 169,
+   "x": 170,
+   "y": 126
+  },
+  {
+   "h": 150,
+   "id": "0001dd",
+   "img": "pptx:\\ppt\\slides\\media\\image15.png/hcnui3",
+   "type": "picture",
+   "w": 130,
+   "x": 415,
+   "y": 115
+  },
+  {
+   "h": 150,
+   "id": "0001de",
+   "img": "pptx:\\ppt\\slides\\media\\image16.png/hcnui3",
+   "type": "picture",
+   "w": 252,
+   "x": 645,
+   "y": 104
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 24.0,
+   "h": 64,
+   "id": "0001df",
+   "text": "有色布条不褪色\r",
+   "type": "shape",
+   "w": 227,
+   "x": 150,
+   "y": 264
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 24.0,
+   "h": 83,
+   "id": "0001e0",
+   "text": "干燥氯气不具有漂白性\r",
+   "type": "shape",
+   "w": 210,
+   "x": 157,
+   "y": 326
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 24.0,
+   "h": 61,
+   "id": "0001e1",
+   "text": "有色布条褪色\r",
+   "type": "shape",
+   "w": 220,
+   "x": 380,
+   "y": 264
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 24.0,
+   "h": 64,
+   "id": "0001e2",
+   "text": "湿润氯气具有漂白性\r",
+   "type": "shape",
+   "w": 263,
+   "x": 358,
+   "y": 332
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 24.0,
+   "h": 61,
+   "id": "0001e3",
+   "text": "鲜花褪色\r",
+   "type": "shape",
+   "w": 220,
+   "x": 667,
+   "y": 262
+  },
+  {
+   "fill": "none",
+   "font_color": "FF0000",
+   "font_name": "微软雅黑",
+   "font_size": 24.0,
+   "h": 64,
+   "id": "0001e4",
+   "text": "干燥氯气能使鲜花褪色\r",
+   "type": "shape",
+   "w": 280,
+   "x": 637,
+   "y": 332
+  },
+  {
+   "children": [
+    {
+     "border_alpha": 100,
+     "border_color": "FFFFFF",
+     "border_width": 0.75,
+     "fill": "0000FF",
+     "h": 103,
+     "id": "0001e5",
+     "text": "\r",
+     "type": "shape",
+     "w": 960,
+     "x": 0,
+     "y": 4
+    },
+    {
+     "fill": "none",
+     "font_color": "FFFFFF",
+     "font_name": "微软雅黑",
+     "font_size": 32.0,
+     "h": 103,
+     "id": "0001e6",
+     "text": "褪色真相：动手的不是Cl2本身，而是它与水反应后生成的次氯酸！\r\r",
+     "type": "shape",
+     "w": 960,
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "h": 107,
+   "id": "0001e7",
+   "type": "group",
+   "w": 960,
+   "x": 0,
+   "y": 409
+  },
+  {
+   "h": 136,
+   "id": "0001e8",
+   "img": "pptx:\\ppt\\slides\\media\\image17.png/hcnui3",
+   "type": "picture",
+   "w": 231,
+   "x": 714,
+   "y": -8
+  }
+ ],
+ "version": 0
+}
