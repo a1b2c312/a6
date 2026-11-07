@@ -1,0 +1,3050 @@
+{
+  "title": "高一上第三次英语周末作业",
+  "subtitle": "瑞昌一中高一上学期 · 全卷 150 分 / 120 分钟 · 含听力原音与 2 篇写作范文",
+  "audio": "assets/audio/listening_1107.mp3",
+  "audioName": "听力原音 · 高一上第三次英语周末作业",
+  "writingTitle": "第四部分 写作 · 书面表达（满分 15 分）",
+  "sections": [
+    {
+      "title": "第一部分 听力 · 第一节（1—5）",
+      "kind": "listen",
+      "hint": "听下面5 段录音。每段录音后有一个小题，从题中所给的 A、B、C 三个选项中选出最佳选项。听完每段录音后，你都有 10秒钟的时间来回答有关小题和阅读下一小题。每段录音播放两遍。",
+      "questions": [
+        {
+          "num": 1,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What are the speakers mainly talking about?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "A restaurant."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "The man’s dog."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Some bad acts."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 1】\nM: I saw some people throwing plastic bags on the street when walking my dog yesterday. That\nwas too bad.\nW: Things like that happen sometimes. I once found two people smoking in the nonsmoking area of a restaurant."
+              }
+            ]
+          }
+        },
+        {
+          "num": 2,
+          "type": "choice",
+          "group": "listening",
+          "stem": "Why does the woman talk to the man?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "To give a warning."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "To offer suggestions."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "To ask about something."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 2】\nW: Excuse me, sir, but can I take the No.6 bus here?\nM: Yes, madam. May I ask where you’re going?\nW: The Lakeside Hotel.\nM: Oh, you have to go across the street and take the No.6 bus over there."
+              }
+            ]
+          }
+        },
+        {
+          "num": 3,
+          "type": "choice",
+          "group": "listening",
+          "stem": "Where does the conversation probably take place?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "In the classroom."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "On the playground."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "In the library."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": [
+              {
+                "t": "【听力原文 · Text 3】\nW: Where is Mike? Did he leave school already?\nM: I don’t think so. Look at his schoolbag. It is still on his desk. Let’s look around. I think we can\nfind him somewhere.\nW: I’m sure he must be playing football on the playground. Let’s go to the playground first."
+              }
+            ]
+          }
+        },
+        {
+          "num": 4,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What is the man’s problem?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "He missed the meeting."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "He forgot the report at home."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "He didn’t know the deadline."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 4】\nW: Have you handed in your monthly report yet?\nM: No, I haven’t. I was planning to hand it in tomorrow.\nW: Well, the monthly report is supposed to be handed in by lunch.\nM: I’m sorry. I didn’t know that. I’ll do it right away."
+              }
+            ]
+          }
+        },
+        {
+          "num": 5,
+          "type": "choice",
+          "group": "listening",
+          "stem": "Who will the woman give some flowers to?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "The man speaker."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Mrs. Jones."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Mr. Watson."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 5】\nM: What will you do on Teachers’ Day?\nW: I’m going to give Mr. Watson some flowers on that day. What about you?\nM: I plan to make a cake for Mrs. Jones."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "第一部分 听力 · 第二节（6—20）",
+      "kind": "listen",
+      "hint": "听下面5段录音。每段录音后有几个小题，从题中所给的A、B、C三个选项中选出最佳选项。听每段录音前，你将有时间阅读各个小题，每小题5秒钟；听完后，每小题都有5秒钟的作答时间。每段录音播放两遍。",
+      "questions": [
+        {
+          "num": 6,
+          "type": "choice",
+          "group": "listening",
+          "stem": "When did Sally get the painting?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "On her birthday."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "On Christmas Day."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "On Mother’s Day."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 6】\nM: Sally, you’ve got a great painting in your office. Is it a gift for this year’s birthday?\nW: I’m glad you like it. Actually, it’s a Mother’s Day gift from my daughter.\nM: Wow, Karen does have an eye for art. Does she work in the art field?\nW: She used to work as an assistant to a painter, but recently she has just joined an advertising company and works as a creative director.\nM: That sounds interesting. Her boss must think very highly of her.\nW: Yes, and her boss is just like ours, who is friendly and treats the staff well."
+              }
+            ]
+          }
+        },
+        {
+          "num": 7,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What is the relationship between the speakers?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Boss and assistant."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Father and daughter."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Co-workers."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 6】\nM: Sally, you’ve got a great painting in your office. Is it a gift for this year’s birthday?\nW: I’m glad you like it. Actually, it’s a Mother’s Day gift from my daughter.\nM: Wow, Karen does have an eye for art. Does she work in the art field?\nW: She used to work as an assistant to a painter, but recently she has just joined an advertising company and works as a creative director.\nM: That sounds interesting. Her boss must think very highly of her.\nW: Yes, and her boss is just like ours, who is friendly and treats the staff well."
+              }
+            ]
+          }
+        },
+        {
+          "num": 8,
+          "type": "choice",
+          "group": "listening",
+          "stem": "How old is Mary’s mother?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "45 years old."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "50 years old."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "55 years old."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": [
+              {
+                "t": "【听力原文 · Text 7】\nM: Mary, tomorrow is your mom’s 50th birthday, do you remember?\nW: Of course I do. How shall we celebrate it?\nM: First of all, a birthday present. What about buying her a beautiful skirt?\nW: That’s a good idea. It’ll make her look younger. And a birthday cake too.\nM: We can have it at home. I’ve learned to cook a few dishes from a Chinese friend. I’m sure she will like them."
+              }
+            ]
+          }
+        },
+        {
+          "num": 9,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What will the man do tomorrow?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Cook some dishes."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Buy a cake."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Buy Chinese dishes."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": [
+              {
+                "t": "【听力原文 · Text 7】\nM: Mary, tomorrow is your mom’s 50th birthday, do you remember?\nW: Of course I do. How shall we celebrate it?\nM: First of all, a birthday present. What about buying her a beautiful skirt?\nW: That’s a good idea. It’ll make her look younger. And a birthday cake too.\nM: We can have it at home. I’ve learned to cook a few dishes from a Chinese friend. I’m sure she will like them."
+              }
+            ]
+          }
+        },
+        {
+          "num": 10,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What’s the probable relationship between the speakers?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Doctor and patient."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Boss and assistant."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Husband and wife."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 8】\nW: Shall I call and tell your assistant that you’re not going to work today?\nM: Yes please. Dear, tell her I’ve got a cold and a headache but I hope to be back in a day or two. You'd better tell her I'm staying in bed.\nW: But you’re not in bed, do you want me to tell a lie?\nM: Oh, it’s only a very little one, dear. I’m not making a false excuse. I really have a bad\nheadache.\nW: Then put the cigarette out. It’s very foolish of you to smoke when you’ve got a cold.\nM: Very well, dear. You’re quite right.\nW: Look, here’s some hot water. Please do as I tell you now, I’ve put something in the water that'll do you a lot of good. Put your nose over the water. That’s right. Breathe in deeply.\nM: Oh, it smells nice."
+              }
+            ]
+          }
+        },
+        {
+          "num": 11,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What can we learn about the man?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "He has a cold."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "He often tells lies."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "He’s staying in bed."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": [
+              {
+                "t": "【听力原文 · Text 8】\nW: Shall I call and tell your assistant that you’re not going to work today?\nM: Yes please. Dear, tell her I’ve got a cold and a headache but I hope to be back in a day or two. You'd better tell her I'm staying in bed.\nW: But you’re not in bed, do you want me to tell a lie?\nM: Oh, it’s only a very little one, dear. I’m not making a false excuse. I really have a bad\nheadache.\nW: Then put the cigarette out. It’s very foolish of you to smoke when you’ve got a cold.\nM: Very well, dear. You’re quite right.\nW: Look, here’s some hot water. Please do as I tell you now, I’ve put something in the water that'll do you a lot of good. Put your nose over the water. That’s right. Breathe in deeply.\nM: Oh, it smells nice."
+              }
+            ]
+          }
+        },
+        {
+          "num": 12,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What did the woman do with the man’s problem?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "She put his cigarette out."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "She gave him some medicine."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "She prepared some hot water for him."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 8】\nW: Shall I call and tell your assistant that you’re not going to work today?\nM: Yes please. Dear, tell her I’ve got a cold and a headache but I hope to be back in a day or two. You'd better tell her I'm staying in bed.\nW: But you’re not in bed, do you want me to tell a lie?\nM: Oh, it’s only a very little one, dear. I’m not making a false excuse. I really have a bad\nheadache.\nW: Then put the cigarette out. It’s very foolish of you to smoke when you’ve got a cold.\nM: Very well, dear. You’re quite right.\nW: Look, here’s some hot water. Please do as I tell you now, I’ve put something in the water that'll do you a lot of good. Put your nose over the water. That’s right. Breathe in deeply.\nM: Oh, it smells nice."
+              }
+            ]
+          }
+        },
+        {
+          "num": 13,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What is Jennifer?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "A teacher."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "A student."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "A tour guide."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": [
+              {
+                "t": "【听力原文 · Text 9】\nM: Jennifer, what’s your plan for the school summer vacation?\nW: My grandparents really miss me, they want me to spend one or two weeks with them in the country this summer. So I’ll go to visit them first, after I return I think I’ll do some volunteer work.\nM: Will you consider volunteering for a program in Kathmandu Nepal?\nW: No, I can’t afford a trip abroad. What about you?\nM: That’s my plan for this summer.\nW: What will you do in this program?\nM: Well, it aims to provide quality education to some of Nepal’s children volunteers will work alongside local teachers to help with subjects, such as English math science history and geography.\nW: So what subjects are you most interested in teaching?\nM: Geography.\nW: When will you begin to work there?\nM: On July tenth, and I’ll volunteer for two whole weeks there after that I’ll do some traveling around the country\nW: Well, I wish you a great time there."
+              }
+            ]
+          }
+        },
+        {
+          "num": 14,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What will Jennifer do first this summer?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Do some volunteer work."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Take a trip abroad."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Visit her grandparents."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 9】\nM: Jennifer, what’s your plan for the school summer vacation?\nW: My grandparents really miss me, they want me to spend one or two weeks with them in the country this summer. So I’ll go to visit them first, after I return I think I’ll do some volunteer work.\nM: Will you consider volunteering for a program in Kathmandu Nepal?\nW: No, I can’t afford a trip abroad. What about you?\nM: That’s my plan for this summer.\nW: What will you do in this program?\nM: Well, it aims to provide quality education to some of Nepal’s children volunteers will work alongside local teachers to help with subjects, such as English math science history and geography.\nW: So what subjects are you most interested in teaching?\nM: Geography.\nW: When will you begin to work there?\nM: On July tenth, and I’ll volunteer for two whole weeks there after that I’ll do some traveling around the country\nW: Well, I wish you a great time there."
+              }
+            ]
+          }
+        },
+        {
+          "num": 15,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What subject will the man probably teach?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "English."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Geography."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Science."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": [
+              {
+                "t": "【听力原文 · Text 9】\nM: Jennifer, what’s your plan for the school summer vacation?\nW: My grandparents really miss me, they want me to spend one or two weeks with them in the country this summer. So I’ll go to visit them first, after I return I think I’ll do some volunteer work.\nM: Will you consider volunteering for a program in Kathmandu Nepal?\nW: No, I can’t afford a trip abroad. What about you?\nM: That’s my plan for this summer.\nW: What will you do in this program?\nM: Well, it aims to provide quality education to some of Nepal’s children volunteers will work alongside local teachers to help with subjects, such as English math science history and geography.\nW: So what subjects are you most interested in teaching?\nM: Geography.\nW: When will you begin to work there?\nM: On July tenth, and I’ll volunteer for two whole weeks there after that I’ll do some traveling around the country\nW: Well, I wish you a great time there."
+              }
+            ]
+          }
+        },
+        {
+          "num": 16,
+          "type": "choice",
+          "group": "listening",
+          "stem": "When will the man finish his work in Nepal?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "On July 10th."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "On July 16th."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "On July 23rd."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 9】\nM: Jennifer, what’s your plan for the school summer vacation?\nW: My grandparents really miss me, they want me to spend one or two weeks with them in the country this summer. So I’ll go to visit them first, after I return I think I’ll do some volunteer work.\nM: Will you consider volunteering for a program in Kathmandu Nepal?\nW: No, I can’t afford a trip abroad. What about you?\nM: That’s my plan for this summer.\nW: What will you do in this program?\nM: Well, it aims to provide quality education to some of Nepal’s children volunteers will work alongside local teachers to help with subjects, such as English math science history and geography.\nW: So what subjects are you most interested in teaching?\nM: Geography.\nW: When will you begin to work there?\nM: On July tenth, and I’ll volunteer for two whole weeks there after that I’ll do some traveling around the country\nW: Well, I wish you a great time there."
+              }
+            ]
+          }
+        },
+        {
+          "num": 17,
+          "type": "choice",
+          "group": "listening",
+          "stem": "Who is the speaker?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "A doctor."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "A headmaster."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "A policeman."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": [
+              {
+                "t": "【听力原文 · Text 10】\nThis is an announcement from the headmaster’s office. This is an earthquake safety exercise. I repeat, this is an earthquake safety exercise. Students, please take cover under your desks and use your arms to protect your head. Do not move until your teachers tell you to. Teachers make sure all classroom doors are not locked and nothing is blocking the doors. You’ll need to make sure that all students are paying attention and doing everything correctly, like we’ve been practicing. Teachers, please try to keep your students as calm as possible. You can use the yellow radios in your desks to communicate with me and other teachers if necessary. No one is allowed to leave the classrooms for any reason until the alarm has stopped. Once you hear that the bell has stopped, line up quickly and walk outside to the playground. Make sure that you stay with your class at all times. Once we are all outside, I will make another announcement and we can then return to our normal activities."
+              }
+            ]
+          }
+        },
+        {
+          "num": 18,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What is happening at the school?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "A fire."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "An earthquake."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "A safety exercise."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 10】\nThis is an announcement from the headmaster’s office. This is an earthquake safety exercise. I repeat, this is an earthquake safety exercise. Students, please take cover under your desks and use your arms to protect your head. Do not move until your teachers tell you to. Teachers make sure all classroom doors are not locked and nothing is blocking the doors. You’ll need to make sure that all students are paying attention and doing everything correctly, like we’ve been practicing. Teachers, please try to keep your students as calm as possible. You can use the yellow radios in your desks to communicate with me and other teachers if necessary. No one is allowed to leave the classrooms for any reason until the alarm has stopped. Once you hear that the bell has stopped, line up quickly and walk outside to the playground. Make sure that you stay with your class at all times. Once we are all outside, I will make another announcement and we can then return to our normal activities."
+              }
+            ]
+          }
+        },
+        {
+          "num": 19,
+          "type": "choice",
+          "group": "listening",
+          "stem": "What should teachers do?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Set the alarm."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Keep the students calm."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Lock all classroom doors."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": [
+              {
+                "t": "【听力原文 · Text 10】\nThis is an announcement from the headmaster’s office. This is an earthquake safety exercise. I repeat, this is an earthquake safety exercise. Students, please take cover under your desks and use your arms to protect your head. Do not move until your teachers tell you to. Teachers make sure all classroom doors are not locked and nothing is blocking the doors. You’ll need to make sure that all students are paying attention and doing everything correctly, like we’ve been practicing. Teachers, please try to keep your students as calm as possible. You can use the yellow radios in your desks to communicate with me and other teachers if necessary. No one is allowed to leave the classrooms for any reason until the alarm has stopped. Once you hear that the bell has stopped, line up quickly and walk outside to the playground. Make sure that you stay with your class at all times. Once we are all outside, I will make another announcement and we can then return to our normal activities."
+              }
+            ]
+          }
+        },
+        {
+          "num": 20,
+          "type": "choice",
+          "group": "listening",
+          "stem": "When should students return to their normal activities?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Once the bell stops."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "At the end of the day."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "After the second announcement."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": [
+              {
+                "t": "【听力原文 · Text 10】\nThis is an announcement from the headmaster’s office. This is an earthquake safety exercise. I repeat, this is an earthquake safety exercise. Students, please take cover under your desks and use your arms to protect your head. Do not move until your teachers tell you to. Teachers make sure all classroom doors are not locked and nothing is blocking the doors. You’ll need to make sure that all students are paying attention and doing everything correctly, like we’ve been practicing. Teachers, please try to keep your students as calm as possible. You can use the yellow radios in your desks to communicate with me and other teachers if necessary. No one is allowed to leave the classrooms for any reason until the alarm has stopped. Once you hear that the bell has stopped, line up quickly and walk outside to the playground. Make sure that you stay with your class at all times. Once we are all outside, I will make another announcement and we can then return to our normal activities."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "第二部分 阅读 · A 篇（21—23）· 图书馆花园志愿者项目",
+      "kind": "passage",
+      "hint": "阅读下列短文，从每题所给的A、B、C和D 四个选项中，选出最佳选项，并在答题卡上将该项涂黑。",
+      "passage": [
+        "If you are a high school student wanting to earn some meaningful volunteer hours over the summer break, this is a perfect chance. The Milton Public Library is looking for youth for its Garden Volunteer Program. You will get close to nature and work with other students while taking part in different tasks that have something to do with gardening.",
+        "What to Expect",
+        "Free Choice of Working Periods: Activities run on Wednesday afternoons and Saturday mornings throughout June, and change to more daytime hours through July and August. You pick the dates that work for you.",
+        "Hands-on Skill Building: Learn the basics of urban agriculture (城市农业), environmentally friendly planting and local food harvesting.",
+        "Earn Hours: Each duty that you finish counts toward your high school graduation requirements.",
+        "The Main Information",
+        "When: June through October 2026",
+        "Where: Milton Public Library Main Branch (1010 Main St E, Milton)",
+        "Who Can Join: High school students aged 14 and older",
+        "How to Sign Up: With your library card, you are able to sign up online for free garden places. Write down your full name, and the library team can offer you the official hour record letter at the end of the season.",
+        "You don’t need gardening experience. The library will provide tools, gloves and training before you start."
+      ],
+      "questions": [
+        {
+          "num": 21,
+          "type": "choice",
+          "group": "read",
+          "stem": "What can we know about the Garden Volunteer Program?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "It lasts for a period of three months."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "It provides activities organized by experts."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Volunteers can choose their work dates freely."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "Volunteers should hand in training reports online."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        },
+        {
+          "num": 22,
+          "type": "choice",
+          "group": "read",
+          "stem": "What is required to join the program?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Reaching a certain age."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Bringing necessary tools."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Rich gardening experience."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "An interview with a librarian."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": []
+          }
+        },
+        {
+          "num": 23,
+          "type": "choice",
+          "group": "read",
+          "stem": "What is the main purpose of the text?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "To share a volunteering experience."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "To introduce a youth volunteer program."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "To get kids to spend more time outdoors."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "To explain the importance of urban agriculture."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": []
+          }
+        }
+      ]
+    },
+    {
+      "title": "第二部分 阅读 · B 篇（24—27）· 历史课上的故事写作",
+      "kind": "passage",
+      "hint": "阅读下列短文，从每题所给的A、B、C和D 四个选项中，选出最佳选项，并在答题卡上将该项涂黑。",
+      "passage": [
+        "Mr. Johnson, a high school history teacher, had long noticed a problem in his classroom. While his students could carefully remember dates, names and events for exams, they always failed to understand the human side of history. To them, the past seemed only facts, without emotion, struggle or personal meaning. Wanting to fix this gap, Mr. Johnson decided to completely change his teaching method, trading a traditional research report for a story-writing task.",
+        "He asked his students to pick a historical person and write a story from the person’s point of view. The task was confusing at first, but soon the classroom was full of active questions and discussion. One student learned deeply about the life of a young soldier in World War I, writing a sad and moving story. Another wrote about a female scholar from the Renaissance, making up a story of her love for learning being held back by social rules.",
+        "Mr. Johnson was surprised by the big change in his students. The essays he got were not just correct; they were full of real feelings and a clear understanding of people’s thoughts. The students had stopped just repeating facts and truly connected with history, seeing historical people with many different sides. In later class talks, their questions changed from “What happened?” to “Why did they feel that way?” and “What would I have done?”. This story-writing method didn’t just help them remember facts better; it built up their ability to think deeply and their real care for how others felt.",
+        "Inspired by this success, Mr. Johnson has now made story-telling a regular part of his lessons. He believes that when students learn to experience history through story-telling, they do more than just remember it — they start to understand its long-lasting effects on their own lives and what it means to be human in general. In his classroom, history is no longer just a subject about the past; it has become a talk with the past."
+      ],
+      "questions": [
+        {
+          "num": 24,
+          "type": "choice",
+          "group": "read",
+          "stem": "What was the original problem of Mr. Johnson’s students?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "They preferred science over history."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "They showed little interest in history."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "They could not memorize historical facts."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "They failed to connect with history emotionally."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "D",
+            "body": []
+          }
+        },
+        {
+          "num": 25,
+          "type": "choice",
+          "group": "read",
+          "stem": "How did Mr. Johnson change his teaching method?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "He gave students more fact-based research papers."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "He showed more historical documentaries with facts."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "He invited historians to give lectures in his classroom."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "He asked students to write in a historical person’s voice."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "D",
+            "body": []
+          }
+        },
+        {
+          "num": 26,
+          "type": "choice",
+          "group": "read",
+          "stem": "What can we learn about the students from paragraph 3?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "They got much higher grades in history exams."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "They enjoyed reading more than writing stories."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "They began to see historical people as real persons."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "They still thought history was boring and meaningless."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        },
+        {
+          "num": 27,
+          "type": "choice",
+          "group": "read",
+          "stem": "What is the main idea of the text?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "History should value facts over emotions."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "History is more than facts — it’s human stories."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Students should learn history through story writing."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "Students should ask questions when learning history."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": []
+          }
+        }
+      ]
+    },
+    {
+      "title": "第二部分 阅读 · C 篇（28—31）· 演唱会经济",
+      "kind": "passage",
+      "hint": "阅读下列短文，从每题所给的A、B、C和D 四个选项中，选出最佳选项，并在答题卡上将该项涂黑。",
+      "passage": [
+        "How can a country give its economy a quick push in a short term? Just host a major concert series to encourage consumption (消费). However, only a small number of performers can create a huge economic effect. One of the best examples is American singer Taylor Swift. Economists have even created a new word called Swiftconomics to describe the economic effect caused by her concerts.",
+        "Taylor Swift’s concerts often bring large amounts of money to the cities where she performs. One reason her concerts have such a strong effect is that many fans turn the concert into a travel experience. They arrive days before the event, visit local sights, stay in hotels, eat in restaurants and buy souvenirs. Even after the concert, many visitors keep spending money in the city. Because of this, the economic benefits are much larger than ticket sales alone. Experts believe her concerts have created billions of dollars in economic activity. Some people have even jokingly called her a walking GDP.",
+        "China is also exploring ways to use concerts to support local economies. Many cities now regard concerts not only as joy, but also as a chance to introduce the city to visitors. During big concerts, extra trains are added for travelling fans to ensure smooth trips. Cities like Hangzhou and Chengdu have launched “Concert + Tourism” packages, including discounted hotels, guided tours and exclusive access (专属通道) to attractions for ticket holders. The goal is to turn a one-night show into a multi-day tourism experience.",
+        "However, challenges remain. Overcrowding, traffic jams and rising prices may weaken these positive effects. Local governments are improving planning to balance economic gains with residents’ daily lives. Experts believe that the concert economy is here to stay. As long as people desire live music and shared experiences, cities will find creative ways to make use of its power. With smart transport, local cooperation and digital marketing, the future of the concert economy looks bright."
+      ],
+      "questions": [
+        {
+          "num": 28,
+          "type": "choice",
+          "group": "read",
+          "stem": "Why is Taylor Swift mentioned?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "To praise her music talent."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "To prove tourism’s power."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "To explain a concert effect."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "To introduce a famous singer."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        },
+        {
+          "num": 29,
+          "type": "choice",
+          "group": "read",
+          "stem": "What does the underlined phrase “a walking GDP” in Paragraph 2 mean?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "An economic influencer."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "A wealthy superstar."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "An attractive artist."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "A popular musician."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": []
+          }
+        },
+        {
+          "num": 30,
+          "type": "choice",
+          "group": "read",
+          "stem": "What does China’s railway system do to meet the need?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Offer more trains."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Lower ticket prices."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Open new railway lines."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "Upgrade railway system."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": []
+          }
+        },
+        {
+          "num": 31,
+          "type": "choice",
+          "group": "read",
+          "stem": "What can be a suitable title for the text?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "New chances for urban tourism"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "The Rise of the Concert Economy"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Hidden risks of live concerts"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "The Future of Concert Tourism"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": []
+          }
+        }
+      ]
+    },
+    {
+      "title": "第二部分 阅读 · D 篇（32—35）· 乌鸦与烟头清理",
+      "kind": "passage",
+      "hint": "阅读下列短文，从每题所给的A、B、C和D 四个选项中，选出最佳选项，并在答题卡上将该项涂黑。",
+      "passage": [
+        "Crows (乌鸦) are very smart birds. They can count, tell human faces, and even use tools. Recently, a popular story said that a Swedish town was training crows to pick up cigarette butts (烟头). While this project isn’t actually happening now, the idea is based on real science.",
+        "In 2022, a researcher named Hans Christian Hanssen proposed “Corvid Cleaning”. The plan was to train wild crows to collect cigarette rubbish and drop it into special bins (垃圾箱). In return, the bins would give the birds food as a reward (回报). The idea drew international attention, and some experts even praised its possibilities to cut down litter in the city. However, the business behind the project failed in 2025. Despite this, false news about the program continues to spread online.",
+        "Why did the project fail? A 2024 study pointed out some serious worries. Researchers worried about the health risks to the crows and whether the public would accept animals cleaning up human waste. Besides this, the business itself was short of money. This wasn’t the first try either. A French theme park tried something similar in 2018 with mixed results. In the end, the question isn’t just whether we can train crows to clean, but should we?",
+        "But the story also draws attention to a huge environmental problem. Cigarette butts are the world’s most littered item. Humans throw away around 4.5 trillion butts every year, and that number could soon double. These butts take years to break down and give off harmful chemicals into soil and waterways, harming both wildlife and the environment.",
+        "While using clever crows as cleaners makes for an eye-catching headline, the real lesson is about human responsibility. Instead of depending on animals to fix our problems, we need to address cigarette pollution at its source through better waste management and a change of smoking rules. Crows are very smart, but at the end of the day, protecting the planet is our job, not theirs."
+      ],
+      "questions": [
+        {
+          "num": 32,
+          "type": "choice",
+          "group": "read",
+          "stem": "What was the main purpose of the “Corvid Cleaning” project?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "To create a new bird shelter."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "To study the cleverness of crows."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "To test special trash bins in Sweden."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "To train crows to clear cigarette waste."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "D",
+            "body": []
+          }
+        },
+        {
+          "num": 33,
+          "type": "choice",
+          "group": "read",
+          "stem": "What can be inferred about the project from Paragraph 3?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "It faced money problems and people’s doubts."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "It was completely rejected by the public."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "It needed better management and more money."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "It brought health risks to the local citizens."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": []
+          }
+        },
+        {
+          "num": 34,
+          "type": "choice",
+          "group": "read",
+          "stem": "How does the author show the seriousness of cigarette pollution in paragraph 4?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "By explaining a key idea."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "By showing facts and results."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "By asking readers questions."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "By sharing personal experiences."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": []
+          }
+        },
+        {
+          "num": 35,
+          "type": "choice",
+          "group": "read",
+          "stem": "What does the author express in the last paragraph?",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Crows are too smart for cleaning tasks."
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "Theme parks should stop using wild animals."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Humans should deal with pollution themselves."
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "We should not believe false stories about animals."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        }
+      ]
+    },
+    {
+      "title": "第二部分 阅读 · 第二节 七选五（36—40）",
+      "kind": "bank",
+      "hint": "根据短文内容，从短文后的选项中选出能填入空白处的最佳选项。选项中有两项为多余选项。",
+      "passage": [
+        "It’s almost impossible to never complain (抱怨), but if you can learn to stop complaining or just complain less, your life will change for the better. It’s not easy to change your way of thinking from negative and critical (批判的) to more positive.    36    Here are some practical ways to stop complaining.",
+        "Focus on solving the problem",
+        "Studies show that complaining can be useful if it’s aimed at getting a result, like solving a problem. Next time you feel like complaining, ask yourself:    37    If the answer is yes, then think about how to use that complaint to make things better.",
+        "Accept what you can’t change",
+        "Sometimes people complain because they’re unhappy with the reality but feel they can’t change it.    38    When a problem is truly beyond control, sharing your feelings with others can help you feel better and clear stress.",
+        "Cheat your brain",
+        "39     Smiles mean happiness, and frowns (皱眉) mean sadness or anger. Usually, the feeling comes first, then the facial expression. But research shows it can also work the other way around. A theory says that the expressions we make can bring about the related feelings. So next time you’re unhappy and want to complain, try this theory. Don’t frown or look upset. Instead, force a smile and wait a few minutes. You might find yourself feeling better.",
+        "Speak to a doctor",
+        "Do you complain a lot? Is it making your mood bad and affecting your daily life? If yes, it might be a good idea to ask for professional help. Doctors can help you change unhelpful thinking habits that make you complain so much.    40"
+      ],
+      "bank": [
+        {
+          "label": "A",
+          "frags": [
+            {
+              "t": "Is complaining a mental illness?"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "frags": [
+            {
+              "t": "It will take effort, but it’s totally possible."
+            }
+          ]
+        },
+        {
+          "label": "C",
+          "frags": [
+            {
+              "t": "Will this complaint help solve my problem?"
+            }
+          ]
+        },
+        {
+          "label": "D",
+          "frags": [
+            {
+              "t": "You can tell how someone feels by their face."
+            }
+          ]
+        },
+        {
+          "label": "E",
+          "frags": [
+            {
+              "t": "After all, not every problem has a clear solution."
+            }
+          ]
+        },
+        {
+          "label": "F",
+          "frags": [
+            {
+              "t": "They’ll also teach you better ways to deal with problems."
+            }
+          ]
+        },
+        {
+          "label": "G",
+          "frags": [
+            {
+              "t": "When people complain, it’s because they judge a situation as “bad”."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "num": 36,
+          "type": "choice",
+          "group": "seven",
+          "stem": "第 36 题：___36___（填入最恰当的一项）",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Is complaining a mental illness?"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "It will take effort, but it’s totally possible."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Will this complaint help solve my problem?"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "You can tell how someone feels by their face."
+                }
+              ]
+            },
+            {
+              "label": "E",
+              "frags": [
+                {
+                  "t": "After all, not every problem has a clear solution."
+                }
+              ]
+            },
+            {
+              "label": "F",
+              "frags": [
+                {
+                  "t": "They’ll also teach you better ways to deal with problems."
+                }
+              ]
+            },
+            {
+              "label": "G",
+              "frags": [
+                {
+                  "t": "When people complain, it’s because they judge a situation as “bad”."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": []
+          }
+        },
+        {
+          "num": 37,
+          "type": "choice",
+          "group": "seven",
+          "stem": "第 37 题：___37___（填入最恰当的一项）",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Is complaining a mental illness?"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "It will take effort, but it’s totally possible."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Will this complaint help solve my problem?"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "You can tell how someone feels by their face."
+                }
+              ]
+            },
+            {
+              "label": "E",
+              "frags": [
+                {
+                  "t": "After all, not every problem has a clear solution."
+                }
+              ]
+            },
+            {
+              "label": "F",
+              "frags": [
+                {
+                  "t": "They’ll also teach you better ways to deal with problems."
+                }
+              ]
+            },
+            {
+              "label": "G",
+              "frags": [
+                {
+                  "t": "When people complain, it’s because they judge a situation as “bad”."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        },
+        {
+          "num": 38,
+          "type": "choice",
+          "group": "seven",
+          "stem": "第 38 题：___38___（填入最恰当的一项）",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Is complaining a mental illness?"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "It will take effort, but it’s totally possible."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Will this complaint help solve my problem?"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "You can tell how someone feels by their face."
+                }
+              ]
+            },
+            {
+              "label": "E",
+              "frags": [
+                {
+                  "t": "After all, not every problem has a clear solution."
+                }
+              ]
+            },
+            {
+              "label": "F",
+              "frags": [
+                {
+                  "t": "They’ll also teach you better ways to deal with problems."
+                }
+              ]
+            },
+            {
+              "label": "G",
+              "frags": [
+                {
+                  "t": "When people complain, it’s because they judge a situation as “bad”."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "E",
+            "body": []
+          }
+        },
+        {
+          "num": 39,
+          "type": "choice",
+          "group": "seven",
+          "stem": "第 39 题：___39___（填入最恰当的一项）",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Is complaining a mental illness?"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "It will take effort, but it’s totally possible."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Will this complaint help solve my problem?"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "You can tell how someone feels by their face."
+                }
+              ]
+            },
+            {
+              "label": "E",
+              "frags": [
+                {
+                  "t": "After all, not every problem has a clear solution."
+                }
+              ]
+            },
+            {
+              "label": "F",
+              "frags": [
+                {
+                  "t": "They’ll also teach you better ways to deal with problems."
+                }
+              ]
+            },
+            {
+              "label": "G",
+              "frags": [
+                {
+                  "t": "When people complain, it’s because they judge a situation as “bad”."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "D",
+            "body": []
+          }
+        },
+        {
+          "num": 40,
+          "type": "choice",
+          "group": "seven",
+          "stem": "第 40 题：___40___（填入最恰当的一项）",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "Is complaining a mental illness?"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "It will take effort, but it’s totally possible."
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "Will this complaint help solve my problem?"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "You can tell how someone feels by their face."
+                }
+              ]
+            },
+            {
+              "label": "E",
+              "frags": [
+                {
+                  "t": "After all, not every problem has a clear solution."
+                }
+              ]
+            },
+            {
+              "label": "F",
+              "frags": [
+                {
+                  "t": "They’ll also teach you better ways to deal with problems."
+                }
+              ]
+            },
+            {
+              "label": "G",
+              "frags": [
+                {
+                  "t": "When people complain, it’s because they judge a situation as “bad”."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "F",
+            "body": []
+          }
+        }
+      ]
+    },
+    {
+      "title": "第三部分 语言运用 · 第一节 完形填空（41—55）",
+      "kind": "passage",
+      "hint": "阅读下面短文，从短文后各题所给的四个选项（A、B、C和D）中，选出可以填入空白处的最佳选项，并在答题卡上将该项涂黑。",
+      "passage": [
+        "17-year-old Lina was walking along a coastal village when she noticed a small turtle    41     to return to the sea. Its left flipper (鳍状肢) was broken. Lina felt    42    seeing the poor animal.",
+        "She called her parents for help. Together, they    43    picked up the turtle and took it to a nearby wildlife    44   . The vet (兽医) there told them the turtle was an endangered (濒危的) species. It had been    45    by a fishing net. The vet promised to treat it until it    46     .",
+        "Every afternoon, Lina visited the turtle. She    47    it eat small fish and swim in a small pool. Lina named it “Wave” because it    48    playing in the water. She even brought a small toy boat to make Wave feel more    49    in the water.",
+        "After three weeks, the vet said Wave was ready to go back to the sea. Lina and her family took Wave to the    50   . When they set it down, Wave stopped for a moment as if to    51    the days spent with Lina, then swam towards the sea. Lina waved goodbye, her eyes filled with    52   . She knew Wave’s journey would be hard, but she also believed it could    53     .",
+        "This experience taught Lina that every life    54   . She joined a wildlife protection club at her school to help more animals, hoping that one day all endangered species will live in    55    without human threats."
+      ],
+      "questions": [
+        {
+          "num": 41,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 41 题：___41___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "refusing"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "preparing"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "struggling"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "preferring"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        },
+        {
+          "num": 42,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 42 题：___42___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "angry"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "sad"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "frightened"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "confused"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": []
+          }
+        },
+        {
+          "num": 43,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 43 题：___43___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "quickly"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "secretly"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "suddenly"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "carefully"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "D",
+            "body": []
+          }
+        },
+        {
+          "num": 44,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 44 题：___44___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "island"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "park"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "cave"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "hospital"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "D",
+            "body": []
+          }
+        },
+        {
+          "num": 45,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 45 题：___45___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "hurt"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "covered"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "attacked"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "protected"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": []
+          }
+        },
+        {
+          "num": 46,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 46 题：___46___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "recovered"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "shook"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "adapted"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "competed"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": []
+          }
+        },
+        {
+          "num": 47,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 47 题：___47___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "reminded"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "observed"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "ordered"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "requested"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": []
+          }
+        },
+        {
+          "num": 48,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 48 题：___48___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "feared"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "recommended"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "enjoyed"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "imagined"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        },
+        {
+          "num": 49,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 49 题：___49___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "determined"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "anxious"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "creative"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "relaxed"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "D",
+            "body": []
+          }
+        },
+        {
+          "num": 50,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 50 题：___50___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "zoo"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "pool"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "beach"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "forest"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        },
+        {
+          "num": 51,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 51 题：___51___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "look back on"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "make fun of"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "keep track of"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "look forward to"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": []
+          }
+        },
+        {
+          "num": 52,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 52 题：___52___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "tears"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "doubts"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "fear"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "shock"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "A",
+            "body": []
+          }
+        },
+        {
+          "num": 53,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 53 题：___53___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "regret"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "survive"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "suffer"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "attack"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "B",
+            "body": []
+          }
+        },
+        {
+          "num": 54,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 54 题：___54___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "lives"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "changes"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "matters"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "limits"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "C",
+            "body": []
+          }
+        },
+        {
+          "num": 55,
+          "type": "choice",
+          "group": "cloze",
+          "stem": "第 55 题：___55___",
+          "options": [
+            {
+              "label": "A",
+              "frags": [
+                {
+                  "t": "trouble"
+                }
+              ]
+            },
+            {
+              "label": "B",
+              "frags": [
+                {
+                  "t": "pressure"
+                }
+              ]
+            },
+            {
+              "label": "C",
+              "frags": [
+                {
+                  "t": "surprise"
+                }
+              ]
+            },
+            {
+              "label": "D",
+              "frags": [
+                {
+                  "t": "peace"
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "head": "D",
+            "body": []
+          }
+        }
+      ]
+    },
+    {
+      "title": "第三部分 语言运用 · 第二节 语法填空（56—65）",
+      "kind": "word",
+      "hint": "阅读下面短文，在空白处填入1个适当的单词或括号内单词的正确形式，并将答案填写在答题卡上。",
+      "passage": [
+        "Many scientists believe our love of sugar may actually be an addiction．When we eat or drink something containing sugar, the sugar enters our blood and affects parts of our brain that make us feel good. Then the good feeling goes away, 56.____________(leave) us wanting more. All tasty foods do this, but sugar has a particularly strong effect. In this way, it is in fact an 57.____________（addict）drug, one that doctors recommend we all cut down on．",
+        "Our bodies 58.____________(design) to survive with very little sugar. Early humans often had very little food, so our bodies learned to be very efficient in storing sugar as fat. In this way, we had energy 59.____________(store) for when there was no food. But today, most people have more than enough. So 60.____________very thing that once saved us may now be killing us.",
+        "So what is the 61.____________(solve)? It's obvious that we need to eat less sugar. The trouble is, in today's world, it's extremely difficult to avoid. From breakfast cereals 62.____________ afterdinner desserts, our foods are increasingly filled with it. Some manufacturers even use sugar in foods that are advertised as low in fat.",
+        "But there are people and organizations 63.____________ are fighting back against sugar. Many schools are replacing sugary desserts with healthier options like fruit. Other schools 64.____________(grow) their own food in gardens, or building 65.____________(facility) like walking tracks so students and others in the community can exercise. The battle has not yet been lost."
+      ],
+      "questions": [
+        {
+          "num": 56,
+          "type": "word",
+          "group": "word",
+          "stem": "第 56 题：Then the good feeling goes away, 56.____________(leave) us wanting more",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "leaving",
+            "body": []
+          }
+        },
+        {
+          "num": 57,
+          "type": "word",
+          "group": "word",
+          "stem": "第 57 题：In this way, it is in fact an 57.____________（addict）drug, one that doctors recommend we all cut down on",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "addictive",
+            "body": []
+          }
+        },
+        {
+          "num": 58,
+          "type": "word",
+          "group": "word",
+          "stem": "第 58 题：Our bodies 58.____________(design) to survive with very little sugar",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "are designed",
+            "body": []
+          }
+        },
+        {
+          "num": 59,
+          "type": "word",
+          "group": "word",
+          "stem": "第 59 题：In this way, we had energy 59.____________(store) for when there was no food",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "stored",
+            "body": []
+          }
+        },
+        {
+          "num": 60,
+          "type": "word",
+          "group": "word",
+          "stem": "第 60 题：So 60.____________very thing that once saved us may now be killing us.",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "the",
+            "body": []
+          }
+        },
+        {
+          "num": 61,
+          "type": "word",
+          "group": "word",
+          "stem": "第 61 题：So what is the 61.____________(solve)? It's obvious that we need to eat less sugar",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "solution",
+            "body": []
+          }
+        },
+        {
+          "num": 62,
+          "type": "word",
+          "group": "word",
+          "stem": "第 62 题：From breakfast cereals 62.____________ afterdinner desserts, our foods are increasingly filled with it",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "to",
+            "body": []
+          }
+        },
+        {
+          "num": 63,
+          "type": "word",
+          "group": "word",
+          "stem": "第 63 题：But there are people and organizations 63.____________ are fighting back against sugar",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "that",
+            "body": []
+          }
+        },
+        {
+          "num": 64,
+          "type": "word",
+          "group": "word",
+          "stem": "第 64 题：Other schools 64.____________(grow) their own food in gardens, or building 65.____________(facility) like walking tracks so students and others in the community can exercise",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "are growing",
+            "body": []
+          }
+        },
+        {
+          "num": 65,
+          "type": "word",
+          "group": "word",
+          "stem": "第 65 题：Other schools 64.____________(grow) their own food in gardens, or building 65.____________(facility) like walking tracks so students and others in the community can exercise",
+          "placeholder": "填入 1 个适当的词或括号内单词的正确形式",
+          "options": [],
+          "answer": {
+            "head": "facilities",
+            "body": []
+          }
+        }
+      ]
+    },
+    {
+      "title": "第五部分 单元知识检测 · 第一节 单句语法填空（1—10）",
+      "kind": "word",
+      "hint": "第一节：单句语法填空（共10小题，每小题1分，满分10分）",
+      "questions": [
+        {
+          "num": 661,
+          "type": "word",
+          "group": "word",
+          "stem": "第 1 题：To my surprise, she managed to hide her ___________(anxious) and stay calm.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "anxiety",
+            "body": []
+          },
+          "label": "1"
+        },
+        {
+          "num": 662,
+          "type": "word",
+          "group": "word",
+          "stem": "第 2 题：His ____________ (survive) in the terrible wild forest surprised all the researchers.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "survival",
+            "body": []
+          },
+          "label": "2"
+        },
+        {
+          "num": 663,
+          "type": "word",
+          "group": "word",
+          "stem": "第 3 题：Those who are ____________ (adventure) tend to step out of their comfort zones and experience unexpected challenges.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "adventurous",
+            "body": []
+          },
+          "label": "3"
+        },
+        {
+          "num": 664,
+          "type": "word",
+          "group": "word",
+          "stem": "第 4 题：He has a ____________ (prefer) for working in a quiet and organized environment, as it helps him focus on his tasks.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "preference",
+            "body": []
+          },
+          "label": "4"
+        },
+        {
+          "num": 665,
+          "type": "word",
+          "group": "word",
+          "stem": "第 5 题：The local newspaper made ____________ (arrange) for an interview with Quan Hongchan after she arrived.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "arrangements",
+            "body": []
+          },
+          "label": "5"
+        },
+        {
+          "num": 666,
+          "type": "word",
+          "group": "word",
+          "stem": "第 6 题：I would be ____________ (extreme) grateful if you could have a word with her.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "extremely",
+            "body": []
+          },
+          "label": "6"
+        },
+        {
+          "num": 667,
+          "type": "word",
+          "group": "word",
+          "stem": "第 7 题：The painting on the wall is so wonderful that it has won ____________ (admire) from all the visitors who came to the art exhibition.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "admiration",
+            "body": []
+          },
+          "label": "7"
+        },
+        {
+          "num": 668,
+          "type": "word",
+          "group": "word",
+          "stem": "第 8 题：She is one of the ___________(apply) for the scholarship and stands a good chance of winning it.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "applicants",
+            "body": []
+          },
+          "label": "8"
+        },
+        {
+          "num": 669,
+          "type": "word",
+          "group": "word",
+          "stem": "第 9 题：The new policy will ____________(official) take effect next month.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "officially",
+            "body": []
+          },
+          "label": "9"
+        },
+        {
+          "num": 670,
+          "type": "word",
+          "group": "word",
+          "stem": "第 10 题：To our ______________(amaze), the old castle survived the heavy storm.",
+          "placeholder": "用括号内单词的适当形式填空",
+          "options": [],
+          "answer": {
+            "head": "amazement",
+            "body": []
+          },
+          "label": "10"
+        }
+      ]
+    },
+    {
+      "title": "第五部分 单元知识检测 · 第二节 补全句子（1—10）",
+      "kind": "word",
+      "hint": "第二节：补全句子 （共10小题，每小题1.5分，满分15分）",
+      "questions": [
+        {
+          "num": 671,
+          "type": "word",
+          "group": "word",
+          "stem": "第 1 题：Every month the group meets so its members can ____________ each other.\n这个小组每个月都开会,这样成员们就可以互相交流他们的看法。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "exchange their opinions / views / ideas",
+            "body": []
+          },
+          "label": "1"
+        },
+        {
+          "num": 672,
+          "type": "word",
+          "group": "word",
+          "stem": "第 2 题：The little girl 's wonderful performance at the evening party ________________________  viewers. 小女孩在晚会上的精彩表演给观众留下了深刻的印象。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "left a deep impression on",
+            "body": []
+          },
+          "label": "2"
+        },
+        {
+          "num": 673,
+          "type": "word",
+          "group": "word",
+          "stem": "第 3 题：I know I’ll have to study harder as a senior high school student and get used to _________\n_____________________ a lot more. 我知道作为一名高中生我得更加努力地学习,并习惯承担更多的责任。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "taking up / taking on responsibility",
+            "body": []
+          },
+          "label": "3"
+        },
+        {
+          "num": 674,
+          "type": "word",
+          "group": "word",
+          "stem": "第 4 题：There was a time when I _____________________________ computer games; how I regret now.  曾经有一段时间我沉迷于玩电脑游戏,我现在真是后悔。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "was addicted to playing",
+            "body": []
+          },
+          "label": "4"
+        },
+        {
+          "num": 675,
+          "type": "word",
+          "group": "word",
+          "stem": "第 5 题：Spain ________________________ Peru in the 16th century and ruled until 1821.  西班牙于16世纪开始掌控秘鲁,并一直统治到1821年。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "took control of",
+            "body": []
+          },
+          "label": "5"
+        },
+        {
+          "num": 676,
+          "type": "word",
+          "group": "word",
+          "stem": "第 6 题：The city has changed almost ________________________ since I left there. 自从我离开\n那里,那座城市已变得让人几乎认不出了。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "beyond / out of recognition",
+            "body": []
+          },
+          "label": "6"
+        },
+        {
+          "num": 677,
+          "type": "word",
+          "group": "word",
+          "stem": "第 7 题：Here’s nothing on TV tonight, _______________ the usual rubbish.今晚电视上除了惯常的垃圾节目外,再没别的了。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "other than / except for",
+            "body": []
+          },
+          "label": "7"
+        },
+        {
+          "num": 678,
+          "type": "word",
+          "group": "word",
+          "stem": "第 8 题：New Zealand ________________________ two islands, the larger of which is the South Island.  新西兰主要由两个岛屿组成,其中较大的是南岛。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "is mainly made up of / mainly consists of",
+            "body": []
+          },
+          "label": "8"
+        },
+        {
+          "num": 679,
+          "type": "word",
+          "group": "word",
+          "stem": "第 9 题：Many people enjoy __________________________ others ’successes and failures, but few of them reflect on their own faults.  很多人喜欢评论别人的得失,而他们当中很少有人反思自己的过错。",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "commenting on / making comments on /making a comment on",
+            "body": []
+          },
+          "label": "9"
+        },
+        {
+          "num": 680,
+          "type": "word",
+          "group": "word",
+          "stem": "第 10 题：We requested the next meeting to be held on a Friday.\n→We requested that the next meeting _____________________on a Friday.",
+          "placeholder": "根据中文提示补全句子",
+          "options": [],
+          "answer": {
+            "head": "(should) be held",
+            "body": []
+          },
+          "label": "10"
+        }
+      ]
+    }
+  ],
+  "writing": [
+    {
+      "num": 690,
+      "label": "第四部分",
+      "title": "写作 · 推荐一座中国城市（满分 15 分）",
+      "stem": "你的外国友人 Peter 打算寒假来中国游玩。他是传统文化爱好者，请你写一封信，向他推荐一座中国城市。内容包括：  1. 你的推荐; 2. 推荐理由",
+      "note": "注意：词数80左右；可适当增加细节",
+      "ref": "范文1（推荐西安）\nDear Peter,\nHow is everything going? Delighted to know you are coming to China this winter holiday, I’d like to recommend Xi’an to you. It is an ancient capital renowned for its rich cultural heritage, perfect for a lover of traditional culture.\nFirstly, the Terracotta Army is a must-see. Dating back over 2,000 years to the Qin Dynasty, with thousands of lifelike clay soldiers, it allows you to appreciate the great wisdom of ancient craftsmen, thus deepening your insight into ancient Chinese history. Equally amazing is the Xi’an City Wall, which is what you can’t miss. As China’s best-preserved ancient city wall, it bears witness to ancient city planning. Cycling on it, you can escape the hustle and bustle of daily life and admire the unique appeal of ancient architecture. Last but not least, wandering along local streets, you will be struck by locals’ warmth and delicious local food that will satisfy your appetite.\nI sincerely hope my recommendation will be helpful. Wish you an unforgettable journey!\nYours,\nLi Hua\n\n范文2（推荐北京）\nDear Peter,\nHow is everything going? Knowing that you plan to travel to China in the winter holiday and you are a big fan of traditional culture, I strongly recommend Beijing.\nFirstly, the Palace Museum is a must-see. It houses countless precious relics, which will surely arouse your greatest appreciation and help you gain a deep insight into splendid royal culture. Equally amazing is the Summer Palace, which is what you can’t miss. Blending wonderful natural scenery with time-honored buildings, it allows you to feel the lasting charm of traditional Chinese art. Besides, tasty local snacks will satisfy your appetite and add great pleasure to your trip.\nI sincerely hope you will have a fantastic time here. Wish you a pleasant trip!\nYours,\nLi Hua"
+    }
+  ]
+}

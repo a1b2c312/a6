@@ -34,8 +34,9 @@
   }
 
   /* ================= 听力播放器 ================= */
-  function Player(box, src) {
+  function Player(box, src, name) {
     this.box = box;
+    this.name = name || "听力原音";
     this.audio = new Audio();
     this.audio.src = src;
     this.audio.preload = "metadata";
@@ -48,7 +49,7 @@
     this.box.innerHTML =
       '<div class="ab-ico">🎧</div>' +
       '<div class="ab-info">' +
-      '<div class="ab-name">听力原音 · 英语训练（二）</div>' +
+      '<div class="ab-name">' + esc(this.name) + "</div>" +
       '<div class="ab-time"><span id="au-cur">00:00</span> / <span id="au-dur">--:--</span></div>' +
       "</div>" +
       '<div class="audio-track" id="au-track"><div class="fill" id="au-fill"></div></div>' +
@@ -225,13 +226,14 @@
 
     // 写作
     if (d.writing && d.writing.length) {
-      body += '<div class="grp-head"><span class="gh-t">写作 · 书面表达（66—67）</span>' +
+      body += '<div class="grp-head"><span class="gh-t">' +
+        esc(d.writingTitle || "写作 · 书面表达（66—67）") + "</span>" +
         '<span class="gh-n">主观题</span>' +
         '<span class="gh-hint">按要求完成写作，提交后可展开参考答案对照自评。</span></div>';
       d.writing.forEach(function (w) {
         body +=
           '<div class="write-card" data-write="' + w.num + '">' +
-          '<div class="wc-t">' + esc(w.num + ". " + w.title) + "</div>" +
+          '<div class="wc-t">' + esc((w.label || w.num) + ". " + w.title) + "</div>" +
           '<div class="wc-stem">' + esc(w.stem) + "</div>" +
           (w.note ? '<div class="wc-note">' + esc(w.note) + "</div>" : "") +
           '<textarea placeholder="在此写下你的作文……" data-write="' + w.num + '"></textarea>' +
@@ -258,7 +260,7 @@
     this.root.innerHTML = bar + player + '<div class="en-body">' + body + "</div>" + result;
 
     // 播放器
-    this.player = new Player($("#en-player", this.root), d.audio);
+    this.player = new Player($("#en-player", this.root), d.audio, d.audioName);
 
     // 事件
     this.root.addEventListener("click", function (e) {
@@ -351,7 +353,7 @@
       '" data-num="' + q.num + '">';
     html +=
       '<div class="q-head">' +
-      '<span class="q-no">' + q.num + "</span>" +
+      '<span class="q-no">' + esc(q.label || q.num) + "</span>" +
       '<span class="q-tag">' + (TYPE_LABEL[q.type] || "题") + "</span>" +
       (q.stats
         ? '<button class="btn-mini stat" data-stat="' + q.num + '" type="button">📊 答题分布</button>'

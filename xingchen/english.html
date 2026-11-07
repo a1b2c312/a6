@@ -83,6 +83,23 @@
             </div>
             <div class="qc-go">开始作答 →</div>
           </div>
+
+          <div class="quiz-card" data-quiz="eng1107">
+            <div class="qc-ico">🎧</div>
+            <h3>高一上第三次英语周末作业</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+              瑞昌一中高一上学期 · 全卷 150 分 / 120 分钟 · 含听力原音、听力原文与 2 篇写作范文
+            </p>
+            <div class="qc-meta">
+              <span>85 题</span>
+              <span>听力 20 题</span>
+              <span>阅读与七选五 20 题</span>
+              <span>完形 / 语法填空 25 题</span>
+              <span>单元检测 20 题</span>
+              <span>写作 1 题</span>
+            </div>
+            <div class="qc-go">开始作答 →</div>
+          </div>
         </div>
 
         <div class="quiz" id="quiz-eng" style="margin-top:22px;"></div>
@@ -152,28 +169,60 @@
     (function () {
       var entry = document.getElementById("quiz-entry");
       var main = document.getElementById("quiz-eng");
-      var quiz = null;
-
-      entry.addEventListener("click", function () {
-        if (quiz) {
-          main.classList.toggle("on");
-          entry.style.display = main.classList.contains("on") ? "none" : "grid";
-          return;
+      var cards = entry.querySelectorAll(".quiz-card");
+      var specs = {
+        eng: {
+          json: "assets/papers/eng.json?v=20261021",
+          audioName: "听力原音 · 英语训练（二）",
+          writingTitle: "写作 · 书面表达（66—67）"
+        },
+        eng1107: {
+          json: "assets/papers/eng_1107.json?v=20261107",
+          audioName: "听力原音 · 高一上第三次英语周末作业",
+          writingTitle: "第四部分 写作 · 书面表达（满分 15 分）"
         }
-        fetch("assets/papers/eng.json?v=20261021")
-          .then(function (r) { return r.json(); })
-          .then(function (data) {
-            quiz = new window.EngQuiz(main, data);
-            main.classList.add("on");
-            entry.style.display = "none";
-            main.scrollIntoView({ behavior: "smooth", block: "start" });
-          })
-          .catch(function () {
-            entry.innerHTML =
-              '<div class="placeholder"><div class="ico">😢</div>' +
-              '<div class="t">试卷加载失败</div>' +
-              '<div class="d">请稍后重试，或确认网络连接正常。</div></div>';
-          });
+      };
+      var current = null;
+
+      Array.prototype.forEach.call(cards, function (card) {
+        card.addEventListener("click", function () {
+          var key = card.getAttribute("data-quiz");
+          var spec = specs[key];
+          if (!spec) return;
+
+          // 再点同一张卡：收起 / 展开
+          if (current === key) {
+            main.classList.toggle("on");
+            card.style.display = main.classList.contains("on") ? "none" : "";
+            if (main.classList.contains("on")) {
+              main.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            return;
+          }
+
+          fetch(spec.json)
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              // 同一挂载点换卷，避免两套卷的固定 DOM id 冲突
+              data.audioName = spec.audioName;
+              data.writingTitle = spec.writingTitle;
+              main.innerHTML = "";
+              new window.EngQuiz(main, data);
+              current = key;
+              Array.prototype.forEach.call(cards, function (c) {
+                c.style.display = "";
+              });
+              card.style.display = "none";
+              main.classList.add("on");
+              main.scrollIntoView({ behavior: "smooth", block: "start" });
+            })
+            .catch(function () {
+              card.innerHTML =
+                '<div class="placeholder"><div class="ico">😢</div>' +
+                '<div class="t">试卷加载失败</div>' +
+                '<div class="d">请稍后重试，或确认网络连接正常。</div></div>';
+            });
+        });
       });
     })();
   </script>
