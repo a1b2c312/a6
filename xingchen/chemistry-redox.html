@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>氧化还原规律及其应用 · 化学小屋</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  .toc-box {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 22px; margin: 0 0 26px;
+  }
+  .toc-box .toc-t {
+    font-size: 13px; letter-spacing: 3px; color: var(--accent);
+    margin-bottom: 10px; font-weight: 600;
+  }
+  .toc-box ol { margin: 0; padding-left: 22px; }
+  .toc-box li { line-height: 2.1; color: var(--ink-soft); }
+  .toc-box a { color: var(--ink-soft); text-decoration: none; }
+  .toc-box a:hover { color: var(--accent); }
+  .rule-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px 22px; margin-bottom: 20px;
+  }
+  .rule-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .rule-no {
+    flex: none; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--accent); color: #04201c; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; font-size: 15px;
+  }
+  .rule-head h3 { margin: 0; font-size: 17px; color: var(--ink); }
+  .rule-body { color: var(--ink-soft); line-height: 2.05; font-size: 15px; }
+  .rule-body .lab {
+    display: inline-block; font-size: 12px; letter-spacing: 2px;
+    color: var(--accent); border: 1px solid var(--border);
+    border-radius: 999px; padding: 1px 10px; margin-right: 8px;
+  }
+  .eg {
+    margin-top: 12px; padding: 12px 14px; border-radius: 10px;
+    background: rgba(255,255,255,0.05); border-left: 3px solid var(--accent);
+    font-size: 14.5px; line-height: 2.1; color: var(--ink-soft);
+  }
+  .eg .eg-t { font-size: 12px; letter-spacing: 2px; color: var(--accent); }
+  .eq {
+    font-family: "Cambria Math", "Times New Roman", serif;
+    color: var(--ink); font-size: 15px;
+  }
+  .up { color: #f87171; font-weight: 600; }
+  .down { color: #38bdf8; font-weight: 600; }
+  .exer {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 14px;
+    padding: 18px 20px; margin-top: 20px;
+  }
+  .exer .ex-t2 {
+    font-size: 12px; letter-spacing: 3px; color: var(--accent);
+    margin-bottom: 10px; font-weight: 600;
+  }
+  .exer .ex-q { color: var(--ink); line-height: 2.1; font-size: 15px; }
+  details.ans { margin-top: 12px; }
+  details.ans summary {
+    cursor: pointer; list-style: none; display: inline-block;
+    color: #04201c; background: var(--accent); border-radius: 999px;
+    padding: 7px 18px; font-size: 13.5px; letter-spacing: 2px;
+    font-weight: 600; user-select: none;
+  }
+  details.ans summary::-webkit-details-marker { display: none; }
+  details.ans summary::before { content: "📖 "; }
+  details.ans .ans-body {
+    margin-top: 12px; padding: 14px 16px; border-radius: 10px;
+    background: rgba(255,255,255,0.05); color: var(--ink-soft);
+    line-height: 2.1; font-size: 14.5px;
+  }
+  .ans-body .lab2 {
+    display: inline-block; font-size: 12px; letter-spacing: 2px;
+    color: var(--accent); border: 1px solid var(--border);
+    border-radius: 999px; padding: 1px 10px; margin-right: 8px;
+  }
+</style>
+</head>
+<body data-theme="chem">
+  <div class="bg-layer"></div>
+  <div class="bg-veil"></div>
+  <div class="bg-pattern"></div>
+
+  <header class="top-bar">
+    <a class="back-link" href="chemistry.html">← 返回化学小屋</a>
+    <span class="top-title">氧化还原规律及其应用</span>
+    <span class="top-title" style="opacity:.35; font-weight:400;">知识专题</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="hero-emoji">⚖️</div>
+      <h1>氧化还原<em>规律</em></h1>
+      <p>
+        化合价的升与降，是氧化还原反应的骨架。抓住"升失氧、降得还"这一条主线，
+        再配合价态规律，绝大多数题目都能找到判断的落点。
+      </p>
+      <div class="hero-rule"></div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>本章目录</h2>
+        <span class="sub">CONTENTS</span>
+      </div>
+      <div class="panel-body">
+        <div class="toc-box">
+          <div class="toc-t">目 录</div>
+          <ol>
+            <li><a href="#rule-price">一、价态规律</a>
+              <ol type="①">
+                <li>最高价只有氧化性，最低价只有还原性</li>
+                <li>同一元素有三种或三种以上价态时，化合价不跳过中间价（歧化反应、归中反应）</li>
+                <li>化合价变化有升必有降</li>
+              </ol>
+            </li>
+            <li><a href="#rule-strength">二、强弱规律</a>（强制弱）
+              <ol type="①">
+                <li>判断强弱</li>
+                <li>判断反应是否能发生</li>
+              </ol>
+            </li>
+            <li><a href="#rule-order">三、先后规律</a>（竞争反应的先后）
+              <ol type="①">
+                <li>依据氧化性／还原性强弱，判断竞争反应的先后顺序</li>
+              </ol>
+            </li>
+            <li><a href="#rule-conserve">四、守恒规律</a>
+              <ol type="①">
+                <li>化合价升降相等</li>
+                <li>得失电子守恒</li>
+                <li>电荷守恒</li>
+              </ol>
+            </li>
+            <li><a href="#mixed">综合巩固</a>（多规律综合题）</li>
+          </ol>
+          <p style="margin:14px 0 0;font-size:13px;color:var(--ink-faint);letter-spacing:1px;">
+            每章末尾附「巩固练习」，第四章三个小点<b>各配一道对应习题</b>，点击按钮即可查看答案与解析。
+          </p>
+        </div>
+        <div class="placeholder">
+          <div class="ico">📝</div>
+          <div class="t">后续章节陆续补充</div>
+          <div class="d">常见氧化剂与还原剂归纳、复杂的氧化还原方程式配平技巧等内容，将在这里继续更新。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="rule-price">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>一、价态规律</h2>
+        <span class="sub">RULES OF VALENCE</span>
+      </div>
+      <div class="panel-body">
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">①</span>
+            <h3>最高价只有氧化性，最低价只有还原性</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">规律</span>元素处于<b>最高价态</b>时，化合价只能降低，所以<b>只有氧化性</b>；
+            处于<b>最低价态</b>时，化合价只能升高，所以<b>只有还原性</b>；
+            处于<b>中间价态</b>时，既可能升高也可能降低，<b>兼有氧化性和还原性</b>。
+          </div>
+          <div class="eg">
+            <span class="eg-t">典 型 实 例</span><br />
+            · 硫元素：<span class="eq">H<sub>2</sub>SO<sub>4</sub></span> 中 S 为 <b>+6</b>（最高价）→ 浓硫酸只表现<b>氧化性</b>；<br />
+            &nbsp;&nbsp;<span class="eq">H<sub>2</sub>S</span> 中 S 为 <b>−2</b>（最低价）→ 硫化氢只表现<b>还原性</b>；<br />
+            &nbsp;&nbsp;<span class="eq">SO<sub>2</sub></span> 中 S 为 <b>+4</b>（中间价）→ 既可被氧化成 +6，又可被还原成 0。<br />
+            · 氮元素：<span class="eq">HNO<sub>3</sub></span>（+5）只有氧化性；<span class="eq">NH<sub>3</sub></span>（−3）只有还原性；<span class="eq">N<sub>2</sub></span>（0）兼有。
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">②</span>
+            <h3>化合价不跳过中间价</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">规律</span>同一元素有<b>三种或三种以上价态</b>时，不同价态之间发生反应，
+            化合价的升降<b>只能"就近"变化，不能跳过中间的价态</b>。<br />
+            由此派生出两类重要反应：<br />
+            <span class="lab">歧化反应</span>同一种元素<b>既升高又降低</b>（自身氧化还原），中间价态转化为较高价和较低价两个价态。<br />
+            <span class="lab">归中反应</span>同种元素的<b>高价与低价相互靠拢</b>，最终都变成中间价（只相向而行，绝不交叉）。
+          </div>
+          <div class="eg">
+            <span class="eg-t">典 型 实 例</span><br />
+            · <b>歧化</b>：<span class="eq">Cl<sub>2</sub> + 2NaOH = NaCl + NaClO + H<sub>2</sub>O</span><br />
+            &nbsp;&nbsp;Cl 由 0 价 <span class="up">升高到 +1</span>，同时 <span class="down">降低到 −1</span>，中间价"一分为二"。<br />
+            · <b>归中</b>：<span class="eq">2H<sub>2</sub>S + SO<sub>2</sub> = 3S↓ + 2H<sub>2</sub>O</span><br />
+            &nbsp;&nbsp;S 由 −2 与 +4 相向而行，都变成 0 价，<b>不会越过 0 价变成对方的价态</b>。<br />
+            · <b>不跳价</b>：<span class="eq">H<sub>2</sub>S + H<sub>2</sub>SO<sub>4</sub>(浓) = S↓ + SO<sub>2</sub>↑ + 2H<sub>2</sub>O</span><br />
+            &nbsp;&nbsp;−2 价只能升到 0，+6 价只能降到 +4，各自"就近"变化，不跳过中间的 0 价与 +4 价。
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">③</span>
+            <h3>化合价变化有升必有降</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">规律</span>氧化还原反应的实质是<b>电子转移</b>，得电子总数一定等于失电子总数。
+            因此元素化合价<b>有升高就必定有降低</b>，且<b>升高总数 = 降低总数</b>。<br />
+            这也是配平氧化还原方程式、进行电子守恒计算的根本依据：可以先数出某元素升高的总数，再去找相应元素降低的总数。
+          </div>
+          <div class="eg">
+            <span class="eg-t">典 型 实 例</span><br />
+            · <span class="eq">Fe + CuSO<sub>4</sub> = FeSO<sub>4</sub> + Cu</span><br />
+            &nbsp;&nbsp;Fe 由 0 <span class="up">升高到 +2</span>（失去 2e<sup>−</sup>），Cu 由 +2 <span class="down">降低到 0</span>（得到 2e<sup>−</sup>），升降总数相等。<br />
+            · <span class="eq">2Na + 2H<sub>2</sub>O = 2NaOH + H<sub>2</sub>↑</span><br />
+            &nbsp;&nbsp;Na 升高到 +1（失 2e<sup>−</sup>），H 由 +1 降到 0（得 2e<sup>−</sup>），始终"有升有降、升=降"。
+          </div>
+        </div>
+
+        <p style="margin:22px 0 0;font-size:14px;color:var(--ink-faint);letter-spacing:1px;">
+          小结：判断氧化性／还原性先看<b>价态高低</b>，判断反应能否发生先看<b>是否跳过中间价</b>，配平与计算则抓住<b>升降相等</b>。
+        </p>
+
+        <div class="exer">
+          <div class="ex-t2">巩 固 练 习 一</div>
+          <div class="ex-q">
+            对于反应 <span class="eq">KClO<sub>3</sub> + 6HCl(浓) = KCl + 3Cl<sub>2</sub>↑ + 3H<sub>2</sub>O</span>，请回答：<br />
+            (1) 氧化剂是______，还原剂是______；<br />
+            (2) 氧化产物与还原产物分别是______；<br />
+            (3) 被氧化的氯原子与被还原的氯原子的个数比为______。
+          </div>
+          <details class="ans">
+            <summary>查看答案与解析</summary>
+            <div class="ans-body">
+              <span class="lab2">答案</span>(1) 氧化剂 <b>KClO<sub>3</sub></b>，还原剂 <b>HCl</b>；(2) 氧化产物和还原产物<b>都是 Cl<sub>2</sub></b>；(3) <b>5 : 1</b>。<br /><br />
+              <span class="lab2">解析</span>先标价态：KClO<sub>3</sub> 中 Cl 为 <b>+5</b>，HCl 中 Cl 为 <b>−1</b>，生成物 Cl<sub>2</sub> 中 Cl 为 <b>0</b>。<br />
+              ① KClO<sub>3</sub> 中的 Cl 由 +5 <span class="down">降到 0</span>，得电子被还原，故 KClO<sub>3</sub> 是氧化剂，对应的还原产物是 Cl<sub>2</sub>；<br />
+              ② HCl 中的 Cl 由 −1 <span class="up">升到 0</span>，失电子被氧化，故 HCl 是还原剂，对应的氧化产物也是 Cl<sub>2</sub>；<br />
+              ③ 注意 KCl 中的 Cl 仍为 −1，<b>没有变价</b>，所以它既不是氧化产物也不是还原产物。<br />
+              由"有升必有降、升降相等"可算出：1 个 +5 的 Cl 要得到 5 个电子，则需要 5 个 −1 的 Cl 各失去 1 个电子，
+              因此被氧化的氯原子 : 被还原的氯原子 = <b>5 : 1</b>（方程式中 6 个 HCl 里有 5 个被氧化、1 个与 K<sup>+</sup> 结合成 KCl）。
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="rule-strength">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>二、强弱规律</h2>
+        <span class="sub">THE STRONGER WINS</span>
+      </div>
+      <div class="panel-body">
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">规</span>
+            <h3>强制弱</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">核心</span>氧化还原反应总是<b>由强到弱</b>进行：<br />
+            <span class="eq">强氧化剂 + 强还原剂 → 弱氧化剂（氧化产物）+ 弱还原剂（还原产物）</span><br />
+            也就是说：<b>氧化剂的氧化性 &gt; 氧化产物的氧化性</b>；<b>还原剂的还原性 &gt; 还原产物的还原性</b>。<br />
+            反应物的"强"与生成物的"弱"，是判断一切氧化还原问题的出发点。
+          </div>
+          <div class="eg">
+            <span class="eg-t">常 见 强 弱 顺 序（供比较）</span><br />
+            · 氧化性（酸性条件下）：<span class="eq">MnO<sub>4</sub><sup>−</sup> &gt; Cl<sub>2</sub> &gt; Br<sub>2</sub> &gt; Fe<sup>3+</sup> &gt; I<sub>2</sub> &gt; S</span><br />
+            · 还原性：<span class="eq">S<sup>2−</sup> &gt; SO<sub>3</sub><sup>2−</sup> &gt; I<sup>−</sup> &gt; Fe<sup>2+</sup> &gt; Br<sup>−</sup> &gt; Cl<sup>−</sup></span><br />
+            注：强弱顺序与<b>浓度、温度、酸碱性</b>有关，如 MnO<sub>4</sub><sup>−</sup> 要在酸性条件下才表现强氧化性。
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">①</span>
+            <h3>判断强弱</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">方法</span>由<b>反应方向反推</b>强弱：写出一个已知能发生的反应，
+            反应物中氧化剂一方的氧化性一定强于氧化产物一方；还原剂一方的还原性一定强于还原产物一方。<br />
+            反过来，把多个反应"串"起来，就能排出整套强弱顺序。
+          </div>
+          <div class="eg">
+            <span class="eg-t">典 型 实 例</span><br />
+            · <span class="eq">Cl<sub>2</sub> + 2NaBr = 2NaCl + Br<sub>2</sub></span><br />
+            &nbsp;&nbsp;氧化性：<b>Cl<sub>2</sub> &gt; Br<sub>2</sub></b>；还原性：<b>Br<sup>−</sup> &gt; Cl<sup>−</sup></b>。<br />
+            · <span class="eq">2Fe<sup>3+</sup> + 2I<sup>−</sup> = 2Fe<sup>2+</sup> + I<sub>2</sub></span><br />
+            &nbsp;&nbsp;氧化性：<b>Fe<sup>3+</sup> &gt; I<sub>2</sub></b>；还原性：<b>I<sup>−</sup> &gt; Fe<sup>2+</sup></b>。<br />
+            · 串联：由 Cl<sub>2</sub> &gt; Br<sub>2</sub>、Br<sub>2</sub> &gt; Fe<sup>3+</sup>、Fe<sup>3+</sup> &gt; I<sub>2</sub>
+            可得 <span class="eq">Cl<sub>2</sub> &gt; Br<sub>2</sub> &gt; Fe<sup>3+</sup> &gt; I<sub>2</sub></span>。
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">②</span>
+            <h3>判断反应是否能发生</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">方法</span>把给出的反应按"<b>强 + 强 → 弱 + 弱</b>"对号入座：
+            反应物中的氧化剂必须是参加比较的<b>较强</b>一方，才可能发生；
+            若写成"较弱的一方去氧化较强的还原产物"，就<b>不能发生</b>。<br />
+            另外注意：如果一种氧化剂同时遇到多种还原剂，<b>先氧化还原性最强的那种</b>（优先反应）。
+          </div>
+          <div class="eg">
+            <span class="eg-t">典 型 实 例</span><br />
+            · <span class="eq">Cl<sub>2</sub> + 2KI = 2KCl + I<sub>2</sub></span>　✅ 能发生<br />
+            &nbsp;&nbsp;因为氧化性 Cl<sub>2</sub> &gt; I<sub>2</sub>，Cl<sub>2</sub> 可以把 I<sup>−</sup> 氧化成 I<sub>2</sub>。<br />
+            · <span class="eq">I<sub>2</sub> + 2NaCl → 不反应</span>　❌ 不能发生<br />
+            &nbsp;&nbsp;因为氧化性 I<sub>2</sub> &lt; Cl<sub>2</sub>，I<sub>2</sub> 无法把 Cl<sup>−</sup> 氧化成 Cl<sub>2</sub>。<br />
+            · <span class="eq">2Fe<sup>3+</sup> + Cu = 2Fe<sup>2+</sup> + Cu<sup>2+</sup></span>　✅ 能发生（氧化性 Fe<sup>3+</sup> &gt; Cu<sup>2+</sup>）<br />
+            · <span class="eq">2Fe<sup>3+</sup> + 2Br<sup>−</sup> → 不反应</span>　❌（氧化性 Fe<sup>3+</sup> &lt; Br<sub>2</sub>，所以 Br<sup>−</sup> 不能被 Fe<sup>3+</sup> 氧化）
+          </div>
+        </div>
+
+        <p style="margin:22px 0 0;font-size:14px;color:var(--ink-faint);letter-spacing:1px;">
+          小结：一、价态规律解决"<b>谁有氧化性、谁有还原性</b>"；二、强弱规律解决"<b>谁的氧化性更强</b>"与"<b>这个反应能不能发生</b>"。
+        </p>
+
+        <div class="exer">
+          <div class="ex-t2">巩 固 练 习 二</div>
+          <div class="ex-q">
+            已知下列反应均能发生：<br />
+            ① <span class="eq">Cl<sub>2</sub> + 2NaBr = 2NaCl + Br<sub>2</sub></span><br />
+            ② <span class="eq">2FeCl<sub>3</sub> + 2NaI = 2FeCl<sub>2</sub> + I<sub>2</sub> + 2NaCl</span><br />
+            ③ <span class="eq">Br<sub>2</sub> + 2Fe<sup>2+</sup> = 2Br<sup>−</sup> + 2Fe<sup>3+</sup></span><br />
+            (1) 请排出 Cl<sub>2</sub>、Br<sub>2</sub>、Fe<sup>3+</sup>、I<sub>2</sub> 四种微粒氧化性由强到弱的顺序；<br />
+            (2) 判断反应 <span class="eq">I<sub>2</sub> + 2Fe<sup>2+</sup> → </span> 能否发生，并说明理由。
+          </div>
+          <details class="ans">
+            <summary>查看答案与解析</summary>
+            <div class="ans-body">
+              <span class="lab2">答案</span>(1) 氧化性：<b>Cl<sub>2</sub> &gt; Br<sub>2</sub> &gt; Fe<sup>3+</sup> &gt; I<sub>2</sub></b>；(2) <b>不能发生</b>。<br /><br />
+              <span class="lab2">解析</span>依据"强制弱"，由每个反应中"氧化剂强于氧化产物"逐条反推：<br />
+              ① 氧化剂是 Cl<sub>2</sub>、氧化产物是 Br<sub>2</sub>，得 <b>Cl<sub>2</sub> &gt; Br<sub>2</sub></b>；<br />
+              ② 氧化剂是 Fe<sup>3+</sup>、氧化产物是 I<sub>2</sub>，得 <b>Fe<sup>3+</sup> &gt; I<sub>2</sub></b>；<br />
+              ③ 氧化剂是 Br<sub>2</sub>、氧化产物是 Fe<sup>3+</sup>，得 <b>Br<sub>2</sub> &gt; Fe<sup>3+</sup></b>；<br />
+              三条串联即得 <span class="eq">Cl<sub>2</sub> &gt; Br<sub>2</sub> &gt; Fe<sup>3+</sup> &gt; I<sub>2</sub></span>（对应还原性为 I<sup>−</sup> &gt; Fe<sup>2+</sup> &gt; Br<sup>−</sup> &gt; Cl<sup>−</sup>）。<br />
+              (2) 若 I<sub>2</sub> 作氧化剂去氧化 Fe<sup>2+</sup>，就必须满足"氧化性 I<sub>2</sub> &gt; Fe<sup>3+</sup>"，
+              而由 (1) 可知实际上 <b>I<sub>2</sub> &lt; Fe<sup>3+</sup></b>，不满足"强制弱"，因此该反应<b>不能发生</b>。
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="rule-order">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>三、先后规律</h2>
+        <span class="sub">THE STRONGEST GOES FIRST</span>
+      </div>
+      <div class="panel-body">
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">规</span>
+            <h3>强者优先，竞争反应的先后顺序</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">核心</span>向混合体系中加入某一种氧化剂（或还原剂）时，它会<b>先和还原性最强（或氧化性最强）的那种微粒反应</b>，
+            等它反应完，才轮到次强的。<br />
+            也就是说："谁能把对方氧化得最彻底"并不重要，<b>还原性（氧化性）最强的先反应</b>——这就是先后顺序的判据。<br />
+            少量／过量（足量）试剂的产物不同，根源就在这个先后顺序上。
+          </div>
+          <div class="eg">
+            <span class="eg-t">典 型 实 例</span><br />
+            · <b>还原性顺序决定先后</b>：向 FeBr<sub>2</sub> 溶液中通入 Cl<sub>2</sub>。因为还原性 <b>Fe<sup>2+</sup> &gt; Br<sup>−</sup></b>，<br />
+            &nbsp;&nbsp;<span class="up">少量</span> Cl<sub>2</sub> 只先氧化 Fe<sup>2+</sup>：<span class="eq">2Fe<sup>2+</sup> + Cl<sub>2</sub> = 2Fe<sup>3+</sup> + 2Cl<sup>−</sup></span>；<br />
+            &nbsp;&nbsp;<span class="up">足量</span> Cl<sub>2</sub> 再氧化 Br<sup>−</sup>：<span class="eq">2Fe<sup>2+</sup> + 4Br<sup>−</sup> + 3Cl<sub>2</sub> = 2Fe<sup>3+</sup> + 2Br<sub>2</sub> + 6Cl<sup>−</sup></span>。<br />
+            · <b>混合液中先析出谁</b>：向 NaI 与 NaBr 的混合液中通入少量 Cl<sub>2</sub>，因为还原性 <b>I<sup>−</sup> &gt; Br<sup>−</sup></b>，<br />
+            &nbsp;&nbsp;首先析出 <b>I<sub>2</sub></b>，而不是 Br<sub>2</sub>。<br />
+            · <b>氧化性顺序决定先后</b>：向含 Fe<sup>3+</sup>、Cu<sup>2+</sup> 的溶液中加入铁粉，因为氧化性 <b>Fe<sup>3+</sup> &gt; Cu<sup>2+</sup></b>，<br />
+            &nbsp;&nbsp;Fe 先与 Fe<sup>3+</sup> 反应（<span class="eq">2Fe<sup>3+</sup> + Fe = 3Fe<sup>2+</sup></span>），剩余的 Fe 才去置换 Cu<sup>2+</sup>。
+          </div>
+        </div>
+
+        <p style="margin:22px 0 0;font-size:14px;color:var(--ink-faint);letter-spacing:1px;">
+          小结：一、二两章解决"<b>谁强谁弱</b>"，三章解决"<b>谁先谁后</b>"。排先后时先排出强弱顺序，
+          再把加入的试剂按顺序"分配"给最强的微粒，注意<b>少量与足量产物不同</b>。
+        </p>
+
+        <div class="exer">
+          <div class="ex-t2">巩 固 练 习 三</div>
+          <div class="ex-q">
+            向 FeBr<sub>2</sub> 溶液中通入一定量的 Cl<sub>2</sub>，请回答：<br />
+            (1) 通入<b>少量</b> Cl<sub>2</sub> 时，发生反应的离子方程式：______；<br />
+            (2) 通入<b>足量</b> Cl<sub>2</sub> 时，发生反应的离子方程式：______；<br />
+            (3) 若溶液中有一半的 Br<sup>−</sup> 被氧化，此时通入的 Cl<sub>2</sub> 与被氧化的 Fe<sup>2+</sup> 的物质的量之比为______。
+          </div>
+          <details class="ans">
+            <summary>查看答案与解析</summary>
+            <div class="ans-body">
+              <span class="lab2">答案</span><br />
+              (1) <span class="eq">2Fe<sup>2+</sup> + Cl<sub>2</sub> = 2Fe<sup>3+</sup> + 2Cl<sup>−</sup></span><br />
+              (2) <span class="eq">2Fe<sup>2+</sup> + 4Br<sup>−</sup> + 3Cl<sub>2</sub> = 2Fe<sup>3+</sup> + 2Br<sub>2</sub> + 6Cl<sup>−</sup></span><br />
+              (3) <b>1 : 1</b><br /><br />
+              <span class="lab2">解析</span>关键是比较还原性强弱：还原性 <b>Fe<sup>2+</sup> &gt; Br<sup>−</sup></b>
+              （因为氧化性 Br<sub>2</sub> &gt; Fe<sup>3+</sup>），所以 Cl<sub>2</sub> <b>先氧化 Fe<sup>2+</sup>，后氧化 Br<sup>−</sup></b>。<br />
+              (1) 少量 Cl<sub>2</sub> 只能氧化部分 Fe<sup>2+</sup>，Br<sup>−</sup> 尚未参与反应。<br />
+              (2) 足量 Cl<sub>2</sub> 把 Fe<sup>2+</sup> 与 Br<sup>−</sup> 全部氧化，按 FeBr<sub>2</sub> 中 Fe<sup>2+</sup> : Br<sup>−</sup> = 1 : 2 配平，
+              可得 Fe<sup>2+</sup>、Br<sup>−</sup>、Cl<sub>2</sub> 的化学计量数之比为 2 : 4 : 3。<br />
+              (3) 设 FeBr<sub>2</sub> 为 1 mol，则 Fe<sup>2+</sup> 为 1 mol、Br<sup>−</sup> 为 2 mol。
+              "一半 Br<sup>−</sup> 被氧化"意味着 Fe<sup>2+</sup> 必须先全部被氧化（1 mol），随后 Br<sup>−</sup> 被氧化 1 mol。<br />
+              &nbsp;&nbsp;由电子守恒，失去的电子总数 = 1 mol × 1 + 1 mol × 1 = 2 mol；
+              每 1 mol Cl<sub>2</sub> 得 2 mol 电子，故通入的 Cl<sub>2</sub> 为 <b>1 mol</b>。<br />
+              &nbsp;&nbsp;因此通入的 Cl<sub>2</sub> : 被氧化的 Fe<sup>2+</sup> = 1 mol : 1 mol = <b>1 : 1</b>。
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="rule-conserve">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>四、守恒规律</h2>
+        <span class="sub">CONSERVATION</span>
+      </div>
+      <div class="panel-body">
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">导</span>
+            <h3>为什么要守恒</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">总纲</span>氧化还原反应的实质是<b>电子转移</b>：有元素失去电子，就必有元素得到电子，且
+            <b>失电子总数 = 得电子总数</b>。反映到化合价上，就是<b>升高总数 = 降低总数</b>；
+            而溶液与离子方程式中还始终保持<b>电荷守恒</b>。这三条守恒律，是配平方程式、进行定量计算的通用工具。
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">①</span>
+            <h3>化合价升降相等</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">规律</span>反应中<b>所有元素化合价升高总数 = 降低总数</b>。常用于"已知一种元素的价态变化，求另一种元素的量或化学计量数"。
+          </div>
+          <div class="eg">
+            <span class="eg-t">思 路</span><br />
+            ① 标出变价元素反应前后的价态；② 算出每种元素<b>单个原子</b>的升降数值；
+            ③ 按"升降相等"列式：<span class="eq">升高值 × 被氧化原子数 = 降低值 × 被还原原子数</span>。
+          </div>
+          <div class="exer">
+            <div class="ex-t2">对 应 练 习 ①</div>
+            <div class="ex-q">
+              铜与稀硝酸反应：<span class="eq">3Cu + 8HNO<sub>3</sub>(稀) = 3Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO↑ + 4H<sub>2</sub>O</span>。<br />
+              若 1 mol Cu 完全反应，求被还原的硝酸（即生成 NO 的硝酸）的物质的量。
+            </div>
+            <details class="ans">
+              <summary>查看答案与解析</summary>
+              <div class="ans-body">
+                <span class="lab2">答案</span><b>2/3 mol</b>（约 0.67 mol）<br /><br />
+                <span class="lab2">解析</span>标价态：Cu 由 <b>0 → +2</b>，每个铜原子<span class="up">升高 2</span>；
+                N 由 <b>+5 → +2</b>（生成 NO），每个氮原子<span class="down">降低 3</span>。<br />
+                设被还原的硝酸为 <i>x</i> mol，由化合价升降相等：<br />
+                <span class="eq">1 mol × 2 = x × 3</span>　解得 <i>x</i> = <b>2/3 mol</b>。<br />
+                注意：8 个 HNO<sub>3</sub> 中只有 2 个被还原（生成 NO），其余 6 个起<b>酸性</b>作用生成 Cu(NO<sub>3</sub>)<sub>2</sub>，
+                所以被还原的硝酸不等于参加反应的硝酸总量（用升降相等列式，可避免这个陷阱）。
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">②</span>
+            <h3>得失电子守恒</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">规律</span>还原剂<b>失去电子的总数 = 氧化剂得到电子的总数</b>。<br />
+            电子转移的数目 = 化合价升降的数值 × 对应原子的物质的量。它是氧化还原<b>计算题</b>最常用的"通用钥匙"：
+            只要抓住"转移电子数相等"，往往一步就能列式求解。
+          </div>
+          <div class="eg">
+            <span class="eg-t">思 路</span><br />
+            ① 找出<b>失电子</b>的物质（还原剂）与<b>得电子</b>的物质（氧化剂）；
+            ② 算出转移电子总数（如某元素升高 3 价 × 3 mol = 9 mol e<sup>−</sup>）；
+            ③ 让"失 = 得"列方程求解。
+          </div>
+          <div class="exer">
+            <div class="ex-t2">对 应 练 习 ②</div>
+            <div class="ex-q">
+              一定量的铁与足量稀硝酸反应，生成标准状况下 2.24 L 的 NO，且铁全部转化为 Fe<sup>3+</sup>。
+              求参加反应的铁的物质的量。（标准状况下气体摩尔体积取 22.4 L/mol）
+            </div>
+            <details class="ans">
+              <summary>查看答案与解析</summary>
+              <div class="ans-body">
+                <span class="lab2">答案</span><b>0.1 mol</b><br /><br />
+                <span class="lab2">解析</span>先求 NO 的物质的量：<i>n</i>(NO) = 2.24 L ÷ 22.4 L/mol = <b>0.1 mol</b>。<br />
+                N 由 <b>+5 → +2</b>，每个氮原子得到 <b>3</b> 个电子，故<b>得电子总数</b> = 0.1 mol × 3 = <b>0.3 mol</b>。<br />
+                Fe 由 <b>0 → +3</b>，每个铁原子失去 <b>3</b> 个电子。设铁为 <i>n</i> mol，则<b>失电子总数</b> = 3<i>n</i> mol。<br />
+                由得失电子守恒：<span class="eq">3<i>n</i> = 0.3</span>　解得 <i>n</i> = <b>0.1 mol</b>。<br />
+                （即反应为 Fe + 4HNO<sub>3</sub> = Fe(NO<sub>3</sub>)<sub>3</sub> + NO↑ + 2H<sub>2</sub>O，1 mol Fe 恰好生成 1 mol NO。）
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">③</span>
+            <h3>电荷守恒</h3>
+          </div>
+          <div class="rule-body">
+            <span class="lab">规律</span>① 任何<b>电中性的溶液</b>中，阳离子所带正电荷总数 = 阴离子所带负电荷总数；<br />
+            ② 任何<b>离子方程式</b>，等号两边的电荷代数和一定相等。<br />
+            常用于：由离子浓度求未知离子浓度、检查离子方程式是否书写正确。
+          </div>
+          <div class="eg">
+            <span class="eg-t">思 路</span><br />
+            · 溶液电中性：<span class="eq">Σ c(阳离子) × 所带电荷数 = Σ c(阴离子) × 所带电荷数</span><br />
+            · 离子方程式：<span class="eq">左边各离子电荷代数和 = 右边各离子电荷代数和</span>
+          </div>
+          <div class="exer">
+            <div class="ex-t2">对 应 练 习 ③</div>
+            <div class="ex-q">
+              某溶液中只含有 Na<sup>+</sup>、Mg<sup>2+</sup>、Cl<sup>−</sup>、SO<sub>4</sub><sup>2−</sup> 四种离子，
+              已知 <i>c</i>(Na<sup>+</sup>) = 0.2 mol/L、<i>c</i>(Mg<sup>2+</sup>) = 0.1 mol/L、<i>c</i>(Cl<sup>−</sup>) = 0.2 mol/L。<br />
+              求 <i>c</i>(SO<sub>4</sub><sup>2−</sup>)。（忽略水的电离）
+            </div>
+            <details class="ans">
+              <summary>查看答案与解析</summary>
+              <div class="ans-body">
+                <span class="lab2">答案</span><b>0.1 mol/L</b><br /><br />
+                <span class="lab2">解析</span>溶液呈电中性，阳离子所带正电荷总数等于阴离子所带负电荷总数：<br />
+                <span class="eq"><i>c</i>(Na<sup>+</sup>) + 2<i>c</i>(Mg<sup>2+</sup>) = <i>c</i>(Cl<sup>−</sup>) + 2<i>c</i>(SO<sub>4</sub><sup>2−</sup>)</span><br />
+                代入数据：<span class="eq">0.2 + 2 × 0.1 = 0.2 + 2<i>x</i></span>　→　0.4 = 0.2 + 2<i>x</i>　→　<i>x</i> = <b>0.1 mol/L</b>。<br />
+                常见错误是忘记把离子的<b>电荷数</b>乘上去（Mg<sup>2+</sup> 要乘 2、SO<sub>4</sub><sup>2−</sup> 要乘 2），导致结果出错。
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <p style="margin:22px 0 0;font-size:14px;color:var(--ink-faint);letter-spacing:1px;">
+          小结：<b>升降相等</b>看化合价，<b>电子守恒</b>看转移数目，<b>电荷守恒</b>看溶液与离子方程式。
+          三条守恒律各有适用场合，配平与计算时优先想到它们，往往能绕开繁琐的中间步骤。
+        </p>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="mixed">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>综合巩固</h2>
+        <span class="sub">MIXED PRACTICE</span>
+      </div>
+      <div class="panel-body">
+        <p style="margin:0 0 20px;font-size:14px;color:var(--ink-faint);letter-spacing:1px;">
+          本题综合考查：歧化反应与还原剂判断（一章②）、双线桥表示电子转移（四章①②）、离子方程式书写与缺项配平（四章③）。
+        </p>
+
+        <div class="rule-card">
+          <div class="rule-head">
+            <span class="rule-no">综</span>
+            <h3>氧化亚铜与高铁酸钠</h3>
+          </div>
+          <div class="rule-body">
+            <div class="ex-q" style="color:var(--ink);line-height:2.1;font-size:15px;">
+              <b>(1)</b> 氧化亚铜（Cu<sub>2</sub>O）是一种鲜红色粉末状固体，几乎不溶于水，可在酸性溶液中发生反应，与硫酸、硝酸的反应如下：<br />
+              <span class="eq">ⅰ. Cu<sub>2</sub>O + H<sub>2</sub>SO<sub>4</sub> = CuSO<sub>4</sub> + Cu + H<sub>2</sub>O</span><br />
+              <span class="eq">ⅱ. 3Cu<sub>2</sub>O + 14HNO<sub>3</sub>(稀) = 6Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO↑ + 7H<sub>2</sub>O</span><br />
+              ① 反应ⅰ中还原剂为______（填化学式，下同），还原产物为______。<br />
+              ② 用双线桥标出反应ⅱ中电子转移的方向和数目。<br />
+              ③ 请写出反应ⅱ的离子方程式：______。<br />
+              <b>(2)</b> 高铁酸钠（Na<sub>2</sub>FeO<sub>4</sub>）有强氧化性，可以有效杀灭水中的细菌和病毒。
+              已知湿法制备高铁酸钠的反应体系有六种微粒：Fe(OH)<sub>3</sub>、ClO<sup>−</sup>、OH<sup>−</sup>、
+              FeO<sub>4</sub><sup>2−</sup>、Cl<sup>−</sup>、H<sub>2</sub>O。写出并配平湿法制备高铁酸钠的离子方程式：______。
+            </div>
+          </div>
+          <details class="ans">
+            <summary>查看答案与解析</summary>
+            <div class="ans-body">
+              <span class="lab2">① 答案</span>还原剂：<b>Cu<sub>2</sub>O</b>；还原产物：<b>Cu</b>。<br /><br />
+              <span class="lab2">解析</span>Cu<sub>2</sub>O 中 Cu 为 <b>+1</b> 价，反应ⅰ中一部分升到 +2（CuSO<sub>4</sub>），
+              一部分降到 0（Cu 单质）——同一元素的<b>歧化反应</b>。化合价升高的部分是还原剂（Cu<sub>2</sub>O），
+              化合价降低后得到的产物是还原产物（Cu）。<br /><br />
+              <span class="lab2">② 答案</span>双线桥的"桥"画在反应物与生成物中<b>同种元素</b>之间，箭头上标注电子数目：<br />
+              · <span class="up">失去 6e<sup>−</sup></span>：Cu<sub>2</sub>O 中的 Cu（+1）→ Cu(NO<sub>3</sub>)<sub>2</sub> 中的 Cu（+2），
+              共 6 个 Cu 各失去 1 个 e<sup>−</sup>；<br />
+              · <span class="down">得到 6e<sup>−</sup></span>：HNO<sub>3</sub> 中的 N（+5）→ NO 中的 N（+2），
+              共 2 个 N 各得到 3 个 e<sup>−</sup>。<br />
+              两条桥上电子数目相同（6e<sup>−</sup>），这正是"得失电子守恒"的体现。<br /><br />
+              <span class="lab2">③ 答案</span><span class="eq">3Cu<sub>2</sub>O + 14H<sup>+</sup> + 2NO<sub>3</sub><sup>−</sup> = 6Cu<sup>2+</sup> + 2NO↑ + 7H<sub>2</sub>O</span><br /><br />
+              <span class="lab2">解析</span>先把化学方程式拆成离子：Cu<sub>2</sub>O、NO、H<sub>2</sub>O（写化学式），
+              强酸 HNO<sub>3</sub> 拆成 H<sup>+</sup> 与 NO<sub>3</sub><sup>−</sup>，可溶盐 Cu(NO<sub>3</sub>)<sub>2</sub> 拆成 Cu<sup>2+</sup> 与 NO<sub>3</sub><sup>−</sup>；
+              消去两边未变价的 NO<sub>3</sub><sup>−</sup>（左边 12 个、右边 12 个）后，剩下的 2 个 NO<sub>3</sub><sup>−</sup> 参与氧化还原。<br />
+              <b>用电荷守恒自查</b>：左边 14(+1) + 2(−1) = +12，右边 6 × (+2) = +12 ✓；电子守恒：失 6e<sup>−</sup> = 得 6e<sup>−</sup> ✓。
+              <br /><br />
+              <span class="lab2">(2) 答案</span><span class="eq">2Fe(OH)<sub>3</sub> + 3ClO<sup>−</sup> + 4OH<sup>−</sup> = 2FeO<sub>4</sub><sup>2−</sup> + 3Cl<sup>−</sup> + 5H<sub>2</sub>O</span><br /><br />
+              <span class="lab2">解析</span>这是典型的<b>缺项配平</b>，四步走：<br />
+              ① 定变价：Fe 由 Fe(OH)<sub>3</sub> 中的 <b>+3 → +6</b>（FeO<sub>4</sub><sup>2−</sup>），
+              <span class="up">每个铁失 3e<sup>−</sup></span>；Cl 由 ClO<sup>−</sup> 中的 <b>+1 → −1</b>（Cl<sup>−</sup>），
+              <span class="down">每个氯得 2e<sup>−</sup></span>；<br />
+              ② 电子守恒定系数：最小公倍数 6，故 Fe(OH)<sub>3</sub> 系数为 2、ClO<sup>−</sup> 系数为 3，
+              得 2FeO<sub>4</sub><sup>2−</sup> 和 3Cl<sup>−</sup>；<br />
+              ③ 电荷守恒补微粒：右边电荷 2×(−2) + 3×(−1) = −7，左边已知 3×(−1) = −3，
+              左边还缺 <b>−4</b>，需在左边补 <b>4 个 OH<sup>−</sup></b>（碱性体系）；<br />
+              ④ 质量守恒补水：H 左边 2×3 + 4 = 10 个，右边补 <b>5H<sub>2</sub>O</b>（O 也恰好平：6+3+4 = 13 = 8+5）✓。
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      星辰班级 · 化学小屋 ｜ 氧化还原规律及其应用
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

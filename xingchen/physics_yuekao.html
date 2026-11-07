@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>物理 · 第一次月考（在线作答）· 星辰班级</title>
+<link rel="stylesheet" href="assets/css/style.css?v=20261023" />
+<link rel="stylesheet" href="assets/css/quiz.css?v=20261023" />
+<style>
+  .paper-wrap{display:flex;flex-direction:column;gap:14px;margin-top:8px;}
+  .paper-wrap a{display:block;border-radius:12px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.13);border:1px solid rgba(0,0,0,.06);background:#fff;}
+  .paper-wrap img{display:block;width:100%;height:auto;}
+  .paper-hint{font-size:13px;color:var(--ink-faint);letter-spacing:.5px;margin:4px 0 12px;}
+  .yx-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .yx-meta span{font-size:12.5px;letter-spacing:.5px;padding:5px 12px;border-radius:999px;
+    background:rgba(56,189,248,.12);color:#2b7fd4;border:1px solid rgba(56,189,248,.28);}
+</style>
+</head>
+<body data-theme="phys">
+  <div class="bg-layer"></div>
+  <div class="bg-veil"></div>
+  <div class="bg-pattern"></div>
+
+  <header class="top-bar">
+    <a class="back-link" href="physics.html">← 返回物理之家</a>
+    <span class="top-title">物理 · 第一次月考</span>
+    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="hero-emoji">⚛️</div>
+      <h1>第一次月考 · <em>物理</em></h1>
+      <p>
+        2026～2027 学年度上学期第一次月考 · 高一物理。<br />
+        共 15 题：单选 7 题、多选 3 题、实验 2 题、解答 3 题。在线作答后可逐题或整卷查看对错与详细解析；
+        带配图的题目请对照页面上方《原卷》图片。
+      </p>
+      <div class="hero-rule"></div>
+      <div class="yx-meta">
+        <span>15 题</span>
+        <span>满分 100 分</span>
+        <span>75 分钟</span>
+        <span>含详细解析</span>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="paper">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>原卷（含配图）</h2>
+        <span class="sub">PAPER</span>
+      </div>
+      <div class="panel-body">
+        <p class="paper-hint">第 2、7、8、9、10、11、12、15 题带图像/表格，作答时请对照下方原卷。🔍 点击图片可放大。</p>
+        <div class="paper-wrap">
+          <a href="assets/papers/phys_yuekao/paper_p1.png" target="_blank" rel="noopener">
+            <img src="assets/papers/phys_yuekao/paper_p1.png" alt="物理月考试卷 第1页" loading="lazy" />
+          </a>
+          <a href="assets/papers/phys_yuekao/paper_p2.png" target="_blank" rel="noopener">
+            <img src="assets/papers/phys_yuekao/paper_p2.png" alt="物理月考试卷 第2页" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="quiz">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>在线作答</h2>
+        <span class="sub">ONLINE QUIZ</span>
+      </div>
+      <div class="panel-body">
+        <p style="margin:0 0 6px;">选择答案后点「本题答案与解析」或「整卷提交」，立刻看到对错与解析。</p>
+
+        <div class="quiz-entry" id="quiz-entry">
+          <div class="quiz-card" data-quiz="physyq">
+            <div class="qc-ico">📝</div>
+            <h3>第一次月考 · 高一物理</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+              2026～2027 学年度上学期第一次月考 · 满分 100 分 / 75 分钟
+            </p>
+            <div class="qc-meta">
+              <span>单选 7</span>
+              <span>多选 3</span>
+              <span>实验 2</span>
+              <span>解答 3</span>
+              <span>含详细解析</span>
+            </div>
+            <div class="qc-go">开始作答 →</div>
+          </div>
+        </div>
+
+        <div class="quiz" id="quiz-physyq" style="margin-top:22px;"></div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      星辰班级 · 物理之家 ｜ 第一次月考
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js?v=20261023"></script>
+  <script src="assets/js/quiz.js?v=20261023"></script>
+  <script>
+    (function () {
+      var entry = document.getElementById("quiz-entry");
+      var main = document.getElementById("quiz-physyq");
+      var quiz = null;
+
+      entry.addEventListener("click", function () {
+        if (quiz) {
+          main.classList.toggle("on");
+          entry.style.display = main.classList.contains("on") ? "none" : "grid";
+          return;
+        }
+        fetch("assets/papers/phys_yuekao.json?v=20261023")
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            quiz = new window.QuizEngine.Quiz(main, data, {
+              id: "physyq",
+              title: "第一次月考 · 高一物理",
+              dir: "assets/papers/phys_yuekao/"
+            });
+            main.classList.add("on");
+            entry.style.display = "none";
+            main.scrollIntoView({ behavior: "smooth", block: "start" });
+          })
+          .catch(function () {
+            entry.innerHTML =
+              '<div class="placeholder"><div class="ico">😢</div>' +
+              '<div class="t">试卷加载失败</div>' +
+              '<div class="d">请稍后重试，或确认网络连接正常。</div></div>';
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

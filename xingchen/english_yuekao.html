@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>英语 · 第一次月考 · 星辰班级</title>
+<link rel="stylesheet" href="assets/css/style.css?v=20261021" />
+<link rel="stylesheet" href="assets/css/quiz.css?v=20261021" />
+<link rel="stylesheet" href="assets/css/quiz-en.css?v=20261021" />
+</head>
+<body data-theme="en">
+  <div class="bg-layer"></div>
+  <div class="bg-veil"></div>
+  <div class="bg-pattern"></div>
+
+  <header class="top-bar">
+    <a class="back-link" href="english.html">← 返回英语角</a>
+    <span class="top-title">英语 · 第一次月考</span>
+    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="hero-emoji">📝</div>
+      <h1>第一次<em>月考</em> · 英语</h1>
+      <p>
+        瑞昌一中 2026—2027 学年度上学期第一次月考 · 全卷 150 分 / 120 分钟。<br />
+        含听力原音（可播放、暂停、拖动进度），边听边答，提交后立刻对照答案与解析。
+      </p>
+      <div class="hero-rule"></div>
+      <div class="chip-row">
+        <a class="chip" href="#quiz">✏️ 在线作答</a>
+        <a class="chip" href="#tip">📌 作答说明</a>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="quiz">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>在线作答</h2>
+        <span class="sub">MONTHLY EXAM</span>
+      </div>
+      <div class="panel-body">
+        <div class="quiz-entry" id="quiz-entry">
+          <div class="quiz-card" data-quiz="engyuekao">
+            <div class="qc-ico">🎧</div>
+            <h3>高一英语第一次月考</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+              瑞昌一中 2026—2027 学年度上学期 · 全卷 150 分 / 120 分钟
+            </p>
+            <div class="qc-meta">
+              <span>听力 20 题</span>
+              <span>阅读 15 题</span>
+              <span>七选五 5 题</span>
+              <span>完形 15 题</span>
+              <span>语法填空 10 题</span>
+              <span>写作 2 题</span>
+            </div>
+            <div class="qc-go">开始作答 →</div>
+          </div>
+        </div>
+
+        <div class="quiz" id="quiz-eng-yuekao" style="margin-top:22px;"></div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="tip">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>作答说明</h2>
+        <span class="sub">HOW TO USE</span>
+      </div>
+      <div class="panel-body">
+        <ul style="margin:0;padding-left:20px;line-height:2.1;color:var(--ink-soft);">
+          <li>听力：先点上方「▶ 开始」播放原音，边听边选；答题中可随时暂停、后退 10 秒或拖动进度条重听。</li>
+          <li>阅读 / 七选五 / 完形：每篇原文在题目前展示，选项点击即选中，可单独点「本题答案与解析」核对。</li>
+          <li>语法填空：在输入框内填写单词（注意词形变化），提交后对照标准答案。</li>
+          <li>写作：在文本框内写作，系统自动统计词数；点「查看参考答案」展开范文自评。</li>
+          <li>整卷完成后点「提交并查看解析」可得正确率概览，也可「显示全部解析」逐题复习。</li>
+        </ul>
+        <div class="placeholder" style="margin-top:18px;">
+          <div class="ico">💡</div>
+          <div class="t">错题建议</div>
+          <div class="d">选择题错题请回原文定位依据句；听力错题可对照每题下方的听力原文；写作可参照范文积累表达。</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      星辰班级 · 英语第一次月考 ｜ 内容持续更新中
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js?v=20261021"></script>
+  <script src="assets/js/quiz.js?v=20261021"></script>
+  <script src="assets/js/quiz-en.js?v=20261021"></script>
+  <script>
+    (function () {
+      var entry = document.getElementById("quiz-entry");
+      var main = document.getElementById("quiz-eng-yuekao");
+      var quiz = null;
+
+      entry.addEventListener("click", function () {
+        if (quiz) {
+          main.classList.toggle("on");
+          entry.style.display = main.classList.contains("on") ? "none" : "grid";
+          return;
+        }
+        fetch("assets/papers/eng_yuekao.json?v=20261021")
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            quiz = new window.EngQuiz(main, data);
+            main.classList.add("on");
+            entry.style.display = "none";
+            main.scrollIntoView({ behavior: "smooth", block: "start" });
+          })
+          .catch(function () {
+            entry.innerHTML =
+              '<div class="placeholder"><div class="ico">😢</div>' +
+              '<div class="t">试卷加载失败</div>' +
+              '<div class="d">请稍后重试，或确认网络连接正常。</div></div>';
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>化学小屋 · 星辰班级</title>
+<link rel="stylesheet" href="assets/css/style.css?v=20261101" />
+<link rel="stylesheet" href="assets/css/quiz.css?v=20261101" />
+</head>
+<body data-theme="chem">
+  <div class="bg-layer"></div>
+  <div class="bg-veil"></div>
+  <div class="bg-pattern"></div>
+
+  <header class="top-bar">
+    <a class="back-link" href="index.html">← 返回首页导航</a>
+    <span class="top-title">化学小屋</span>
+    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="hero-emoji">⚗️</div>
+      <h1>化学<em>小屋</em></h1>
+      <p>
+        玻璃烧杯里冒着细小的气泡，紫色石蕊试液悄然变色，火焰在坩埚下跳起蓝色的火苗 ——
+        这里记录每一次实验的成功与失败，每一次"原来如此"的惊叹。
+      </p>
+      <div class="hero-rule"></div>
+      <div class="chip-row">
+        <a class="chip" href="#quiz">✏️ 在线测试</a>
+        <a class="chip" href="#kejian">🎬 课堂课件</a>
+        <a class="chip" href="#redox">⚖️ 知识专题</a>
+        <a class="chip" href="#lab">🧪 实验记录</a>
+        <a class="chip" href="#equip">🔬 器材与安全</a>
+        <a class="chip" href="#tips">📓 学习锦囊</a>
+      </div>
+    </section>
+
+    <!-- 第一次月考 -->
+    <section class="panel reveal" id="yuekao">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>第一次月考</h2>
+        <span class="sub">MONTHLY EXAM</span>
+      </div>
+      <div class="panel-body">
+        <div class="act-grid">
+          <a class="act-card" href="chem_yuekao.html">
+            <div class="ai">📄</div>
+            <h3>第一次月考试卷 · 原卷 + 答案</h3>
+            <p>原卷图片 + 详细答案对照，公式 100% 保真，点击放大查看每一页。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 在线测试 -->
+    <section class="panel reveal" id="quiz">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>在线测试</h2>
+        <span class="sub">ONLINE QUIZ</span>
+      </div>
+      <div class="panel-body">
+        <p style="margin:0 0 6px;">
+          点开作业即可作答 —— 选择答案后提交，立刻看到对错；填空题为参考答案对照模式，做完自查。
+        </p>
+
+        <div class="quiz-entry" id="quiz-entry">
+          <div class="quiz-card" data-quiz="chem1020">
+            <div class="qc-ico">📝</div>
+            <h3>2026年10月31日 化学作业</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+              单选题 22 道（自动判分）＋ 填空题 3 道（对照参考答案自查）
+            </p>
+            <div class="qc-meta">
+              <span>25 题</span>
+              <span>含参考答案</span>
+              <span>电解质 · 胶体 · 离子反应 · 氧化还原</span>
+            </div>
+            <div class="qc-go">开始作答 →</div>
+          </div>
+        </div>
+
+        <div class="quiz" id="quiz-chem1020" style="margin-top:22px;"></div>
+      </div>
+    </section>
+
+    <!-- 课堂课件 -->
+    <section class="panel reveal" id="kejian">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>课堂课件</h2>
+        <span class="sub">CLASSWARE</span>
+      </div>
+      <div class="panel-body">
+        <div class="act-grid">
+          <a class="act-card" href="chemistry-na-lesson1.html">
+            <div class="ai">🧂</div>
+            <h3>钠及其化合物 · 第1课时（交互课件）</h3>
+            <p>金属钠的物理性质、钠与非金属（O₂ / Cl₂ / S）的反应、钠与水（盐溶液）的反应。可点击"切钠""点燃""钠入水"等互动实验动画，"浮熔游响红"逐条点亮，附 4 道即时判分课堂小测。← → 键翻页。</p>
+          </a>
+          <div class="act-card" style="opacity:.72;">
+            <div class="ai">🎬</div>
+            <h3>更多课件</h3>
+            <p>后续课时课件陆续上线，敬请期待。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="redox">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>知识专题</h2>
+        <span class="sub">KNOWLEDGE</span>
+      </div>
+      <div class="panel-body">
+        <div class="act-grid">
+          <a class="act-card" href="chemistry-redox.html">
+            <div class="ai">⚖️</div>
+            <h3>氧化还原规律及其应用</h3>
+            <p>一、价态规律；二、强弱规律（强制弱）；三、先后规律（竞争反应先后）；四、守恒规律（化合价升降相等、得失电子守恒、电荷守恒）。每章配实例与巩固练习，第四章三个小点各配一道题，可在线查看答案解析。</p>
+          </a>
+          <div class="act-card" style="opacity:.72;">
+            <div class="ai">📝</div>
+            <h3>更多专题</h3>
+            <p>离子方程式、元素周期律、化学计算专题陆续上线，敬请期待。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="lab">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>实验记录</h2>
+        <span class="sub">LAB NOTES</span>
+      </div>
+      <div class="panel-body">
+        <div class="grid g3">
+          <div class="tile">
+            <div class="ti">🧪</div>
+            <h3>基础实验</h3>
+            <p>物质的性质与变化、常见气体的制取与性质。</p>
+          </div>
+          <div class="tile">
+            <div class="ti">🔥</div>
+            <h3>燃烧与反应</h3>
+            <p>氧化还原反应、燃烧条件、反应热的探究。</p>
+          </div>
+          <div class="tile">
+            <div class="ti">⚖️</div>
+            <h3>定量分析</h3>
+            <p>溶液配制、物质的量计算、滴定实验。</p>
+          </div>
+        </div>
+        <div class="placeholder" style="margin-top:20px;">
+          <div class="ico">📷</div>
+          <div class="t">实验照片与记录待上传</div>
+          <div class="d">后续上传的实验照片、装置图、现象记录会显示在这里。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="equip">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>器材与安全</h2>
+        <span class="sub">SAFETY FIRST</span>
+      </div>
+      <div class="panel-body">
+        <div class="grid g4">
+          <div class="tile">
+            <div class="ti">🥽</div>
+            <h3>护目镜</h3>
+            <p>进入实验室必须佩戴，保护双眼。</p>
+          </div>
+          <div class="tile">
+            <div class="ti">🧤</div>
+            <h3>防化手套</h3>
+            <p>接触腐蚀性试剂时佩戴。</p>
+          </div>
+          <div class="tile">
+            <div class="ti">🔥</div>
+            <h3>酒精灯</h3>
+            <p>熄灭用灯帽盖灭，禁止嘴吹。</p>
+          </div>
+          <div class="tile">
+            <div class="ti">🧯</div>
+            <h3>应急处置</h3>
+            <p>酸碱沾皮肤先用大量流水冲洗。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="tips">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>学习锦囊</h2>
+        <span class="sub">CHEM TIPS</span>
+      </div>
+      <div class="panel-body">
+        <div class="placeholder">
+          <div class="ico">📓</div>
+          <div class="t">错题本与心得待上传</div>
+          <div class="d">这里将整理化学方程式默写、实验易错点、元素周期律记忆方法等内容。</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      星辰班级 · 化学小屋 ｜ 内容持续更新中
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js?v=20261101"></script>
+  <script src="assets/js/quiz.js?v=20261101"></script>
+  <script>
+    (function () {
+      var specs = {
+        chem1020: {
+          json: "assets/papers/chem1020.json?v=20261101",
+          id: "chem1020",
+          title: "2026年10月31日 化学作业",
+          dir: "assets/papers/chem1020/"
+        }
+      };
+      var instances = {};
+      document.querySelectorAll("#quiz-entry .quiz-card").forEach(function (card) {
+        var key = card.getAttribute("data-quiz");
+        var spec = specs[key];
+        var mount = document.getElementById("quiz-" + key);
+        if (!spec || !mount) return;
+        card.addEventListener("click", function () {
+          if (instances[key]) {
+            mount.classList.toggle("on");
+            card.style.display = mount.classList.contains("on") ? "none" : "";
+            if (mount.classList.contains("on")) {
+              mount.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            return;
+          }
+          fetch(spec.json)
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              instances[key] = new window.QuizEngine.Quiz(mount, data, {
+                id: spec.id, title: spec.title, dir: spec.dir
+              });
+              mount.classList.add("on");
+              card.style.display = "none";
+              mount.scrollIntoView({ behavior: "smooth", block: "start" });
+            })
+            .catch(function () {
+              card.innerHTML =
+                '<div class="placeholder"><div class="ico">😢</div>' +
+                '<div class="t">试卷加载失败</div>' +
+                '<div class="d">请稍后重试，或确认网络连接正常。</div></div>';
+            });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2944 @@
+{
+ "title": "第一次月考 · 高一英语",
+ "subtitle": "瑞昌一中 2026—2027 学年度上学期 · 全卷 150 分 / 120 分钟",
+ "audio": "assets/audio/yuekao_listening.mp3",
+ "sections": [
+  {
+   "title": "第一节 · 短篇听力（1—5）",
+   "kind": "listen",
+   "hint": "听下面 5 段对话。每段对话后有一个小题，从题中所给的 A、B、C 三个选项中选出最佳选项。听完每段对话后，你都有 10 秒钟的时间来回答有关小题和阅读下一小题。每段对话读两遍。",
+   "questions": [
+    {
+     "num": 1,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 1 题：What do we know about Mr. Brown?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "He’s from Germany."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "He has a British accent."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "He’s moved to Germany."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【听力原文】M: Sally, did you see the man standing outside our classroom now? The one with the British accent.\nW: Yes, that’s Mr. Brown. He’s our new science teacher. He’s taking over from Mrs. Black since she’s moved to Germany."
+       }
+      ]
+     }
+    },
+    {
+     "num": 2,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 2 题：When will the woman’s flight take off tomorrow?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "At 8:00 a.m."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "At 9:00 a.m."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "At 11:00 a.m."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【听力原文】M: So, you’re leaving tomorrow. When will you set off?\nW: I’ve booked a taxi to the airport at 8:00 am because I have to be there at 9:00 am — two hours before the flight."
+       }
+      ]
+     }
+    },
+    {
+     "num": 3,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 3 题：What does the woman advise the man to do?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Live in France."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Learn more French words."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Research into French culture."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【听力原文】M: I’ve learned so much about France, like its cities, food, and customs.\nW: Yes. By living there for the past few months, you have learned a lot, especially its culture. But in order to get even better at speaking French, you need to expand your vocabulary."
+       }
+      ]
+     }
+    },
+    {
+     "num": 4,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 4 题：What is the weather like now?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Sunny."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Rainy."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Snowy."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【听力原文】W: I hate driving in winter. Even on bright days like this, the sun is so low in the sky that it almost blinds you.\nM: The weather is much better today. I had to drive up to my mother’s last weekend in that heavy snow! Still, at least there hasn’t been any ice on the roads so far."
+       }
+      ]
+     }
+    },
+    {
+     "num": 5,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 5 题：What are the speakers talking about?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "How to keep healthy."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "How to handle stress."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "How to prepare for exams."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【听力原文】M: I’ve been feeling stressed lately. My grandmother was ill last week and I have an important exam this Thursday. How do you stay calm at times like this?\nW: When I’m stressed, I do some exercise. I feel peaceful afterwards.\nM: Thanks. That’s not a bad idea."
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "第二节 · 长对话与独白（6—20）",
+   "kind": "listen",
+   "hint": "听下面 5 段录音。每段录音后有几个小题，从题中所给的 A、B、C 三个选项中选出最佳选项。听每段录音前，你将有时间阅读各个小题；听完后，每小题都有 5 秒钟的作答时间。每段录音播放两遍。",
+   "questions": [
+    {
+     "num": 6,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 6 题：What might the man be?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "A publisher."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "A writer."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "An editor."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【听力原文】M: I sent my new book to the publisher last week, but I haven’t heard a word back yet.\nW: Hmm, is that a promising sign or a worrying one?\nM: Honestly, I’m not quite sure. Probably the latter. I’m really on edge about this. What if they despise it?\nW: Come on, stay optimistic. You’ve managed to write three books! Most people can’t even finish one. That’s no small feat.\nM: You’re absolutely right. I should focus on the positive aspects.\nW: Exactly! Hey, why don’t we step away from all this for a bit and do something enjoyable to get this off your mind?\nM: That sounds good. What do you have in mind?\nW: How about we head to the cinema? There’s that new comedy out, supposed to be amazing. Might help loosen you up.\nM: Perfect."
+       }
+      ]
+     }
+    },
+    {
+     "num": 7,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 7 题：What is the woman doing?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Cheering the man up."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Teaching the man how to write."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Advising the man to write more."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【听力原文】M: I sent my new book to the publisher last week, but I haven’t heard a word back yet.\nW: Hmm, is that a promising sign or a worrying one?\nM: Honestly, I’m not quite sure. Probably the latter. I’m really on edge about this. What if they despise it?\nW: Come on, stay optimistic. You’ve managed to write three books! Most people can’t even finish one. That’s no small feat.\nM: You’re absolutely right. I should focus on the positive aspects.\nW: Exactly! Hey, why don’t we step away from all this for a bit and do something enjoyable to get this off your mind?\nM: That sounds good. What do you have in mind?\nW: How about we head to the cinema? There’s that new comedy out, supposed to be amazing. Might help loosen you up.\nM: Perfect."
+       }
+      ]
+     }
+    },
+    {
+     "num": 8,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 8 题：What did the man want to do?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Work with numbers."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Change his major to literature."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Work at an accounting firm."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【听力原文】W: It’s great to have you back from university, dear! Come inside. Your father and sister have gone to the supermarket. We’re preparing a big dinner for you.\nM: Thanks, Mom.\nW: Come and sit down first. Take a short break. How’s everything been at school?\nM: Pretty good overall. Well, there’s one thing I want to talk to you about. I started a work-study program at an accounting firm, but I’ve had a sudden change of heart. I’d rather not work with numbers. Instead, I want to switch to a creative field, like literature.\nW: That’s a big change! They are likely two completely different worlds.\nM: Do you think it’s strange to change majors?\nW: Oh, I changed my major when I was your age, too. I know you’ll do well in any field. The only thing I’m worried about is the job opportunities in creative areas. Follow your heart, but don’t ignore future job options. Please keep this in mind while choosing a major."
+       }
+      ]
+     }
+    },
+    {
+     "num": 9,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 9 题：What is the woman’s attitude toward the man’s idea?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Understanding."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Uncertain."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Curious."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【听力原文】W: It’s great to have you back from university, dear! Come inside. Your father and sister have gone to the supermarket. We’re preparing a big dinner for you.\nM: Thanks, Mom.\nW: Come and sit down first. Take a short break. How’s everything been at school?\nM: Pretty good overall. Well, there’s one thing I want to talk to you about. I started a work-study program at an accounting firm, but I’ve had a sudden change of heart. I’d rather not work with numbers. Instead, I want to switch to a creative field, like literature.\nW: That’s a big change! They are likely two completely different worlds.\nM: Do you think it’s strange to change majors?\nW: Oh, I changed my major when I was your age, too. I know you’ll do well in any field. The only thing I’m worried about is the job opportunities in creative areas. Follow your heart, but don’t ignore future job options. Please keep this in mind while choosing a major."
+       }
+      ]
+     }
+    },
+    {
+     "num": 10,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 10 题：What’s the woman’s suggestion to the man?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Deal with challenges flexibly."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Ask his professors for advice."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Consider his future job options."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【听力原文】W: It’s great to have you back from university, dear! Come inside. Your father and sister have gone to the supermarket. We’re preparing a big dinner for you.\nM: Thanks, Mom.\nW: Come and sit down first. Take a short break. How’s everything been at school?\nM: Pretty good overall. Well, there’s one thing I want to talk to you about. I started a work-study program at an accounting firm, but I’ve had a sudden change of heart. I’d rather not work with numbers. Instead, I want to switch to a creative field, like literature.\nW: That’s a big change! They are likely two completely different worlds.\nM: Do you think it’s strange to change majors?\nW: Oh, I changed my major when I was your age, too. I know you’ll do well in any field. The only thing I’m worried about is the job opportunities in creative areas. Follow your heart, but don’t ignore future job options. Please keep this in mind while choosing a major."
+       }
+      ]
+     }
+    },
+    {
+     "num": 11,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 11 题：Why can’t Tom meet Ms. Greenwell today?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "He makes an unannounced visit."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Ms. Greenwell doesn’t prepare well."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "He forgets to bring his business card."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【听力原文】W: Hello, sir. Welcome to Eurasia Associates. Do you have an appointment?\nM: I don’t, sorry. I’m looking for Ms. Greenwell. Last month, she mentioned I should visit her office to negotiate the prices of our business deal.\nW: I see. I have her schedule in front of me. But I’m afraid there aren’t any appointments listed, nor any mention of visitors coming in this afternoon.\nM: Sure. But is it possible to drop into her office after lunch?\nW: She’s in the conference room giving a presentation to investors until 3:00 pm. May I take a message for her?\nM: Please mention that Tom from AC International stopped by. Here’s my business card with my mobile number. I’m free for a chat on the phone any time today. And I can come back to the office anytime next week.\nW: Will do, sir. Thanks for coming by. I’ll deliver this message for you."
+       }
+      ]
+     }
+    },
+    {
+     "num": 12,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 12 题：Why does Tom come here?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "To give a presentation."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "To attend a conference."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "To have business discussions."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【听力原文】W: Hello, sir. Welcome to Eurasia Associates. Do you have an appointment?\nM: I don’t, sorry. I’m looking for Ms. Greenwell. Last month, she mentioned I should visit her office to negotiate the prices of our business deal.\nW: I see. I have her schedule in front of me. But I’m afraid there aren’t any appointments listed, nor any mention of visitors coming in this afternoon.\nM: Sure. But is it possible to drop into her office after lunch?\nW: She’s in the conference room giving a presentation to investors until 3:00 pm. May I take a message for her?\nM: Please mention that Tom from AC International stopped by. Here’s my business card with my mobile number. I’m free for a chat on the phone any time today. And I can come back to the office anytime next week.\nW: Will do, sir. Thanks for coming by. I’ll deliver this message for you."
+       }
+      ]
+     }
+    },
+    {
+     "num": 13,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 13 题：What does Tom ask the woman to do?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Call him back this afternoon."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Visit his company next week."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Pass a message to Ms. Greenwell."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【听力原文】W: Hello, sir. Welcome to Eurasia Associates. Do you have an appointment?\nM: I don’t, sorry. I’m looking for Ms. Greenwell. Last month, she mentioned I should visit her office to negotiate the prices of our business deal.\nW: I see. I have her schedule in front of me. But I’m afraid there aren’t any appointments listed, nor any mention of visitors coming in this afternoon.\nM: Sure. But is it possible to drop into her office after lunch?\nW: She’s in the conference room giving a presentation to investors until 3:00 pm. May I take a message for her?\nM: Please mention that Tom from AC International stopped by. Here’s my business card with my mobile number. I’m free for a chat on the phone any time today. And I can come back to the office anytime next week.\nW: Will do, sir. Thanks for coming by. I’ll deliver this message for you."
+       }
+      ]
+     }
+    },
+    {
+     "num": 14,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 14 题：What was stressful for Mark after he arrived in China?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Ordering food."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Writing an essay."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Taking Chinese classes."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【听力原文】W: What are you up to, Mark?\nM: Writing about learning Chinese. When I came in 2022, I only knew hello and thank you. So ordering food or taking a taxi was stressful.\nW: How did you cope with it?\nM: I signed up for classes. The teacher was nice, yet real talk was impossible. Self-study helped little, and I got frustrated.\nW: Then?\nM: The best way is making native friends and hanging out. That’s what I’ll tell foreign Chinese lovers.\nW: Fair enough. English is hard for us, too.\nM: Think of them. 100 million studied Chinese in 2017. In 2024, the figure has roughly doubled, reaching almost 200 million.\nW: Truly inspiring. Maybe I should also find a pen pal to exchange languages.\nM: Good idea. Mutual correction over coffee works wonders for fluency. Let’s start next week. I’ll bring my notebook and colorful sticky notes."
+       }
+      ]
+     }
+    },
+    {
+     "num": 15,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 15 题：What does Mark think is the best way to learn Chinese?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Taking Chinese classes."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Having self-study."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Making Chinese friends."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【听力原文】W: What are you up to, Mark?\nM: Writing about learning Chinese. When I came in 2022, I only knew hello and thank you. So ordering food or taking a taxi was stressful.\nW: How did you cope with it?\nM: I signed up for classes. The teacher was nice, yet real talk was impossible. Self-study helped little, and I got frustrated.\nW: Then?\nM: The best way is making native friends and hanging out. That’s what I’ll tell foreign Chinese lovers.\nW: Fair enough. English is hard for us, too.\nM: Think of them. 100 million studied Chinese in 2017. In 2024, the figure has roughly doubled, reaching almost 200 million.\nW: Truly inspiring. Maybe I should also find a pen pal to exchange languages.\nM: Good idea. Mutual correction over coffee works wonders for fluency. Let’s start next week. I’ll bring my notebook and colorful sticky notes."
+       }
+      ]
+     }
+    },
+    {
+     "num": 16,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 16 题：Who does Mark want to share his experience with?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "English majors."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "An English pen pal."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Foreigners who learn Chinese."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【听力原文】W: What are you up to, Mark?\nM: Writing about learning Chinese. When I came in 2022, I only knew hello and thank you. So ordering food or taking a taxi was stressful.\nW: How did you cope with it?\nM: I signed up for classes. The teacher was nice, yet real talk was impossible. Self-study helped little, and I got frustrated.\nW: Then?\nM: The best way is making native friends and hanging out. That’s what I’ll tell foreign Chinese lovers.\nW: Fair enough. English is hard for us, too.\nM: Think of them. 100 million studied Chinese in 2017. In 2024, the figure has roughly doubled, reaching almost 200 million.\nW: Truly inspiring. Maybe I should also find a pen pal to exchange languages.\nM: Good idea. Mutual correction over coffee works wonders for fluency. Let’s start next week. I’ll bring my notebook and colorful sticky notes."
+       }
+      ]
+     }
+    },
+    {
+     "num": 17,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 17 题：How many foreigners learned Chinese in 2024?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "About 100 million."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Nearly 200 million."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Over 300 million."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【听力原文】W: What are you up to, Mark?\nM: Writing about learning Chinese. When I came in 2022, I only knew hello and thank you. So ordering food or taking a taxi was stressful.\nW: How did you cope with it?\nM: I signed up for classes. The teacher was nice, yet real talk was impossible. Self-study helped little, and I got frustrated.\nW: Then?\nM: The best way is making native friends and hanging out. That’s what I’ll tell foreign Chinese lovers.\nW: Fair enough. English is hard for us, too.\nM: Think of them. 100 million studied Chinese in 2017. In 2024, the figure has roughly doubled, reaching almost 200 million.\nW: Truly inspiring. Maybe I should also find a pen pal to exchange languages.\nM: Good idea. Mutual correction over coffee works wonders for fluency. Let’s start next week. I’ll bring my notebook and colorful sticky notes."
+       }
+      ]
+     }
+    },
+    {
+     "num": 18,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 18 题：Who is probably the speaker?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "A teacher."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "A student."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "A doctor."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【听力原文】W: Good morning, everyone. It’s time for our weekly health class. How many of you feel tired all the time? Raise your hands, please.\nWow, there are a lot of hands! Doctors recommend that teens get at least 8-10 hours of sleep each night. However, in practice, many teens struggle to make it. This is often due to a conflict between nature and modern life. During our teenage years, our body clocks tend to move forward. This natural change makes us want to go to sleep and wake up much later. However, as society usually demands we get up early, the key is finding a way to fall asleep earlier.\nLater on in the lesson, we’ll be talking about how stress and screen addiction can also impact our sleep. But first, we’re going to study the 10-3-2-1 sleep rule. This means that ten hours before bed, you stop drinking tea, coffee, and other energy drinks. Your last meal of the day should be at least three hours before bed. Homework and other work should be completed at least two hours before bed. One hour before bed, you shut off all screens. These tips will help ready your body for sleep, and help you drop off to sleep much more quickly."
+       }
+      ]
+     }
+    },
+    {
+     "num": 19,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 19 题：What causes long-term tiredness in teens according to the speaker?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Preference for drinking energy drinks."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "An addiction to screens and study pressure."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "The conflict between body clocks and social demands."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【听力原文】W: Good morning, everyone. It’s time for our weekly health class. How many of you feel tired all the time? Raise your hands, please.\nWow, there are a lot of hands! Doctors recommend that teens get at least 8-10 hours of sleep each night. However, in practice, many teens struggle to make it. This is often due to a conflict between nature and modern life. During our teenage years, our body clocks tend to move forward. This natural change makes us want to go to sleep and wake up much later. However, as society usually demands we get up early, the key is finding a way to fall asleep earlier.\nLater on in the lesson, we’ll be talking about how stress and screen addiction can also impact our sleep. But first, we’re going to study the 10-3-2-1 sleep rule. This means that ten hours before bed, you stop drinking tea, coffee, and other energy drinks. Your last meal of the day should be at least three hours before bed. Homework and other work should be completed at least two hours before bed. One hour before bed, you shut off all screens. These tips will help ready your body for sleep, and help you drop off to sleep much more quickly."
+       }
+      ]
+     }
+    },
+    {
+     "num": 20,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 20 题：What does the speaker tell us at the end of the conversation?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "How stress affects sleep quality."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Why teens have trouble waking up early."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "How to arrange time properly before bedtime."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【听力原文】W: Good morning, everyone. It’s time for our weekly health class. How many of you feel tired all the time? Raise your hands, please.\nWow, there are a lot of hands! Doctors recommend that teens get at least 8-10 hours of sleep each night. However, in practice, many teens struggle to make it. This is often due to a conflict between nature and modern life. During our teenage years, our body clocks tend to move forward. This natural change makes us want to go to sleep and wake up much later. However, as society usually demands we get up early, the key is finding a way to fall asleep earlier.\nLater on in the lesson, we’ll be talking about how stress and screen addiction can also impact our sleep. But first, we’re going to study the 10-3-2-1 sleep rule. This means that ten hours before bed, you stop drinking tea, coffee, and other energy drinks. Your last meal of the day should be at least three hours before bed. Homework and other work should be completed at least two hours before bed. One hour before bed, you shut off all screens. These tips will help ready your body for sleep, and help you drop off to sleep much more quickly."
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "阅读理解 A · 希腊岛屿推荐",
+   "kind": "passage",
+   "passage": [
+    "There are so many islands to visit in Greece, all with their own unique styles. Here I share with you why these beautiful islands are my favorite in Greece.",
+    "Crete: Greece’s southernmost island, and largest, Crete has two main airports—Chania and Heraklion. This makes it a popular destination year-round. Despite its touristy crowds—particularly in the summer months—Crete remains a favorite of mine because it offers such a variety of things to see and do. Want to lie on the beach all day? No problem. If hiking’s more your thing, the famous Samaria Gorge is best hiked in the cooler spring and fall months. Lovers of history and tradition will love the Venetian harbor, explore the old cobbled streets of Chania, and marvel at one of the oldest lighthouses in the world.",
+    "Dodecanese Islands: The Dodecanese Islands are known for their medieval castles, Byzantine churches, beaches, and ancient sites. The capital of this island chain is Rhodes. You can’t miss the old town of Rhodes—a UNESCO World Heritage site and a continuously functioning old town, meaning people still live and trade behind and within its castle walls. Marvel at the architecture, or take a stroll atop the ancient castle walls. Wear sturdy shoes! Heading out of the ancient old town and driving inland will bring you to the pine forest of Profitis Ilias. It makes for a beautiful day trip away from the crowded beaches.",
+    "Ikaria: One of five blue zones in the world, the island’s name stems from Greek mythology. Where Icarus, the son of Daedalus, fell is supposed to be where the island formed. You’ll find long stretches of beaches, wild landscapes, authentic people, and phenomenal food. It’s a blue zone due to the fact that it’s a place where inhabitants live long and healthy lives—essentially “forgetting to die”. This is down to the environment that allows people to live and exercise outside more, have a strong community spirit, and take frequent naps."
+   ],
+   "questions": [
+    {
+     "num": 21,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 21 题：What is the main purpose of the passage?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "To advertise local food in Greece."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "To recommend some Greek islands to visit."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "To introduce the history of Greek mythology."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "To compare the climates of different Greek islands."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【导语】文章主要介绍了作者推荐的三座希腊岛屿，分别是克里特岛、多德卡尼斯群岛以及伊卡利亚岛，介绍了各岛屿特色、景观与人文特点。\n【21题详解】推理判断题。根据第一段“There are so many islands to visit in Greece… Here I share with you why these beautiful islands are my favorite in Greece.”可知，文章的主要目的是推荐一些可供游览的希腊岛屿。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 22,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 22 题：Which is true about the old town of Rhodes?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "It is the southernmost and largest island in Greece."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "It is named after a Greek mythological character."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "It is where visitors can see the world’s oldest lighthouse."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "It is a time-honored site still full of life."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【22题详解】细节理解题。根据 Dodecanese Islands 部分“You can’t miss the old town of Rhodes—a UNESCO World Heritage site and a continuously functioning old town, meaning people still live and trade behind and within its castle walls.”可知，罗得岛古镇是历史悠久且依旧充满生机的地方。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 23,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 23 题：What makes Ikaria a “blue zone”?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Its beautiful beaches and wild landscapes."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Its convenient transportation and airports."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Its environment promoting long and healthy lives."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Its medieval castles and ancient sites."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【23题详解】细节理解题。根据 Ikaria 部分“It’s a blue zone due to the fact that it’s a place where inhabitants live long and healthy lives—essentially ‘forgetting to die’.”可知，造就伊卡利亚成为“蓝色地带”的是当地能够促进人们健康长寿的环境。"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "阅读理解 B · 北京胡同生活",
+   "kind": "passage",
+   "passage": [
+    "When I first moved into a traditional hutong in Beijing, the narrow alleyways felt like a maze (迷宫). My tiny room was part of a siheyuan shared with three Chinese families. Back home in London, I lived in a quiet suburban house with a private garden. Here, I could hear neighbours chatting through paper-thin walls, and the smell of stir-fried vegetables often drifted into my room. It was overwhelming yet strangely alive.",
+    "The biggest shock came the next morning. I stepped outside to find a communal tap where residents brushed teeth and washed vegetables side by side. An elderly man in pajamas nodded at me while spitting into the drain—a common practice here but shocking to Western eyes. Later, when I tried to throw trash into a bin, Mrs. Li from next door rushed over, sorting my waste into four colourful categories with a patient smile. “Recycling matters,” she said, though I understood little Chinese.",
+    "Gradually, the hutong revealed its magic. Children played hopscotch (跳房子游戏) on stone paths, and shopkeepers knew everyone’s name. One rainy day, my roof leaked. Before I could call for help, one of my neighbours climbed up with a ladder and fixed it himself. That evening, he invited me for jiaozi. As we dipped them in vinegar, I realized privacy in the West meant isolation (孤独); here, “noisy closeness” meant belonging.",
+    "Now, when I bike past the morning crowds buying baozi or see neighbours playing chess under tree shades, I feel at home. The hutong taught me that culture shock is just the first step to discovering a new way of living—one where community wraps around you like a warm quilt."
+   ],
+   "questions": [
+    {
+     "num": 24,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 24 题：What does the author think of his home in London?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Crowded."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Peaceful."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Small."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Old."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【导语】文章主要讲述作者初到北京胡同生活，因环境、生活习惯差异感到冲击，后逐渐感受胡同邻里温情，领悟此处“热闹的亲近”带来归属感。\n【24题详解】细节理解题。根据第一段中“Back home in London, I lived in a quiet suburban house with a private garden.”可知，作者认为自己在伦敦的家是安静的。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 25,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 25 题：What did Mrs. Li help the author do?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Clean his room."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Cook meals."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Sort his waste."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Wash vegetables."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【25题详解】细节理解题。根据第二段中“Later, when I tried to throw trash into a bin, Mrs. Li from next door rushed over, sorting my waste into four colourful categories with a patient smile.”可知，李太太帮作者分类垃圾。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 26,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 26 题：Why did the author mention the story about his roof’s repair?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "To show neighbours in hutong were warm and helpful."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "To tell the hutong was noisy and old."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "To explain he disliked his small room."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "To say living in hutong was difficult."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【26题详解】推理判断题。根据第三段中“One rainy day, my roof leaked. Before I could call for help, one of my neighbours climbed up with a ladder and fixed it himself.”可推知，作者提及修屋顶的故事是为了展现胡同邻居温暖又乐于助人。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 27,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 27 题：What can we learn about the author from the last paragraph?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "He believes culture shock is terrible."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "He dislikes the busy street."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "He wants to go back to London."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "He loves the hutong life now."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【27题详解】细节理解题。根据最后一段“Now, when I bike past the morning crowds buying baozi… I feel at home. The hutong taught me that culture shock is just the first step to discovering a new way of living…”可知，作者现在已经爱上了胡同生活。"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "阅读理解 C · 海底数据中心",
+   "kind": "passage",
+   "passage": [
+    "China has completed construction of the world’s first wind-powered underwater data center (UDC), which could transform how the vast digital infrastructure (基础设施) driving AI, cloud computing and big data is powered. Located in the Lin-gang Special Area, Shanghai, the project is being hailed as a milestone in the integration of offshore renewable energy with next-generation computing.",
+    "The facility features a total power capacity of 24 megawatts (MW) and draws about 97 percent of its electricity from offshore wind. It is cooled using ocean water that flows through its 198 radiator (散热器)-equipped frames. This significantly reduces both energy consumption and land use. For comparison, traditional land-based data centers require up to 40 percent of the power supply for cooling alone.",
+    "According to the administrative committee of the Lin-gang Special Area, the new facility’s completion represents a turning point in the green and smart advancement of computing infrastructure. In contrast to traditional land-based data centers, the UDC is made to cut overall power consumption by nearly 23 percent. It also eliminates water use entirely and reduces land requirements by over 90 percent.",
+    "Instead of relying on massive air-conditioning systems, the underwater data center uses seawater as a natural cooling medium. This brings cooling-related energy use down to below 10 percent.",
+    "The project is part of Shanghai’s broader goal to turn the coastal region into a global smart computing and clean energy innovation center. It also plans to reach a total computing capacity of 200 exaFLOPS. This is equal to one quintillion (百万的三次方) floating point operations per second. For reference, in 2021, Tesla’s supercomputer achieved 1.8 exaFLOPS.",
+    "However, experts note that although the technology holds great promise, further development is required before large-scale application becomes cost-effective. “Construction of UDCs is still in its initial stage,” Wang Shifeng, chairman of Third Harbor Engineering, said. “To achieve the transition from demonstration projects to large-scale application, progress is still required in terms of technological maturity and cost efficiency.” Shifeng added that the company plans to prioritize advances in key technologies for offshore computing infrastructure, improve operations and maintenance and pursue greener, low-carbon upgrades."
+   ],
+   "questions": [
+    {
+     "num": 28,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 28 题：What does the underlined word “hailed” probably mean in paragraph 1?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Praised."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Proved."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Challenged."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Criticized."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【导语】文章主要介绍我国建成全球首个风电海底数据中心，依托海风、海水冷却大幅节约能耗水土，算力规划可观；但技术尚初级，大规模落地仍需突破。\n【28题详解】词句猜测题。根据第一段“China has completed construction of the world’s first wind-powered underwater data center (UDC)… the project is being hailed as a milestone…”可知，be hailed as 意为“被誉为、被称赞为”，与 praised 含义最接近。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 29,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 29 题：What is the main comparative advantage of the UDC?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "It relies on wind and seawater power."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "It has more radiators for heat removal."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "It saves plenty of energy, water and land."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "It needs less land but is harder to maintain."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【29题详解】细节理解题。根据第三段“In contrast to traditional land-based data centers, the UDC is made to cut overall power consumption by nearly 23 percent. It also eliminates water use entirely and reduces land requirements by over 90 percent.”可知，UDC 对比传统陆基数据中心的核心优势体现在三个维度：整体能耗降低近 23%、完全零用水、土地需求减少 90% 以上，即大幅节约能源、水资源与土地资源。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 30,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 30 题：Why does the author mention Tesla’s supercomputer?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "To prove the UDC’s leading position in computing."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "To show the growth of the supercomputing industry."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "To stress the difficulty of achieving 200 exaFLOPS."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "To help readers understand the scale of the target."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【30题详解】推理判断题。根据第五段“It also plans to reach a total computing capacity of 200 exaFLOPS… For reference, in 2021, Tesla’s supercomputer achieved 1.8 exaFLOPS.”可知，作者以特斯拉超算的 1.8 exaFLOPS 作为参照，目的是通过读者相对熟悉的对象，帮助读者直观理解该算力目标的规模量级。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 31,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 31 题：What is Wang Shifeng’s attitude towards the future of UDCs?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Extremely confident."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Slightly opposed."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Cautiously positive."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Practically concerned."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【31题详解】推理判断题。根据最后一段“However, experts note that although the technology holds great promise, further development is required… ‘Construction of UDCs is still in its initial stage… progress is still required in terms of technological maturity and cost efficiency.’”可知，王世峰一方面认可该技术前景广阔，另一方面也指出其仍处于初期阶段，整体态度是谨慎乐观的。"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "阅读理解 D · 男女化解冲突差异",
+   "kind": "passage",
+   "passage": [
+    "It’s not exactly front-page news that when it comes to conflict（冲突）, men and women usually behave very differently. The way they resolve(解决) those conflicts also tends to be different. While men can be aggressive (好斗的), a new study shows that men are more likely than women to make peace with their competitors after the competition ends.",
+    "Earlier studies had shown male chimps (黑猩猩) were more likely than females to try to put hard feelings to rest following a head-to-head conflict, inspiring Benenson and Wrangham, two experts of Human Evolutionary Biology, to wonder whether the same might be true among humans.",
+    "To get at the question, they turned to a modern form of conflict: sports. Researchers found hundreds of videos of tennis, table tennis, badminton, and boxing matches, and focused their attention not on the matches, but on the immediate post-game period. Researchers watched hundreds of matches, taking care to ensure no player was repeated in any match, and found clear sex differences in all four sports.",
+    "So why is it that women seem less willing to reconcile (和解) following conflict?",
+    "Part of the answer, Benenson and Wrangham believe, may be tied to traditional gender(性别) roles that stretch to the earliest human history. While males develop large friendship networks, females focus more on family relationships and a handful of close friends—partly, researchers believe, as a way to share the burden of raising children. The whole community gains when unrelated men successfully defeat external groups. In contrast, women gain more from family members and one or two close friends who help with child care.",
+    "Ultimately, Benenson said, the implications of the study could reach far beyond the boundaries of the playing field. “Studies have shown that when two females compete in the workplace, they feel much more damaged afterward. I think this is something human resources professionals should be aware of, so they can address it.”"
+   ],
+   "questions": [
+    {
+     "num": 32,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 32 题：In what way did the researchers study the sports matches?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Comparing human emotional responses with the chimps’."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Looking into both genders’ reactions right after the matches."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Focusing on the different skills of male and female players."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Studying the impact of repeated players on the final findings."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【导语】文章主要介绍一项新研究，探讨男女在冲突后的和解差异，分析差异成因以及该研究在体育运动之外的现实意义。\n【32题详解】细节理解题。根据第三段“Researchers found hundreds of videos… focused their attention not on the matches, but on the immediate post-game period.”可知，研究人员通过观察男女选手赛后的即时反应，研究体育比赛中的性别行为差异。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 33,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 33 题：According to paragraph 5, as for social relationships, women ______",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "prefer to build a larger friendship network"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "are unwilling to raise children on their own"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "value quality over quantity in relationships"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "frequently need to defend their communities"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【33题详解】细节理解题。根据第五段“While males develop large friendship networks, females focus more on family relationships and a handful of close friends…”可知，女性不追求宽泛的社交，更看重少而精的高质量人际关系。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 34,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 34 题：What can be inferred from Benenson’s words in the last paragraph?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Female competition leads to lasting psychological harm."
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "The findings have practical implications beyond sports."
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Human resources professionals tend to favor women."
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Female competition causes less harm than thought."
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【34题详解】推理判断题。根据第六段“Ultimately, Benenson said, the implications of the study could reach far beyond the boundaries of the playing field.”可知，该研究成果除体育运动外，在职场等领域也具备实际参考价值。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 35,
+     "type": "choice",
+     "group": "read",
+     "stem": "第 35 题：What is a suitable title for the passage?",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "Managing Emotions: Males Vs. Females"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Facing Competition: Fight Vs. Flight"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "Observing Sports: Men’s Vs. Women’s"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Resolving Conflict: Men Vs. Women"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【35题详解】主旨大意题。通读全文，尤其是首段“It’s not exactly front-page news that when it comes to conflict, men and women usually behave very differently. The way they resolve those conflicts also tends to differ.”可知，文章主要围绕男性和女性在冲突后的和解方式差异展开，介绍了相关研究、成因与现实启示，因此“Resolving Conflict: Men Vs. Women”最能概括全文核心。"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "七选五 · 预防溺水（36—40）",
+   "kind": "bank",
+   "passage": [
+    "Every summer holiday, there are always many drowning (溺死) accidents. Especially, swimming in the wild is extremely dangerous. Most accidents happen right there. ___36___.",
+    "The main reason is that people who can’t swim have a fear of water. ___37___. But the person that can swim is otherwise. ___38___ and likes to enter water, appearing occasionally so nervous for unusual condition. If nobody rescues, accident may happen.",
+    "___39___. Don’t make the mistake of thinking that drowning deaths are mostly swimmers. The truth is that the vast majority (大部分的) of accidental drowning are those who cannot swim. An extra skill will give you an extra chance to save yourself in the event of an accident.",
+    "The improvement of swimming skills lies in practice. The only proper place for practice is a swimming pool with coaches and ambulance people present.",
+    "Good advice to prevent drowning: ___40___."
+   ],
+   "bank": [
+    {
+     "label": "A",
+     "frags": [
+      {
+       "t": "He is not afraid of water"
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "frags": [
+      {
+       "t": "Swimming is good for your health"
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "frags": [
+      {
+       "t": "They don’t want to go near dangerous waters"
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "frags": [
+      {
+       "t": "Master swimming skills and never swim in the wild"
+      }
+     ]
+    },
+    {
+     "label": "E",
+     "frags": [
+      {
+       "t": "However, we cannot think learning to swim is useless for this reason"
+      }
+     ]
+    },
+    {
+     "label": "F",
+     "frags": [
+      {
+       "t": "Common swimming strokes (泳姿) are breaststroke, freestyle, and backstroke"
+      }
+     ]
+    },
+    {
+     "label": "G",
+     "frags": [
+      {
+       "t": "Surprisingly, in many drowning accidents, those drowning deaths are able to swim"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "num": 36,
+     "type": "choice",
+     "group": "seven",
+     "stem": "第 36 题：___36___（从选项池中挑选最恰当的一项）",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "He is not afraid of water"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Swimming is good for your health"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "They don’t want to go near dangerous waters"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Master swimming skills and never swim in the wild"
+        }
+       ]
+      },
+      {
+       "label": "E",
+       "frags": [
+        {
+         "t": "However, we cannot think learning to swim is useless for this reason"
+        }
+       ]
+      },
+      {
+       "label": "F",
+       "frags": [
+        {
+         "t": "Common swimming strokes (泳姿) are breaststroke, freestyle, and backstroke"
+        }
+       ]
+      },
+      {
+       "label": "G",
+       "frags": [
+        {
+         "t": "Surprisingly, in many drowning accidents, those drowning deaths are able to swim"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "G",
+      "body": [
+       {
+        "t": "【36题详解】第二段提到“The main reason is that people who can’t swim have a fear of water.”不会游泳的人不去水边，会游泳的人可能发生意外。G项“许多溺水事故中的溺亡者都是会游泳的人”承接下文，符合语境，故选G项。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 37,
+     "type": "choice",
+     "group": "seven",
+     "stem": "第 37 题：___37___（从选项池中挑选最恰当的一项）",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "He is not afraid of water"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Swimming is good for your health"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "They don’t want to go near dangerous waters"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Master swimming skills and never swim in the wild"
+        }
+       ]
+      },
+      {
+       "label": "E",
+       "frags": [
+        {
+         "t": "However, we cannot think learning to swim is useless for this reason"
+        }
+       ]
+      },
+      {
+       "label": "F",
+       "frags": [
+        {
+         "t": "Common swimming strokes (泳姿) are breaststroke, freestyle, and backstroke"
+        }
+       ]
+      },
+      {
+       "label": "G",
+       "frags": [
+        {
+         "t": "Surprisingly, in many drowning accidents, those drowning deaths are able to swim"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【37题详解】结合上文及空前“The main reason is that people who can’t swim have a fear of water”可知，溺亡的人很大比例都是会游泳的人，其主要原因是不怕水，空处应是说明不会游泳者的表现，C项“他们不想靠近危险水域”承接空前内容，故选C项。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 38,
+     "type": "choice",
+     "group": "seven",
+     "stem": "第 38 题：___38___（从选项池中挑选最恰当的一项）",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "He is not afraid of water"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Swimming is good for your health"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "They don’t want to go near dangerous waters"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Master swimming skills and never swim in the wild"
+        }
+       ]
+      },
+      {
+       "label": "E",
+       "frags": [
+        {
+         "t": "However, we cannot think learning to swim is useless for this reason"
+        }
+       ]
+      },
+      {
+       "label": "F",
+       "frags": [
+        {
+         "t": "Common swimming strokes (泳姿) are breaststroke, freestyle, and backstroke"
+        }
+       ]
+      },
+      {
+       "label": "G",
+       "frags": [
+        {
+         "t": "Surprisingly, in many drowning accidents, those drowning deaths are able to swim"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【38题详解】根据空前“But the person that can swim is otherwise.(但是会游泳的人就不一样了)”可知，空后应是具体讲会游泳的人的情况，A项“他不害怕水”符合题意，与空后“likes to enter water”表达意思一致，故选A项。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 39,
+     "type": "choice",
+     "group": "seven",
+     "stem": "第 39 题：___39___（从选项池中挑选最恰当的一项）",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "He is not afraid of water"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Swimming is good for your health"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "They don’t want to go near dangerous waters"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Master swimming skills and never swim in the wild"
+        }
+       ]
+      },
+      {
+       "label": "E",
+       "frags": [
+        {
+         "t": "However, we cannot think learning to swim is useless for this reason"
+        }
+       ]
+      },
+      {
+       "label": "F",
+       "frags": [
+        {
+         "t": "Common swimming strokes (泳姿) are breaststroke, freestyle, and backstroke"
+        }
+       ]
+      },
+      {
+       "label": "G",
+       "frags": [
+        {
+         "t": "Surprisingly, in many drowning accidents, those drowning deaths are able to swim"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "E",
+      "body": [
+       {
+        "t": "【39题详解】上文提到在很多溺亡事故中很大比例的死亡人数是会游泳的人，根据空后“Don’t make the mistake of thinking that drowning deaths are mostly swimmers.”及本段最后一句可知，本段与上文是转折关系，讲述学习游泳是有用的，E项“然而，我们不能因为这个原因就认为学习游泳是没有用的”符合语境，故选E项。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 40,
+     "type": "choice",
+     "group": "seven",
+     "stem": "第 40 题：___40___（从选项池中挑选最恰当的一项）",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "He is not afraid of water"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "Swimming is good for your health"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "They don’t want to go near dangerous waters"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "Master swimming skills and never swim in the wild"
+        }
+       ]
+      },
+      {
+       "label": "E",
+       "frags": [
+        {
+         "t": "However, we cannot think learning to swim is useless for this reason"
+        }
+       ]
+      },
+      {
+       "label": "F",
+       "frags": [
+        {
+         "t": "Common swimming strokes (泳姿) are breaststroke, freestyle, and backstroke"
+        }
+       ]
+      },
+      {
+       "label": "G",
+       "frags": [
+        {
+         "t": "Surprisingly, in many drowning accidents, those drowning deaths are able to swim"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【40题详解】根据空前“Good advice to prevent drowning(预防溺水的好建议)”可知，空处应是讲述防止溺亡的建议，D项“掌握游泳技能，不要在野外游泳”切题，故选D项。"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "完形填空（41—55）",
+   "kind": "passage",
+   "passage": [
+    "As the fifth of the seven children, I went to the same school as my elder sisters and brothers. Every child took an active part in an old school tradition — the ____41____ plant sale held in early May, just ____42____ Mother’s Day.",
+    "The third grade was the first time that I was allowed to take part in the plant sale. I ____43____ to surprise my mother, but I didn’t have any money. I went to my eldest sister and she ____44____ to help. Then, at the plant sale, I carefully made my ____45____ to ensure that I had ____46____ found the best geranium (天竺葵). I hid it secretly.",
+    "On Mother’s Day, bursting with ____47____, I gave my mother that geranium. I remember her eyes ____48____ with joy.",
+    "The year I was fifteen, my younger sister ____49____ the third grade. In early May she came to me and I gave her some money. She arrived home full of ____50____ excitement, the best geranium hidden in a paper bag.",
+    "With a sweet ____51____ of familiarity, I helped my little sister hide that geranium, ____52____ her that our mother would not find it. When she proudly gave my mother the geranium, Mom gave me a soft, secret ____53____. I smiled back. I had been wondering how my mother could ____54____ such a joyful smile at the same gift all the time, but when I found her eyes bright with joy at that most ____55____ gift, I knew her joy was sincere."
+   ],
+   "questions": [
+    {
+     "num": 41,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 41 题：the ____41____ plant sale held in early May",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "daily"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "weekly"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "monthly"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "yearly"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【41题详解】考查形容词。句意：每个孩子都参加学校的一个古老传统——每年五月初举行的植物售卖活动，正好赶在母亲节之前。根据“early May”及后文每年都发生的故事可知，这是一个年度活动。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 42,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 42 题：just ____42____ Mother’s Day",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "in case of"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "in favor of"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "in time for"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "in need of"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【42题详解】考查介词。固定搭配“in time for + 节日/活动”意为“刚好赶上……”，符合语境。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 43,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 43 题：I ____43____ to surprise my mother",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "desired"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "preferred"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "hesitated"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "hated"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【43题详解】考查动词。句意：我渴望给母亲一个惊喜，但我没有钱。根据后文“surprise my mother”及借钱买花的举动可知，作者内心非常想要给妈妈惊喜。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 44,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 44 题：she ____44____ to help",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "sought"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "continued"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "failed"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "volunteered"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【44题详解】考查动词。句意：我去找我的大姐，她自愿提供帮助。根据后文作者成功买到花可知，姐姐主动帮忙。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 45,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 45 题：I carefully made my ____45____",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "trip"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "fortune"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "selection"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "appearance"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【45题详解】考查名词。句意：我仔细地挑选，确保我真的找到了最好的天竺葵。根据前文“carefully”和后文“found the best geranium”可知，作者在精心挑选。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 46,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 46 题：I had ____46____ found the best geranium",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "always"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "briefly"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "indeed"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "totally"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【46题详解】考查副词。句意：确保我确实找到了最好的天竺葵。indeed 加强了语气。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 47,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 47 题：bursting with ____47____",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "pride"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "ideas"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "fantasy"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "plans"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【47题详解】考查名词。句意：母亲节那天，我满怀自豪，把那盆天竺葵送给了母亲。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 48,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 48 题：her eyes ____48____ with joy",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "breaking up"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "cleaning up"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "lighting up"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "cheering up"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "C",
+      "body": [
+       {
+        "t": "【48题详解】考查动词短语。句意：我记得她的眼睛因喜悦而闪闪发光。light up 为形象表达。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 49,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 49 题：my younger sister ____49____ the third grade",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "read"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "reached"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "finished"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "got"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【49题详解】考查动词。句意：我十五岁那年，妹妹上三年级了。reach 有“发展到某一阶段”的含义。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 50,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 50 题：full of ____50____ excitement",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "puzzled"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "nervous"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "surprised"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "confused"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【50题详解】考查形容词。句意：她满怀着紧张的兴奋回到家。因为是偷偷给妈妈送花，所以是一种既紧张又兴奋的感觉。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 51,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 51 题：a sweet ____51____ of familiarity",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "sense"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "sight"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "source"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "style"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【51题详解】考查名词。句意：带着一种熟悉的甜蜜感觉。sense 意为“感觉”。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 52,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 52 题：____52____ her that our mother would not find it",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "reminding"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "recommending"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "teaching"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "promising"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【52题详解】考查动词。句意：向她保证我们的母亲不会发现它。promise 意为“承诺、保证”。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 53,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 53 题：a soft, secret ____53____",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "look"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "smile"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "wave"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "signal"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "B",
+      "body": [
+       {
+        "t": "【53题详解】考查名词。句意：妈妈给了我一个温柔而隐秘的微笑。根据后文“I smiled back”可知。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 54,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 54 题：how my mother could ____54____ such a joyful smile",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "manage"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "perform"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "control"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "hide"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "A",
+      "body": [
+       {
+        "t": "【54题详解】考查动词。句意：我一直想知道母亲是如何在面对同样的礼物时，总能露出如此快乐的笑容的。manage to do sth. 意为“设法做成某事”。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 55,
+     "type": "choice",
+     "group": "cloze",
+     "stem": "第 55 题：at that most ____55____ gift",
+     "options": [
+      {
+       "label": "A",
+       "frags": [
+        {
+         "t": "expensive"
+        }
+       ]
+      },
+      {
+       "label": "B",
+       "frags": [
+        {
+         "t": "ordinary"
+        }
+       ]
+      },
+      {
+       "label": "C",
+       "frags": [
+        {
+         "t": "original"
+        }
+       ]
+      },
+      {
+       "label": "D",
+       "frags": [
+        {
+         "t": "priceless"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "head": "D",
+      "body": [
+       {
+        "t": "【55题详解】考查形容词。句意：当我发现她看着那份最珍贵的礼物，眼中闪烁着喜悦的光芒时。priceless 与 sincere 形成对比，突出母爱。"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "语法填空（56—65）",
+   "kind": "word",
+   "passage": [
+    "Our school has a tradition of holding an annual English textbook drama competition, which attracts many students every year. I decided to sign up ____56____ this year’s event. At the beginning, I was filled with ____57____ (anxious) because playing a role on stage was new to me. Some classmates told me it was too tough, but I preferred ____58____ (face) the challenge rather than give up easily. We met after class almost every day to discuss the plot and polish our body language. There were many moments ____59____ we argued about how to show the characters properly and better, but we never lost heart.",
+    "The contest, which was held as ____60____ (schedule), brought us a wonderful night. We spent plenty of time rehearsing to deliver our lines ____61____ (fluent). Our group tried our best to act out the story with true feelings. In the end, our performance was really impressive and won warm applause(掌声) from ____62____ audience.",
+    "This ____63____ (challenge) experience helps me grow a lot. I learn that nothing is impossible if we stick to our efforts. It also teaches me the importance of teamwork, which makes hard tasks much ____64____ (easy) to complete. Up to now, I ____65____ (keep) this unforgettable experience deep in my mind."
+   ],
+   "questions": [
+    {
+     "num": 56,
+     "type": "word",
+     "group": "word",
+     "stem": "第 56 题：I decided to sign up ____56____ this year’s event.",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "for",
+      "body": [
+       {
+        "t": "sign up for 为固定搭配，意为“报名参加”。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 57,
+     "type": "word",
+     "group": "word",
+     "stem": "第 57 题：I was filled with ____57____ (anxious)",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "anxiety",
+      "body": [
+       {
+        "t": "with 后接名词，anxious 的名词形式为 anxiety。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 58,
+     "type": "word",
+     "group": "word",
+     "stem": "第 58 题：I preferred ____58____ (face) the challenge",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "to face",
+      "body": [
+       {
+        "t": "prefer to do rather than do 为固定结构，意为“宁愿做……而不愿做……”。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 59,
+     "type": "word",
+     "group": "word",
+     "stem": "第 59 题：moments ____59____ we argued",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "when",
+      "body": [
+       {
+        "t": "此处为定语从句，先行词 moments 表时间，用 when 引导。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 60,
+     "type": "word",
+     "group": "word",
+     "stem": "第 60 题：held as ____60____ (schedule)",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "scheduled",
+      "body": [
+       {
+        "t": "as scheduled 为固定表达，意为“按计划进行”。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 61,
+     "type": "word",
+     "group": "word",
+     "stem": "第 61 题：deliver our lines ____61____ (fluent)",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "fluently",
+      "body": [
+       {
+        "t": "修饰动词 deliver 用副词 fluently。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 62,
+     "type": "word",
+     "group": "word",
+     "stem": "第 62 题：from ____62____ audience",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "the",
+      "body": [
+       {
+        "t": "此处 audience 特指“观众”，用定冠词 the。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 63,
+     "type": "word",
+     "group": "word",
+     "stem": "第 63 题：This ____63____ (challenge) experience",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "challenging",
+      "body": [
+       {
+        "t": "修饰名词 experience 用形容词 challenging（有挑战性的）。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 64,
+     "type": "word",
+     "group": "word",
+     "stem": "第 64 题：much ____64____ (easy) to complete",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "easier",
+      "body": [
+       {
+        "t": "much 后接比较级，easy 的比较级为 easier。"
+       }
+      ]
+     }
+    },
+    {
+     "num": 65,
+     "type": "word",
+     "group": "word",
+     "stem": "第 65 题：Up to now, I ____65____ (keep)",
+     "placeholder": "填入一个适当的词",
+     "options": [],
+     "answer": {
+      "head": "have kept",
+      "body": [
+       {
+        "t": "Up to now 与现在完成时连用，主语 I 后用 have kept。"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "writing": [
+  {
+   "num": 66,
+   "title": "应用文写作 · 建议信",
+   "stem": "假定你是李华，你的英国朋友 Chris 最近沉迷手机，每天使用超过 6 小时，导致注意力下降、睡眠不足。他来信向你求助。请你给他写一封建议信，内容包括：\n1. 表示理解；\n2. 说明沉迷手机的危害；\n3. 提出具体建议。\n注意：写作词数应为 100 左右。",
+   "note": "写作词数应为 100 左右；开头结尾已给出（Dear Chris / Yours, Li Hua）。",
+   "ref": "Dear Chris,\nI’m sorry to hear about your problem. It is completely normal to feel trapped by screens, so please don’t be too hard on yourself.\nNot only does mindless scrolling severely fragment your attention span, but the blue light also ruins your sleep quality and drains your daily energy.\nTo regain control, you can start with small, realistic steps. First, establish a strict “phone-free hour” before bedtime and keep the device out of your bedroom. Second, replace digital habits with fulfilling offline activities, such as reading or jogging, to keep your mind engaged and refreshed.\nI am confident that you will soon break free and find your rhythm!\nYours,\nLi Hua"
+  },
+  {
+   "num": 67,
+   "title": "读后续写",
+   "stem": "阅读下面材料，根据其内容和所给段落开头语续写两段，使之构成一篇完整的短文。\n\nTen-year-old Tom always felt lonely. His parents were always busy with work. They left home early in the morning and came back late at night. Tom often ate dinner alone and went to bed without a goodnight kiss. For him, there were no family games, no city tours, no weekend outings.\n\nOne day, Tom’s parents brought home a gift—a smart watch. “This watch has a special friend inside,” Mom said with a smile. “Her name is Ling. She can talk to you, answer your questions, and even tell you stories.” A wave of anticipation swept over Tom as he put on the watch and pressed the button. A gentle voice came out, “Hello, Tom! I’m Ling. Nice to meet you!” Tom’s eyes lit up. He had never received such an interesting gift before.\n\nFrom that day on, Ling became Tom’s closest companion. Every morning, Ling would say, “Good morning, Tom! Have a great day at school!” Whenever Tom encountered difficulties with his homework, Ling would patiently provide thorough explanations. After Tom got into bed, Ling would tell his favorite tales about brave knights and magical lands. Sometimes, when Tom felt scared of the dark, Ling would sing softly to comfort him. To Tom, Ling was more than a voice; she was family.\n\nHis parents noticed Tom’s change. “See? Our little boy seems much happier now,” Dad said one evening. Mom agreed, “The watch really helps,” relieved. They thought their son was no longer lonely. What they didn’t know was that sometimes, after Ling had finished her stories, Tom would lie awake in the darkness, listening to the silence that filled the room. He loved Ling, but he couldn’t help thinking: if only Mom and Dad were here.\n\nOne afternoon after school, Tom tripped and fell on the way home. The watch hit a rock with a loud crack. When Tom picked it up, the screen was dark. He pressed the button again and again, but nothing appeared. “Ling? Ling, are you there?” he called desperately. There was no reply.\n\n注意：(1) 续写词数应为 150 左右；(2) 请按如下格式在答题卡的相应位置作答。\n\nParagraph 1: Tom had no choice but to turn to his parents for help.___________________________\nParagraph 2: At that moment, both Mom and Dad saw clearly what they had missed.______________",
+   "note": "续写词数应为 150 左右；两段开头语已给出，需据此合理续写。",
+   "ref": "Tom had no choice but to turn to his parents for help. Clutching the broken watch, he hurried home. Like usual, the house lay empty and quiet. But this time, the loneliness felt unbearable—not because Ling was gone, but because the people he truly needed were absent. He waited and waited. It was nearly midnight when his parents finally returned. They were alarmed to see Tom curling up on the sofa, face wet with tears. “What happened, Tom?” Mom rushed over. Wordlessly, he held out the broken watch. Dad soon fetched his toolbox trying to fix it, but in vain. Seeing this, Tom couldn’t contain himself any longer and burst into desperate sobs. Between gasps, he poured out his loneliness—the silent dinners, the empty house, the longing for someone to be there.\n\nAt that moment, both Mom and Dad saw clearly what they had missed. They realized that no watch, however smart, could ever take the place of their presence. Immediately, Mom wrapped her arms around Tom, apologizing, “I’m so sorry. We thought the watch was enough, but we were wrong.” Dad knelt beside them, his voice thick with guilt. “From now on, we’ll be home earlier. No more lonely dinners.” Together they drew up a family schedule—Tuesday night board games, Friday pizza-making, Sunday afternoons in the park. They promised to make it a weekly routine and wrote it on the family calendar in bright colors. That night, the family came to understand technology might offer comfort, but only love could fill the silence of an empty home."
+  }
+ ]
+}

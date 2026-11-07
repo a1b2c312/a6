@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>使用说明 · 星辰班级网站</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  body[data-theme="home"] .bg-layer { background-image: linear-gradient(140deg,#1f2937,#0b1220); animation:none; }
+  .doc h2 { font-size:20px; letter-spacing:2px; margin:26px 0 12px; color:var(--accent); }
+  .doc h3 { font-size:16px; margin:18px 0 8px; color:var(--ink); }
+  .doc p, .doc li { line-height:2; font-size:14.5px; color:var(--ink-soft); }
+  .doc ol, .doc ul { padding-left:22px; }
+  .doc code {
+    display:inline-block; padding:2px 8px; border-radius:6px;
+    background:rgba(255,255,255,.1); border:1px solid var(--border);
+    font-family:Consolas,Monaco,monospace; font-size:13px; color:#ffd489;
+  }
+  .doc pre {
+    padding:16px 18px; border-radius:14px; overflow-x:auto;
+    background:rgba(0,0,0,.4); border:1px solid var(--border);
+    font-family:Consolas,Monaco,monospace; font-size:13px; line-height:1.85;
+    color:#dbeafe; margin:12px 0;
+  }
+  .steps { counter-reset: s; }
+  .steps > li { margin-bottom: 14px; }
+</style>
+</head>
+<body data-theme="home">
+  <div class="bg-layer"></div>
+  <div class="bg-veil"></div>
+
+  <header class="top-bar">
+    <a class="back-link" href="index.html">← 返回首页导航</a>
+    <span class="top-title">使用说明</span>
+    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+  </header>
+
+  <main class="page-shell doc">
+    <section class="page-hero">
+      <div class="hero-emoji">📖</div>
+      <h1>使用<em>说明</em></h1>
+      <p>本页介绍网站结构与「如何往各板块添加内容」。照着做即可，无需任何编程基础。</p>
+      <div class="hero-rule"></div>
+    </section>
+
+    <section class="panel reveal in">
+      <div class="panel-head"><span class="panel-dot"></span><h2>一、怎么看网站</h2><span class="sub">HOW TO OPEN</span></div>
+      <div class="panel-body">
+        <ol class="steps">
+          <li>双击 <code>index.html</code> 即可在浏览器中打开首页。</li>
+          <li>首页是背景照片 + 五个板块的导航卡片，点击任意卡片进入对应板块。</li>
+          <li>若要把整个网站拷给家长/学生，把整个 <code>星辰班级网页</code> 文件夹压缩发过去，对方解压后打开 <code>index.html</code> 即可观看（视频也能正常播放）。</li>
+        </ol>
+        <h3>文件结构</h3>
+        <pre>D:\Users\何xing\班主任工作\星辰班级网页\
+├─ index.html        首页导航页
+├─ class.html        班级风采（含运动会）
+├─ chemistry.html    化学小屋
+├─ math.html         数学加油站
+├─ english.html      英语角
+├─ physics.html      物理之家
+├─ 使用说明.html      本页
+└─ assets\
+   ├─ 星空背景.jpg     首页背景（星空图）
+   ├─ 运动会照片.jpg   运动会现场照片
+   ├─ css\style.css   全站样式
+   ├─ js\main.js      滚动动画等脚本
+   └─ media\          视频文件存放处</pre>
+      </div>
+    </section>
+
+    <section class="panel reveal in">
+      <div class="panel-head"><span class="panel-dot"></span><h2>二、添加照片</h2><span class="sub">ADD PHOTO</span></div>
+      <div class="panel-body">
+        <ol class="steps">
+          <li>把新照片复制到 <code>assets</code> 文件夹里，文件名改成简单的英文或数字，例如 <code>实验01.jpg</code>（<strong>不要用空格和中文括号</strong>）。</li>
+          <li>打开对应的板块 HTML 文件，找到想插入图片的位置，复制下面这段代码，把 <code>文件名.jpg</code> 换成你的文件名，再粘贴进去：</li>
+        </ol>
+        <pre>&lt;figure class="shot"&gt;
+  &lt;img src="assets/实验01.jpg" alt="照片说明文字" loading="lazy" /&gt;
+  &lt;figcaption&gt;这里写照片的说明文字。&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+        <p>用记事本（或 VS Code）打开 HTML 文件，粘贴、保存，双击 HTML 看效果。</p>
+      </div>
+    </section>
+
+    <section class="panel reveal in">
+      <div class="panel-head"><span class="panel-dot"></span><h2>三、添加视频</h2><span class="sub">ADD VIDEO</span></div>
+      <div class="panel-body">
+        <ol class="steps">
+          <li>把视频文件复制到 <code>assets\media</code> 文件夹，重命名为简单文件名，例如 <code>女子800米.mp4</code>。</li>
+
+          <li>在板块页里复制下面这段，替换 <code>文件名.mp4</code> 和标题：</li>
+        </ol>
+        <pre>&lt;div class="video-card"&gt;
+  &lt;video src="assets/media/女子800米.mp4" controls preload="metadata" playsinline&gt;
+    您的浏览器不支持视频播放。
+  &lt;/video&gt;
+  &lt;div class="cap"&gt;视频标题写这里&lt;/div&gt;
+&lt;/div&gt;</pre>
+        <p>提示：视频建议控制在 <strong>50MB 以内、10 秒到 2 分钟</strong>，手机拍的视频请先压缩，否则网页打开会很慢。两段视频并排显示时，把整段放进下面这个容器里：</p>
+        <pre>&lt;div class="video-grid"&gt;
+  ...上面那段代码...
+  ...第二段...
+&lt;/div&gt;</pre>
+        <p><strong>小技巧：</strong>把 <code>poster="assets/运动会照片.jpg"</code> 这段留着，视频封面就是那张运动会照片，没播放前也是漂亮的画面。</p>
+      </div>
+    </section>
+
+    <section class="panel reveal in">
+      <div class="panel-head"><span class="panel-dot"></span><h2>四、新增一个活动（如"研学活动"）</h2><span class="sub">NEW EVENT</span></div>
+      <div class="panel-body">
+        <p>在 <code>class.html</code> 里找到「运动会」那个板块（<code>&lt;section class="panel reveal" id="games"&gt;</code>），把它整段复制粘贴一份，改成新活动的名字即可：</p>
+        <pre>&lt;section class="panel reveal" id="study"&gt;
+  &lt;div class="panel-head"&gt;
+    &lt;span class="panel-dot"&gt;&lt;/span&gt;
+    &lt;h2&gt;研学活动&lt;/h2&gt;
+    &lt;span class="sub"&gt;FIELD TRIP&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="panel-body"&gt;
+    &lt;p&gt;在这里写一段活动介绍。&lt;/p&gt;
+    &lt;!-- 照片与视频按上面第二、三节的方法插入 --&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+        <p>改完记得在页面顶部的快捷跳转里加一条：<code>&lt;a class="chip" href="#study"&gt;🎒 研学活动&lt;/a&gt;</code>。</p>
+      </div>
+    </section>
+
+    <section class="panel reveal in">
+      <div class="panel-head"><span class="panel-dot"></span><h2>五、常见问题</h2><span class="sub">FAQ</span></div>
+      <div class="panel-body">
+        <h3>图片/视频显示不出来？</h3>
+        <p>检查两件事：① 文件名是否完全一致（大小写、中英文）；② HTML 里写的路径是否带 <code>assets/</code> 前缀。</p>
+        <h3>换了背景照片不生效？</h3>
+        <p>新照片要命名为 <code>星空背景.jpg</code> 并放在 <code>assets</code> 根目录，替换原来的即可（文件名必须完全相同）。改完后如页面没变化，按 <code>Ctrl+F5</code> 强制刷新。</p>
+        <h3>手机上能看吗？</h3>
+        <p>可以。页面已做手机适配，视频也能在手机浏览器里播放。把文件夹传到手机或网盘即可。</p>
+      </div>
+    </section>
+
+    <footer class="page-foot">星辰班级网站 · 使用说明 ｜ 有需要随时找我添加内容</footer>
+  </main>
+</body>
+</html>

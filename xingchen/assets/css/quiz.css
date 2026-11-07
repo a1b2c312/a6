@@ -1,0 +1,834 @@
+/* ==========================================================================
+   在线测试样式（数学加油站 / 物理之家 共用）
+   ========================================================================== */
+
+.quiz-entry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.quiz-card {
+  display: block;
+  padding: 26px 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, background 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.34);
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+}
+
+.quiz-card .qc-ico {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.quiz-card h3 {
+  margin: 14px 0 8px;
+  font-size: 19px;
+  letter-spacing: 2px;
+  color: var(--ink);
+}
+
+.quiz-card .qc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.quiz-card .qc-meta span {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+}
+
+.quiz-card .qc-go {
+  margin-top: 16px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+/* ---------- 测试主体 ---------- */
+.quiz {
+  display: none;
+}
+
+.quiz.on {
+  display: block;
+}
+
+.quiz-bar {
+  position: sticky;
+  top: 68px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.quiz-bar .qb-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--ink);
+}
+
+.quiz-bar .qb-prog {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--ink-faint);
+}
+
+.quiz-bar .qb-spacer {
+  flex: 1;
+}
+
+.btn {
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ink);
+  font-size: 13.5px;
+  letter-spacing: 1.5px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, opacity 0.25s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn.primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 题目卡 */
+.q-card {
+  margin-bottom: 18px;
+  padding: 24px 26px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.q-card.done {
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.q-card.wrong {
+  border-color: rgba(239, 68, 68, 0.45);
+  background: linear-gradient(
+    180deg,
+    rgba(239, 68, 68, 0.08),
+    var(--surface) 60px
+  );
+}
+
+.q-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.q-no {
+  flex: none;
+  min-width: 40px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+.q-tag {
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 7px;
+  font-size: 11.5px;
+  letter-spacing: 1.5px;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+}
+
+.q-stem {
+  font-size: 16px;
+  line-height: 2.15;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+}
+
+/* 公式内联图片：JS 已按比例设定 height，这里只做兜底 */
+img.fx {
+  display: inline-block;
+  vertical-align: -0.24em;
+  margin: 0 2px;
+  max-height: 30px;
+  width: auto;
+  border-radius: 2px;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+/* 黑白公式图：原图是黑字透明底，在深色页面上看不清 —— 反色成白字。
+   invert 只改亮度不改 alpha，背景依旧透明。
+   彩色图（v-t 图、光电门、实验装置）带 .colored，排除反色保持原样。 */
+img.fx:not(.colored) {
+  filter: invert(1) grayscale(1) brightness(1.08);
+}
+
+/* 彩色题图：保持原色，白底衬托，可点击放大 */
+img.fx.colored {
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  max-height: none;
+  margin: 4px 0;
+}
+
+.q-figures img {
+  max-width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.q-figures img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.7);
+}
+
+.q-figures {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* 选项 */
+.q-opts {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.q-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.22s ease, border-color 0.22s ease,
+    transform 0.18s ease;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.q-opt:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+
+.q-opt .dot {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border);
+  transition: background 0.22s ease, color 0.22s ease;
+}
+
+.q-opt.sel {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 26%, transparent),
+    transparent
+  );
+  border-color: var(--accent);
+}
+
+.q-opt.sel .dot {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border-color: transparent;
+}
+
+.q-opt.right {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.14);
+}
+
+.q-opt.right .dot {
+  background: #22c55e;
+  color: #fff;
+  border-color: transparent;
+}
+
+.q-opt.miss {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.q-opt.miss .dot {
+  background: #ef4444;
+  color: #fff;
+  border-color: transparent;
+}
+
+/* 填空题输入 */
+.q-input {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 1px;
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.q-input:focus {
+  border-color: var(--accent);
+  background: rgba(0, 0, 0, 0.32);
+}
+
+.q-input::placeholder {
+  color: var(--ink-faint);
+}
+
+/* 解析区 */
+.q-ans {
+  display: none;
+  margin-top: 18px;
+  padding: 20px 22px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.26);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+}
+
+.q-ans.on {
+  display: block;
+  animation: ansIn 0.35s ease;
+}
+
+@keyframes ansIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.q-ans .ans-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.q-ans .ans-val {
+  margin-left: auto;
+  padding: 5px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+.q-body {
+  font-size: 14.5px;
+  line-height: 2.1;
+  color: var(--ink-soft);
+}
+
+.q-body .lab {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* 结算面板 */
+.quiz-result {
+  display: none;
+  margin-top: 24px;
+  padding: 32px;
+  border-radius: 22px;
+  text-align: center;
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--accent) 18%, transparent),
+    var(--surface)
+  );
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.quiz-result.on {
+  display: block;
+  animation: ansIn 0.5s ease;
+}
+
+.quiz-result .score {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.quiz-result .score small {
+  font-size: 22px;
+  -webkit-text-fill-color: var(--ink-faint);
+}
+
+.quiz-result .word {
+  margin-top: 8px;
+  font-size: 17px;
+  letter-spacing: 3px;
+  color: var(--ink);
+}
+
+.quiz-result .detail {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 1px;
+  color: var(--ink-soft);
+}
+
+.quiz-result .acts {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.q-jump {
+  display: inline-block;
+  min-width: 26px;
+  margin: 0 3px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+/* ---------- 逐题提交 / 大题提交 ---------- */
+.q-acts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn-mini {
+  padding: 7px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  letter-spacing: 1.5px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-mini:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.btn-mini.sec {
+  margin-left: auto;
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.btn-mini.sec:hover {
+  background: color-mix(in srgb, var(--accent) 26%, transparent);
+  color: #fff;
+}
+
+.q-one-state {
+  font-size: 12.5px;
+  letter-spacing: 1.5px;
+  color: var(--ink-faint);
+}
+
+.q-one-state.ok {
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.q-one-state.bad {
+  color: #f87171;
+  font-weight: 700;
+}
+
+.q-one-state.blank {
+  color: var(--ink-faint);
+}
+
+/* 大题分组 */
+.grp-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.grp-head:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.grp-head .gh-t {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--ink);
+}
+
+.grp-head .gh-n {
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+}
+
+.grp-head .qb-spacer {
+  flex: 1;
+}
+
+.grp-tip {
+  margin: 0 0 18px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  letter-spacing: 2px;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px dashed var(--border);
+}
+
+/* ---------- 公式/题图放大层 ---------- */
+.zoom-box {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  place-items: center;
+  padding: 40px 24px;
+  background: rgba(6, 8, 14, 0.94);
+  backdrop-filter: blur(8px);
+  cursor: zoom-out;
+}
+
+.zoom-box.on {
+  display: grid;
+  animation: ansIn 0.25s ease;
+}
+
+.zoom-box img {
+  max-width: min(1200px, 94vw);
+  max-height: 86vh;
+  object-fit: contain;
+  /* 公式已反色为白字，底衬必须用深色，否则看不清 */
+  background: #0d1220;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.9);
+}
+
+.zoom-box .zoom-close {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.zoom-box .zoom-close:hover {
+  background: rgba(255, 255, 255, 0.26);
+  transform: rotate(90deg);
+}
+
+img.fx {
+  cursor: zoom-in;
+}
+
+/* 小屏适配 */
+@media (max-width: 720px) {
+  .quiz-bar {
+    top: 62px;
+    padding: 12px 14px;
+  }
+  .quiz-bar .qb-title {
+    font-size: 14px;
+  }
+  .q-card {
+    padding: 18px 16px;
+  }
+  .q-stem {
+    font-size: 15px;
+    line-height: 2;
+  }
+  .q-opt {
+    padding: 10px 13px;
+    font-size: 14.5px;
+  }
+  .quiz-result {
+    padding: 24px 18px;
+  }
+  .quiz-result .score {
+    font-size: 40px;
+  }
+}
+
+/* ===== 答题分布面板 ===== */
+.btn-mini.stat {
+  margin-left: auto;
+  background: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #7dd3fc;
+}
+.btn-mini.stat:hover {
+  background: rgba(56, 189, 248, 0.28);
+}
+
+.q-stat {
+  display: none;
+  margin-top: 12px;
+}
+.q-stat.on {
+  display: block;
+  animation: statIn 0.25s ease;
+}
+@keyframes statIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-box {
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.stat-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 10px;
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+.stat-opt {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+.so-lbl {
+  display: inline-block;
+  min-width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 0 6px;
+}
+.so-cnt {
+  margin-left: 8px;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+.so-names {
+  margin-top: 6px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  word-break: break-all;
+}
+.stat-bands {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.stat-band {
+  border-radius: 12px;
+  padding: 9px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+.sb-lbl {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 8px;
+  background: rgba(251, 191, 36, 0.2);
+  color: #fcd34d;
+  font-weight: 700;
+  font-size: 13px;
+}
+.sb-cnt {
+  margin-left: 8px;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+.sb-names {
+  margin-top: 5px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  word-break: break-all;
+}
+.stat-unans {
+  margin-top: 10px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #94a3b8;
+  border-top: 1px dashed var(--border);
+  padding-top: 8px;
+}
+}
+
+/* KaTeX 公式片段（{"m": latex} 由 quiz.js 渲染） */
+.tex-disp { display: block; margin: 6px 0; overflow-x: auto; overflow-y: hidden; }
+.tex-err { color: #ef4444; font-family: ui-monospace, monospace; white-space: pre-wrap; }
+
+/* ===== 题干内嵌表格（如物质分类表、概念从属表） ===== */
+.q-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 4px;
+  font-size: 15px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.04);
+}
+.q-tbl th,
+.q-tbl td {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 9px 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.7;
+}
+.q-tbl th {
+  background: rgba(255, 255, 255, 0.09);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.q-tbl td:first-child {
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 600;
+}
+@media (max-width: 720px) {
+  .q-tbl { font-size: 13.5px; }
+  .q-tbl th, .q-tbl td { padding: 6px 6px; }
+}

@@ -1,0 +1,401 @@
+/* ==========================================================================
+   英语听力播放器（开始 / 停止 / 进度 / 循环段落）
+   ========================================================================== */
+
+.audio-bar {
+  position: sticky;
+  top: 68px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 20px;
+  margin-bottom: 22px;
+  border-radius: 18px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.audio-bar .ab-ico {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.audio-bar .ab-info {
+  min-width: 0;
+}
+
+.audio-bar .ab-name {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--ink);
+}
+
+.audio-bar .ab-time {
+  margin-top: 3px;
+  font-size: 12.5px;
+  letter-spacing: 1px;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 波形/进度条 */
+.audio-track {
+  flex: 1 1 240px;
+  min-width: 180px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.audio-track .fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 0.12s linear;
+}
+
+.audio-bar .ab-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-play {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: inherit;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s;
+  min-width: 92px;
+}
+
+.btn-play:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-play:active {
+  transform: translateY(0);
+}
+
+.btn-play.playing {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+.btn-ghost {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.btn-ghost[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 听力提示条 */
+.listen-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 1px;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed var(--border);
+}
+
+.listen-tip .lt-ico {
+  flex: none;
+  font-size: 18px;
+}
+
+/* 段落/短文展示 */
+.passage {
+  margin-bottom: 18px;
+  padding: 22px 26px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+}
+
+.passage h4 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.passage p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 2.15;
+  letter-spacing: 0.3px;
+  color: var(--ink);
+}
+
+.passage p:last-child {
+  margin-bottom: 0;
+}
+
+.passage p b {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.passage p i {
+  font-style: italic;
+  color: var(--accent-2);
+}
+
+/* 选项池 */
+.bank {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+}
+
+.bank .bank-t {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--ink-faint);
+  margin-bottom: 4px;
+}
+
+.bank .q-opt {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.bank .q-opt.picked {
+  border-color: var(--accent);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 26%, transparent),
+    transparent
+  );
+}
+
+.bank .q-opt.picked .dot {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border-color: transparent;
+}
+
+.bank .q-opt .used-mark {
+  margin-left: auto;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  flex: none;
+}
+
+/* 大题分组标题 */
+.grp-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.grp-head:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.grp-head .gh-t {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--ink);
+}
+
+.grp-head .gh-n {
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+}
+
+.grp-head .gh-hint {
+  flex: 1 1 100%;
+  font-size: 13.5px;
+  line-height: 1.95;
+  letter-spacing: 0.5px;
+  color: var(--ink-faint);
+}
+
+/* 单词填空 */
+.q-word .q-input {
+  margin-top: 4px;
+}
+
+.q-word .q-input.right {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.q-word .q-input.miss {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+/* 未作答：中性灰，不标红 */
+.q-card.blank {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.q-card.blank::after {
+  content: "未作答";
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--ink-faint);
+}
+
+.q-card {
+  position: relative;
+}
+
+/* 写作题 */
+.write-card {
+  margin-bottom: 18px;
+  padding: 24px 26px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.write-card .wc-t {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.write-card .wc-stem {
+  font-size: 14.5px;
+  line-height: 2.1;
+  color: var(--ink-soft);
+  white-space: pre-line;
+}
+
+.write-card .wc-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-faint);
+  letter-spacing: 1px;
+}
+
+.write-card textarea {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px 16px;
+  min-height: 190px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 2;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.25s ease;
+}
+
+.write-card textarea:focus {
+  border-color: var(--accent);
+}
+
+.write-card .wc-ref {
+  display: none;
+  margin-top: 16px;
+  padding: 20px 22px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.26);
+  border: 1px solid var(--border);
+  border-left: 4px solid #22c55e;
+  font-size: 14.5px;
+  line-height: 2.1;
+  color: var(--ink-soft);
+  white-space: pre-line;
+}
+
+.write-card .wc-ref.on {
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .audio-bar {
+    top: 62px;
+    padding: 14px 15px;
+    gap: 10px;
+  }
+  .audio-bar .ab-ico {
+    display: none;
+  }
+  .btn-play {
+    min-width: 76px;
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+  .passage,
+  .write-card {
+    padding: 18px 16px;
+  }
+  .passage p {
+    font-size: 14.5px;
+    line-height: 2.05;
+  }
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>数学加油站 · 星辰班级</title>
+<link rel="stylesheet" href="assets/css/style.css?v=20261028" />
+<link rel="stylesheet" href="assets/css/quiz.css?v=20261028" />
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css?v=20261028" />
+</head>
+<body data-theme="math">
+  <div class="bg-layer"></div>
+  <div class="bg-veil"></div>
+  <div class="bg-pattern"></div>
+
+  <header class="top-bar">
+    <a class="back-link" href="index.html">← 返回首页导航</a>
+    <span class="top-title">数学加油站</span>
+    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="hero-emoji">📐</div>
+      <h1>数学<em>加油站</em></h1>
+      <p>
+        函数是变化的语言，几何是空间的诗，概率是我们理解偶然的钥匙 ——
+        每一道题都是一次思维的重启，在这里我们给自己的脑袋充满能量。
+      </p>
+      <div class="hero-rule"></div>
+      <div class="chip-row">
+        <a class="chip" href="#method">🧭 学习方法</a>
+        <a class="chip" href="#quiz">✏️ 在线测试</a>
+        <a class="chip" href="#topic">📚 专题板块</a>
+        <a class="chip" href="#formula">🧮 公式速查</a>
+        <a class="chip" href="#challenge">🎯 挑战题</a>
+      </div>
+    </section>
+
+    <!-- 第一次月考 -->
+    <section class="panel reveal" id="yuekao">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>第一次月考</h2>
+        <span class="sub">MONTHLY EXAM</span>
+      </div>
+      <div class="panel-body">
+        <div class="act-grid">
+          <a class="act-card" href="math_yuekao.html">
+            <div class="ai">📄</div>
+            <h3>第一次月考试卷 · 原卷 + 答案</h3>
+            <p>原卷图片 + 详细答案对照，公式 100% 保真，点击放大查看每一页。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 在线测试 -->
+    <section class="panel reveal" id="quiz">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>在线测试</h2>
+        <span class="sub">ONLINE QUIZ</span>
+      </div>
+      <div class="panel-body">
+        <p style="margin:0 0 6px;">
+          点开试卷即可作答 —— 选择答案后提交，立刻看到对错与详细解析。
+          做错的题建议对照解析重做一遍。
+        </p>
+
+        <div class="quiz-entry" id="quiz-entry">
+          <div class="quiz-card" data-quiz="math">
+            <div class="qc-ico">📝</div>
+            <h3>周考试卷四（B 卷）</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+              瑞昌一中 2026~2027 学年度上学期练习试卷（四）· 高一数学
+            </p>
+            <div class="qc-meta">
+              <span>19 题</span>
+              <span>满分 150 分</span>
+              <span>120 分钟</span>
+              <span>含详细解析</span>
+            </div>
+            <div class="qc-go">开始作答 →</div>
+          </div>
+
+          <div class="quiz-card" data-quiz="week1026">
+            <div class="qc-ico">📝</div>
+            <h3>周考（10月26日）· 高一数学</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+              瑞昌一中 2026~2027 学年度上学期练习试卷（五）· 高一数学（B）
+            </p>
+            <div class="qc-meta">
+              <span>19 题</span>
+              <span>满分 150 分</span>
+              <span>120 分钟</span>
+              <span>含详细解析</span>
+            </div>
+          <div class="quiz-card" data-quiz="week1103">
+            <div class="qc-ico">📝</div>
+            <h3>周练（11月3日）· 高一数学（B 卷）</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+              瑞昌一中 2026~2027 学年度上学期练习试卷（六）· 高一数学（B）
+            </p>
+            <div class="qc-meta">
+              <span>19 题</span>
+              <span>满分 150 分</span>
+              <span>120 分钟</span>
+              <span>含详细解析</span>
+            </div>
+            <div class="qc-go">开始作答 →</div>
+          </div>
+        </div>
+
+        <div class="quiz" id="quiz-math" style="margin-top:22px;"></div>
+        <div class="quiz" id="quiz-week1026" style="margin-top:22px;"></div>
+        <div class="quiz" id="quiz-week1103" style="margin-top:22px;"></div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="method">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>学习方法</h2>
+        <span class="sub">HOW TO LEARN</span>
+      </div>
+      <div class="panel-body">
+        <div class="act-grid">
+          <a class="act-card" href="math-study-tips.html">
+            <div class="ai">🧭</div>
+            <h3>给高一新同学数学学习方法的建议</h3>
+            <p>从"记题型"转向"懂原理"、四步学习闭环、错题本用法、分层努力方向，以及给家长与教师的配合建议。</p>
+          </a>
+          <div class="act-card" style="opacity:.72;">
+            <div class="ai">📈</div>
+            <h3>更多学法分享</h3>
+            <p>答题规范、时间分配、考前复习节奏等内容陆续上线，敬请期待。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="topic">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>专题板块</h2>
+        <span class="sub">TOPICS</span>
+      </div>
+      <div class="panel-body">
+        <div class="grid g4">
+          <div class="tile">
+            <div class="ti">📈</div>
+            <h3>函数与导数</h3>
+            <p>单调性、极值、单调性求参。</p>
+          </div>
+          <div class="tile">
+            <div class="ti">🔺</div>
+            <h3>三角与向量</h3>
+            <p>解三角形、正余弦定理。</p>
+          </div>
+          <div class="tile">
+            <div class="ti">🎲</div>
+            <h3>概率统计</h3>
+            <p>分布列、期望方差、回归。</p>
+          </div>
+          <div class="tile">
+            <div class="ti">🧊</div>
+            <h3>立体几何</h3>
+            <p>空间向量、外接球体积。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="formula">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>公式速查</h2>
+        <span class="sub">FORMULA</span>
+      </div>
+      <div class="panel-body">
+        <div class="grid g3">
+          <div class="tile">
+            <div class="ti">➗</div>
+            <h3>等差数列</h3>
+            <p>aₙ = a₁ + (n−1)d<br />Sₙ = n(a₁+aₙ)/2 = na₁ + n(n−1)d/2</p>
+          </div>
+          <div class="tile">
+            <div class="ti">✖️</div>
+            <h3>等比数列</h3>
+            <p>aₙ = a₁qⁿ⁻¹<br />Sₙ = a₁(1−qⁿ)/(1−q)（q ≠ 1）</p>
+          </div>
+          <div class="tile">
+            <div class="ti">📐</div>
+            <h3>常用面积</h3>
+            <p>三角形 S = ½·底·高<br />圆 S = πr²，C = 2πr</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="challenge">
+      <div class="panel-head">
+        <span class="panel-dot"></span>
+        <h2>挑战题</h2>
+        <span class="sub">CHALLENGE</span>
+      </div>
+      <div class="panel-body">
+        <div class="placeholder">
+          <div class="ico">🎯</div>
+          <div class="t">题目与解答待上传</div>
+          <div class="d">后续上传的压轴题、思维题、竞赛题及详细解析会显示在这里。</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      星辰班级 · 数学加油站 ｜ 内容持续更新中
+    </footer>
+  </main>
+
+  <script src="assets/vendor/katex/katex.min.js?v=20261028"></script>
+  <script src="assets/js/main.js?v=20261028"></script>
+  <script src="assets/js/quiz.js?v=20261028"></script>
+  <script>
+    (function () {
+      var specs = {
+        math: {
+          json: "assets/papers/math.json?v=20261028",
+          id: "mathq",
+          title: "周考试卷四（B 卷）· 高一数学",
+          dir: "assets/papers/math/"
+        },
+        week1026: {
+          json: "assets/papers/math_week1026.json?v=20261028",
+          id: "week1026",
+          title: "周考（10月26日）· 高一数学",
+          dir: "assets/papers/"
+        },
+        week1103: {
+          json: "assets/papers/math_113B.json?v=20261104",
+          id: "week1103",
+          title: "周练（11月3日）· 高一数学（B 卷）",
+          dir: "assets/papers/math_113B/"
+        }
+      };
+      var instances = {};
+      document.querySelectorAll("#quiz-entry .quiz-card").forEach(function (card) {
+        var key = card.getAttribute("data-quiz");
+        var spec = specs[key];
+        var mount = document.getElementById("quiz-" + key);
+        if (!spec || !mount) return;
+        card.addEventListener("click", function () {
+          if (instances[key]) {
+            mount.classList.toggle("on");
+            card.style.display = mount.classList.contains("on") ? "none" : "";
+            if (mount.classList.contains("on")) {
+              mount.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            return;
+          }
+          fetch(spec.json)
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              instances[key] = new window.QuizEngine.Quiz(mount, data, {
+                id: spec.id, title: spec.title, dir: spec.dir
+              });
+              mount.classList.add("on");
+              card.style.display = "none";
+              mount.scrollIntoView({ behavior: "smooth", block: "start" });
+            })
+            .catch(function () {
+              card.innerHTML =
+                '<div class="placeholder"><div class="ico">😢</div>' +
+                '<div class="t">试卷加载失败</div>' +
+                '<div class="d">请稍后重试，或确认网络连接正常。</div></div>';
+            });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

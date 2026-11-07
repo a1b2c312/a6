@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>午训在线答题 · 10月13日 · 星辰班级</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  .quiz-meta {
+    display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;
+    font-size: 13px; color: var(--ink-faint); letter-spacing: 1px;
+    margin: 18px 0 0;
+  }
+  .quiz-meta .pill {
+    border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px;
+    background: var(--surface); color: var(--ink-soft);
+  }
+  .score-bar {
+    position: sticky; top: 64px; z-index: 5; pointer-events: none;
+    display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center;
+    background: var(--surface-strong); border: 1px solid var(--border);
+    border-radius: 14px; padding: 12px 18px; margin-bottom: 26px;
+    backdrop-filter: blur(8px);
+  }
+  .score-bar b { color: var(--accent); font-size: 18px; }
+  .score-bar .lab { font-size: 13px; color: var(--ink-faint); letter-spacing: 1px; }
+  .q-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 22px 24px; margin-bottom: 24px;
+  }
+  .q-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+  .q-no {
+    flex: none; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--accent); color: #04101f; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; font-size: 15px;
+  }
+  .q-tag {
+    font-size: 12px; letter-spacing: 2px; color: var(--ink-faint);
+    border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px;
+  }
+  .q-stem { color: var(--ink); line-height: 2; font-size: 15.5px; }
+  .q-stem img, .opts img, .explain img { vertical-align: middle; margin: 0 2px; }
+  .fx {
+    display: inline-block; background: #f5f8fc; border-radius: 6px;
+    padding: 2px 6px; line-height: 1; margin: 2px 1px;
+    max-width: 100%; overflow-x: auto; vertical-align: middle;
+  }
+  .fx img { display: block; height: 1.4em; width: auto; }
+  .fig img { max-width: 100%; height: auto; }
+  .fig {
+    background: #fff; border-radius: 12px; padding: 12px; margin: 14px auto;
+    text-align: center; max-width: 560px;
+  }
+  .fig img { max-width: 100%; height: auto; }
+  .fig .cap { font-size: 12px; color: #64748b; margin-top: 6px; letter-spacing: 1px; }
+  .opts { display: grid; gap: 10px; margin: 14px 0 4px; }
+  .opt {
+    text-align: left; cursor: pointer; font-size: 15px; line-height: 1.9;
+    color: var(--ink-soft); background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px;
+    transition: all .18s ease; font-family: inherit;
+  }
+  .opt:hover { border-color: var(--accent); color: var(--ink); }
+  .opt.sel { border-color: var(--accent); background: rgba(56,189,248,0.12); color: var(--ink); }
+  .opt.right { border-color: #34d399; background: rgba(52,211,153,0.14); color: #d1fae5; }
+  .opt.wrong { border-color: #f87171; background: rgba(248,113,113,0.12); color: #fee2e2; }
+  .opt:disabled { cursor: default; opacity: .9; }
+  .q-actions { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+  .btn {
+    cursor: pointer; font-family: inherit; font-size: 14px; letter-spacing: 2px;
+    color: #04101f; background: var(--accent); border: none; border-radius: 999px;
+    padding: 9px 22px; transition: all .18s ease;
+  }
+  .btn:hover { filter: brightness(1.1); }
+  .btn:disabled { opacity: .45; cursor: default; }
+  .btn.ghost { background: transparent; color: var(--ink-soft); border: 1px solid var(--border); }
+  .num-in {
+    font-family: inherit; font-size: 15px; color: var(--ink);
+    background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+    border-radius: 10px; padding: 9px 14px; width: 180px;
+  }
+  .num-in:focus { outline: none; border-color: var(--accent); }
+  .verdict { margin-top: 12px; font-size: 15px; font-weight: 600; min-height: 1em; }
+  .verdict.ok { color: #34d399; }
+  .verdict.no { color: #f87171; }
+  .explain {
+    display: none; margin-top: 16px; border-top: 1px dashed var(--border);
+    padding-top: 14px; color: var(--ink-soft); line-height: 2.1; font-size: 14.5px;
+  }
+  .explain.open { display: block; }
+  .explain .ex-t {
+    font-size: 13px; letter-spacing: 2px; color: var(--accent); margin-bottom: 8px;
+  }
+  .self-btns { display: flex; gap: 10px; margin: 14px 16px 16px; flex-wrap: wrap; }
+  details.ans-box {
+    margin-top: 14px; border: 1px dashed var(--border); border-radius: 10px;
+    background: rgba(255,255,255,0.03);
+  }
+  details.ans-box summary {
+    cursor: pointer; list-style: none; padding: 11px 16px;
+    color: var(--accent); font-size: 14px; letter-spacing: 2px; text-align: center;
+    font-weight: 600; user-select: none;
+  }
+  details.ans-box summary::-webkit-details-marker { display: none; }
+  details.ans-box summary::before { content: "▸ "; }
+  details.ans-box[open] summary::before { content: "▾ "; }
+  details.ans-box[open] summary { border-bottom: 1px dashed var(--border); }
+  details.ans-box .explain {
+    display: block; border-top: none; margin-top: 0;
+    padding: 14px 16px 4px;
+  }
+  textarea.work {
+    width: 100%; min-height: 110px; font-family: inherit; font-size: 14px;
+    color: var(--ink); background: rgba(255,255,255,0.05);
+    border: 1px dashed var(--border); border-radius: 10px; padding: 10px 12px;
+    resize: vertical; margin-top: 12px;
+  }
+  textarea.work::placeholder { color: var(--ink-faint); }
+  .sub-q { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border); }
+  .sub-q .sq-t { color: var(--ink); font-size: 15px; line-height: 2; }
+</style>
+</head>
+<body data-theme="phy">
+  <div class="bg-layer"></div>
+  <div class="bg-veil"></div>
+  <div class="bg-pattern"></div>
+
+  <header class="top-bar">
+    <a class="back-link" href="physics.html">← 返回物理之家</a>
+    <span class="top-title">午训在线答题</span>
+    <span class="top-title" style="opacity:.35; font-weight:400;">2026年10月13日</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="hero-emoji">✏️</div>
+      <h1>10月13日<em>物理午训</em></h1>
+      <p>匀变速直线运动专项 · 共 7 题：第 1—4 题选择/填空提交后即时判分，第 5—7 题计算题先在纸上作答，再点「对答案」自评。</p>
+      <div class="quiz-meta">
+        <span class="pill">📐 匀变速直线运动</span>
+        <span class="pill">⏱ 建议用时 40 分钟</span>
+        <span class="pill">📚 高一</span>
+      </div>
+      <div class="hero-rule"></div>
+    </section>
+
+    <div class="score-bar" id="scoreBar">
+      <span class="lab">判分题</span><span><b id="scoreRight">0</b> / <span id="scoreDone">0</span> 对</span>
+      <span class="lab">已提交</span><span><b id="scoreDone2">0</b> / 5</span>
+      <span class="lab">计算题自评</span><span><b id="scoreSelf">0</b> / 3</span>
+      <span class="lab" id="scoreMsg" style="color:var(--ink-soft);"></span>
+    </div>
+
+    <!-- 第1题 -->
+    <div class="q-card" data-qid="q1" data-type="single" data-ans="D">
+      <div class="q-head"><span class="q-no">1</span><span class="q-tag">单选</span></div>
+      <div class="q-stem">若某物体做直线运动的 v-t 图像如图所示，则下列说法中正确的是（&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;）</div>
+      <div class="fig"><img src="assets/quiz/2026-1013/img/image2.png" alt="第1题 v-t 图像" /></div>
+      <div class="opts">
+        <button class="opt" data-k="A">A．物体做的是曲线运动</button>
+        <button class="opt" data-k="B">B．<span class="fx"><img src="assets/quiz/2026-1013/img/image3.png" alt="t=2s" /></span> 时物体的加速度为零</button>
+        <button class="opt" data-k="C">C．<span class="fx"><img src="assets/quiz/2026-1013/img/image4.png" alt="t=2s" /></span> 时物体离出发点最远</button>
+        <button class="opt" data-k="D">D．<span class="fx"><img src="assets/quiz/2026-1013/img/image3.png" alt="t=2s" /></span> 时物体运动的速度方向发生改变，加速度方向不变</button>
+      </div>
+      <div class="q-actions"><button class="btn submit">提交本题</button></div>
+      <div class="verdict"></div>
+      <div class="explain">
+        <div class="ex-t">【详解】</div>
+        A．物体运动的速度可以用正负表示，说明运动过程中有向正向有向负向的阶段，轨迹为直线，故A错误；<br />
+        B．物体在 <span class="fx"><img src="assets/quiz/2026-1013/img/image3.png" alt="t=2s" /></span> 时的速度虽然为零，但速度的变化率不为零，故B错误；<br />
+        C．<span class="fx"><img src="assets/quiz/2026-1013/img/image4.png" alt="t=2s" /></span> 到 <span class="fx"><img src="assets/quiz/2026-1013/img/image39.png" alt="t1" /></span> 期间速度仍然为正，说明物体仍然向正方向运动，故C错误；<br />
+        D．<span class="fx"><img src="assets/quiz/2026-1013/img/image39.png" alt="t1" /></span> 时速度由正变负，方向发生改变，但 <span class="fx"><img src="assets/quiz/2026-1013/img/image4.png" alt="t=2s" /></span> 至 <span class="fx"><img src="assets/quiz/2026-1013/img/image40.png" alt="t2" /></span> 期间图像斜率不变，加速度大小和方向均不变，故D正确。<br />
+        <strong>故选D。</strong>
+      </div>
+    </div>
+
+    <!-- 第2题 -->
+    <div class="q-card" data-qid="q2" data-type="single" data-ans="D">
+      <div class="q-head"><span class="q-no">2</span><span class="q-tag">单选</span></div>
+      <div class="q-stem">某司机驾驶汽车在一城郊道路上缓慢行驶，看到前面路段没有行人和车辆，立即加油门做匀加速直线运动，在一段时间内，汽车速度的平方与位移的关系图像如图所示，下列描述正确的是（&nbsp;&nbsp;&nbsp;&nbsp;）</div>
+      <div class="fig"><img src="assets/quiz/2026-1013/img/image5.png" alt="第2题 v²-x 关系图像" /></div>
+      <div class="opts">
+        <button class="opt" data-k="A">A．汽车的初速度大小为25 <span class="fx"><img src="assets/quiz/2026-1013/img/image6.png" alt="m/s" /></span></button>
+        <button class="opt" data-k="B">B．汽车的初速度为零</button>
+        <button class="opt" data-k="C">C．汽车加速时的加速度大小为5 <span class="fx"><img src="assets/quiz/2026-1013/img/image7.png" alt="m/s²" /></span></button>
+        <button class="opt" data-k="D">D．汽车加速时的加速度大小为2.5 <span class="fx"><img src="assets/quiz/2026-1013/img/image7.png" alt="m/s²" /></span></button>
+      </div>
+      <div class="q-actions"><button class="btn submit">提交本题</button></div>
+      <div class="verdict"></div>
+      <div class="explain">
+        <div class="ex-t">【详解】</div>
+        AB．根据 <span class="fx"><img src="assets/quiz/2026-1013/img/image41.png" alt="v²=2ax" /></span>，整理得 <span class="fx"><img src="assets/quiz/2026-1013/img/image42.png" alt="整理式" /></span>。<br />
+        图像的纵截距为 <span class="fx"><img src="assets/quiz/2026-1013/img/image43.png" alt="纵截距" /></span>，解得汽车的初速度大小为 <span class="fx"><img src="assets/quiz/2026-1013/img/image44.png" alt="初速度" /></span>，故AB错误；<br />
+        CD．图像的斜率为 <span class="fx"><img src="assets/quiz/2026-1013/img/image45.png" alt="斜率" /></span>，解得加速度大小 <span class="fx"><img src="assets/quiz/2026-1013/img/image46.png" alt="加速度" /></span>，故C错误，D正确。<br />
+        <strong>故选D。</strong>
+      </div>
+    </div>
+
+    <!-- 第3题 -->
+    <div class="q-card" data-qid="q3" data-type="multi" data-ans="BD">
+      <div class="q-head"><span class="q-no">3</span><span class="q-tag">多选</span></div>
+      <div class="q-stem">（多选）物块在粗糙的水平面上，以一定的初速度沿直线运动，它的位移 <span class="fx"><img src="assets/quiz/2026-1013/img/image8.png" alt="x" /></span> 与时间 <span class="fx"><img src="assets/quiz/2026-1013/img/image9.png" alt="t" /></span> 的关系为 <span class="fx"><img src="assets/quiz/2026-1013/img/image10.png" alt="x=8t-t²" /></span>（各物理量均采用国际单位制中的基本单位），重力加速度 <span class="fx"><img src="assets/quiz/2026-1013/img/image11.png" alt="g" /></span> 取 <span class="fx"><img src="assets/quiz/2026-1013/img/image12.png" alt="10m/s²" /></span>。则下列说法中正确的是（&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;）</div>
+      <div class="opts">
+        <button class="opt" data-k="A">A．第 <span class="fx"><img src="assets/quiz/2026-1013/img/image13.png" alt="1s" /></span> 内的位移是 <span class="fx"><img src="assets/quiz/2026-1013/img/image14.png" alt="7m" /></span></button>
+        <button class="opt" data-k="B">B．前 <span class="fx"><img src="assets/quiz/2026-1013/img/image15.png" alt="2s" /></span> 内物体的平均速度是 <span class="fx"><img src="assets/quiz/2026-1013/img/image16.png" alt="6m/s" /></span></button>
+        <button class="opt" data-k="C">C．前 <span class="fx"><img src="assets/quiz/2026-1013/img/image17.png" alt="4s" /></span> 内物体运动的位移是 <span class="fx"><img src="assets/quiz/2026-1013/img/image18.png" alt="16m" /></span></button>
+        <button class="opt" data-k="D">D．物体 <span class="fx"><img src="assets/quiz/2026-1013/img/image19.png" alt="4s" /></span> 末的速度为零</button>
+      </div>
+      <div class="q-actions"><button class="btn submit">提交本题</button></div>
+      <div class="verdict"></div>
+      <div class="explain">
+        <div class="ex-t">【详解】</div>
+        将 <span class="fx"><img src="assets/quiz/2026-1013/img/image10.png" alt="x=8t-t²" /></span> 与匀变速直线运动的位移公式 <span class="fx"><img src="assets/quiz/2026-1013/img/image47.png" alt="x=v0t+½at²" /></span> 对比可知，物块的初速度 <span class="fx"><img src="assets/quiz/2026-1013/img/image48.png" alt="v0=8m/s" /></span>，加速度 <span class="fx"><img src="assets/quiz/2026-1013/img/image49.png" alt="a=-2m/s²" /></span>。<br />
+        物块速度减为零所需的时间 <span class="fx"><img src="assets/quiz/2026-1013/img/image50.png" alt="t=4s" /></span>，此时物块的位移 <span class="fx"><img src="assets/quiz/2026-1013/img/image51.png" alt="x=16m" /></span>，此后物块不受推力，在摩擦力作用下保持静止。<br />
+        A．第 <span class="fx"><img src="assets/quiz/2026-1013/img/image52.png" alt="1s" /></span> 内物块的位移 <span class="fx"><img src="assets/quiz/2026-1013/img/image53.png" alt="x=7m" /></span>，故A错误；<br />
+        B．前 <span class="fx"><img src="assets/quiz/2026-1013/img/image54.png" alt="2s" /></span> 内物块的位移 <span class="fx"><img src="assets/quiz/2026-1013/img/image55.png" alt="12m" /></span>，平均速度 <span class="fx"><img src="assets/quiz/2026-1013/img/image56.png" alt="6m/s" /></span>，故B正确；<br />
+        C．物块在 <span class="fx"><img src="assets/quiz/2026-1013/img/image57.png" alt="4s" /></span> 末已经静止，故前 <span class="fx"><img src="assets/quiz/2026-1013/img/image37.png" alt="5s" /></span> 内物块的位移等于前 <span class="fx"><img src="assets/quiz/2026-1013/img/image57.png" alt="4s" /></span> 内的位移 <span class="fx"><img src="assets/quiz/2026-1013/img/image58.png" alt="16m" /></span>，故C错误；<br />
+        D．由 <span class="fx"><img src="assets/quiz/2026-1013/img/image10.png" alt="x=8t-t²" /></span> 可得 <span class="fx"><img src="assets/quiz/2026-1013/img/image48.png" alt="v0" /></span>、<span class="fx"><img src="assets/quiz/2026-1013/img/image49.png" alt="a" /></span>，故 <span class="fx"><img src="assets/quiz/2026-1013/img/image57.png" alt="4s" /></span> 末物块的速度 <span class="fx"><img src="assets/quiz/2026-1013/img/image59.png" alt="v=0" /></span>，故D正确。<br />
+        <strong>故选BD。</strong>
+      </div>
+    </div>
+
+    <!-- 第4题 -->
+    <div class="q-card" data-qid="q4a" data-type="multi" data-ans="BD">
+      <div class="q-head"><span class="q-no">4</span><span class="q-tag">实验·多选＋填空</span></div>
+      <div class="q-stem">利用如图甲所示装置探究匀变速直线运动。</div>
+      <div class="fig"><img src="assets/quiz/2026-1013/img/image20.png" alt="第4题 实验装置图甲与纸带图乙" /></div>
+      <div class="sub-q">
+        <div class="sq-t">(1) 除图甲中所示器材外，下列装置必要的是_________。（多选）</div>
+        <div class="opts">
+          <button class="opt" data-k="A">A．220 V 的交流电源</button>
+          <button class="opt" data-k="B">B．8 V 的交流电源</button>
+          <button class="opt" data-k="C">C．天平</button>
+          <button class="opt" data-k="D">D．刻度尺</button>
+        </div>
+        <div class="q-actions"><button class="btn submit">提交本题</button></div>
+        <div class="verdict"></div>
+        <div class="explain">
+          <div class="ex-t">【详解】</div>
+          AB．由图甲可知该装置用的是电磁打点计时器，则用的是约 8V 的交流电源，故A错误，B正确；<br />
+          CD．实验中不需要用天平测质量，需要用刻度尺测点迹间的长度，故C错误，D正确。<br />
+          <strong>故选BD。</strong>
+        </div>
+      </div>
+      <div class="sub-q" data-qid="q4b" data-type="num" data-ans="0.51">
+        <div class="sq-t">(2) 图乙为某次实验中得到的一条纸带，两相邻计数点间还有四个点未画出，各点之间的距离已在图乙中标出，实验所用交流电源的频率为 50 Hz，则小车的加速度大小为
+          <input class="num-in" type="text" inputmode="decimal" placeholder="输入数值" />
+          <span class="fx"><img src="assets/quiz/2026-1013/img/image7.png" alt="m/s²" /></span>
+          （结果保留两位有效数字）
+        </div>
+        <div class="q-actions"><button class="btn submit">提交本题</button></div>
+        <div class="verdict"></div>
+        <div class="explain">
+          <div class="ex-t">【详解】</div>
+          相邻两计数点间的时间间隔为 <span class="fx"><img src="assets/quiz/2026-1013/img/image60.png" alt="T=0.1s" /></span>，由逐差法可知，小车的加速度大小为 <span class="fx"><img src="assets/quiz/2026-1013/img/image61.png" alt="a=0.51m/s²" /></span>。
+        </div>
+      </div>
+    </div>
+
+    <!-- 第5题 -->
+    <div class="q-card" data-self="s5">
+      <div class="q-head"><span class="q-no">5</span><span class="q-tag">计算·自评</span></div>
+      <div class="q-stem">冰壶运动是冬奥会的一个项目。如图所示，运动员在 <span class="fx"><img src="assets/quiz/2026-1013/img/image21.png" alt="O" /></span> 点以一定的初速度将冰壶（可看作质点）沿水平冰面投出，冰壶在冰面上做匀减速直线运动，先后经过 <span class="fx"><img src="assets/quiz/2026-1013/img/image22.png" alt="P" /></span> 点和 <span class="fx"><img src="assets/quiz/2026-1013/img/image23.png" alt="Q" /></span> 点。冰壶从 <span class="fx"><img src="assets/quiz/2026-1013/img/image21.png" alt="O" /></span> 点到 <span class="fx"><img src="assets/quiz/2026-1013/img/image22.png" alt="P" /></span> 点所用的时间 <span class="fx"><img src="assets/quiz/2026-1013/img/image24.png" alt="t1" /></span>，从 <span class="fx"><img src="assets/quiz/2026-1013/img/image22.png" alt="P" /></span> 点到 <span class="fx"><img src="assets/quiz/2026-1013/img/image23.png" alt="Q" /></span> 点所用的时间 <span class="fx"><img src="assets/quiz/2026-1013/img/image25.png" alt="t2" /></span>，<span class="fx"><img src="assets/quiz/2026-1013/img/image21.png" alt="O" /></span>、<span class="fx"><img src="assets/quiz/2026-1013/img/image22.png" alt="P" /></span> 间的距离 <span class="fx"><img src="assets/quiz/2026-1013/img/image26.png" alt="s1" /></span>，P、Q 间的距离 <span class="fx"><img src="assets/quiz/2026-1013/img/image27.png" alt="s2" /></span>。求：</div>
+      <div class="fig"><img src="assets/quiz/2026-1013/img/image28.png" alt="第5题 冰壶运动示意图 O、P、Q" /></div>
+      <div class="q-stem">(1) 冰壶从 <span class="fx"><img src="assets/quiz/2026-1013/img/image21.png" alt="O" /></span> 点到 <span class="fx"><img src="assets/quiz/2026-1013/img/image23.png" alt="Q" /></span> 点的平均速度大小 <span class="fx"><img src="assets/quiz/2026-1013/img/image29.png" alt="v1" /></span>；<br />(2) 冰壶运动过程中加速度的大小 <span class="fx"><img src="assets/quiz/2026-1013/img/image30.png" alt="a" /></span>。</div>
+      <textarea class="work" placeholder="（可选）在这里写你的解题过程，或直接在纸上完成后对答案"></textarea>
+      <details class="ans-box">
+        <summary>📖 对答案 · 展开参考答案与解析</summary>
+        <div class="explain">
+        <div class="ex-t">【参考答案】(1) <span class="fx"><img src="assets/quiz/2026-1013/img/image62.png" alt="第1问答案" /></span>　(2) <span class="fx"><img src="assets/quiz/2026-1013/img/image63.png" alt="第2问答案" /></span></div>
+        <div class="ex-t">【详解】</div>
+        （1）冰壶从 <span class="fx"><img src="assets/quiz/2026-1013/img/image21.png" alt="O" /></span> 点到 <span class="fx"><img src="assets/quiz/2026-1013/img/image23.png" alt="Q" /></span> 点的平均速度大小为 <span class="fx"><img src="assets/quiz/2026-1013/img/image64.png" alt="平均速度" /></span>；<br />
+        （2）冰壶从 <span class="fx"><img src="assets/quiz/2026-1013/img/image21.png" alt="O" /></span> 点到 <span class="fx"><img src="assets/quiz/2026-1013/img/image22.png" alt="P" /></span> 点的平均速度大小为 <span class="fx"><img src="assets/quiz/2026-1013/img/image65.png" alt="vP" /></span>，即为 <span class="fx"><img src="assets/quiz/2026-1013/img/image21.png" alt="O" /></span> 点到 <span class="fx"><img src="assets/quiz/2026-1013/img/image22.png" alt="P" /></span> 点中间时间的瞬时速度；冰壶从 <span class="fx"><img src="assets/quiz/2026-1013/img/image22.png" alt="P" /></span> 点到 <span class="fx"><img src="assets/quiz/2026-1013/img/image23.png" alt="Q" /></span> 点的平均速度大小为 <span class="fx"><img src="assets/quiz/2026-1013/img/image66.png" alt="vQ" /></span>，即为 <span class="fx"><img src="assets/quiz/2026-1013/img/image22.png" alt="P" /></span> 点到 <span class="fx"><img src="assets/quiz/2026-1013/img/image23.png" alt="Q" /></span> 点中间时间的瞬时速度，则加速度大小为 <span class="fx"><img src="assets/quiz/2026-1013/img/image67.png" alt="加速度" /></span>。
+        </div>
+        <div class="self-btns">
+          <button class="btn self-ok">✓ 我做对了</button>
+          <button class="btn ghost self-no">✗ 再练一遍</button>
+        </div>
+      </details>
+    </div>
+
+    <!-- 第6题 -->
+    <div class="q-card" data-self="s6">
+      <div class="q-head"><span class="q-no">6</span><span class="q-tag">计算·自评</span></div>
+      <div class="q-stem">为检测某新能源汽车的刹车性能，在平直公路上，某一辆新能源汽车以 20m/s 的速度匀速行驶，某一时刻司机踩下制动器后汽车开始做匀减速直线运动，在 2s 内前进 32m。求：<br />(1) 开始制动后汽车做匀减速直线运动的加速度大小；<br />(2) 开始制动后 1s 末汽车的速度大小；<br />(3) 开始制动后 8s 内汽车行驶的距离。</div>
+      <textarea class="work" placeholder="（可选）在这里写你的解题过程，或直接在纸上完成后对答案"></textarea>
+      <details class="ans-box">
+        <summary>📖 对答案 · 展开参考答案与解析</summary>
+        <div class="explain">
+        <div class="ex-t">【参考答案】(1) <span class="fx"><img src="assets/quiz/2026-1013/img/image68.png" alt="第1问答案" /></span>　(2) <span class="fx"><img src="assets/quiz/2026-1013/img/image69.png" alt="第2问答案" /></span>　(3) <span class="fx"><img src="assets/quiz/2026-1013/img/image70.png" alt="第3问答案" /></span></div>
+        <div class="ex-t">【详解】</div>
+        （1）取汽车初速度方向为正方向，已知初速度 <span class="fx"><img src="assets/quiz/2026-1013/img/image71.png" alt="v0=20m/s" /></span>，<span class="fx"><img src="assets/quiz/2026-1013/img/image72.png" alt="t=2s" /></span> 时位移 <span class="fx"><img src="assets/quiz/2026-1013/img/image73.png" alt="x=32m" /></span>，设匀减速加速度大小为 <span class="fx"><img src="assets/quiz/2026-1013/img/image30.png" alt="a" /></span>。匀减速直线运动位移公式为 <span class="fx"><img src="assets/quiz/2026-1013/img/image74.png" alt="位移公式" /></span>，代入已知数值解得 <span class="fx"><img src="assets/quiz/2026-1013/img/image75.png" alt="加速度解" /></span>。<br />
+        （2）匀减速直线运动速度公式为 <span class="fx"><img src="assets/quiz/2026-1013/img/image76.png" alt="速度公式" /></span>，代入 <span class="fx"><img src="assets/quiz/2026-1013/img/image77.png" alt="t=1s" /></span> 得 <span class="fx"><img src="assets/quiz/2026-1013/img/image78.png" alt="速度解" /></span>。<br />
+        （3）汽车减速到速度为 0 的时间满足 <span class="fx"><img src="assets/quiz/2026-1013/img/image79.png" alt="停稳时间方程" /></span>，解得 <span class="fx"><img src="assets/quiz/2026-1013/img/image80.png" alt="停稳时间" /></span>。说明 8s 时汽车已静止，8s 内位移等于刹车总位移。由速度位移关系 <span class="fx"><img src="assets/quiz/2026-1013/img/image81.png" alt="速度位移关系" /></span> 得 <span class="fx"><img src="assets/quiz/2026-1013/img/image82.png" alt="刹车总位移" /></span>。
+        </div>
+        <div class="self-btns">
+          <button class="btn self-ok">✓ 我做对了</button>
+          <button class="btn ghost self-no">✗ 再练一遍</button>
+        </div>
+      </details>
+    </div>
+
+    <!-- 第7题 -->
+    <div class="q-card" data-self="s7">
+      <div class="q-head"><span class="q-no">7</span><span class="q-tag">计算·自评</span></div>
+      <div class="q-stem">当车辆在高速公路发生故障无法移动时，需在车后一定距离放置警示标志。通常，不同司机看到警示标志后会有 <span class="fx"><img src="assets/quiz/2026-1013/img/image32.png" alt="反应时间t0" /></span> 的反应时间。在成渝高速某直线路段限速 <span class="fx"><img src="assets/quiz/2026-1013/img/image33.png" alt="限速" /></span>（<span class="fx"><img src="assets/quiz/2026-1013/img/image34.png" alt="120km/h" /></span>），不同车辆在此公路刹车过程最大加速度大小取值范围为 <span class="fx"><img src="assets/quiz/2026-1013/img/image35.png" alt="加速度范围" /></span>。<br />(1) 若某次事故中，后车速度取 <span class="fx"><img src="assets/quiz/2026-1013/img/image34.png" alt="120km/h" /></span>，刹车加速度大小取 <span class="fx"><img src="assets/quiz/2026-1013/img/image36.png" alt="5m/s²" /></span>，求开始刹车后 <span class="fx"><img src="assets/quiz/2026-1013/img/image37.png" alt="3s" /></span> 内它发生的位移多大？<br />(2) 假设后方司机经过警示标志时才看到前车，在这种情况下，为避免所有情况下后方车辆与故障车相撞，警示标志应放在故障车尾后面的距离不得小于多少？不考虑后车与警示标志的相撞。</div>
+      <div class="fig"><img src="assets/quiz/2026-1013/img/image31.png" alt="第7题 高速公路警示标志情景图" /></div>
+      <textarea class="work" placeholder="（可选）在这里写你的解题过程，或直接在纸上完成后对答案"></textarea>
+      <details class="ans-box">
+        <summary>📖 对答案 · 展开参考答案与解析</summary>
+        <div class="explain">
+        <div class="ex-t">【参考答案】(1) <span class="fx"><img src="assets/quiz/2026-1013/img/image83.png" alt="第1问答案" /></span>　(2) 警示标志应放在故障车尾后面的距离不得小于 <span class="fx"><img src="assets/quiz/2026-1013/img/image84.png" alt="最小距离" /></span>。</div>
+        <div class="ex-t">【详解】</div>
+        （1）已知汽车初速度 <span class="fx"><img src="assets/quiz/2026-1013/img/image85.png" alt="v=120km/h" /></span>，刹车加速度的大小 <span class="fx"><img src="assets/quiz/2026-1013/img/image86.png" alt="a=5m/s²" /></span>，由匀变速直线运动速度公式可知汽车末速度减小至 0 所需的总时间 <span class="fx"><img src="assets/quiz/2026-1013/img/image87.png" alt="总时间" /></span>。因此 <span class="fx"><img src="assets/quiz/2026-1013/img/image37.png" alt="3s" /></span> 内汽车的位移就是总刹车位移，满足 <span class="fx"><img src="assets/quiz/2026-1013/img/image88.png" alt="位移计算" /></span>。<br />
+        （2）要保证所有极端情况下都不相撞，需要取最不利的参数组合，即汽车速度取最大 <span class="fx"><img src="assets/quiz/2026-1013/img/image89.png" alt="v最大" /></span>，反应时间取最长 <span class="fx"><img src="assets/quiz/2026-1013/img/image90.png" alt="反应时间最长" /></span>，刹车过程最大加速度大小取最小 <span class="fx"><img src="assets/quiz/2026-1013/img/image91.png" alt="加速度最小" /></span>，此时后车的总制动距离（反应距离＋刹车距离）最大，满足 <span class="fx"><img src="assets/quiz/2026-1013/img/image92.png" alt="总制动距离" /></span>。故为避免所有情况下后方车辆与故障车相撞，警示标志应放在故障车尾后面的距离不得小于 <span class="fx"><img src="assets/quiz/2026-1013/img/image84.png" alt="最小距离" /></span>。
+        </div>
+        <div class="self-btns">
+          <button class="btn self-ok">✓ 我做对了</button>
+          <button class="btn ghost self-no">✗ 再练一遍</button>
+        </div>
+      </details>
+    </div>
+
+    <footer class="page-foot">
+      星辰班级 · 物理午训 ｜ 提交后可反复练习，祝同学们越练越稳
+    </footer>
+  </main>
+
+<script>
+(function () {
+  function each(list, fn) { return Array.prototype.forEach.call(list, fn); }
+  var totalGradable = 5, totalSelf = 3;
+  var done = 0, right = 0, selfDone = 0;
+  function refresh() {
+    document.getElementById("scoreRight").textContent = right;
+    document.getElementById("scoreDone").textContent = done;
+    document.getElementById("scoreDone2").textContent = done;
+    document.getElementById("scoreSelf").textContent = selfDone;
+    var msg = document.getElementById("scoreMsg");
+    if (done >= totalGradable) {
+      msg.textContent = "判分题全部完成：" + right + " / " + totalGradable + (right === totalGradable ? " 🎉 全对！" : "，错题看解析哦");
+    } else { msg.textContent = ""; }
+  }
+  function lettersOf(card) {
+    var sel = card.querySelectorAll(".opt.sel");
+    var arr = [];
+    each(sel, function (b) { arr.push(b.getAttribute("data-k")); });
+    return arr.sort().join("");
+  }
+  try {
+  // 选择题
+  each(document.querySelectorAll(".q-card[data-type]"), function (card) {
+    var type = card.getAttribute("data-type"), ans = card.getAttribute("data-ans");
+    var submitted = false;
+    each(card.querySelectorAll(".opt"), function (btn) {
+      btn.addEventListener("click", function () {
+        if (submitted) return;
+        if (type === "single") {
+          each(card.querySelectorAll(".opt"), function (b) { b.classList.remove("sel"); });
+          btn.classList.add("sel");
+        } else {
+          btn.classList.toggle("sel");
+        }
+      });
+    });
+    var sub = card.querySelector(".q-actions .submit");
+    if (sub) sub.addEventListener("click", function () {
+      if (submitted) return;
+      var picked = lettersOf(card);
+      var v = card.querySelector(".verdict");
+      if (!picked) { v.textContent = "请先选择选项"; v.className = "verdict no"; return; }
+      submitted = true;
+      done++;
+      var ok = picked === ans;
+      if (ok) right++;
+      each(card.querySelectorAll(".opt"), function (b) {
+        b.disabled = true;
+        if (ans.indexOf(b.getAttribute("data-k")) > -1) b.classList.add("right");
+        else if (b.classList.contains("sel")) b.classList.add("wrong");
+      });
+      v.textContent = ok ? "✓ 回答正确" : "✗ 回答错误（你选了 " + picked + "，正确答案 " + ans + "）";
+      v.className = "verdict " + (ok ? "ok" : "no");
+      card.querySelector(".explain").classList.add("open");
+      refresh();
+    });
+  });
+  // 填空题（数值）
+  each(document.querySelectorAll(".sub-q[data-type='num']"), function (card) {
+    var ans = parseFloat(card.getAttribute("data-ans")), submitted = false;
+    var sub = card.querySelector(".submit");
+    sub.addEventListener("click", function () {
+      if (submitted) return;
+      var v = card.querySelector(".verdict");
+      var raw = card.querySelector(".num-in").value.trim().replace(/[^\d.\-]/g, "");
+      if (raw === "") { v.textContent = "请先填写答案"; v.className = "verdict no"; return; }
+      submitted = true;
+      done++;
+      var ok = Math.abs(parseFloat(raw) - ans) < 0.005;
+      if (ok) right++;
+      v.textContent = ok ? "✓ 回答正确（" + ans + "）" : "✗ 回答错误（正确答案 " + ans + "）";
+      v.className = "verdict " + (ok ? "ok" : "no");
+      card.querySelector(".num-in").disabled = true;
+      sub.disabled = true;
+      card.querySelector(".explain").classList.add("open");
+      refresh();
+    });
+  });
+  // 计算题自评（答案解析用原生 details 展开，不依赖 JS）
+  each(document.querySelectorAll(".q-card[data-self]"), function (card) {
+    var okBtn = card.querySelector(".self-ok");
+    var noBtn = card.querySelector(".self-no");
+    if (!okBtn || !noBtn) return;
+    okBtn.addEventListener("click", function () {
+      if (selfDone >= totalSelf) return;
+      selfDone++; refresh();
+      okBtn.disabled = true; noBtn.disabled = true;
+      okBtn.textContent = "✓ 已记为正确";
+    });
+    noBtn.addEventListener("click", function () {
+      if (selfDone >= totalSelf) return;
+      selfDone++; refresh();
+      okBtn.disabled = true; noBtn.disabled = true;
+      noBtn.textContent = "✗ 已记入，看完解析再练一遍吧";
+    });
+  });
+  } catch (e) {
+    // 即使判分脚本报错，选择题之外的答案解析仍可通过原生折叠组件查看
+  }
+  refresh();
+})();
+</script>
+</body>
+</html>
