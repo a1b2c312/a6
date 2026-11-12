@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="assets/js/auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>物质的量_第1课时_物质的量和阿伏加德罗常数_交互课件</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { width:100%; height:100%; background:#0B1F3D; overflow:hidden;
+  font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif; }
+#stage { position:absolute; left:50%; top:50%; width:1280px; height:720px;
+  transform-origin:center center; background:#fff; }
+.slide { position:absolute; inset:0; width:1280px; height:720px; display:none;
+  background:#fff; color:#1A2230; overflow:hidden; }
+.slide.active { display:block; animation:fadeIn .45s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:none;} }
+:root { --blue:#1E4FA8; --navy:#0E3F8C; --light:#E8EFF8; --lighter:#F0F5FC;
+  --red:#D9534F; --yellow:#F5B301; --ink:#1A2230; --gray:#8B97A8; --green:#2E8B57; }
+.topbar { position:absolute; top:0; left:0; right:0; height:10px;
+  background:linear-gradient(90deg,#0E3F8C,#1E4FA8); }
+.footer { position:absolute; bottom:64px; left:56px; right:56px; display:flex;
+  justify-content:space-between; font-size:13px; color:#8B97A8; }
+.kicker { display:inline-flex; align-items:center; gap:10px; color:var(--blue);
+  font-size:17px; letter-spacing:2px; font-weight:bold; }
+.kicker::before { content:""; width:5px; height:22px; background:var(--blue); display:inline-block; }
+h2.title { font-size:34px; color:var(--navy); margin:8px 0 4px; }
+.subtitle { color:#5B6B84; font-size:16px; }
+.body-pad { position:absolute; inset:0; padding:40px 56px 92px; }
+.pagebody { margin-top:20px; height:518px; }
+.btn { display:inline-block; cursor:pointer; user-select:none; border:none;
+  background:var(--blue); color:#fff; font-size:16px; font-weight:bold;
+  padding:9px 22px; border-radius:22px; letter-spacing:1px;
+  box-shadow:0 3px 10px rgba(30,79,168,.35); transition:.2s; }
+.btn:hover { background:var(--navy); transform:translateY(-2px); }
+.btn.red { background:var(--red); box-shadow:0 3px 10px rgba(217,83,79,.35); }
+.btn.ghost { background:#fff; color:var(--blue); border:2px solid var(--blue); box-shadow:none; }
+.btn.ghost:hover { background:var(--light); }
+.btn.done { background:#B9C6DA; box-shadow:none; cursor:default; }
+.reveal { opacity:0; transform:translateY(14px); transition:.55s ease; }
+.reveal.shown { opacity:1; transform:none; }
+.hint { color:#8B97A8; font-size:14px; font-style:italic; }
+.card { background:var(--lighter); border:1px solid #D5E1F2; border-radius:14px; padding:16px 20px; }
+.card.blue { background:var(--light); border-color:#B9CCEC; }
+.card.warm { background:#FFF9E8; border-color:#F0DFA8; }
+.card.good { background:#E9F6EC; border-color:#A9D9B6; }
+.eq { font-size:25px; font-weight:bold; color:var(--navy); letter-spacing:.5px; }
+.big { font-size:40px; font-weight:800; color:var(--blue); line-height:1.2; }
+.mid { font-size:23px; font-weight:bold; color:var(--navy); }
+.small { font-size:15px; color:#5B6B84; line-height:1.7; }
+.row { display:flex; gap:16px; }
+.col { flex:1; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+ul.tight { padding-left:22px; line-height:1.95; font-size:17px; }
+.tagRed { color:var(--red); } .tagBlue { color:var(--blue); }
+.tagY { color:#B87B00; } .tagG { color:var(--green); }
+
+/* 封面 */
+.cover-left { position:absolute; left:0; top:0; width:440px; height:720px; background:var(--navy);
+  padding:56px 46px; display:flex; flex-direction:column; justify-content:space-between; }
+.cover-left .tag { color:#9FB8DC; font-size:17px; letter-spacing:3px; line-height:1.8; }
+.cover-left h1 { color:#fff; font-size:54px; line-height:1.25; font-weight:800; }
+.cover-left .sub { color:#C9DAF2; font-size:19px; line-height:1.75; }
+.cover-right { position:absolute; left:440px; top:0; width:840px; height:720px; padding:62px 58px;
+  display:flex; flex-direction:column; justify-content:space-between; }
+.section-num { font-size:140px; font-weight:800; color:var(--light); line-height:1; }
+.sec-badge { width:76px; height:8px; background:var(--red); border-radius:4px; margin:18px 0; }
+
+/* 目录 */
+.toc-item { display:flex; align-items:center; gap:18px; background:var(--lighter);
+  border-radius:12px; padding:14px 22px; margin-bottom:11px; border-left:8px solid #D5E1F2; }
+.toc-item.on { background:var(--light); border-left-color:var(--red); }
+.toc-num { font-size:29px; font-weight:800; color:var(--blue); width:48px; }
+.toc-t { font-size:21px; font-weight:bold; color:var(--ink); }
+.toc-d { color:#5B6B84; font-size:14px; margin-top:2px; }
+
+/* 翻牌 */
+.flip { height:190px; perspective:900px; cursor:pointer; }
+.flip-in { position:relative; width:100%; height:100%; transform-style:preserve-3d;
+  transition:transform .65s; }
+.flip.open .flip-in { transform:rotateY(180deg); }
+.flip-f,.flip-b { position:absolute; inset:0; backface-visibility:hidden; border-radius:16px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:14px; }
+.flip-f { background:var(--light); border:2px solid #B9CCEC; }
+.flip-b { background:var(--navy); color:#fff; transform:rotateY(180deg); border:2px solid var(--navy); }
+.flip-f .q { font-size:21px; font-weight:bold; color:var(--navy); }
+.flip-f .ic { font-size:38px; margin-bottom:10px; }
+.flip-b .nm { font-size:17px; color:#C9DAF2; }
+.flip-b .bigv { font-size:31px; font-weight:800; color:#FFD86B; margin:8px 0; }
+.flip-b .d { font-size:14px; color:#C9DAF2; line-height:1.6; }
+
+/* 判错卡片 */
+.chip { background:#fff; border:2px solid #C4D2E8; border-radius:12px; padding:14px 10px;
+  text-align:center; cursor:pointer; font-size:16px; font-weight:bold; color:var(--ink); transition:.2s; }
+.chip:hover { border-color:var(--blue); }
+.chip.ok { background:#E4F4E6; border-color:#3E9B4F; color:#22662E; }
+.chip.no { background:#FBE4E3; border-color:var(--red); color:#9C2B27; }
+.chip .rs { display:block; font-size:12.5px; font-weight:normal; margin-top:8px;
+  line-height:1.5; color:#43506A; }
+
+/* 逐步点亮 */
+.step-item { background:var(--lighter); border-left:6px solid var(--blue); border-radius:10px;
+  padding:11px 16px; margin-bottom:9px; font-size:16px; cursor:pointer;
+  opacity:.3; transition:.4s; }
+.step-item.on { opacity:1; background:var(--light); }
+
+/* 点击高亮格 */
+.cell { background:var(--lighter); border:2px solid #D5E1F2; border-radius:12px;
+  padding:14px 10px; text-align:center; cursor:pointer; transition:.3s; opacity:.6; }
+.cell:hover { opacity:.9; }
+.cell.on { opacity:1; background:var(--light); border-color:var(--blue); transform:translateY(-4px); }
+.cell.hi.on { background:#FFF4D6; border-color:var(--yellow); }
+.cell .nm { font-size:16px; font-weight:bold; color:var(--navy); }
+.cell .un { font-size:13px; color:#5B6B84; margin-top:5px; }
+
+/* 滑块 / 数值 */
+input[type=range] { width:100%; height:8px; accent-color:var(--blue); cursor:pointer; }
+.n-big { font-size:46px; font-weight:800; color:var(--navy); line-height:1.1; }
+.dots { display:flex; flex-wrap:wrap; gap:5px; align-content:flex-start; height:110px; }
+.dot { width:11px; height:11px; border-radius:50%; background:var(--blue); animation:pop .4s; }
+@keyframes pop { 0%{transform:scale(.5);opacity:.2} 70%{transform:scale(1.15)} 100%{transform:scale(1);opacity:1} }
+.pulse { animation:pop .5s ease; }
+
+/* 公式框 */
+.fbox { background:var(--light); border:2px solid #B9CCEC; border-radius:12px;
+  padding:12px 22px; font-size:24px; font-weight:bold; color:var(--navy);
+  cursor:pointer; transition:.25s; text-align:center; }
+.fbox.on { background:var(--navy); color:#fff; border-color:var(--navy); }
+.hub { width:120px; height:120px; border-radius:50%; background:var(--navy); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:46px; font-weight:800;
+  cursor:pointer; box-shadow:0 8px 22px rgba(14,63,140,.3); }
+
+/* 输入判分 */
+.task { background:var(--lighter); border:1px solid #D5E1F2; border-radius:12px; padding:11px 14px; }
+.task .q { font-size:15px; font-weight:bold; margin-bottom:7px; line-height:1.5; }
+.task input { width:92px; font-size:15px; padding:5px 8px; border:2px solid #C4D2E8;
+  border-radius:8px; outline:none; }
+.task input:focus { border-color:var(--blue); }
+.fb { font-size:13px; margin-top:6px; font-weight:bold; min-height:17px; }
+.fb.good { color:#22662E; } .fb.bad { color:#9C2B27; }
+
+/* 选择题 */
+.quiz { background:var(--lighter); border:1px solid #D5E1F2; border-radius:12px; padding:10px 14px; }
+.quiz .q { font-size:14.5px; font-weight:bold; margin-bottom:8px; line-height:1.5; }
+.opts { display:flex; gap:7px; flex-wrap:wrap; }
+.opt { cursor:pointer; background:#fff; border:2px solid #C4D2E8; border-radius:9px;
+  padding:5px 10px; font-size:13px; transition:.15s; }
+.opt:hover { border-color:var(--blue); }
+.opt.right { background:#E4F4E6; border-color:#3E9B4F; color:#22662E; font-weight:bold; }
+.opt.wrong { background:#FBE4E3; border-color:var(--red); color:#9C2B27; }
+.expl { display:none; margin-top:7px; font-size:12.5px; color:#22662E; background:#E4F4E6;
+  border-radius:8px; padding:6px 10px; line-height:1.5; }
+.expl.show { display:block; }
+
+/* 表格 */
+table.t { width:100%; border-collapse:collapse; font-size:15px; }
+table.t th { background:var(--navy); color:#fff; padding:9px 10px; text-align:left; }
+table.t td { border-bottom:1px solid #D5E1F2; padding:8px 10px; }
+table.t tr:nth-child(even) td { background:var(--lighter); }
+
+/* 导航 */
+#nav { position:absolute; bottom:0; left:0; right:0; height:52px; background:rgba(11,31,61,.94);
+  display:flex; align-items:center; justify-content:center; gap:16px; z-index:50; }
+#nav button { background:#1E4FA8; border:none; color:#fff; width:40px; height:32px;
+  border-radius:8px; font-size:16px; cursor:pointer; }
+#nav button:hover { background:#2E63C4; }
+#pageinfo { color:#9FB8DC; font-size:14px; letter-spacing:1px; min-width:70px; text-align:center; }
+#navtip { position:absolute; right:22px; color:#7E93B4; font-size:12px; }
+</style>
+</head>
+<body>
+<div id="stage">
+<section class="slide active"><div class="cover-left"><div class="tag">人教版（2019）· 必修第一册<br>第二章 第三节 · 第1课时</div><div><div style="width:64px;height:6px;background:#D9534F;margin-bottom:22px;"></div><h1>物质的量</h1><div style="width:76px;height:4px;background:#3D7BD9;margin:22px 0;"></div><div class="sub">物质的量的单位——摩尔<br>阿伏加德罗常数 N<sub>A</sub></div></div><div class="tag" style="font-size:15px;letter-spacing:2px;">高中化学 · 45 分钟 · 交互课件</div></div><div class="cover-right"><div><div class="kicker">本节课要弄清</div><div style='font-size:18px;line-height:2;color:#43506A;'>· 1 mol 到底有多少个微粒？</div><div style='font-size:18px;line-height:2;color:#43506A;'>· 六个基本物理量之外，为什么还要加一个？</div><div style='font-size:18px;line-height:2;color:#43506A;'>· n、N、N_A 三者怎样换算？</div><div style='font-size:18px;line-height:2;color:#43506A;'>· 用 mol 时为什么要写化学式？</div></div><div style="text-align:right;"><div class="section-num">01</div><div class="sec-badge" style="margin-left:auto;"></div><div style="font-size:21px;color:var(--navy);font-weight:bold;">物质的量的概念及阿伏加德罗常数</div><div style="font-size:16px;color:#5B6B84;margin-top:6px;">n = N / N_A</div></div></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">单元地图</div><h2 class="title">物质的量 · 五个课时</h2><div class="pagebody"><div style="margin-top:6px;"><div class="toc-item on"><div class="toc-num">1</div><div><div class="toc-t">第1课时　物质的量的概念及阿伏加德罗常数</div><div class="toc-d">n = N / N_A</div></div></div><div class="toc-item "><div class="toc-num">2</div><div><div class="toc-t">第2课时　摩尔质量与气体摩尔体积</div><div class="toc-d">n = m/M = V/V_m</div></div></div><div class="toc-item "><div class="toc-num">3</div><div><div class="toc-t">第3课时　阿伏加德罗常数 N_A 的应用</div><div class="toc-d">以 n 为枢纽的换算</div></div></div><div class="toc-item "><div class="toc-num">4</div><div><div class="toc-t">第4课时　物质的量浓度</div><div class="toc-d">c_B = n_B / V</div></div></div><div class="toc-item "><div class="toc-num">5</div><div><div class="toc-t">第5课时　一定物质的量浓度溶液的配制</div><div class="toc-d">容量瓶 · 误差分析</div></div></div></div><div class="card warm" style="margin-top:12px;font-size:15px;">一条主线：<b>把数不清的微粒，换算成能称、能量、能配的量</b>；物质的量 n 始终是枢纽。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">导入</div><h2 class="title">一滴水里有多少个水分子</h2><div class="pagebody"><div class="row" style="height:100%;"><div class="col card blue" style="display:flex;flex-direction:column;justify-content:center;"><div class="mid">一滴水 ≈ 0.05 mL</div><div class="small" style="margin-top:12px;">水分子直径约 4×10⁻¹⁰ m，一亿个排成一行才约 4 cm。</div><div class="big" style="margin-top:22px;">≈ 1.7×10²¹ 个</div><div class="small">就算每秒数 1 个，也要数上 5×10¹³ 年。</div></div><div class="col card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;"><div class="mid">微粒太小、太多</div><div class="hint" style="margin:10px 0 20px;">点击下面按钮，看看化学家怎么办</div><button class="btn" onclick="reveal(['r1','r2'])">揭晓思路 →</button><div id="r1" class="reveal eq" style="margin-top:26px;text-align:center;">不一个个数，改「成堆」数</div><div id="r2" class="reveal small" style="margin-top:12px;text-align:center;">把一定数目的微粒作为一个集合，只数有多少「堆」。</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">类比</div><h2 class="title">生活里的「集合单位」</h2><div class="pagebody"><div class="hint" style="margin-bottom:14px;">点击卡片翻面，看看每个集合单位代表多少个</div><div class="grid3"><div class="flip" onclick="flip(this)"><div class="flip-in"><div class="flip-f"><div class="ic">✏️</div><div class="q">1 打铅笔</div></div><div class="flip-b"><div class="nm">集合单位：打</div><div class="bigv">12 支</div><div class="d">把 12 支看成 1 个单位</div></div></div></div><div class="flip" onclick="flip(this)"><div class="flip-in"><div class="flip-f"><div class="ic">📄</div><div class="q">1 令纸</div></div><div class="flip-b"><div class="nm">集合单位：令</div><div class="bigv">500 张</div><div class="d">把 500 张看成 1 个单位</div></div></div></div><div class="flip" onclick="flip(this)"><div class="flip-in"><div class="flip-f"><div class="ic">⚗️</div><div class="q">1 mol 微粒</div></div><div class="flip-b"><div class="nm">集合单位：摩尔</div><div class="bigv">6.02×10²³ 个</div><div class="d">数值极大，因为微粒极小</div></div></div></div></div><div class="card warm" style="margin-top:20px;font-size:17px;">共同点：<b>先规定一堆有多少个，再数堆数</b>。摩尔就是化学里专门给微粒用的「打」。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">概念</div><h2 class="title">物质的量 n：七个基本物理量之一</h2><div class="pagebody"><div class="hint" style="margin-bottom:12px;">逐个点击方框，找到描述「微粒集体」的那一个</div><div class="grid4" id="si7"><div class="cell" onclick="light(this)"><div class="nm">长度</div><div class="un">m</div></div><div class="cell" onclick="light(this)"><div class="nm">质量</div><div class="un">kg</div></div><div class="cell" onclick="light(this)"><div class="nm">时间</div><div class="un">s</div></div><div class="cell" onclick="light(this)"><div class="nm">电流</div><div class="un">A</div></div><div class="cell" onclick="light(this)"><div class="nm">热力学温度</div><div class="un">K</div></div><div class="cell" onclick="light(this)"><div class="nm">发光强度</div><div class="un">cd</div></div><div class="cell hi" onclick="light(this)"><div class="nm">物质的量</div><div class="un">mol</div></div></div><div class="card blue" style="margin-top:18px;font-size:17px;line-height:1.9;">物质的量 <b>n</b>：表示含有一定数目粒子集合体的物理量，单位<b>摩尔（mol）</b>，简称摩。<br>它衡量的既不是质量，也不是体积，而是<b>微粒的「堆数」</b>。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">定量</div><h2 class="title">1 mol 究竟有多少？逐级放大</h2><div class="pagebody"><div class="row"><div class="col"><div class="big" id="scaleNum">12 个</div><div class="small" id="scaleDesc" style="margin:8px 0 12px;height:44px;">一打：12 个，肉眼还能数清。</div><div class="dots" id="dotBox"></div><button class="btn" id="scaleBtn" style="margin-top:14px;" onclick="scaleNext()">继续放大 →</button></div><div class="col card blue"><div class="mid">从「打」到「mol」</div><ul class="tight" style="margin-top:10px;"><li>12 个 = 1 打</li><li>500 张 = 1 令</li><li>6.02×10²³ 个 = 1 mol</li></ul><div class="small" style="margin-top:16px;">每点一次放大约 1000 倍，要一直放到 10²³ 量级，才够得上 1 mol。</div><div class="eq" style="margin-top:18px;">1 mol ≈ 6.02×10²³ 个</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">数量级</div><h2 class="title">6.02×10²³ 大到什么程度</h2><div class="pagebody"><div class="row"><div class="col card" style="text-align:center;"><div class="mid">假如把 1 mol 水分子铺满地球</div><div class="big" style="margin:18px 0;">约 1.4 cm 厚</div><div class="small">覆盖整个地球表面，能积成薄薄一层水。</div><button class="btn red" style="margin-top:18px;" onclick="runCounter()">看一个动态计数 →</button><div class="n-big" id="countNum" style="margin-top:16px;">0</div><div class="small">若每秒数 1 亿个，需约 1.9×10⁸ 年</div></div><div class="col card blue" style="display:flex;flex-direction:column;justify-content:center;"><div class="mid">为什么非要这么大？</div><div class="small" style="margin-top:14px;line-height:2;">微粒直径约 10⁻¹⁰ m，1 个微粒的质量约 10⁻²³ g。<br>要让「一堆」的质量、体积大到实验室能称量、能量取，这一堆就必须含 10²³ 数量级的微粒。<br><b>数值大，是微观尺度逼出来的必然结果。</b></div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">核心概念</div><h2 class="title">阿伏加德罗常数 N_A</h2><div class="pagebody"><div class="grid2" style="height:calc(100% - 10px);"><div class="card blue" style="display:flex;flex-direction:column;justify-content:center;"><div class="eq" style="font-size:31px;">N_A ≈ 6.02×10²³ mol⁻¹</div><div class="small" style="margin-top:18px;line-height:2;">定义基准：1 mol 粒子集合体所含的粒子数，与 0.012 kg ¹²C 中所含的碳原子数相同。<br>常取近似值 6.02×10²³ mol⁻¹ 用于计算。</div><div class="card warm" style="margin-top:16px;font-size:15px;">注意 <b>N_A 有单位 mol⁻¹</b>，它不是纯数字；而 6.02×10²³ 只是它的近似数值。</div></div><div class="card"><div class="mid" style="margin-bottom:12px;">点击辨析三个易混点</div><div class="step-item" onclick="light(this)">N 表示粒子数（个），无单位量纲</div><div class="step-item" onclick="light(this)">N_A 是常数，单位 mol⁻¹</div><div class="step-item" onclick="light(this)">n 是物质的量，单位 mol</div><div class="step-item" onclick="light(this)">三者关系：N = n · N_A</div><div class="step-item" onclick="light(this)">6.02×10²³ 是近似值，不是精确定义</div><div class="small" style="margin-top:14px;">点亮的每一条都是判断题的高频考法。</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">辨析</div><h2 class="title">哪些说法能用 mol 计量</h2><div class="pagebody"><div class="hint" style="margin-bottom:12px;">点击卡片判断：这样用 mol 规范吗？</div><div class="grid4"><div class="chip" onclick="chip(this,true,'✓ 指明了分子种类')">1 mol H₂O</div><div class="chip" onclick="chip(this,false,'✗ 「氧」未指明是 O 还是 O₂')">1 mol 氧</div><div class="chip" onclick="chip(this,false,'✗ 苹果是宏观物体')">1 mol 苹果</div><div class="chip" onclick="chip(this,true,'✓ 指明了离子种类')">1 mol Na⁺</div><div class="chip" onclick="chip(this,true,'✓ 电子也是微观粒子')">2 mol e⁻</div><div class="chip" onclick="chip(this,false,'✗ 应写 1 mol H 原子或 H₂')">1 mol 氢</div><div class="chip" onclick="chip(this,true,'✓ 指明了原子种类')">0.5 mol Fe</div><div class="chip" onclick="chip(this,false,'✗ 未指明具体微粒')">1 mol 物质</div></div><div class="card warm" style="margin-top:20px;font-size:17px;"><b>两条规矩：</b>① 只用于微观粒子（分子、原子、离子、电子、质子等）；② 必须用化学式把粒子种类<b>写清楚</b>。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">拆分子</div><h2 class="title">1 mol H₂O 里究竟有什么</h2><div class="pagebody"><div class="hint" style="margin-bottom:14px;">点击每一层，逐层拆开一个水分子</div><div id="waterSteps"><div class="step-item" onclick="light(this)">H₂O 分子：1 mol，约 6.02×10²³ 个</div><div class="step-item" onclick="light(this)">H 原子：2 mol（下标 2 决定倍数）</div><div class="step-item" onclick="light(this)">O 原子：1 mol</div><div class="step-item" onclick="light(this)">原子总数：3 mol</div><div class="step-item" onclick="light(this)">质子：每个 H₂O 有 10 个 → 10 mol</div><div class="step-item" onclick="light(this)">电子：中性分子 → 10 mol</div></div><div class="card blue" style="margin-top:16px;font-size:17px;">方法：<b>先按化学式数出每个分子里的粒子个数，再乘物质的量 n</b>。这一步是后面所有 N_A 判断题的基础。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">公式</div><h2 class="title">n = N / N_A 的换算</h2><div class="pagebody"><div class="row"><div class="col"><div class="card blue" style="text-align:center;padding:22px;"><div class="eq" style="font-size:32px;">n = N / N_A</div><div class="small" style="margin-top:10px;">拖动滑块，观察粒子数随 n 怎样变化</div></div><div style="margin-top:22px;font-size:17px;">n = <b id="nShow">1.0</b> mol<input type="range" min="1" max="50" value="10" id="nRange" oninput="setN(this.value)"></div><div class="card" style="margin-top:18px;font-size:18px;line-height:2;">粒子数 N = <b id="NShow" class="tagRed">6.02×10²³</b> 个<br><span class="small">N = n × N_A，n 扩大几倍，N 就扩大几倍。</span></div></div><div class="col"><div class="card" style="margin-bottom:12px;"><div class="mid">两道题，现场算</div><div class="task" style="margin-top:10px;"><div class="q">① 0.5 mol O₂ 含多少个 O₂ 分子？（填系数，×10²³）</div><input id="i1" placeholder="如 3.01"> <button class="btn" style="padding:5px 14px;font-size:14px;" onclick="checkVal('i1','f1',3.01,'3.01×10²³ 个','再想想：0.5×6.02=?')">判分</button><div class="fb" id="f1"></div></div><div class="task" style="margin-top:10px;"><div class="q">② 1.204×10²⁴ 个 CO₂ 分子是几 mol？</div><input id="i2" placeholder="如 2"> <button class="btn" style="padding:5px 14px;font-size:14px;" onclick="checkVal('i2','f2',2,'n = N/N_A = 2 mol','用 N 除以 6.02×10²³')">判分</button><div class="fb" id="f2"></div></div></div><div class="card warm" style="font-size:15px;line-height:1.8;">换算口诀：<b>见粒子数就除以 N_A，见 n 就乘 N_A</b>；算完先检查单位是不是 mol 或「个」。</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">课堂训练</div><h2 class="title">基础 4 题 · 概念与直接换算</h2><div class="pagebody"><div class="grid2"><div class="quiz"><div class="q">1. 下列关于物质的量的说法正确的是（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q11')">A．就是物质的质量</span><span class="opt" data-key="1" onclick="pick(this,true,'q11')">B．单位是 mol</span><span class="opt" onclick="pick(this,false,'q11')">C．就是粒子个数</span><span class="opt" onclick="pick(this,false,'q11')">D．只能用于气体</span></div><div class="expl" id="e_q11">物质的量衡量粒子集合体的多少，单位是摩尔 mol。</div></div><div class="quiz"><div class="q">2. 1 mol H₂SO₄ 中含 H 原子（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q12')">A．1 mol</span><span class="opt" data-key="1" onclick="pick(this,true,'q12')">B．2 mol</span><span class="opt" onclick="pick(this,false,'q12')">C．4 mol</span><span class="opt" onclick="pick(this,false,'q12')">D．8 mol</span></div><div class="expl" id="e_q12">每个 H₂SO₄ 含 2 个 H 原子，故 1 mol 含 2 mol H 原子。</div></div><div class="quiz"><div class="q">3. 3.01×10²³ 个 O₂ 分子的物质的量是（　）</div><div class="opts"><span class="opt" data-key="1" onclick="pick(this,true,'q13')">A．0.5 mol</span><span class="opt" onclick="pick(this,false,'q13')">B．1 mol</span><span class="opt" onclick="pick(this,false,'q13')">C．2 mol</span><span class="opt" onclick="pick(this,false,'q13')">D．6.02 mol</span></div><div class="expl" id="e_q13">n = 3.01×10²³ / 6.02×10²³ = 0.5 mol。</div></div><div class="quiz"><div class="q">4. 下列表述规范的是（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q14')">A．1 mol 氧</span><span class="opt" onclick="pick(this,false,'q14')">B．1 mol 大米</span><span class="opt" data-key="1" onclick="pick(this,true,'q14')">C．1 mol NaCl</span><span class="opt" onclick="pick(this,false,'q14')">D．1 mol 物质</span></div><div class="expl" id="e_q14">必须用化学式指明微观粒子；NaCl 指明的是离子化合物中的化学式单元。</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">课堂训练</div><h2 class="title">提高 4 题 · 拆粒子与代数式</h2><div class="pagebody"><div class="grid2"><div class="quiz"><div class="q">5. 0.5 mol CO₂ 中含原子总数（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q15')">A．0.5 mol</span><span class="opt" onclick="pick(this,false,'q15')">B．1 mol</span><span class="opt" data-key="1" onclick="pick(this,true,'q15')">C．1.5 mol</span><span class="opt" onclick="pick(this,false,'q15')">D．3 mol</span></div><div class="expl" id="e_q15">每个 CO₂ 有 3 个原子，0.5×3 = 1.5 mol 原子。</div></div><div class="quiz"><div class="q">6. 1 mol NH₃ 含电子（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q16')">A．7 mol</span><span class="opt" data-key="1" onclick="pick(this,true,'q16')">B．10 mol</span><span class="opt" onclick="pick(this,false,'q16')">C．3 mol</span><span class="opt" onclick="pick(this,false,'q16')">D．4 mol</span></div><div class="expl" id="e_q16">N 有 7 个电子，3 个 H 各 1 个，共 10 个电子/分子 → 10 mol。</div></div><div class="quiz"><div class="q">7. 与 0.5 mol H₂O 含分子数相同的是（　）</div><div class="opts"><span class="opt" data-key="1" onclick="pick(this,true,'q17')">A．0.5 mol O₂</span><span class="opt" onclick="pick(this,false,'q17')">B．1 mol H₂</span><span class="opt" onclick="pick(this,false,'q17')">C．0.25 mol CO₂</span><span class="opt" onclick="pick(this,false,'q17')">D．16 g O₂</span></div><div class="expl" id="e_q17">分子数只由 n 决定；0.5 mol O₂ 与 0.5 mol H₂O 都是 0.5 mol 分子。</div></div><div class="quiz"><div class="q">8. 关于 N_A 的说法正确的是（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q18')">A．无单位</span><span class="opt" onclick="pick(this,false,'q18')">B．等于 6.02×10²³ 个</span><span class="opt" data-key="1" onclick="pick(this,true,'q18')">C．单位 mol⁻¹</span><span class="opt" onclick="pick(this,false,'q18')">D．是精确值</span></div><div class="expl" id="e_q18">N_A 是有单位的常数，单位 mol⁻¹；6.02×10²³ 只是近似数值。</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">归纳</div><h2 class="title">这节课，我们学会了什么</h2><div class="pagebody"><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">1.</b>　物质的量 n 是七个基本物理量之一，单位摩尔 mol，衡量微粒的「堆数」。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">2.</b>　1 mol 含约 6.02×10²³ 个微粒；阿伏加德罗常数 N_A ≈ 6.02×10²³ mol⁻¹，有单位。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">3.</b>　用 mol 必须写明粒子种类，且只用于微观粒子。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">4.</b>　n = N / N_A：见粒子数除以 N_A，见 n 乘 N_A；拆粒子按化学式下标放大。</div><div class="card warm" style="margin-top:14px;font-size:16px;">下一课时预告：把 n 与质量、气体体积接起来 —— 摩尔质量与气体摩尔体积。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section></div>
+<div id="nav">
+  <button onclick="go(-1)" title="上一页">◀</button>
+  <span id="pageinfo">1 / 14</span>
+  <button onclick="go(1)" title="下一页">▶</button>
+  <div id="navtip">← → / 空格 翻页 · 点击卡片交互</div>
+</div>
+<script>
+
+const stage = document.getElementById('stage');
+function fit(){
+  const s = Math.min(window.innerWidth/1280, (window.innerHeight-52)/720);
+  stage.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
+}
+window.addEventListener('resize', fit); fit();
+const slides = [...document.querySelectorAll('.slide')];
+let cur = 0;
+function go(d){
+  if(d>0 && cur===slides.length-1) return;
+  if(d<0 && cur===0) return;
+  slides[cur].classList.remove('active');
+  cur += d;
+  slides[cur].classList.add('active');
+  document.getElementById('pageinfo').textContent = (cur+1)+' / '+slides.length;
+}
+document.addEventListener('keydown', e=>{
+  const t = e.target.tagName;
+  if(t==='INPUT' || t==='TEXTAREA' || t==='SELECT') return;
+  if(e.key===' ' && t==='BUTTON') return;
+  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ') { e.preventDefault(); go(1); }
+  if(e.key==='ArrowLeft'||e.key==='PageUp') { e.preventDefault(); go(-1); }
+});
+function show(id){ const e=document.getElementById(id); if(e) e.classList.add('shown'); }
+function reveal(ids){ ids.forEach(show); }
+function flip(el){ el.classList.toggle('open'); }
+function chip(el, ok, reason){
+  if(el.dataset.done) return;
+  el.classList.add(ok?'ok':'no');
+  const s=document.createElement('span'); s.className='rs'; s.textContent=reason;
+  el.appendChild(s); el.dataset.done='1';
+}
+function pick(el, ok, qid){
+  const box = el.closest('.quiz');
+  if(box.dataset.done) return;
+  box.querySelectorAll('.opt').forEach(o=>o.style.pointerEvents='none');
+  el.classList.add(ok?'right':'wrong');
+  if(!ok) box.querySelectorAll('.opt').forEach(o=>{ if(o.dataset.key==='1') o.classList.add('right'); });
+  document.getElementById('e_'+qid).classList.add('show');
+  box.dataset.done='1';
+}
+function checkVal(inputId, fbId, expected, okMsg, badMsg){
+  const v = parseFloat(document.getElementById(inputId).value);
+  const fb = document.getElementById(fbId);
+  if(Math.abs(v-expected) < 1e-6){ fb.className='fb good'; fb.textContent='✓ '+okMsg; }
+  else { fb.className='fb bad'; fb.textContent='✗ '+badMsg; }
+}
+function light(el, cls){
+  el.classList.add('on');
+  if(cls) el.classList.add(cls);
+}
+function lightNext(groupIdx){
+  const g=document.getElementById(groupIdx);
+  const items=g.querySelectorAll('.step-item');
+  for(let i=0;i<items.length;i++){ if(!items[i].classList.contains('on')){ items[i].classList.add('on'); break; } }
+}
+
+
+/* 逐级放大 */
+const scaleData = [
+  ['12 个','一打：12 个，肉眼还能数清。',12],
+  ['10³ 个','一千个，仍然可以想象。',24],
+  ['10⁶ 个','一百万个，已经画不下了。',36],
+  ['10⁹ 个','十亿个。',48],
+  ['10¹² 个','一万亿个。',60],
+  ['10¹⁵ 个','一千万亿个。',72],
+  ['10¹⁸ 个','继续放大……',84],
+  ['10²¹ 个','离 1 mol 只差两个数量级。',96],
+  ['10²³ 个','已经到 10²³ 量级。',108],
+  ['6.02×10²³ 个','定格：这就是 1 mol 所含的粒子数。',108]
+];
+let scaleIdx = 0;
+function scaleNext(){
+  if(scaleIdx >= scaleData.length) return;
+  const d = scaleData[scaleIdx];
+  const num = document.getElementById('scaleNum');
+  num.textContent = d[0];
+  num.classList.remove('pulse'); void num.offsetWidth; num.classList.add('pulse');
+  document.getElementById('scaleDesc').textContent = d[1];
+  const box = document.getElementById('dotBox');
+  box.innerHTML = '';
+  for(let i=0;i<d[2];i++){ const s=document.createElement('span'); s.className='dot'; box.appendChild(s); }
+  scaleIdx++;
+  if(scaleIdx===scaleData.length){
+    const b=document.getElementById('scaleBtn'); b.textContent='✓ 已到 1 mol'; b.classList.add('done');
+  }
+}
+/* 计数器 */
+let counting=false;
+function supNum(n){
+  const m={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+  return String(n).split('').map(c=>m[c]||c).join('');
+}
+function runCounter(){
+  if(counting) return; counting=true;
+  const el=document.getElementById('countNum');
+  const target=1.9e8, dur=1700, t0=performance.now();
+  function tick(t){
+    const p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,3), v=target*e;
+    if(v>=1e4){ const a=v.toExponential(2).split('e'); el.textContent=a[0]+'×10'+supNum(parseInt(a[1],10)); }
+    else el.textContent=Math.round(v).toLocaleString();
+    if(p<1) requestAnimationFrame(tick);
+    else { el.textContent='1.9×10⁸ 年'; counting=false; }
+  }
+  requestAnimationFrame(tick);
+}
+/* n 滑块 */
+function setN(v){
+  const n=Number(v)/10;
+  document.getElementById('nShow').textContent=n.toFixed(1);
+  const coef=n*6.02;
+  const s=(coef>=100)? coef.toExponential(2).replace('e+','×10^') : coef.toFixed(2);
+  document.getElementById('NShow').textContent=(coef>=100? s+' ' : s+'×10²³ ');
+}
+setN(10);
+
+</script>
+</body>
+</html>

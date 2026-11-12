@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="assets/js/auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>物质的量_第4课时_物质的量浓度_交互课件</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { width:100%; height:100%; background:#0B1F3D; overflow:hidden;
+  font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif; }
+#stage { position:absolute; left:50%; top:50%; width:1280px; height:720px;
+  transform-origin:center center; background:#fff; }
+.slide { position:absolute; inset:0; width:1280px; height:720px; display:none;
+  background:#fff; color:#1A2230; overflow:hidden; }
+.slide.active { display:block; animation:fadeIn .45s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:none;} }
+:root { --blue:#1E4FA8; --navy:#0E3F8C; --light:#E8EFF8; --lighter:#F0F5FC;
+  --red:#D9534F; --yellow:#F5B301; --ink:#1A2230; --gray:#8B97A8; --green:#2E8B57; }
+.topbar { position:absolute; top:0; left:0; right:0; height:10px;
+  background:linear-gradient(90deg,#0E3F8C,#1E4FA8); }
+.footer { position:absolute; bottom:64px; left:56px; right:56px; display:flex;
+  justify-content:space-between; font-size:13px; color:#8B97A8; }
+.kicker { display:inline-flex; align-items:center; gap:10px; color:var(--blue);
+  font-size:17px; letter-spacing:2px; font-weight:bold; }
+.kicker::before { content:""; width:5px; height:22px; background:var(--blue); display:inline-block; }
+h2.title { font-size:34px; color:var(--navy); margin:8px 0 4px; }
+.subtitle { color:#5B6B84; font-size:16px; }
+.body-pad { position:absolute; inset:0; padding:40px 56px 92px; }
+.pagebody { margin-top:20px; height:518px; }
+.btn { display:inline-block; cursor:pointer; user-select:none; border:none;
+  background:var(--blue); color:#fff; font-size:16px; font-weight:bold;
+  padding:9px 22px; border-radius:22px; letter-spacing:1px;
+  box-shadow:0 3px 10px rgba(30,79,168,.35); transition:.2s; }
+.btn:hover { background:var(--navy); transform:translateY(-2px); }
+.btn.red { background:var(--red); box-shadow:0 3px 10px rgba(217,83,79,.35); }
+.btn.ghost { background:#fff; color:var(--blue); border:2px solid var(--blue); box-shadow:none; }
+.btn.ghost:hover { background:var(--light); }
+.btn.done { background:#B9C6DA; box-shadow:none; cursor:default; }
+.reveal { opacity:0; transform:translateY(14px); transition:.55s ease; }
+.reveal.shown { opacity:1; transform:none; }
+.hint { color:#8B97A8; font-size:14px; font-style:italic; }
+.card { background:var(--lighter); border:1px solid #D5E1F2; border-radius:14px; padding:16px 20px; }
+.card.blue { background:var(--light); border-color:#B9CCEC; }
+.card.warm { background:#FFF9E8; border-color:#F0DFA8; }
+.card.good { background:#E9F6EC; border-color:#A9D9B6; }
+.eq { font-size:25px; font-weight:bold; color:var(--navy); letter-spacing:.5px; }
+.big { font-size:40px; font-weight:800; color:var(--blue); line-height:1.2; }
+.mid { font-size:23px; font-weight:bold; color:var(--navy); }
+.small { font-size:15px; color:#5B6B84; line-height:1.7; }
+.row { display:flex; gap:16px; }
+.col { flex:1; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+ul.tight { padding-left:22px; line-height:1.95; font-size:17px; }
+.tagRed { color:var(--red); } .tagBlue { color:var(--blue); }
+.tagY { color:#B87B00; } .tagG { color:var(--green); }
+
+/* 封面 */
+.cover-left { position:absolute; left:0; top:0; width:440px; height:720px; background:var(--navy);
+  padding:56px 46px; display:flex; flex-direction:column; justify-content:space-between; }
+.cover-left .tag { color:#9FB8DC; font-size:17px; letter-spacing:3px; line-height:1.8; }
+.cover-left h1 { color:#fff; font-size:54px; line-height:1.25; font-weight:800; }
+.cover-left .sub { color:#C9DAF2; font-size:19px; line-height:1.75; }
+.cover-right { position:absolute; left:440px; top:0; width:840px; height:720px; padding:62px 58px;
+  display:flex; flex-direction:column; justify-content:space-between; }
+.section-num { font-size:140px; font-weight:800; color:var(--light); line-height:1; }
+.sec-badge { width:76px; height:8px; background:var(--red); border-radius:4px; margin:18px 0; }
+
+/* 目录 */
+.toc-item { display:flex; align-items:center; gap:18px; background:var(--lighter);
+  border-radius:12px; padding:14px 22px; margin-bottom:11px; border-left:8px solid #D5E1F2; }
+.toc-item.on { background:var(--light); border-left-color:var(--red); }
+.toc-num { font-size:29px; font-weight:800; color:var(--blue); width:48px; }
+.toc-t { font-size:21px; font-weight:bold; color:var(--ink); }
+.toc-d { color:#5B6B84; font-size:14px; margin-top:2px; }
+
+/* 翻牌 */
+.flip { height:190px; perspective:900px; cursor:pointer; }
+.flip-in { position:relative; width:100%; height:100%; transform-style:preserve-3d;
+  transition:transform .65s; }
+.flip.open .flip-in { transform:rotateY(180deg); }
+.flip-f,.flip-b { position:absolute; inset:0; backface-visibility:hidden; border-radius:16px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:14px; }
+.flip-f { background:var(--light); border:2px solid #B9CCEC; }
+.flip-b { background:var(--navy); color:#fff; transform:rotateY(180deg); border:2px solid var(--navy); }
+.flip-f .q { font-size:21px; font-weight:bold; color:var(--navy); }
+.flip-f .ic { font-size:38px; margin-bottom:10px; }
+.flip-b .nm { font-size:17px; color:#C9DAF2; }
+.flip-b .bigv { font-size:31px; font-weight:800; color:#FFD86B; margin:8px 0; }
+.flip-b .d { font-size:14px; color:#C9DAF2; line-height:1.6; }
+
+/* 判错卡片 */
+.chip { background:#fff; border:2px solid #C4D2E8; border-radius:12px; padding:14px 10px;
+  text-align:center; cursor:pointer; font-size:16px; font-weight:bold; color:var(--ink); transition:.2s; }
+.chip:hover { border-color:var(--blue); }
+.chip.ok { background:#E4F4E6; border-color:#3E9B4F; color:#22662E; }
+.chip.no { background:#FBE4E3; border-color:var(--red); color:#9C2B27; }
+.chip .rs { display:block; font-size:12.5px; font-weight:normal; margin-top:8px;
+  line-height:1.5; color:#43506A; }
+
+/* 逐步点亮 */
+.step-item { background:var(--lighter); border-left:6px solid var(--blue); border-radius:10px;
+  padding:11px 16px; margin-bottom:9px; font-size:16px; cursor:pointer;
+  opacity:.3; transition:.4s; }
+.step-item.on { opacity:1; background:var(--light); }
+
+/* 点击高亮格 */
+.cell { background:var(--lighter); border:2px solid #D5E1F2; border-radius:12px;
+  padding:14px 10px; text-align:center; cursor:pointer; transition:.3s; opacity:.6; }
+.cell:hover { opacity:.9; }
+.cell.on { opacity:1; background:var(--light); border-color:var(--blue); transform:translateY(-4px); }
+.cell.hi.on { background:#FFF4D6; border-color:var(--yellow); }
+.cell .nm { font-size:16px; font-weight:bold; color:var(--navy); }
+.cell .un { font-size:13px; color:#5B6B84; margin-top:5px; }
+
+/* 滑块 / 数值 */
+input[type=range] { width:100%; height:8px; accent-color:var(--blue); cursor:pointer; }
+.n-big { font-size:46px; font-weight:800; color:var(--navy); line-height:1.1; }
+.dots { display:flex; flex-wrap:wrap; gap:5px; align-content:flex-start; height:110px; }
+.dot { width:11px; height:11px; border-radius:50%; background:var(--blue); animation:pop .4s; }
+@keyframes pop { 0%{transform:scale(.5);opacity:.2} 70%{transform:scale(1.15)} 100%{transform:scale(1);opacity:1} }
+.pulse { animation:pop .5s ease; }
+
+/* 公式框 */
+.fbox { background:var(--light); border:2px solid #B9CCEC; border-radius:12px;
+  padding:12px 22px; font-size:24px; font-weight:bold; color:var(--navy);
+  cursor:pointer; transition:.25s; text-align:center; }
+.fbox.on { background:var(--navy); color:#fff; border-color:var(--navy); }
+.hub { width:120px; height:120px; border-radius:50%; background:var(--navy); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:46px; font-weight:800;
+  cursor:pointer; box-shadow:0 8px 22px rgba(14,63,140,.3); }
+
+/* 输入判分 */
+.task { background:var(--lighter); border:1px solid #D5E1F2; border-radius:12px; padding:11px 14px; }
+.task .q { font-size:15px; font-weight:bold; margin-bottom:7px; line-height:1.5; }
+.task input { width:92px; font-size:15px; padding:5px 8px; border:2px solid #C4D2E8;
+  border-radius:8px; outline:none; }
+.task input:focus { border-color:var(--blue); }
+.fb { font-size:13px; margin-top:6px; font-weight:bold; min-height:17px; }
+.fb.good { color:#22662E; } .fb.bad { color:#9C2B27; }
+
+/* 选择题 */
+.quiz { background:var(--lighter); border:1px solid #D5E1F2; border-radius:12px; padding:10px 14px; }
+.quiz .q { font-size:14.5px; font-weight:bold; margin-bottom:8px; line-height:1.5; }
+.opts { display:flex; gap:7px; flex-wrap:wrap; }
+.opt { cursor:pointer; background:#fff; border:2px solid #C4D2E8; border-radius:9px;
+  padding:5px 10px; font-size:13px; transition:.15s; }
+.opt:hover { border-color:var(--blue); }
+.opt.right { background:#E4F4E6; border-color:#3E9B4F; color:#22662E; font-weight:bold; }
+.opt.wrong { background:#FBE4E3; border-color:var(--red); color:#9C2B27; }
+.expl { display:none; margin-top:7px; font-size:12.5px; color:#22662E; background:#E4F4E6;
+  border-radius:8px; padding:6px 10px; line-height:1.5; }
+.expl.show { display:block; }
+
+/* 表格 */
+table.t { width:100%; border-collapse:collapse; font-size:15px; }
+table.t th { background:var(--navy); color:#fff; padding:9px 10px; text-align:left; }
+table.t td { border-bottom:1px solid #D5E1F2; padding:8px 10px; }
+table.t tr:nth-child(even) td { background:var(--lighter); }
+
+/* 导航 */
+#nav { position:absolute; bottom:0; left:0; right:0; height:52px; background:rgba(11,31,61,.94);
+  display:flex; align-items:center; justify-content:center; gap:16px; z-index:50; }
+#nav button { background:#1E4FA8; border:none; color:#fff; width:40px; height:32px;
+  border-radius:8px; font-size:16px; cursor:pointer; }
+#nav button:hover { background:#2E63C4; }
+#pageinfo { color:#9FB8DC; font-size:14px; letter-spacing:1px; min-width:70px; text-align:center; }
+#navtip { position:absolute; right:22px; color:#7E93B4; font-size:12px; }
+</style>
+</head>
+<body>
+<div id="stage">
+<section class="slide active"><div class="cover-left"><div class="tag">人教版（2019）· 必修第一册<br>第二章 第三节 · 第4课时</div><div><div style="width:64px;height:6px;background:#D9534F;margin-bottom:22px;"></div><h1>物质的量浓度</h1><div style="width:76px;height:4px;background:#3D7BD9;margin:22px 0;"></div><div class="sub">把 n 接到溶液里<br>c_B = n_B / V（溶液）</div></div><div class="tag" style="font-size:15px;letter-spacing:2px;">高中化学 · 45 分钟 · 交互课件</div></div><div class="cover-right"><div><div class="kicker">本节课要弄清</div><div style='font-size:18px;line-height:2;color:#43506A;'>· 为什么有了质量分数还要新浓度？</div><div style='font-size:18px;line-height:2;color:#43506A;'>· V 到底是溶液体积还是水的体积？</div><div style='font-size:18px;line-height:2;color:#43506A;'>· 稀释时什么不变？离子浓度怎么算？</div></div><div style="text-align:right;"><div class="section-num">04</div><div class="sec-badge" style="margin-left:auto;"></div><div style="font-size:21px;color:var(--navy);font-weight:bold;">物质的量浓度</div><div style="font-size:16px;color:#5B6B84;margin-top:6px;">c_B = n_B / V</div></div></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">单元地图</div><h2 class="title">物质的量 · 五个课时</h2><div class="pagebody"><div style="margin-top:6px;"><div class="toc-item "><div class="toc-num">1</div><div><div class="toc-t">第1课时　物质的量的概念及阿伏加德罗常数</div><div class="toc-d">n = N / N_A</div></div></div><div class="toc-item "><div class="toc-num">2</div><div><div class="toc-t">第2课时　摩尔质量与气体摩尔体积</div><div class="toc-d">n = m/M = V/V_m</div></div></div><div class="toc-item "><div class="toc-num">3</div><div><div class="toc-t">第3课时　阿伏加德罗常数 N_A 的应用</div><div class="toc-d">以 n 为枢纽的换算</div></div></div><div class="toc-item on"><div class="toc-num">4</div><div><div class="toc-t">第4课时　物质的量浓度</div><div class="toc-d">c_B = n_B / V</div></div></div><div class="toc-item "><div class="toc-num">5</div><div><div class="toc-t">第5课时　一定物质的量浓度溶液的配制</div><div class="toc-d">容量瓶 · 误差分析</div></div></div></div><div class="card warm" style="margin-top:12px;font-size:15px;">一条主线：<b>把数不清的微粒，换算成能称、能量、能配的量</b>；物质的量 n 始终是枢纽。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">导入</div><h2 class="title">为什么需要一种新的浓度</h2><div class="pagebody"><div class="grid2" style="height:100%;"><div class="card"><div class="mid">质量分数 w</div><ul class="tight" style="margin-top:12px;"><li>w = m(溶质) / m(溶液)</li><li>要称质量，操作较繁</li><li>实验室量取体积更方便</li><li>化学反应按粒子数（n）配比</li></ul></div><div class="card blue"><div class="mid">物质的量浓度 c_B</div><ul class="tight" style="margin-top:12px;"><li>c_B = n_B / V(溶液)</li><li>直接给出「每升含多少 mol」</li><li>量取体积即得 n</li><li>与化学方程式的系数直接对接</li></ul><div class="eq" style="margin-top:16px;text-align:center;">n = c · V</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">定义</div><h2 class="title">c_B = n_B / V 逐块拼起来</h2><div class="pagebody"><div class="hint" style="margin-bottom:12px;">点击三块，拼出完整定义</div><div class="grid3" style="margin-bottom:20px;"><div class="fbox" onclick="light(this)">c_B<br><span style="font-size:15px;">物质的量浓度</span></div><div class="fbox" onclick="light(this)">n_B<br><span style="font-size:15px;">溶质 B 的物质的量</span></div><div class="fbox" onclick="light(this)">V<br><span style="font-size:15px;">溶液体积（L）</span></div></div><div class="card blue" style="font-size:18px;line-height:2;">单位体积溶液里所含溶质 B 的物质的量，叫 B 的物质的量浓度。<br><span class="eq">c_B = n_B / V</span>　常用单位 <b>mol/L</b>（或 mol·L⁻¹）<br>1 mol/L NaCl 溶液：每 <b>1 L 溶液</b>中含 1 mol NaCl。</div><div class="card warm" style="margin-top:16px;font-size:16px;">特别提醒：<b>V 是溶液的总体积，不是溶剂水的体积，也不是两者简单相加</b>。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">辨析</div><h2 class="title">分母 V 到底是谁的体积</h2><div class="pagebody"><div class="hint" style="margin-bottom:12px;">点击判断：下列做法对吗</div><div class="grid4"><div class="chip" onclick="chip(this,false,'✗ 溶剂体积 ≠ 溶液体积')">4 g NaOH 加 500 mL 水</div><div class="chip" onclick="chip(this,true,'✓ 配成 500 mL 溶液')">4 g NaOH 配成 500 mL</div><div class="chip" onclick="chip(this,false,'✗ 溶解后体积会变')">体积 = 水体积 + 固体体积</div><div class="chip" onclick="chip(this,true,'✓ 定容到刻度即溶液体积')">容量瓶定容至刻度线</div><div class="chip" onclick="chip(this,false,'✗ 取出的是溶液不是溶剂')">从溶液中倒出 100 mL 水</div><div class="chip" onclick="chip(this,true,'✓ 量的是溶液')">用量筒量取 100 mL 溶液</div><div class="chip" onclick="chip(this,false,'✗ 1 L 是溶剂不是溶液')">1 L 水溶解 1 mol 溶质得 1 mol/L</div><div class="chip" onclick="chip(this,true,'✓ 分母单位是升')">计算时把 mL 换成 L</div></div><div class="card warm" style="margin-top:20px;font-size:17px;">一句话：<b>分母永远是「配好之后溶液的总体积」</b>，单位换算成 L 再代入。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">性质</div><h2 class="title">取出多少，浓度都不变</h2><div class="pagebody"><div class="row"><div class="col card"><div class="mid" style="margin-bottom:10px;">从 1.0 mol/L NaCl 中取出 V mL</div><div style="font-size:17px;margin-top:14px;">取出体积 V = <b id="takeVShow">100</b> mL<input type="range" min="10" max="1000" step="10" value="100" id="takeRange" oninput="takeV()"></div><div class="card blue" style="margin-top:20px;font-size:18px;line-height:2;">浓度 c = <b id="takeC" class="tagBlue">1.0 mol/L</b>（始终不变）<br>含溶质 n = <b id="takeN" class="tagRed">0.10 mol</b>（随体积变）</div><div class="small" style="margin-top:12px;">溶液是均一的，倒多倒少不改变「浓淡」。</div></div><div class="col"><div class="card warm" style="font-size:16px;line-height:1.9;"><b>两个量要分清</b><br>c 是「浓淡」，与取用量无关；<br>n 是「有多少」，n = c·V，随取用体积成正比。</div><div class="card" style="margin-top:14px;"><div class="mid">算一算</div><div class="task" style="margin-top:10px;"><div class="q">0.2 mol/L NaOH 溶液 250 mL 含 NaOH 几 mol？</div><input id="c1" placeholder="mol"> <button class="btn" style="padding:5px 14px;font-size:14px;" onclick="checkVal('c1','cf1',0.05,'n = 0.2×0.25 = 0.05 mol','先把 250 mL 换成 0.25 L')">判分</button><div class="fb" id="cf1"></div></div></div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">稀释</div><h2 class="title">c₁V₁ = c₂V₂ · 拖动双滑块</h2><div class="pagebody"><div class="row"><div class="col card"><div class="mid" style="margin-bottom:14px;">浓硫酸稀释：c₁ = 18 mol/L</div><div style="font-size:16px;">取原液 V₁ = <b id="dV1">10</b> mL<input type="range" min="1" max="50" value="10" id="dR1" oninput="calcDil()"></div><div style="font-size:16px;margin-top:16px;">稀释到 V₂ = <b id="dV2">100</b> mL<input type="range" min="50" max="500" step="10" value="100" id="dR2" oninput="calcDil()"></div><div class="card blue" style="margin-top:22px;text-align:center;padding:20px;"><div class="eq">c₂ = c₁V₁ / V₂</div><div class="big" id="dC2" style="margin-top:10px;">1.80 mol/L</div></div></div><div class="col"><div class="card warm" style="font-size:16px;line-height:1.9;"><b>稀释定律的依据</b><br>加水只改变溶液体积，<b>溶质的物质的量 n 始终不变</b>。<br>所以 n = c₁V₁ = c₂V₂。<br>注意 V₁、V₂ 必须用同一单位。</div><div class="card" style="margin-top:14px;"><div class="mid">随堂算</div><div class="task" style="margin-top:10px;"><div class="q">把 20 mL 6 mol/L 盐酸稀释到 120 mL，c₂ = ?</div><input id="c2" placeholder="mol/L"> <button class="btn" style="padding:5px 14px;font-size:14px;" onclick="checkVal('c2','cf2',1,'c₂ = 6×20/120 = 1 mol/L','用 c₁V₁ 除以 V₂')">判分</button><div class="fb" id="cf2"></div></div></div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">离子浓度</div><h2 class="title">溶质浓度 × 下标 = 离子浓度</h2><div class="pagebody"><div class="row"><div class="col card"><div class="mid" style="margin-bottom:12px;">① 选溶质　② 拖浓度</div><div class="grid2" id="ionPick"><div class="cell on" onclick="setIon(this,1,1,'Na⁺','Cl⁻','NaCl')"><div class="nm">NaCl</div><div class="un">1 : 1</div></div><div class="cell" onclick="setIon(this,2,1,'Na⁺','SO₄²⁻','Na₂SO₄')"><div class="nm">Na₂SO₄</div><div class="un">2 : 1</div></div><div class="cell" onclick="setIon(this,2,3,'Al³⁺','SO₄²⁻','Al₂(SO₄)₃')"><div class="nm">Al₂(SO₄)₃</div><div class="un">2 : 3</div></div><div class="cell" onclick="setIon(this,1,2,'Mg²⁺','Cl⁻','MgCl₂')"><div class="nm">MgCl₂</div><div class="un">1 : 2</div></div></div><div style="font-size:16px;margin-top:18px;">溶质浓度 c = <b id="ionC">0.5</b> mol/L<input type="range" min="1" max="20" value="5" id="ionRange" oninput="calcIon()"></div></div><div class="col"><div class="card blue" style="text-align:center;padding:28px;"><div class="mid" id="ionName">NaCl 溶液</div><div class="eq" style="font-size:21px;margin-top:18px;">c(<span id="ionA">Na⁺</span>) = <span id="ionAV" class="tagRed">0.5</span> mol/L</div><div class="eq" style="font-size:21px;margin-top:12px;">c(<span id="ionB">Cl⁻</span>) = <span id="ionBV" class="tagBlue">0.5</span> mol/L</div></div><div class="card warm" style="margin-top:14px;font-size:15px;">离子浓度<b>与取用体积无关</b>，只由溶质浓度和化学式下标决定。</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">拓展</div><h2 class="title">质量分数 w 与 c 的换算</h2><div class="pagebody"><div class="card blue" style="text-align:center;padding:22px;"><div class="eq" style="font-size:30px;">c = 1000 ρ w / M</div><div class="small" style="margin-top:10px;">ρ：g/cm³　w：质量分数　M：g/mol　c：mol/L</div></div><div class="hint" style="margin:18px 0 10px;">点击逐条看推导思路</div><div id="wSteps"><div class="step-item" onclick="light(this)">取 1 L 溶液，其质量 = 1000ρ 克</div><div class="step-item" onclick="light(this)">其中溶质质量 = 1000ρ·w 克</div><div class="step-item" onclick="light(this)">溶质物质的量 n = 1000ρw / M</div><div class="step-item" onclick="light(this)">因体积恰为 1 L，故 c = n / 1 = 1000ρw/M</div></div><div class="card warm" style="margin-top:16px;font-size:16px;">例：98% 浓硫酸 ρ=1.84 g/cm³，M=98 g/mol → c = 1000×1.84×0.98/98 = 18.4 mol/L。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">课堂训练</div><h2 class="title">基础 4 题 · 定义与直接计算</h2><div class="pagebody"><div class="grid2"><div class="quiz"><div class="q">1. 4 g NaOH 配成 500 mL 溶液，c 为（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q41')">A．0.1 mol/L</span><span class="opt" data-key="1" onclick="pick(this,true,'q41')">B．0.2 mol/L</span><span class="opt" onclick="pick(this,false,'q41')">C．0.4 mol/L</span><span class="opt" onclick="pick(this,false,'q41')">D．2 mol/L</span></div><div class="expl" id="e_q41">n = 4/40 = 0.1 mol，c = 0.1/0.5 = 0.2 mol/L。</div></div><div class="quiz"><div class="q">2. 配制时把 1 L 水当成 1 L 溶液，结果 c（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q42')">A．偏高</span><span class="opt" data-key="1" onclick="pick(this,true,'q42')">B．偏低</span><span class="opt" onclick="pick(this,false,'q42')">C．不变</span><span class="opt" onclick="pick(this,false,'q42')">D．无法判断</span></div><div class="expl" id="e_q42">实际溶液体积大于 1 L，分母偏大，浓度偏低。</div></div><div class="quiz"><div class="q">3. 从 2 mol/L 溶液中倒出一半，剩余溶液 c（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q43')">A．1 mol/L</span><span class="opt" data-key="1" onclick="pick(this,true,'q43')">B．2 mol/L</span><span class="opt" onclick="pick(this,false,'q43')">C．4 mol/L</span><span class="opt" onclick="pick(this,false,'q43')">D．无法确定</span></div><div class="expl" id="e_q43">溶液均一，浓度与取用量无关，仍是 2 mol/L。</div></div><div class="quiz"><div class="q">4. 0.5 mol/L Na₂SO₄ 中 c(Na⁺) 为（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q44')">A．0.5 mol/L</span><span class="opt" data-key="1" onclick="pick(this,true,'q44')">B．1.0 mol/L</span><span class="opt" onclick="pick(this,false,'q44')">C．0.25 mol/L</span><span class="opt" onclick="pick(this,false,'q44')">D．2 mol/L</span></div><div class="expl" id="e_q44">下标 2，c(Na⁺) = 2×0.5 = 1.0 mol/L。</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">课堂训练</div><h2 class="title">提高 4 题 · 稀释与换算</h2><div class="pagebody"><div class="grid2"><div class="quiz"><div class="q">5. 10 mL 18 mol/L 硫酸稀释到 100 mL，c 为（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q45')">A．0.18</span><span class="opt" data-key="1" onclick="pick(this,true,'q45')">B．1.8</span><span class="opt" onclick="pick(this,false,'q45')">C．18</span><span class="opt" onclick="pick(this,false,'q45')">D．180 mol/L</span></div><div class="expl" id="e_q45">c₂ = 18×10/100 = 1.8 mol/L，稀释前后溶质 n 不变。</div></div><div class="quiz"><div class="q">6. 0.5 mol/L Al₂(SO₄)₃ 中 c(SO₄²⁻)（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q46')">A．0.5</span><span class="opt" onclick="pick(this,false,'q46')">B．1.0</span><span class="opt" data-key="1" onclick="pick(this,true,'q46')">C．1.5</span><span class="opt" onclick="pick(this,false,'q46')">D．3.0 mol/L</span></div><div class="expl" id="e_q46">下标 3，c(SO₄²⁻) = 3×0.5 = 1.5 mol/L。</div></div><div class="quiz"><div class="q">7. 稀释前后保持不变的是（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q47')">A．浓度</span><span class="opt" onclick="pick(this,false,'q47')">B．溶液体积</span><span class="opt" data-key="1" onclick="pick(this,true,'q47')">C．溶质的物质的量</span><span class="opt" onclick="pick(this,false,'q47')">D．溶剂质量</span></div><div class="expl" id="e_q47">只加水，溶质的量 n 不变；c 变小、V 变大。</div></div><div class="quiz"><div class="q">8. 100 mL 0.2 mol/L NaCl 中 n(NaCl)（　）</div><div class="opts"><span class="opt" data-key="1" onclick="pick(this,true,'q48')">A．0.02 mol</span><span class="opt" onclick="pick(this,false,'q48')">B．0.2 mol</span><span class="opt" onclick="pick(this,false,'q48')">C．2 mol</span><span class="opt" onclick="pick(this,false,'q48')">D．20 mol</span></div><div class="expl" id="e_q48">n = cV = 0.2×0.1 = 0.02 mol，注意把 mL 换成 L。</div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">易错清单</div><h2 class="title">四条最容易丢分的地方</h2><div class="pagebody"><div class="grid2"><div class="card"><div class="mid">① 分母用错体积</div><div class="small" style="margin-top:8px;">必须用配好后的溶液总体积，且换成 L。</div></div><div class="card"><div class="mid">② 认为倒出一半浓度减半</div><div class="small" style="margin-top:8px;">c 不变，变的是 n 和 V。</div></div><div class="card"><div class="mid">③ 稀释时把 c 相加</div><div class="small" style="margin-top:8px;">只能用 c₁V₁ = c₂V₂，不能把浓度直接平均。</div></div><div class="card"><div class="mid">④ 离子浓度漏乘下标</div><div class="small" style="margin-top:8px;">Al₂(SO₄)₃ 中 Al³⁺ 乘 2、SO₄²⁻ 乘 3。</div></div></div><div class="card blue" style="margin-top:20px;font-size:17px;line-height:1.9;">至此四条通路齐了：<span class="eq">N ⇄ n ⇄ m</span>、<span class="eq">n ⇄ V(g)</span>、<span class="eq">n ⇄ c</span>。<br>无论题目给什么，<b>一律先求 n，再求目标量</b>。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">归纳</div><h2 class="title">这节课，我们学会了什么</h2><div class="pagebody"><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">1.</b>　c_B = n_B / V(溶液)，单位 mol/L；V 是溶液总体积，不是溶剂体积。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">2.</b>　浓度与取用量无关，n = c·V 随体积成正比。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">3.</b>　稀释前后溶质 n 不变：c₁V₁ = c₂V₂。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">4.</b>　离子浓度 = 溶质浓度 × 下标；w 与 c 换算 c = 1000ρw/M。</div><div class="card warm" style="margin-top:14px;font-size:16px;">下一课时预告：动手配制 —— 一定物质的量浓度溶液的配制。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section></div>
+<div id="nav">
+  <button onclick="go(-1)" title="上一页">◀</button>
+  <span id="pageinfo">1 / 13</span>
+  <button onclick="go(1)" title="下一页">▶</button>
+  <div id="navtip">← → / 空格 翻页 · 点击卡片交互</div>
+</div>
+<script>
+
+const stage = document.getElementById('stage');
+function fit(){
+  const s = Math.min(window.innerWidth/1280, (window.innerHeight-52)/720);
+  stage.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
+}
+window.addEventListener('resize', fit); fit();
+const slides = [...document.querySelectorAll('.slide')];
+let cur = 0;
+function go(d){
+  if(d>0 && cur===slides.length-1) return;
+  if(d<0 && cur===0) return;
+  slides[cur].classList.remove('active');
+  cur += d;
+  slides[cur].classList.add('active');
+  document.getElementById('pageinfo').textContent = (cur+1)+' / '+slides.length;
+}
+document.addEventListener('keydown', e=>{
+  const t = e.target.tagName;
+  if(t==='INPUT' || t==='TEXTAREA' || t==='SELECT') return;
+  if(e.key===' ' && t==='BUTTON') return;
+  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ') { e.preventDefault(); go(1); }
+  if(e.key==='ArrowLeft'||e.key==='PageUp') { e.preventDefault(); go(-1); }
+});
+function show(id){ const e=document.getElementById(id); if(e) e.classList.add('shown'); }
+function reveal(ids){ ids.forEach(show); }
+function flip(el){ el.classList.toggle('open'); }
+function chip(el, ok, reason){
+  if(el.dataset.done) return;
+  el.classList.add(ok?'ok':'no');
+  const s=document.createElement('span'); s.className='rs'; s.textContent=reason;
+  el.appendChild(s); el.dataset.done='1';
+}
+function pick(el, ok, qid){
+  const box = el.closest('.quiz');
+  if(box.dataset.done) return;
+  box.querySelectorAll('.opt').forEach(o=>o.style.pointerEvents='none');
+  el.classList.add(ok?'right':'wrong');
+  if(!ok) box.querySelectorAll('.opt').forEach(o=>{ if(o.dataset.key==='1') o.classList.add('right'); });
+  document.getElementById('e_'+qid).classList.add('show');
+  box.dataset.done='1';
+}
+function checkVal(inputId, fbId, expected, okMsg, badMsg){
+  const v = parseFloat(document.getElementById(inputId).value);
+  const fb = document.getElementById(fbId);
+  if(Math.abs(v-expected) < 1e-6){ fb.className='fb good'; fb.textContent='✓ '+okMsg; }
+  else { fb.className='fb bad'; fb.textContent='✗ '+badMsg; }
+}
+function light(el, cls){
+  el.classList.add('on');
+  if(cls) el.classList.add(cls);
+}
+function lightNext(groupIdx){
+  const g=document.getElementById(groupIdx);
+  const items=g.querySelectorAll('.step-item');
+  for(let i=0;i<items.length;i++){ if(!items[i].classList.contains('on')){ items[i].classList.add('on'); break; } }
+}
+
+
+function takeV(){
+  const ml=Number(document.getElementById('takeRange').value);
+  document.getElementById('takeVShow').textContent=ml;
+  document.getElementById('takeC').textContent='1.0 mol/L';
+  document.getElementById('takeN').textContent=(1.0*ml/1000).toFixed(2)+' mol';
+}
+takeV();
+function calcDil(){
+  const v1=Number(document.getElementById('dR1').value);
+  const v2=Number(document.getElementById('dR2').value);
+  document.getElementById('dV1').textContent=v1;
+  document.getElementById('dV2').textContent=v2;
+  document.getElementById('dC2').textContent=(18*v1/v2).toFixed(2)+' mol/L';
+}
+calcDil();
+let ionA=1, ionB=1, ionAN='Na⁺', ionBN='Cl⁻', ionName='NaCl';
+function setIon(el,a,b,an,bn,name){
+  document.querySelectorAll('#ionPick .cell').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on'); ionA=a; ionB=b; ionAN=an; ionBN=bn; ionName=name; calcIon();
+}
+function calcIon(){
+  const c=Number(document.getElementById('ionRange').value)/10;
+  document.getElementById('ionC').textContent=c.toFixed(1);
+  document.getElementById('ionName').textContent=ionName+' 溶液';
+  document.getElementById('ionA').textContent=ionAN;
+  document.getElementById('ionB').textContent=ionBN;
+  document.getElementById('ionAV').textContent=(c*ionA).toFixed(1);
+  document.getElementById('ionBV').textContent=(c*ionB).toFixed(1);
+}
+calcIon();
+
+</script>
+</body>
+</html>

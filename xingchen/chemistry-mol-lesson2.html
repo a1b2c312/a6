@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="assets/js/auth.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>物质的量_第2课时_摩尔质量与气体摩尔体积_交互课件</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { width:100%; height:100%; background:#0B1F3D; overflow:hidden;
+  font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif; }
+#stage { position:absolute; left:50%; top:50%; width:1280px; height:720px;
+  transform-origin:center center; background:#fff; }
+.slide { position:absolute; inset:0; width:1280px; height:720px; display:none;
+  background:#fff; color:#1A2230; overflow:hidden; }
+.slide.active { display:block; animation:fadeIn .45s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:none;} }
+:root { --blue:#1E4FA8; --navy:#0E3F8C; --light:#E8EFF8; --lighter:#F0F5FC;
+  --red:#D9534F; --yellow:#F5B301; --ink:#1A2230; --gray:#8B97A8; --green:#2E8B57; }
+.topbar { position:absolute; top:0; left:0; right:0; height:10px;
+  background:linear-gradient(90deg,#0E3F8C,#1E4FA8); }
+.footer { position:absolute; bottom:64px; left:56px; right:56px; display:flex;
+  justify-content:space-between; font-size:13px; color:#8B97A8; }
+.kicker { display:inline-flex; align-items:center; gap:10px; color:var(--blue);
+  font-size:17px; letter-spacing:2px; font-weight:bold; }
+.kicker::before { content:""; width:5px; height:22px; background:var(--blue); display:inline-block; }
+h2.title { font-size:34px; color:var(--navy); margin:8px 0 4px; }
+.subtitle { color:#5B6B84; font-size:16px; }
+.body-pad { position:absolute; inset:0; padding:40px 56px 92px; }
+.pagebody { margin-top:20px; height:518px; }
+.btn { display:inline-block; cursor:pointer; user-select:none; border:none;
+  background:var(--blue); color:#fff; font-size:16px; font-weight:bold;
+  padding:9px 22px; border-radius:22px; letter-spacing:1px;
+  box-shadow:0 3px 10px rgba(30,79,168,.35); transition:.2s; }
+.btn:hover { background:var(--navy); transform:translateY(-2px); }
+.btn.red { background:var(--red); box-shadow:0 3px 10px rgba(217,83,79,.35); }
+.btn.ghost { background:#fff; color:var(--blue); border:2px solid var(--blue); box-shadow:none; }
+.btn.ghost:hover { background:var(--light); }
+.btn.done { background:#B9C6DA; box-shadow:none; cursor:default; }
+.reveal { opacity:0; transform:translateY(14px); transition:.55s ease; }
+.reveal.shown { opacity:1; transform:none; }
+.hint { color:#8B97A8; font-size:14px; font-style:italic; }
+.card { background:var(--lighter); border:1px solid #D5E1F2; border-radius:14px; padding:16px 20px; }
+.card.blue { background:var(--light); border-color:#B9CCEC; }
+.card.warm { background:#FFF9E8; border-color:#F0DFA8; }
+.card.good { background:#E9F6EC; border-color:#A9D9B6; }
+.eq { font-size:25px; font-weight:bold; color:var(--navy); letter-spacing:.5px; }
+.big { font-size:40px; font-weight:800; color:var(--blue); line-height:1.2; }
+.mid { font-size:23px; font-weight:bold; color:var(--navy); }
+.small { font-size:15px; color:#5B6B84; line-height:1.7; }
+.row { display:flex; gap:16px; }
+.col { flex:1; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+ul.tight { padding-left:22px; line-height:1.95; font-size:17px; }
+.tagRed { color:var(--red); } .tagBlue { color:var(--blue); }
+.tagY { color:#B87B00; } .tagG { color:var(--green); }
+
+/* 封面 */
+.cover-left { position:absolute; left:0; top:0; width:440px; height:720px; background:var(--navy);
+  padding:56px 46px; display:flex; flex-direction:column; justify-content:space-between; }
+.cover-left .tag { color:#9FB8DC; font-size:17px; letter-spacing:3px; line-height:1.8; }
+.cover-left h1 { color:#fff; font-size:54px; line-height:1.25; font-weight:800; }
+.cover-left .sub { color:#C9DAF2; font-size:19px; line-height:1.75; }
+.cover-right { position:absolute; left:440px; top:0; width:840px; height:720px; padding:62px 58px;
+  display:flex; flex-direction:column; justify-content:space-between; }
+.section-num { font-size:140px; font-weight:800; color:var(--light); line-height:1; }
+.sec-badge { width:76px; height:8px; background:var(--red); border-radius:4px; margin:18px 0; }
+
+/* 目录 */
+.toc-item { display:flex; align-items:center; gap:18px; background:var(--lighter);
+  border-radius:12px; padding:14px 22px; margin-bottom:11px; border-left:8px solid #D5E1F2; }
+.toc-item.on { background:var(--light); border-left-color:var(--red); }
+.toc-num { font-size:29px; font-weight:800; color:var(--blue); width:48px; }
+.toc-t { font-size:21px; font-weight:bold; color:var(--ink); }
+.toc-d { color:#5B6B84; font-size:14px; margin-top:2px; }
+
+/* 翻牌 */
+.flip { height:190px; perspective:900px; cursor:pointer; }
+.flip-in { position:relative; width:100%; height:100%; transform-style:preserve-3d;
+  transition:transform .65s; }
+.flip.open .flip-in { transform:rotateY(180deg); }
+.flip-f,.flip-b { position:absolute; inset:0; backface-visibility:hidden; border-radius:16px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:14px; }
+.flip-f { background:var(--light); border:2px solid #B9CCEC; }
+.flip-b { background:var(--navy); color:#fff; transform:rotateY(180deg); border:2px solid var(--navy); }
+.flip-f .q { font-size:21px; font-weight:bold; color:var(--navy); }
+.flip-f .ic { font-size:38px; margin-bottom:10px; }
+.flip-b .nm { font-size:17px; color:#C9DAF2; }
+.flip-b .bigv { font-size:31px; font-weight:800; color:#FFD86B; margin:8px 0; }
+.flip-b .d { font-size:14px; color:#C9DAF2; line-height:1.6; }
+
+/* 判错卡片 */
+.chip { background:#fff; border:2px solid #C4D2E8; border-radius:12px; padding:14px 10px;
+  text-align:center; cursor:pointer; font-size:16px; font-weight:bold; color:var(--ink); transition:.2s; }
+.chip:hover { border-color:var(--blue); }
+.chip.ok { background:#E4F4E6; border-color:#3E9B4F; color:#22662E; }
+.chip.no { background:#FBE4E3; border-color:var(--red); color:#9C2B27; }
+.chip .rs { display:block; font-size:12.5px; font-weight:normal; margin-top:8px;
+  line-height:1.5; color:#43506A; }
+
+/* 逐步点亮 */
+.step-item { background:var(--lighter); border-left:6px solid var(--blue); border-radius:10px;
+  padding:11px 16px; margin-bottom:9px; font-size:16px; cursor:pointer;
+  opacity:.3; transition:.4s; }
+.step-item.on { opacity:1; background:var(--light); }
+
+/* 点击高亮格 */
+.cell { background:var(--lighter); border:2px solid #D5E1F2; border-radius:12px;
+  padding:14px 10px; text-align:center; cursor:pointer; transition:.3s; opacity:.6; }
+.cell:hover { opacity:.9; }
+.cell.on { opacity:1; background:var(--light); border-color:var(--blue); transform:translateY(-4px); }
+.cell.hi.on { background:#FFF4D6; border-color:var(--yellow); }
+.cell .nm { font-size:16px; font-weight:bold; color:var(--navy); }
+.cell .un { font-size:13px; color:#5B6B84; margin-top:5px; }
+
+/* 滑块 / 数值 */
+input[type=range] { width:100%; height:8px; accent-color:var(--blue); cursor:pointer; }
+.n-big { font-size:46px; font-weight:800; color:var(--navy); line-height:1.1; }
+.dots { display:flex; flex-wrap:wrap; gap:5px; align-content:flex-start; height:110px; }
+.dot { width:11px; height:11px; border-radius:50%; background:var(--blue); animation:pop .4s; }
+@keyframes pop { 0%{transform:scale(.5);opacity:.2} 70%{transform:scale(1.15)} 100%{transform:scale(1);opacity:1} }
+.pulse { animation:pop .5s ease; }
+
+/* 公式框 */
+.fbox { background:var(--light); border:2px solid #B9CCEC; border-radius:12px;
+  padding:12px 22px; font-size:24px; font-weight:bold; color:var(--navy);
+  cursor:pointer; transition:.25s; text-align:center; }
+.fbox.on { background:var(--navy); color:#fff; border-color:var(--navy); }
+.hub { width:120px; height:120px; border-radius:50%; background:var(--navy); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:46px; font-weight:800;
+  cursor:pointer; box-shadow:0 8px 22px rgba(14,63,140,.3); }
+
+/* 输入判分 */
+.task { background:var(--lighter); border:1px solid #D5E1F2; border-radius:12px; padding:11px 14px; }
+.task .q { font-size:15px; font-weight:bold; margin-bottom:7px; line-height:1.5; }
+.task input { width:92px; font-size:15px; padding:5px 8px; border:2px solid #C4D2E8;
+  border-radius:8px; outline:none; }
+.task input:focus { border-color:var(--blue); }
+.fb { font-size:13px; margin-top:6px; font-weight:bold; min-height:17px; }
+.fb.good { color:#22662E; } .fb.bad { color:#9C2B27; }
+
+/* 选择题 */
+.quiz { background:var(--lighter); border:1px solid #D5E1F2; border-radius:12px; padding:10px 14px; }
+.quiz .q { font-size:14.5px; font-weight:bold; margin-bottom:8px; line-height:1.5; }
+.opts { display:flex; gap:7px; flex-wrap:wrap; }
+.opt { cursor:pointer; background:#fff; border:2px solid #C4D2E8; border-radius:9px;
+  padding:5px 10px; font-size:13px; transition:.15s; }
+.opt:hover { border-color:var(--blue); }
+.opt.right { background:#E4F4E6; border-color:#3E9B4F; color:#22662E; font-weight:bold; }
+.opt.wrong { background:#FBE4E3; border-color:var(--red); color:#9C2B27; }
+.expl { display:none; margin-top:7px; font-size:12.5px; color:#22662E; background:#E4F4E6;
+  border-radius:8px; padding:6px 10px; line-height:1.5; }
+.expl.show { display:block; }
+
+/* 表格 */
+table.t { width:100%; border-collapse:collapse; font-size:15px; }
+table.t th { background:var(--navy); color:#fff; padding:9px 10px; text-align:left; }
+table.t td { border-bottom:1px solid #D5E1F2; padding:8px 10px; }
+table.t tr:nth-child(even) td { background:var(--lighter); }
+
+/* 导航 */
+#nav { position:absolute; bottom:0; left:0; right:0; height:52px; background:rgba(11,31,61,.94);
+  display:flex; align-items:center; justify-content:center; gap:16px; z-index:50; }
+#nav button { background:#1E4FA8; border:none; color:#fff; width:40px; height:32px;
+  border-radius:8px; font-size:16px; cursor:pointer; }
+#nav button:hover { background:#2E63C4; }
+#pageinfo { color:#9FB8DC; font-size:14px; letter-spacing:1px; min-width:70px; text-align:center; }
+#navtip { position:absolute; right:22px; color:#7E93B4; font-size:12px; }
+</style>
+</head>
+<body>
+<div id="stage">
+<section class="slide active"><div class="cover-left"><div class="tag">人教版（2019）· 必修第一册<br>第二章 第三节 · 第2课时</div><div><div style="width:64px;height:6px;background:#D9534F;margin-bottom:22px;"></div><h1>摩尔质量<br>与气体摩尔体积</h1><div style="width:76px;height:4px;background:#3D7BD9;margin:22px 0;"></div><div class="sub">从「数堆」到「能称、能量」<br>n = m/M = V/V_m</div></div><div class="tag" style="font-size:15px;letter-spacing:2px;">高中化学 · 45 分钟 · 交互课件</div></div><div class="cover-right"><div><div class="kicker">本节课要弄清</div><div style='font-size:18px;line-height:2;color:#43506A;'>· 为什么 1 mol 不同物质质量不一样？</div><div style='font-size:18px;line-height:2;color:#43506A;'>· 为什么 1 mol 气体体积却差不多？</div><div style='font-size:18px;line-height:2;color:#43506A;'>· 22.4 L/mol 到底要满足哪些条件？</div></div><div style="text-align:right;"><div class="section-num">02</div><div class="sec-badge" style="margin-left:auto;"></div><div style="font-size:21px;color:var(--navy);font-weight:bold;">摩尔质量与气体摩尔体积</div><div style="font-size:16px;color:#5B6B84;margin-top:6px;">n = m/M = V/V_m</div></div></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">单元地图</div><h2 class="title">物质的量 · 五个课时</h2><div class="pagebody"><div style="margin-top:6px;"><div class="toc-item "><div class="toc-num">1</div><div><div class="toc-t">第1课时　物质的量的概念及阿伏加德罗常数</div><div class="toc-d">n = N / N_A</div></div></div><div class="toc-item on"><div class="toc-num">2</div><div><div class="toc-t">第2课时　摩尔质量与气体摩尔体积</div><div class="toc-d">n = m/M = V/V_m</div></div></div><div class="toc-item "><div class="toc-num">3</div><div><div class="toc-t">第3课时　阿伏加德罗常数 N_A 的应用</div><div class="toc-d">以 n 为枢纽的换算</div></div></div><div class="toc-item "><div class="toc-num">4</div><div><div class="toc-t">第4课时　物质的量浓度</div><div class="toc-d">c_B = n_B / V</div></div></div><div class="toc-item "><div class="toc-num">5</div><div><div class="toc-t">第5课时　一定物质的量浓度溶液的配制</div><div class="toc-d">容量瓶 · 误差分析</div></div></div></div><div class="card warm" style="margin-top:12px;font-size:15px;">一条主线：<b>把数不清的微粒，换算成能称、能量、能配的量</b>；物质的量 n 始终是枢纽。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">温故</div><h2 class="title">从相对分子质量到摩尔质量</h2><div class="pagebody"><div class="hint" style="margin-bottom:12px;">逐行点击，把式量与摩尔质量对上</div><div id="mSteps"><div class="step-item" onclick="light(this)">H₂O：式量 18 → M = 18 g/mol</div><div class="step-item" onclick="light(this)">CO₂：式量 44 → M = 44 g/mol</div><div class="step-item" onclick="light(this)">NaCl：式量 58.5 → M = 58.5 g/mol</div><div class="step-item" onclick="light(this)">H₂SO₄：式量 98 → M = 98 g/mol</div><div class="step-item" onclick="light(this)">规律：以克为单位时，M 的数值 = 式量</div></div><div class="card blue" style="margin-top:18px;font-size:17px;line-height:1.9;"><b>摩尔质量 M</b>：单位物质的量的物质所具有的质量，单位 g/mol。<br>1 mol 任何粒子集合体的质量以克计时，数值恰好等于其相对原子（分子）质量。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">计算器</div><h2 class="title">摩尔质量计算器 · 拖一拖</h2><div class="pagebody"><style>#mPick .cell{padding:10px 8px;}</style><div class="row"><div class="col card"><div class="mid" style="margin-bottom:8px;">① 选一种物质</div><div class="grid2" id="mPick"><div class="cell on" onclick="setM(this,18,'H₂O')"><div class="nm">H₂O</div><div class="un">18 g/mol</div></div><div class="cell" onclick="setM(this,44,'CO₂')"><div class="nm">CO₂</div><div class="un">44 g/mol</div></div><div class="cell" onclick="setM(this,58.5,'NaCl')"><div class="nm">NaCl</div><div class="un">58.5 g/mol</div></div><div class="cell" onclick="setM(this,98,'H₂SO₄')"><div class="nm">H₂SO₄</div><div class="un">98 g/mol</div></div></div><div class="mid" style="margin:12px 0 6px;">② 拖动质量 m</div><div style="font-size:17px;">m = <b id="mShow">18</b> g<input type="range" min="1" max="200" value="18" id="mRange" oninput="calcM()"></div><div class="card blue" style="margin-top:12px;text-align:center;padding:18px;"><div class="eq">n = m / M</div><div class="big" id="nOut" style="margin-top:12px;">1.00 mol</div><div class="small" id="nDesc">相当于 6.02×10²³ 个 H₂O 分子</div></div></div><div class="col"><div class="card warm" style="font-size:16px;line-height:1.9;"><b>为什么质量会随物质变？</b><br>单个微粒质量不同，同样「一堆」（同样数目）的微粒，总质量自然不同。<br>所以 <b>M 是每种物质自己的属性</b>，而 N_A 对所有微粒都一样。</div><div class="card" style="margin-top:14px;"><div class="mid">随堂换算</div><div class="task" style="margin-top:10px;"><div class="q">88 g CO₂ 是多少 mol？</div><input id="m1" placeholder="mol"> <button class="btn" style="padding:5px 14px;font-size:14px;" onclick="checkVal('m1','mf1',2,'n = 88/44 = 2 mol','用质量除以 M = 44 g/mol')">判分</button><div class="fb" id="mf1"></div></div><div class="task" style="margin-top:10px;"><div class="q">0.25 mol NaOH（M=40）质量是几 g？</div><input id="m2" placeholder="g"> <button class="btn" style="padding:5px 14px;font-size:14px;" onclick="checkVal('m2','mf2',10,'m = 0.25×40 = 10 g','用 n 乘以 M')">判分</button><div class="fb" id="mf2"></div></div></div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">对比</div><h2 class="title">1 mol 不同物质，体积一样吗</h2><div class="pagebody"><div class="grid3" style="margin-bottom:18px;"><div class="card blue" style="text-align:center;"><div class="mid">1 mol 铁</div><div class="big" style="font-size:32px;">≈ 7.1 cm³</div><div class="small">固体</div></div><div class="card blue" style="text-align:center;"><div class="mid">1 mol 水</div><div class="big" style="font-size:32px;">≈ 18 cm³</div><div class="small">液体</div></div><div class="card good" style="text-align:center;"><div class="mid">1 mol 气体（标况）</div><div class="big" style="font-size:32px;">≈ 22.4 L</div><div class="small">气体</div></div></div><div class="hint" style="margin-bottom:12px;">点击逐条点亮，弄清原因</div><div id="vSteps"><div class="step-item" onclick="light(this)">固、液体粒子挨得很近，体积主要由粒子本身大小决定</div><div class="step-item" onclick="light(this)">气体粒子间距约为粒子直径的十倍，粒子本身可忽略</div><div class="step-item" onclick="light(this)">所以气体体积主要由粒子间距决定</div><div class="step-item" onclick="light(this)">同温同压下，各种气体的粒子间距近似相同</div><div class="step-item" onclick="light(this)">结论：同温同压下 1 mol 任何气体体积近似相同</div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">核心概念</div><h2 class="title">气体摩尔体积 V_m</h2><div class="pagebody"><div class="row"><div class="col card blue" style="display:flex;flex-direction:column;justify-content:center;"><div class="eq" style="font-size:31px;text-align:center;">V_m = V / n</div><div class="small" style="margin-top:18px;line-height:2;font-size:16px;">单位物质的量的气体所占的体积，常用单位 <b>L/mol</b>。<br>它的大小取决于温度和压强，不是固定常数。<br>在<b>标准状况（0 ℃、101 kPa）</b>下：<br><span class="eq">V_m ≈ 22.4 L/mol</span></div></div><div class="col"><div class="card warm" style="font-size:16px;line-height:1.9;"><b>22.4 的两个前提，缺一不可</b><br>① 必须是<b>标准状况</b>（0 ℃、101 kPa）<br>② 研究对象必须是<b>气体</b>（含混合气体）</div><div class="card" style="margin-top:14px;"><div class="mid">标况体积滑块</div><div style="font-size:17px;margin-top:12px;">n = <b id="vNShow">1.0</b> mol<input type="range" min="1" max="50" value="10" id="vRange" oninput="calcV()"></div><div class="card blue" style="margin-top:14px;text-align:center;"><div class="eq">V = n × 22.4</div><div class="big" id="vOut" style="margin-top:8px;">22.4 L</div></div></div></div></div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">辨析</div><h2 class="title">22.4 L/mol 能不能用？点卡片判断</h2><div class="pagebody"><div class="hint" style="margin-bottom:12px;">逐张判断：该情境能否用 22.4 L/mol 换算</div><div class="grid4"><div class="chip" onclick="chip(this,true,'✓ 标况 + 气体')">标况 22.4 L O₂</div><div class="chip" onclick="chip(this,false,'✗ 标况下水是液体')">标况 22.4 L H₂O</div><div class="chip" onclick="chip(this,false,'✗ 非标况，V_m 不是 22.4')">常温 22.4 L CO₂</div><div class="chip" onclick="chip(this,true,'✓ 混合气体也适用')">标况 22.4 L 空气</div><div class="chip" onclick="chip(this,false,'✗ CCl₄ 标况下是液体')">标况 1 mol CCl₄</div><div class="chip" onclick="chip(this,true,'✓ 标况 + 气体')">标况 11.2 L H₂</div><div class="chip" onclick="chip(this,false,'✗ 未给状况')">25 ℃ 22.4 L N₂</div><div class="chip" onclick="chip(this,true,'✓ 标况 + 气体')">0 ℃ 101 kPa 下 He</div></div><div class="card warm" style="margin-top:20px;font-size:17px;">口诀：<b>先看状态、再看条件、最后才代 22.4</b>。常温常压（25 ℃、101 kPa）下 V_m 约为 24.5 L/mol，别混用。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">定律</div><h2 class="title">阿伏加德罗定律</h2><div class="pagebody"><div class="card blue" style="font-size:19px;line-height:1.9;text-align:center;padding:20px;">同温、同压下，<b>相同体积</b>的任何气体，含有<b>相同数目的分子</b></div><div class="hint" style="margin:16px 0 10px;">点击逐条推出常用推论（同温同压）</div><div id="avSteps"><div class="step-item" onclick="light(this)">V₁ : V₂ = n₁ : n₂　（体积比 = 物质的量之比）</div><div class="step-item" onclick="light(this)">ρ₁ : ρ₂ = M₁ : M₂　（密度比 = 摩尔质量之比）</div><div class="step-item" onclick="light(this)">同体积时，m₁ : m₂ = M₁ : M₂</div><div class="step-item" onclick="light(this)">同质量时，V 与 M 成反比</div></div><div class="card warm" style="margin-top:16px;font-size:16px;">记忆：气体体积只由「有多少堆分子」和「间距」决定，与分子本身大小几乎无关。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">课堂训练</div><h2 class="title">综合换算 · 质量 ↔ 体积</h2><div class="pagebody"><div class="grid2"><div class="quiz"><div class="q">1. 44 g CO₂ 在标况下的体积是（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q21')">A．11.2 L</span><span class="opt" data-key="1" onclick="pick(this,true,'q21')">B．22.4 L</span><span class="opt" onclick="pick(this,false,'q21')">C．44.8 L</span><span class="opt" onclick="pick(this,false,'q21')">D．无法确定</span></div><div class="expl" id="e_q21">n = 44/44 = 1 mol，V = 1×22.4 = 22.4 L。</div></div><div class="quiz"><div class="q">2. 标况下 11.2 L O₂ 的质量是（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q22')">A．8 g</span><span class="opt" data-key="1" onclick="pick(this,true,'q22')">B．16 g</span><span class="opt" onclick="pick(this,false,'q22')">C．32 g</span><span class="opt" onclick="pick(this,false,'q22')">D．64 g</span></div><div class="expl" id="e_q22">n = 11.2/22.4 = 0.5 mol，m = 0.5×32 = 16 g。</div></div><div class="quiz"><div class="q">3. 下列说法正确的是（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q23')">A．1 mol 任何物质标况下都是 22.4 L</span><span class="opt" onclick="pick(this,false,'q23')">B．标况下 1 mol 水约 22.4 L</span><span class="opt" data-key="1" onclick="pick(this,true,'q23')">C．标况下 1 mol 混合气体约 22.4 L</span><span class="opt" onclick="pick(this,false,'q23')">D．常温 1 mol O₂ 是 22.4 L</span></div><div class="expl" id="e_q23">只适用于气体，混合气体同样适用；水在标况下是液体。</div></div><div class="quiz"><div class="q">4. 同温同压下，等质量的 O₂ 与 H₂ 体积比（　）</div><div class="opts"><span class="opt" onclick="pick(this,false,'q24')">A．1:1</span><span class="opt" data-key="1" onclick="pick(this,true,'q24')">B．1:16</span><span class="opt" onclick="pick(this,false,'q24')">C．16:1</span><span class="opt" onclick="pick(this,false,'q24')">D．32:1</span></div><div class="expl" id="e_q24">n = m/M，体积比等于 n 比 = (1/32):(1/2) = 1:16。</div></div></div><div class="card warm" style="margin-top:16px;font-size:16px;">解题通法：<b>一切先换算成 n</b> —— 质量用 n=m/M，气体体积用 n=V/V_m，n 是枢纽。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">易错清单</div><h2 class="title">这四条，考试最爱考</h2><div class="pagebody"><div class="grid2"><div class="card"><div class="mid">① 把 22.4 当成万能常数</div><div class="small" style="margin-top:8px;">它只在标况 + 气体时成立。</div></div><div class="card"><div class="mid">② 忘记标况下水不是气体</div><div class="small" style="margin-top:8px;">水、酒精、CCl₄、SO₃ 标况下都不是气体。</div></div><div class="card"><div class="mid">③ 把 M 当成有单位「个」</div><div class="small" style="margin-top:8px;">M 单位是 g/mol，数值等于式量。</div></div><div class="card"><div class="mid">④ 质量与物质的量混为一谈</div><div class="small" style="margin-top:8px;">1 mol 不同物质质量不同，但粒子数相同。</div></div></div><div class="card blue" style="margin-top:20px;font-size:17px;line-height:1.9;">一张关系图记牢：<br><span class="eq">N ⇄ n ⇄ m</span>　用 N_A 与 M 连接；<span class="eq">n ⇄ V(g)</span>　用 V_m 连接。<br>所有箭头都必须经过 <b>n</b>，不能直接从质量跳到气体体积。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section>
+<section class="slide"><div class="topbar"></div><div class="body-pad"><div class="kicker">归纳</div><h2 class="title">这节课，我们学会了什么</h2><div class="pagebody"><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">1.</b>　摩尔质量 M：以 g/mol 为单位时数值等于式量，n = m / M。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">2.</b>　气体体积由粒子间距决定；同温同压下 1 mol 任何气体体积近似相同。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">3.</b>　V_m = V/n；标准状况（0 ℃、101 kPa）下 V_m ≈ 22.4 L/mol，只用于气体。</div><div class="card" style="margin-bottom:11px;font-size:17px;padding:13px 18px;"><b style="color:var(--blue);">4.</b>　阿伏加德罗定律：同温同压同体积的气体含相同分子数；V 比 = n 比。</div><div class="card warm" style="margin-top:14px;font-size:16px;">下一课时预告：用 N_A 做综合判断 —— 阿伏加德罗常数 N_A 的应用。</div></div></div><div class="footer"><span>人教版（2019）必修第一册 · 第二章 第三节</span><span>物质的量</span></div></section></div>
+<div id="nav">
+  <button onclick="go(-1)" title="上一页">◀</button>
+  <span id="pageinfo">1 / 11</span>
+  <button onclick="go(1)" title="下一页">▶</button>
+  <div id="navtip">← → / 空格 翻页 · 点击卡片交互</div>
+</div>
+<script>
+
+const stage = document.getElementById('stage');
+function fit(){
+  const s = Math.min(window.innerWidth/1280, (window.innerHeight-52)/720);
+  stage.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
+}
+window.addEventListener('resize', fit); fit();
+const slides = [...document.querySelectorAll('.slide')];
+let cur = 0;
+function go(d){
+  if(d>0 && cur===slides.length-1) return;
+  if(d<0 && cur===0) return;
+  slides[cur].classList.remove('active');
+  cur += d;
+  slides[cur].classList.add('active');
+  document.getElementById('pageinfo').textContent = (cur+1)+' / '+slides.length;
+}
+document.addEventListener('keydown', e=>{
+  const t = e.target.tagName;
+  if(t==='INPUT' || t==='TEXTAREA' || t==='SELECT') return;
+  if(e.key===' ' && t==='BUTTON') return;
+  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ') { e.preventDefault(); go(1); }
+  if(e.key==='ArrowLeft'||e.key==='PageUp') { e.preventDefault(); go(-1); }
+});
+function show(id){ const e=document.getElementById(id); if(e) e.classList.add('shown'); }
+function reveal(ids){ ids.forEach(show); }
+function flip(el){ el.classList.toggle('open'); }
+function chip(el, ok, reason){
+  if(el.dataset.done) return;
+  el.classList.add(ok?'ok':'no');
+  const s=document.createElement('span'); s.className='rs'; s.textContent=reason;
+  el.appendChild(s); el.dataset.done='1';
+}
+function pick(el, ok, qid){
+  const box = el.closest('.quiz');
+  if(box.dataset.done) return;
+  box.querySelectorAll('.opt').forEach(o=>o.style.pointerEvents='none');
+  el.classList.add(ok?'right':'wrong');
+  if(!ok) box.querySelectorAll('.opt').forEach(o=>{ if(o.dataset.key==='1') o.classList.add('right'); });
+  document.getElementById('e_'+qid).classList.add('show');
+  box.dataset.done='1';
+}
+function checkVal(inputId, fbId, expected, okMsg, badMsg){
+  const v = parseFloat(document.getElementById(inputId).value);
+  const fb = document.getElementById(fbId);
+  if(Math.abs(v-expected) < 1e-6){ fb.className='fb good'; fb.textContent='✓ '+okMsg; }
+  else { fb.className='fb bad'; fb.textContent='✗ '+badMsg; }
+}
+function light(el, cls){
+  el.classList.add('on');
+  if(cls) el.classList.add(cls);
+}
+function lightNext(groupIdx){
+  const g=document.getElementById(groupIdx);
+  const items=g.querySelectorAll('.step-item');
+  for(let i=0;i<items.length;i++){ if(!items[i].classList.contains('on')){ items[i].classList.add('on'); break; } }
+}
+
+
+let curM=18, curName='H₂O';
+function setM(el,m,name){
+  document.querySelectorAll('#mPick .cell').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on'); curM=m; curName=name; calcM();
+}
+function calcM(){
+  const m=Number(document.getElementById('mRange').value);
+  document.getElementById('mShow').textContent=m;
+  const n=m/curM;
+  document.getElementById('nOut').textContent=n.toFixed(2)+' mol';
+  const N=n*6.02;
+  document.getElementById('nDesc').textContent='约 '+(N>=100? N.toExponential(2):N.toFixed(2))+'×10²³ 个 '+curName;
+}
+calcM();
+function calcV(){
+  const n=Number(document.getElementById('vRange').value)/10;
+  document.getElementById('vNShow').textContent=n.toFixed(1);
+  document.getElementById('vOut').textContent=(n*22.4).toFixed(1)+' L';
+}
+calcV();
+
+</script>
+</body>
+</html>
