@@ -5,36 +5,33 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>数学 · 第一次月考（逐题精讲）· 星辰班级</title>
-<link rel="stylesheet" href="assets/css/style.css?v=20261023" />
-<link rel="stylesheet" href="assets/css/quiz.css?v=20261023" />
+<link rel="stylesheet" href="assets/css/style.css?v=20261201" />
+<link rel="stylesheet" href="assets/css/quiz.css?v=20261201" />
 <style>
   .paper-wrap{display:flex;flex-direction:column;gap:14px;margin-top:8px;}
-  .paper-wrap a{display:block;border-radius:12px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.13);border:1px solid rgba(0,0,0,.06);background:#fff;}
+  .paper-wrap a{display:block;border-radius:6px;overflow:hidden;border:1px solid var(--border);background:#fff;}
   .paper-wrap img{display:block;width:100%;height:auto;}
-  .paper-hint{font-size:13px;color:var(--ink-faint);letter-spacing:.5px;margin:4px 0 12px;}
-  .yx-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-  .yx-meta span{font-size:12.5px;letter-spacing:.5px;padding:5px 12px;border-radius:999px;
-    background:rgba(56,189,248,.12);color:#2b7fd4;border:1px solid rgba(56,189,248,.28);}
+  .paper-hint{font-size:13px;color:var(--ink-faint);margin:4px 0 12px;}
+  .yx-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+  .yx-meta span{font-size:12px;padding:4px 10px;border-radius:4px;
+    background:var(--accent-weak);color:var(--accent);border:1px solid var(--accent-line);}
   /* 逐题精讲卡片内的图片 */
   .rv-img{display:block;width:100%;max-width:640px;height:auto;margin:12px 0;
-    border-radius:10px;border:1px solid var(--border);background:#fff;cursor:zoom-in;}
+    border-radius:6px;border:1px solid var(--border);background:#fff;cursor:zoom-in;}
   .q-ans .rv-img{max-width:600px;}
 </style>
 </head>
 <body data-theme="math">
-  <div class="bg-layer"></div>
-  <div class="bg-veil"></div>
-  <div class="bg-pattern"></div>
 
   <header class="top-bar">
     <a class="back-link" href="math.html">← 返回数学加油站</a>
     <span class="top-title">数学 · 第一次月考</span>
-    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+    <span class="top-title">星辰班级</span>
   </header>
 
   <main class="page-shell">
     <section class="page-hero">
-      <div class="hero-emoji">📐</div>
+      <span class="eyebrow">Mathematics · 月考</span>
       <h1>第一次月考 · <em>数学</em></h1>
       <p>
         2026～2027 学年度上学期第一次月考 · 高一数学（满分 150 分 / 150 分钟）。<br />
@@ -57,7 +54,7 @@
         <span class="sub">PAPER</span>
       </div>
       <div class="panel-body">
-        <p class="paper-hint">🔍 点击图片可放大查看。逐题题面见下方「逐题精讲」。</p>
+        <p class="paper-hint">点击图片可放大查看。逐题题面见下方「逐题精讲」。</p>
         <div class="paper-wrap">
           <a href="assets/papers/math_yuekao/mpaper_L1.png" target="_blank" rel="noopener"><img src="assets/papers/math_yuekao/mpaper_L1.png" alt="数学月考试卷 第1页" loading="lazy" /></a>
           <a href="assets/papers/math_yuekao/mpaper_L2.png" target="_blank" rel="noopener"><img src="assets/papers/math_yuekao/mpaper_L2.png" alt="数学月考试卷 第2页" loading="lazy" /></a>
@@ -76,7 +73,7 @@
         <span class="sub">ONLINE REVIEW</span>
       </div>
       <div class="panel-body">
-        <p class="paper-hint">每题独立成卡：点「📊 答题分布」看全班得分分布与名单，点「📖 答案与解析」看参考答案。</p>
+        <p class="paper-hint">每题独立成卡：点「答题分布」看全班得分分布与名单，点「答案与解析」看参考答案。</p>
         <div class="q-list" id="review-list">
           <div class="placeholder"><div class="ico">⏳</div><div class="t">正在加载试题…</div></div>
         </div>
@@ -105,8 +102,8 @@
     </footer>
   </main>
 
-  <script src="assets/js/main.js?v=20261023"></script>
-  <script src="assets/js/review.js?v=20261023"></script>
+  <script src="assets/js/main.js?v=20261201"></script>
+  <script src="assets/js/review.js?v=20261201"></script>
   <script>
     window.ReviewPage.init({
       mount: "review-list",

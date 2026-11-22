@@ -1,66 +1,101 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<script src="assets/js/auth.js?v=20261120"></script>
+<script src="assets/js/auth.js?v=20261201"></script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>星辰班级 · 首页</title>
 <meta name="description" content="星辰班级主题网页：班级风采、化学小屋、数学加油站、英语角、物理之家。" />
-<link rel="stylesheet" href="assets/css/style.css?v=20261014" />
+<link rel="stylesheet" href="assets/css/style.css?v=20261201" />
 </head>
 <body data-theme="home">
-  <div class="bg-layer"></div>
-  <div class="bg-veil"></div>
-
   <main class="home-wrap">
-    <span class="home-badge">✦ XING CHEN CLASS ✦</span>
+    <!-- 星座装饰：扁平线稿，贴合「星辰」班名 -->
+    <svg class="home-constellation" viewBox="0 0 420 300" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M36 214 L94 152 L150 180 L208 96 L276 134 L334 58" />
+        <path d="M150 180 L190 240 L250 218" />
+        <path d="M334 58 L392 96" />
+      </g>
+      <g fill="currentColor">
+        <circle cx="36" cy="214" r="3" />
+        <circle cx="94" cy="152" r="2.2" />
+        <circle cx="150" cy="180" r="3.4" />
+        <circle cx="208" cy="96" r="2.4" />
+        <circle cx="276" cy="134" r="2.8" />
+        <circle cx="334" cy="58" r="2.2" />
+        <circle cx="190" cy="240" r="2" />
+        <circle cx="250" cy="218" r="2.6" />
+        <circle cx="392" cy="96" r="2" />
+      </g>
+      <path class="spark" d="M356 166l4.4 11 11 4.4-11 4.4-4.4 11-4.4-11-11-4.4 11-4.4z" />
+      <path class="spark spark-2" d="M64 84l3 7.6 7.6 3-7.6 3-3 7.6-3-7.6-7.6-3 7.6-3z" />
+    </svg>
+
+    <span class="home-badge">Xing Chen Class</span>
 
     <h1 class="home-title">星辰班级</h1>
 
-    <p class="home-sub">
-      星光不问赶路人，时光不负有心人。<br />
-      这里是属于我们的成长天地 —— 记录课堂的精彩，收藏奔跑的身影，珍藏每一句笑语与每一次突破。
-    </p>
+    <!-- 一言：成功时替换兜底文案，失败/离线时保留这句星光 -->
+    <figure class="home-quote" id="home-quote">
+      <blockquote class="quote-text" aria-live="polite">星光不问赶路人，时光不负有心人。</blockquote>
+      <figcaption class="quote-meta">
+        <a class="quote-from" hidden></a>
+      </figcaption>
+    </figure>
 
     <div class="home-rule"></div>
 
     <nav class="nav-grid">
-      <a class="nav-card" href="class.html" style="--c1:#fb923c; --c2:#ef4444;">
-        <div class="nav-icon">🏅</div>
+      <a class="nav-card lg" href="class.html" style="--c1:#b0233c;">
+        <span class="nav-idx">01</span>
         <div class="nav-name">班级风采</div>
-        <div class="nav-tag">SPORTS · GROWTH</div>
+        <div class="nav-tag">Sports · Growth</div>
+        <div class="nav-desc">运动会、远足 MV 与看台上的身影片段。</div>
         <span class="nav-enter">进入 →</span>
       </a>
 
-      <a class="nav-card" href="chemistry.html" style="--c1:#2dd4bf; --c2:#84cc16;">
-        <div class="nav-icon">⚗️</div>
+      <a class="nav-card lg" href="chemistry.html" style="--c1:#0b6b57;">
+        <span class="nav-idx">02</span>
         <div class="nav-name">化学小屋</div>
-        <div class="nav-tag">LAB · REACTION</div>
+        <div class="nav-tag">Lab · Reaction</div>
+        <div class="nav-desc">交互课件、在线练习、试题讲评与实验安全。</div>
         <span class="nav-enter">进入 →</span>
       </a>
 
-      <a class="nav-card" href="math.html" style="--c1:#60a5fa; --c2:#8b5cf6;">
-        <div class="nav-icon">📐</div>
+      <a class="nav-card" href="math.html" style="--c1:#1c4ed8;">
+        <span class="nav-idx">03</span>
         <div class="nav-name">数学加油站</div>
-        <div class="nav-tag">LOGIC · NUMBERS</div>
+        <div class="nav-tag">Logic · Numbers</div>
+        <div class="nav-desc">周考练习、月考试卷讲评与公式速查。</div>
         <span class="nav-enter">进入 →</span>
       </a>
 
-      <a class="nav-card" href="english.html" style="--c1:#c084fc; --c2:#f472b6;">
-        <div class="nav-icon">🔤</div>
+      <a class="nav-card" href="english.html" style="--c1:#a8560a;">
+        <span class="nav-idx">04</span>
         <div class="nav-name">英语角</div>
-        <div class="nav-tag">WORDS · WORLD</div>
+        <div class="nav-tag">Words · World</div>
+        <div class="nav-desc">听力练习、词汇墙与班级活动秀。</div>
         <span class="nav-enter">进入 →</span>
       </a>
 
-      <a class="nav-card" href="physics.html" style="--c1:#38bdf8; --c2:#facc15;">
-        <div class="nav-icon">⚛️</div>
+      <a class="nav-card" href="physics.html" style="--c1:#6b26d9;">
+        <span class="nav-idx">05</span>
         <div class="nav-name">物理之家</div>
-        <div class="nav-tag">FORCE · UNIVERSE</div>
+        <div class="nav-tag">Force · Universe</div>
+        <div class="nav-desc">周末作业、午训讲评与力学电学专题。</div>
         <span class="nav-enter">进入 →</span>
       </a>
     </nav>
 
-    <p class="home-foot">每一段素材都会在这里慢慢累积 · 内容持续更新中</p>
+    <p class="home-foot">
+      每一段素材都会在这里慢慢累积 · 内容持续更新中
+    </p>
+    <p class="home-foot">
+      <a href="teacher.html">教师入口</a> · 成绩汇总与网站维护说明
+    </p>
   </main>
+
+  <script src="assets/js/hitokoto.js?v=20261201" defer></script>
 </body>
+</html>

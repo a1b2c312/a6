@@ -15,10 +15,10 @@ html,body { width:100%; height:100%; background:#0B1F3D; overflow:hidden;
   background:#fff; color:#1A2230; overflow:hidden; }
 .slide.active { display:block; animation:fadeIn .45s ease; }
 @keyframes fadeIn { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:none;} }
-:root { --blue:#1E4FA8; --navy:#0E3F8C; --light:#E8EFF8; --lighter:#F0F5FC;
+:root { --blue:#0b6b57; --navy:#08503f; --light:#e6f2ee; --lighter:#f3f8f6;
   --red:#D9534F; --yellow:#F5B301; --ink:#1A2230; --gray:#8B97A8; --green:#2E8B57; }
 .topbar { position:absolute; top:0; left:0; right:0; height:10px;
-  background:linear-gradient(90deg,#0E3F8C,#1E4FA8); }
+  background:var(--navy); }
 .footer { position:absolute; bottom:64px; left:56px; right:56px; display:flex;
   justify-content:space-between; font-size:13px; color:#8B97A8; }
 .kicker { display:inline-flex; align-items:center; gap:10px; color:var(--blue);
@@ -164,7 +164,7 @@ table.t tr:nth-child(even) td { background:var(--lighter); }
 /* 导航 */
 #nav { position:absolute; bottom:0; left:0; right:0; height:52px; background:rgba(11,31,61,.94);
   display:flex; align-items:center; justify-content:center; gap:16px; z-index:50; }
-#nav button { background:#1E4FA8; border:none; color:#fff; width:40px; height:32px;
+#nav button { background:var(--blue); border:none; color:#fff; width:40px; height:32px;
   border-radius:8px; font-size:16px; cursor:pointer; }
 #nav button:hover { background:#2E63C4; }
 #pageinfo { color:#9FB8DC; font-size:14px; letter-spacing:1px; min-width:70px; text-align:center; }
@@ -271,5 +271,6 @@ function upd(v){
 }
 
 </script>
+<a href="chemistry-mol.html" style="position:fixed;left:14px;top:14px;z-index:9999;padding:7px 14px;border-radius:999px;background:rgba(11,31,61,.62);color:#fff;font:13px/1.2 'Microsoft YaHei',sans-serif;text-decoration:none;border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px);">← 课件列表</a>
 </body>
 </html>

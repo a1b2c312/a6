@@ -4,74 +4,120 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>登录 · 星辰班级</title>
-<script src="assets/js/auth.js?v=20261120"></script>
+<script src="assets/js/auth.js?v=20261201"></script>
 <style>
+  :root {
+    --bg: #eef1f7;
+    --paper: #ffffff;
+    --ink: #14171c;
+    --ink-soft: #4a5361;
+    --ink-faint: #6b7480;
+    --line: #e3e6eb;
+    --accent: #14171c;
+    --font: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB",
+      "Source Han Sans SC", system-ui, -apple-system, sans-serif;
+  }
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
   body {
-    font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
-    color: #f4f6fb;
-    background:
-      radial-gradient(900px 600px at 15% 10%, rgba(255,122,69,.16), transparent 60%),
-      radial-gradient(700px 500px at 85% 85%, rgba(72,132,255,.14), transparent 60%),
-      linear-gradient(160deg, #0a1120 0%, #121d33 55%, #0d1626 100%);
-    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font);
+    color: var(--ink);
+    background-color: var(--bg);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(20, 23, 28, 0.055) 0 1px,
+      transparent 1px 14px
+    );
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 24px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
   }
   .card {
-    width: 100%; max-width: 420px;
-    padding: 42px 38px 34px;
-    border-radius: 24px;
-    background: rgba(255,255,255,.055);
-    border: 1px solid rgba(255,255,255,.12);
-    box-shadow: 0 30px 80px -30px rgba(0,0,0,.8);
-    backdrop-filter: blur(14px);
+    width: 100%;
+    max-width: 410px;
+    padding: 36px 32px 28px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 6px solid var(--accent);
+    border-radius: 14px;
   }
   .mark {
-    width: 54px; height: 54px; margin: 0 auto 18px;
-    border-radius: 17px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 28px; color: #fff;
-    background: linear-gradient(135deg, #ff8a5c, #e8433a);
-    box-shadow: 0 12px 28px -10px rgba(232,67,58,.9);
+    display: inline-block;
+    padding: 5px 11px 4px;
+    border-radius: 4px;
+    background: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #fff;
+    transform: rotate(-1.2deg);
   }
-  h1 { margin: 0; text-align: center; font-size: 26px; letter-spacing: 4px; font-weight: 600; }
-  .sub { margin: 10px 0 30px; text-align: center; font-size: 13px; letter-spacing: 2px; color: #9aa8c2; }
-  label { display: block; margin-bottom: 18px; font-size: 13px; letter-spacing: 1px; color: #c4cde0; }
+  h1 { margin: 20px 0 0; font-size: 34px; letter-spacing: .02em; font-weight: 800; line-height: 1.2; }
+  .sub { margin: 8px 0 28px; font-size: 13px; color: var(--ink-soft); }
+
+  label { display: block; margin-bottom: 16px; font-size: 12.5px; font-weight: 600; color: var(--ink-soft); }
   input {
-    display: block; width: 100%; margin-top: 9px; padding: 13px 15px;
-    font-size: 15px; font-family: inherit; color: #fff;
-    background: rgba(0,0,0,.26);
-    border: 1px solid rgba(255,255,255,.14); border-radius: 12px;
-    outline: none; transition: border-color .2s, box-shadow .2s;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color .2s ease, background .2s ease;
   }
-  input::placeholder { color: #77839b; font-size: 13px; }
-  input:focus { border-color: #ff8a5c; box-shadow: 0 0 0 3px rgba(255,138,92,.16); }
+  input::placeholder { color: var(--ink-faint); font-size: 13px; }
+  input:focus { border-color: var(--accent); background: #fff; }
   button {
-    width: 100%; margin-top: 6px; padding: 14px;
-    font-size: 15px; font-family: inherit; font-weight: 600; letter-spacing: 3px;
-    color: #fff; cursor: pointer;
-    background: linear-gradient(135deg, #ff8a5c, #e8433a);
-    border: 0; border-radius: 12px;
-    box-shadow: 0 14px 30px -12px rgba(232,67,58,.9);
-    transition: transform .15s, box-shadow .15s;
+    width: 100%;
+    margin-top: 8px;
+    padding: 13px;
+    font-size: 14.5px;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: .12em;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity .2s ease;
   }
-  button:hover { transform: translateY(-1px); box-shadow: 0 18px 36px -12px rgba(232,67,58,1); }
-  button:active { transform: translateY(0); }
-  .msg { min-height: 20px; margin: 14px 0 0; text-align: center; font-size: 13px; color: #ff9b8f; }
+  button {
+    box-shadow: 0 0 0 0 var(--line);
+    transition: transform .16s ease, box-shadow .16s ease, opacity .16s ease;
+  }
+  button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #cbd1da;
+  }
+  button:active { transform: translate(0, 0); box-shadow: none; }
+  .msg { min-height: 20px; margin: 14px 0 0; font-size: 12.5px; color: #b0233c; }
   .tip {
-    margin-top: 18px; padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,.10);
-    font-size: 12px; line-height: 2; letter-spacing: .5px; color: #8e9bb3; text-align: center;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--ink-faint);
   }
-  .logout { display: block; margin-top: 14px; text-align: center; font-size: 12px; color: #6e7c96; text-decoration: none; }
-  .logout:hover { color: #c4cde0; }
-  @media (max-width: 480px) { .card { padding: 34px 24px 26px; } }
+  .logout { display: inline-block; margin-top: 14px; font-size: 12px; color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; }
+  .logout:hover { color: var(--ink); }
+  @media (max-width: 480px) { .card { padding: 28px 20px 22px; } }
 </style>
 </head>
 <body>
   <div class="card">
-    <div class="mark">✦</div>
+    <div class="mark">Xing Chen Class</div>
     <h1>星辰班级</h1>
     <p class="sub">请登录后继续</p>
 

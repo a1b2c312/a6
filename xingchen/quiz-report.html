@@ -5,27 +5,29 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>答题汇总 · 化学练习3 · 星辰班级</title>
-<link rel="stylesheet" href="assets/css/style.css?v=20261101" />
+<link rel="stylesheet" href="assets/css/style.css?v=20261201" />
 <style>
   .rp-wrap { max-width: 1100px; margin: 0 auto; }
   .rp-panel {
     padding: 24px 26px;
     margin-bottom: 20px;
-    border-radius: 20px;
-    background: var(--surface);
+    border-radius: var(--radius, 12px);
+    background: var(--paper);
     border: 1px solid var(--border);
   }
   .rp-panel h2 {
     margin: 0 0 6px;
     font-size: 17px;
-    letter-spacing: 1px;
+    letter-spacing: .02em;
     color: var(--ink);
     display: flex; align-items: center; gap: 10px;
   }
   .rp-panel h2 em {
-    font-style: normal; font-size: 11.5px; font-weight: 400;
-    padding: 2px 9px; border-radius: 999px;
+    font-style: normal; font-size: 11px; font-weight: 600;
+    padding: 2px 8px; border-radius: 4px;
+    letter-spacing: .1em;
     color: var(--ink-faint);
+    background: var(--paper-alt);
     border: 1px solid var(--border);
   }
   .rp-hint { margin: 0 0 14px; font-size: 13px; line-height: 1.9; color: var(--ink-soft); }
@@ -35,36 +37,38 @@
     font-family: Consolas, Monaco, monospace;
     font-size: 12.5px; line-height: 1.7;
     color: var(--ink);
-    background: rgba(0, 0, 0, 0.28);
+    background: var(--paper);
     border: 1px solid var(--border);
-    border-radius: 13px;
+    border-radius: 6px;
     resize: vertical;
   }
+  #codesInput:focus { outline: none; border-color: var(--accent); }
   .rp-acts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
   .rp-btn {
-    padding: 9px 18px;
-    font-size: 13.5px; font-family: inherit; letter-spacing: 1px;
-    color: var(--ink);
-    background: rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    font-size: 13px; font-family: inherit; letter-spacing: .04em;
+    color: var(--ink-soft);
+    background: var(--paper);
     border: 1px solid var(--border);
-    border-radius: 11px;
+    border-radius: 6px;
     cursor: pointer;
   }
-  .rp-btn:hover { background: rgba(255, 255, 255, 0.16); }
+  .rp-btn:hover { background: var(--paper-alt); color: var(--ink); border-color: var(--line-strong); }
   .rp-btn.primary {
     color: #fff; font-weight: 700;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    border-color: transparent;
+    background: var(--accent);
+    border-color: var(--accent);
   }
+  .rp-btn.primary:hover { opacity: .88; }
   .rp-msg { margin-top: 12px; font-size: 13px; min-height: 18px; color: var(--ink-faint); }
-  .rp-msg.err { color: #f87171; }
+  .rp-msg.err { color: var(--danger); }
 
   .rp-cards { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 6px; }
   .rp-kpi {
     flex: 1 1 150px;
     padding: 16px 18px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.055);
+    border-radius: 8px;
+    background: var(--paper-alt);
     border: 1px solid var(--border);
   }
   .rp-kpi b { display: block; font-size: 24px; color: var(--ink); font-variant-numeric: tabular-nums; }
@@ -83,43 +87,51 @@
     white-space: nowrap;
   }
   table.rp-tbl th {
-    font-size: 12.5px; font-weight: 600;
+    font-size: 12.5px; font-weight: 700;
     color: var(--ink-faint);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--paper-alt);
     position: sticky; top: 0;
   }
   table.rp-tbl td.num { text-align: center; font-variant-numeric: tabular-nums; }
-  .rp-scroll { max-height: 520px; overflow: auto; border-radius: 12px; }
+  .rp-scroll { max-height: 520px; overflow: auto; border-radius: 6px; border: 1px solid var(--border); }
 
   .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; font-size: 13px; }
   .bar-lbl { flex: 0 0 108px; color: var(--ink-soft); line-height: 1.5; }
   .bar-track {
-    flex: 1; height: 9px; border-radius: 999px;
-    background: rgba(255, 255, 255, 0.1);
+    flex: 1; height: 8px; border-radius: 4px;
+    background: var(--paper-alt);
+    border: 1px solid var(--border);
     overflow: hidden;
   }
   .bar-fill {
     display: block;
-    height: 100%; border-radius: 999px;
-    background: linear-gradient(90deg, #34d399, #10b981);
+    height: 100%; border-radius: 4px;
+    background: var(--ok);
   }
-  .bar-fill.low { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
-  .bar-fill.bad { background: linear-gradient(90deg, #f87171, #ef4444); }
+  .bar-fill.low { background: var(--warn); }
+  .bar-fill.bad { background: var(--danger); }
   .bar-val { flex: 0 0 96px; text-align: right; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
-  .tag-ok { color: #34d399; }
-  .tag-no { color: #f87171; }
+  .tag-ok { color: var(--ok); }
+  .tag-no { color: var(--danger); }
   .tag-none { color: var(--ink-faint); }
   .rp-empty { padding: 28px 0; text-align: center; color: var(--ink-faint); font-size: 13.5px; }
 </style>
 </head>
 <body data-theme="chem">
   <header class="top-bar">
-    <a class="back-link" href="chemistry.html">← 返回化学小屋</a>
+    <a class="back-link" href="chemistry.html">← 化学小屋</a>
     <span class="top-title">答题汇总</span>
-    <span class="top-title" style="opacity:.35; font-weight:400;">高一化学练习3</span>
+    <span class="top-title">高一化学练习3</span>
   </header>
 
   <main class="page-shell">
+    <section class="page-hero">
+      <span class="eyebrow">Chemistry · 报表</span>
+      <h1>答题<em>汇总</em></h1>
+      <p>把学生发来的成绩码粘贴进来，出全班每题正确率、错题排行与逐人明细。本页只在你的浏览器里计算，不上传任何数据。</p>
+      <div class="hero-rule"></div>
+    </section>
+
     <div class="rp-wrap">
 
       <div class="rp-panel">

@@ -5,41 +5,38 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>使用说明 · 星辰班级网站</title>
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style.css?v=20261201" />
 <style>
-  body[data-theme="home"] .bg-layer { background-image: linear-gradient(140deg,#1f2937,#0b1220); animation:none; }
-  .doc h2 { font-size:20px; letter-spacing:2px; margin:26px 0 12px; color:var(--accent); }
-  .doc h3 { font-size:16px; margin:18px 0 8px; color:var(--ink); }
+  .doc h2 { font-size:19px; letter-spacing:.02em; margin:0 0 12px; color:var(--ink); }
+  .doc h3 { font-size:15.5px; margin:18px 0 8px; color:var(--ink); }
   .doc p, .doc li { line-height:2; font-size:14.5px; color:var(--ink-soft); }
   .doc ol, .doc ul { padding-left:22px; }
   .doc code {
-    display:inline-block; padding:2px 8px; border-radius:6px;
-    background:rgba(255,255,255,.1); border:1px solid var(--border);
-    font-family:Consolas,Monaco,monospace; font-size:13px; color:#ffd489;
+    display:inline-block; padding:1px 6px; border-radius:4px;
+    background:var(--accent-weak); border:1px solid var(--accent-line);
+    font-family:Consolas,Monaco,monospace; font-size:12.5px; color:var(--accent-ink);
   }
   .doc pre {
-    padding:16px 18px; border-radius:14px; overflow-x:auto;
-    background:rgba(0,0,0,.4); border:1px solid var(--border);
-    font-family:Consolas,Monaco,monospace; font-size:13px; line-height:1.85;
-    color:#dbeafe; margin:12px 0;
+    padding:16px 18px; border-radius:6px; overflow-x:auto;
+    background:var(--paper-alt); border:1px solid var(--border);
+    font-family:Consolas,Monaco,monospace; font-size:12.5px; line-height:1.85;
+    color:var(--ink-soft); margin:12px 0;
   }
   .steps { counter-reset: s; }
   .steps > li { margin-bottom: 14px; }
 </style>
 </head>
-<body data-theme="home">
-  <div class="bg-layer"></div>
-  <div class="bg-veil"></div>
+<body data-theme="teacher">
 
   <header class="top-bar">
     <a class="back-link" href="index.html">← 返回首页导航</a>
     <span class="top-title">使用说明</span>
-    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+    <span class="top-title">星辰班级</span>
   </header>
 
   <main class="page-shell doc">
     <section class="page-hero">
-      <div class="hero-emoji">📖</div>
+      <span class="eyebrow">Teacher · 维护</span>
       <h1>使用<em>说明</em></h1>
       <p>本页介绍网站结构与「如何往各板块添加内容」。照着做即可，无需任何编程基础。</p>
       <div class="hero-rule"></div>
@@ -50,7 +47,7 @@
       <div class="panel-body">
         <ol class="steps">
           <li>双击 <code>index.html</code> 即可在浏览器中打开首页。</li>
-          <li>首页是背景照片 + 五个板块的导航卡片，点击任意卡片进入对应板块。</li>
+          <li>首页是五个板块的导航卡片，点击任意卡片进入对应板块。</li>
           <li>若要把整个网站拷给家长/学生，把整个 <code>星辰班级网页</code> 文件夹压缩发过去，对方解压后打开 <code>index.html</code> 即可观看（视频也能正常播放）。</li>
         </ol>
         <h3>文件结构</h3>
@@ -63,9 +60,8 @@
 ├─ physics.html      物理之家
 ├─ 使用说明.html      本页
 └─ assets\
-   ├─ 星空背景.jpg     首页背景（星空图）
    ├─ 运动会照片.jpg   运动会现场照片
-   ├─ css\style.css   全站样式
+   ├─ css\style.css   全站样式（配色与排版都改在这里）
    ├─ js\main.js      滚动动画等脚本
    └─ media\          视频文件存放处</pre>
       </div>
@@ -124,7 +120,7 @@
     &lt;!-- 照片与视频按上面第二、三节的方法插入 --&gt;
   &lt;/div&gt;
 &lt;/section&gt;</pre>
-        <p>改完记得在页面顶部的快捷跳转里加一条：<code>&lt;a class="chip" href="#study"&gt;🎒 研学活动&lt;/a&gt;</code>。</p>
+        <p>改完记得在页面顶部的快捷跳转里加一条：<code>&lt;a class="chip" href="#study"&gt;&lt;span class="n"&gt;06&lt;/span&gt;研学活动&lt;/a&gt;</code>。</p>
       </div>
     </section>
 
@@ -133,8 +129,8 @@
       <div class="panel-body">
         <h3>图片/视频显示不出来？</h3>
         <p>检查两件事：① 文件名是否完全一致（大小写、中英文）；② HTML 里写的路径是否带 <code>assets/</code> 前缀。</p>
-        <h3>换了背景照片不生效？</h3>
-        <p>新照片要命名为 <code>星空背景.jpg</code> 并放在 <code>assets</code> 根目录，替换原来的即可（文件名必须完全相同）。改完后如页面没变化，按 <code>Ctrl+F5</code> 强制刷新。</p>
+        <h3>想换某个板块的主题色？</h3>
+        <p>新版首页已改成纯色背景，不再使用背景照片。若要更换某个板块的主题色，改 <code>assets/css/style.css</code> 顶部 <code>body[data-theme="…"]</code> 里的 <code>--accent</code> 即可。改完后如页面没变化，按 <code>Ctrl+F5</code> 强制刷新。</p>
         <h3>手机上能看吗？</h3>
         <p>可以。页面已做手机适配，视频也能在手机浏览器里播放。把文件夹传到手机或网盘即可。</p>
       </div>

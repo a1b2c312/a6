@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<script src="assets/js/auth.js?v=20261120"></script>
+<script src="assets/js/auth.js?v=20261201"></script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>班级风采 · 星辰班级</title>
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style.css?v=20261201" />
 </head>
 <body data-theme="class">
-  <div class="bg-layer"></div>
-  <div class="bg-veil"></div>
-  <div class="bg-pattern"></div>
-
   <header class="top-bar">
-    <a class="back-link" href="index.html">← 返回首页导航</a>
+    <a class="back-link" href="index.html">← 首页导航</a>
     <span class="top-title">班级风采</span>
-    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+    <span class="top-title">星辰班级</span>
   </header>
 
   <main class="page-shell">
     <section class="page-hero">
-      <div class="hero-emoji">🏅</div>
+      <span class="eyebrow">Class · 班级</span>
       <h1>班级<em>风采</em></h1>
       <p>
         跑道上的风、球场上的笑、接力棒交接的一刻 —— 那些拼尽全力奔跑的少年身影，
         是这个秋天最好的注脚。我们在这里记录每一次集结、每一次冲刺、每一次沸腾。
       </p>
       <div class="hero-rule"></div>
+
       <div class="chip-row">
-        <a class="chip" href="#mv">🎬 远足 MV</a>
-        <a class="chip" href="#events">活动一览</a>
-        <a class="chip" href="#games">🏃 运动会</a>
-        <a class="chip" href="#photos">☂️ 看台上的身影</a>
-        <a class="chip" href="#closeups">📷 看台特写</a>
+        <a class="chip" href="#mv"><span class="n">01</span>远足 MV</a>
+        <a class="chip" href="#events"><span class="n">02</span>活动一览</a>
+        <a class="chip" href="#games"><span class="n">03</span>运动会</a>
+        <a class="chip" href="#photos"><span class="n">04</span>看台上的身影</a>
+        <a class="chip" href="#closeups"><span class="n">05</span>看台特写</a>
       </div>
     </section>
 
@@ -41,7 +38,7 @@
       <div class="panel-head">
         <span class="panel-dot"></span>
         <h2>星辰班远足 · 班级 MV</h2>
-        <span class="sub">CLASS MV · 2026</span>
+        <span class="sub">Class MV · 2026</span>
       </div>
       <div class="panel-body">
         <div class="media-block">
@@ -64,22 +61,19 @@
       <div class="panel-head">
         <span class="panel-dot"></span>
         <h2>活动一览</h2>
-        <span class="sub">CLASS MOMENTS</span>
+        <span class="sub">Class Moments</span>
       </div>
       <div class="panel-body">
         <div class="act-grid">
           <a class="act-card" href="#games">
-            <div class="ai">🏃</div>
             <h3>运动会</h3>
             <p>径赛、方阵、加油声 —— 秋日操场上属于我们的高光时刻。</p>
           </a>
-          <div class="act-card" style="opacity:.72;">
-            <div class="ai">🎓</div>
+          <div class="act-card is-muted">
             <h3>研学活动</h3>
             <p>素材整理中，敬请期待。</p>
           </div>
-          <div class="act-card" style="opacity:.72;">
-            <div class="ai">🎭</div>
+          <div class="act-card is-muted">
             <h3>文艺汇演</h3>
             <p>素材整理中，敬请期待。</p>
           </div>
@@ -92,17 +86,16 @@
       <div class="panel-head">
         <span class="panel-dot"></span>
         <h2>运动会</h2>
-        <span class="sub">SPORTS MEET</span>
+        <span class="sub">Sports Meet</span>
       </div>
 
       <div class="panel-body">
-        <p style="margin:0 0 26px;">
+        <p>
           晨光里，整支队伍穿着班旗方阵，踩着整齐的步伐走进操场。看台上加油声一浪高过一浪，
           红色的塑胶跑道被秋阳晒得发烫。接力棒传出去的那一刻，全场都在喊同一句话：
           <strong>加油，还有下一个！</strong>
         </p>
 
-        <!-- 拼搏寄语 -->
         <div class="slogan">
           <p class="lead">拼搏不止于跑道</p>
           <div class="lines">
@@ -112,7 +105,6 @@
           </div>
         </div>
 
-        <!-- 现场照片 -->
         <div class="media-block">
           <div class="media-label">入场方阵 · 现场直击</div>
           <figure class="shot">
@@ -123,7 +115,6 @@
           </figure>
         </div>
 
-        <!-- 视频 -->
         <div class="media-block">
           <div class="media-label">接力赛 · 现场直击</div>
           <div class="video-grid">
@@ -142,12 +133,9 @@
           </div>
         </div>
 
-        <!-- 4×400 接力 -->
         <div class="media-block">
           <div class="media-label">4×400 米接力 · 四棒接力</div>
-          <p style="margin:0 0 18px;font-size:14px;color:var(--ink-faint);letter-spacing:1px;">
-            四棒、四段跑道、四次交接 —— 每一棒都在为下一棒攒力气。
-          </p>
+          <p>四棒、四段跑道、四次交接 —— 每一棒都在为下一棒攒力气。</p>
           <div class="video-grid">
             <div class="video-card">
               <video src="assets/media/4×400接力1.mp4" controls preload="metadata" playsinline poster="assets/poster/4×400接力1.jpg">
@@ -176,10 +164,9 @@
           </div>
         </div>
 
-        <!-- 看台上的身影 -->
         <div class="media-block" id="photos">
           <div class="media-label">看台上的身影 · 雨中作伴</div>
-          <p style="margin:0 0 18px;font-size:14px;color:var(--ink-faint);letter-spacing:1px;">
+          <p>
             运动场上的主角在跑道，而另一场没有裁判的"比赛"，正在看台的雨伞下悄悄进行 ——
             记笔记、递水、帮同学收伞。点击照片可放大查看。
           </p>
@@ -223,10 +210,9 @@
           </div>
         </div>
 
-        <!-- 看台特写 -->
         <div class="media-block" id="closeups">
           <div class="media-label">看台特写 · 光影瞬间</div>
-          <p style="margin:0 0 18px;font-size:14px;color:var(--ink-faint);letter-spacing:1px;">
+          <p>
             镜头拉近的那些一瞬 —— 笔尖、侧脸、眉眼之间的专注。点击照片可放大查看。
           </p>
           <div class="photo-wall">
@@ -265,6 +251,6 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20261201"></script>
 </body>
 </html>

@@ -5,36 +5,36 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>化学练习3 · 答题卡补录 · 星辰班级</title>
-<link rel="stylesheet" href="assets/css/style.css?v=20261101" />
-<link rel="stylesheet" href="assets/css/quiz-exam.css?v=20261120f" />
+<link rel="stylesheet" href="assets/css/style.css?v=20261201" />
+<link rel="stylesheet" href="assets/css/quiz-exam.css?v=20261201" />
 <style>
   .cd-wrap { max-width: 940px; margin: 0 auto; }
   .cd-intro {
-    margin: 0 0 18px; padding: 16px 18px; border-radius: 16px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    margin: 0 0 18px; padding: 16px 18px; border-radius: 8px;
+    background: var(--paper-alt); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
     font-size: 13.5px; line-height: 1.95; color: var(--ink-soft);
   }
   .cd-intro b { color: var(--ink); }
   .cd-bar {
     position: sticky; top: 62px; z-index: 28;
     display: flex; align-items: center; gap: 12px;
-    padding: 12px 16px; margin-bottom: 16px; border-radius: 16px;
-    background: var(--surface-strong); border: 1px solid var(--border);
-    backdrop-filter: blur(14px); box-shadow: var(--shadow);
+    padding: 12px 16px; margin-bottom: 16px; border-radius: 8px;
+    background: var(--paper); border: 1px solid var(--border);
   }
-  .cd-bar-t { font-weight: 700; letter-spacing: 1px; color: var(--ink); }
+  .cd-bar-t { font-weight: 700; letter-spacing: .02em; color: var(--ink); }
   .cd-bar-p {
-    font-size: 12.5px; padding: 3px 10px; border-radius: 999px;
-    color: var(--accent-2); background: rgba(255, 255, 255, 0.08);
+    font-size: 12.5px; padding: 2px 9px; border-radius: 4px;
+    color: var(--accent); background: var(--accent-weak);
     border: 1px solid var(--border); font-variant-numeric: tabular-nums;
   }
   .cd-bar-s { flex: 1; }
   .cd-who { font-size: 12.5px; color: var(--ink-faint); }
-  .cd-who a { color: var(--accent-2); text-decoration: none; margin-left: 6px; }
+  .cd-who a { color: var(--accent); text-decoration: none; margin-left: 6px; }
 
   .cd-sec {
     margin: 24px 0 12px; padding-left: 12px; font-size: 15px; font-weight: 700;
-    letter-spacing: 1.5px; color: var(--ink); border-left: 3px solid var(--accent);
+    letter-spacing: .03em; color: var(--ink); border-left: 3px solid var(--accent);
   }
   .cd-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .cd-grid.one { grid-template-columns: 1fr; }
@@ -42,10 +42,10 @@
 
   .cd-item {
     display: flex; align-items: center; gap: 8px;
-    padding: 8px 12px; border-radius: 12px;
-    background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border);
+    padding: 8px 12px; border-radius: 6px;
+    background: var(--paper); border: 1px solid var(--border);
   }
-  .cd-item.done { border-color: rgba(52, 211, 153, 0.5); }
+  .cd-item.done { border-color: var(--ok); }
   .cd-no {
     flex: 0 0 52px; font-size: 13.5px; font-weight: 700; color: var(--ink);
     font-variant-numeric: tabular-nums;
@@ -53,22 +53,22 @@
   .cd-opts { display: flex; gap: 6px; }
   .cd-o {
     width: 34px; height: 34px; display: grid; place-items: center;
-    font-size: 14px; color: var(--ink); cursor: pointer; user-select: none;
-    background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border);
-    border-radius: 9px; transition: all 0.15s ease;
+    font-size: 14px; color: var(--ink-soft); cursor: pointer; user-select: none;
+    background: var(--paper-alt); border: 1px solid var(--border);
+    border-radius: 6px; transition: background .15s ease, border-color .15s ease, color .15s ease;
   }
-  .cd-o:hover { background: rgba(255, 255, 255, 0.14); }
+  .cd-o:hover { background: #fff; border-color: var(--line-strong); color: var(--ink); }
   .cd-o.sel {
-    color: #fff; font-weight: 700; border-color: transparent;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #fff; font-weight: 700; border-color: var(--accent);
+    background: var(--accent);
   }
   .cd-in {
     flex: 1; min-width: 0; padding: 9px 12px;
     font-size: 14px; font-family: inherit; color: var(--ink);
-    background: rgba(0, 0, 0, 0.22); border: 1px solid var(--border);
-    border-radius: 10px; outline: none;
+    background: var(--paper); border: 1px solid var(--border);
+    border-radius: 6px; outline: none;
   }
-  .cd-in:focus { border-color: var(--accent-2); }
+  .cd-in:focus { border-color: var(--accent); }
   .cd-in::placeholder { color: var(--ink-faint); font-size: 13px; }
 
   .cd-res { margin-top: 22px; }
@@ -89,19 +89,20 @@
 </style>
 </head>
 <body data-theme="chem">
-  <div class="bg-layer"></div>
-  <div class="bg-veil"></div>
-  <div class="bg-pattern"></div>
-
   <header class="top-bar">
-    <a class="back-link" href="chemistry.html">← 返回化学小屋</a>
+    <a class="back-link" href="chemistry.html">← 化学小屋</a>
     <span class="top-title">化学练习3</span>
-    <span class="top-title" style="opacity:.35; font-weight:400;">答题卡补录</span>
+    <span class="top-title">答题卡补录</span>
   </header>
 
   <main class="page-shell">
+    <section class="page-hero">
+      <span class="eyebrow">Chemistry · 补录</span>
+      <h1>答题卡<em>补录</em></h1>
+      <div class="hero-rule"></div>
+    </section>
+
     <div class="cd-wrap">
-      <h1 style="font-size:26px;margin:0 0 12px;">答题卡<span style="color:var(--accent-2)">补录</span></h1>
       <div class="cd-intro">
         这张页面只用来<b>补交答案</b>，不放题目原文、也不显示正确答案。<br />
         凭你做题时的印象把答案填上即可，<b>14 道单选 + 21 个判分空</b>，一般 3 分钟能填完；
@@ -115,7 +116,7 @@
     </div>
   </main>
 
-  <script src="assets/js/quiz-exam.js?v=20261120g"></script>
+  <script src="assets/js/quiz-exam.js?v=20261201"></script>
   <script>
     (function () {
       "use strict";
@@ -167,7 +168,7 @@
           '<input id="cd-s" type="text" autocomplete="off" inputmode="numeric" placeholder="完整学号" value="' +
           (who.sid ? esc(who.sid).replace(/"/g, "&quot;") : "") + '"/></label>' +
           '<div class="cd-acts"><button class="xq-btn primary" id="cd-go" type="button">开始补录</button></div>' +
-          '<p class="xq-gmsg" id="cd-gmsg" style="margin:10px 0 0;font-size:13px;color:#f87171;"></p>' +
+          '<p class="xq-gmsg" id="cd-gmsg" style="margin:10px 0 0;font-size:13px;"></p>' +
           "</div>";
 
         document.getElementById("cd-go").addEventListener("click", function () {

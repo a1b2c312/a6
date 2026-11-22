@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="assets/css/style.css" />
 <style>
   .toc-box {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 18px 22px; margin: 0 0 26px;
+    background: var(--paper-alt); border: 1px solid var(--border);
+    border-radius: 6px; padding: 18px 22px; margin: 0 0 26px;
   }
   .toc-box .toc-t {
-    font-size: 13px; letter-spacing: 3px; color: var(--accent);
+    font-size: 12px; letter-spacing: .14em; color: var(--accent);
     margin-bottom: 10px; font-weight: 600;
   }
   .toc-box ol { margin: 0; padding-left: 22px; }
@@ -20,79 +20,75 @@
   .toc-box a { color: var(--ink-soft); text-decoration: none; }
   .toc-box a:hover { color: var(--accent); }
   .rule-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 16px; padding: 20px 22px; margin-bottom: 20px;
+    background: var(--paper); border: 1px solid var(--border);
+    border-radius: 8px; padding: 20px 22px; margin-bottom: 20px;
   }
   .rule-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
   .rule-no {
-    flex: none; width: 30px; height: 30px; border-radius: 50%;
-    background: var(--accent); color: #04201c; font-weight: 700;
+    flex: none; width: 30px; height: 30px; border-radius: 4px;
+    background: var(--accent); color: #fff; font-weight: 700;
     display: flex; align-items: center; justify-content: center; font-size: 15px;
   }
   .rule-head h3 { margin: 0; font-size: 17px; color: var(--ink); }
   .rule-body { color: var(--ink-soft); line-height: 2.05; font-size: 15px; }
   .rule-body .lab {
-    display: inline-block; font-size: 12px; letter-spacing: 2px;
-    color: var(--accent); border: 1px solid var(--border);
-    border-radius: 999px; padding: 1px 10px; margin-right: 8px;
+    display: inline-block; font-size: 11.5px; letter-spacing: .1em;
+    color: var(--accent); border: 1px solid var(--accent-line);
+    border-radius: 4px; padding: 1px 8px; margin-right: 8px;
   }
   .eg {
-    margin-top: 12px; padding: 12px 14px; border-radius: 10px;
-    background: rgba(255,255,255,0.05); border-left: 3px solid var(--accent);
+    margin-top: 12px; padding: 12px 14px; border-radius: 6px;
+    background: var(--paper-alt); border-left: 3px solid var(--accent);
     font-size: 14.5px; line-height: 2.1; color: var(--ink-soft);
   }
-  .eg .eg-t { font-size: 12px; letter-spacing: 2px; color: var(--accent); }
+  .eg .eg-t { font-size: 11.5px; letter-spacing: .1em; color: var(--accent); }
   .eq {
     font-family: "Cambria Math", "Times New Roman", serif;
     color: var(--ink); font-size: 15px;
   }
-  .up { color: #f87171; font-weight: 600; }
-  .down { color: #38bdf8; font-weight: 600; }
+  .up { color: var(--danger); font-weight: 600; }
+  .down { color: var(--accent); font-weight: 600; }
   .exer {
-    background: var(--surface); border: 1px solid var(--border);
-    border-left: 3px solid var(--accent); border-radius: 14px;
+    background: var(--paper); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 8px;
     padding: 18px 20px; margin-top: 20px;
   }
   .exer .ex-t2 {
-    font-size: 12px; letter-spacing: 3px; color: var(--accent);
+    font-size: 11.5px; letter-spacing: .14em; color: var(--accent);
     margin-bottom: 10px; font-weight: 600;
   }
   .exer .ex-q { color: var(--ink); line-height: 2.1; font-size: 15px; }
   details.ans { margin-top: 12px; }
   details.ans summary {
     cursor: pointer; list-style: none; display: inline-block;
-    color: #04201c; background: var(--accent); border-radius: 999px;
-    padding: 7px 18px; font-size: 13.5px; letter-spacing: 2px;
+    color: #fff; background: var(--accent); border-radius: 4px;
+    padding: 7px 16px; font-size: 13px; letter-spacing: .04em;
     font-weight: 600; user-select: none;
   }
   details.ans summary::-webkit-details-marker { display: none; }
-  details.ans summary::before { content: "📖 "; }
   details.ans .ans-body {
-    margin-top: 12px; padding: 14px 16px; border-radius: 10px;
-    background: rgba(255,255,255,0.05); color: var(--ink-soft);
+    margin-top: 12px; padding: 14px 16px; border-radius: 6px;
+    background: var(--paper-alt); color: var(--ink-soft);
     line-height: 2.1; font-size: 14.5px;
   }
   .ans-body .lab2 {
-    display: inline-block; font-size: 12px; letter-spacing: 2px;
-    color: var(--accent); border: 1px solid var(--border);
-    border-radius: 999px; padding: 1px 10px; margin-right: 8px;
+    display: inline-block; font-size: 11.5px; letter-spacing: .1em;
+    color: var(--accent); border: 1px solid var(--accent-line);
+    border-radius: 4px; padding: 1px 8px; margin-right: 8px;
   }
 </style>
 </head>
 <body data-theme="chem">
-  <div class="bg-layer"></div>
-  <div class="bg-veil"></div>
-  <div class="bg-pattern"></div>
 
   <header class="top-bar">
     <a class="back-link" href="chemistry.html">← 返回化学小屋</a>
     <span class="top-title">氧化还原规律及其应用</span>
-    <span class="top-title" style="opacity:.35; font-weight:400;">知识专题</span>
+    <span class="top-title">知识专题</span>
   </header>
 
   <main class="page-shell">
     <section class="page-hero">
-      <div class="hero-emoji">⚖️</div>
+      <span class="eyebrow">Chemistry · 专题</span>
       <h1>氧化还原<em>规律</em></h1>
       <p>
         化合价的升与降，是氧化还原反应的骨架。抓住"升失氧、降得还"这一条主线，
@@ -143,7 +139,6 @@
           </p>
         </div>
         <div class="placeholder">
-          <div class="ico">📝</div>
           <div class="t">后续章节陆续补充</div>
           <div class="d">常见氧化剂与还原剂归纳、复杂的氧化还原方程式配平技巧等内容，将在这里继续更新。</div>
         </div>

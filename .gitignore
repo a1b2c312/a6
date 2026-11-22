@@ -1,0 +1,25 @@
+# ---- 系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- 依赖 ----
+node_modules/
+
+# ---- 课件生成中间产物（不入库，需要时本地重跑脚本）----
+# 逐页校验截图
+**/shots/
+**/.slidep/
+# 临时导出的图片
+**/probe_*.png
+**/*.tmp

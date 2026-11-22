@@ -1,103 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<script src="assets/js/auth.js?v=20261120"></script>
+<script src="assets/js/auth.js?v=20261201"></script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>化学小屋 · 星辰班级</title>
-<link rel="stylesheet" href="assets/css/style.css?v=20261101" />
-<link rel="stylesheet" href="assets/css/quiz.css?v=20261118" />
-<link rel="stylesheet" href="assets/css/quiz-exam.css?v=20261120f" />
+<link rel="stylesheet" href="assets/css/style.css?v=20261201" />
+<link rel="stylesheet" href="assets/css/quiz.css?v=20261201" />
+<link rel="stylesheet" href="assets/css/quiz-exam.css?v=20261201" />
 </head>
 <body data-theme="chem">
-  <div class="bg-layer"></div>
-  <div class="bg-veil"></div>
-  <div class="bg-pattern"></div>
-
   <header class="top-bar">
-    <a class="back-link" href="index.html">← 返回首页导航</a>
+    <a class="back-link" href="index.html">← 首页导航</a>
     <span class="top-title">化学小屋</span>
-    <span class="top-title" style="opacity:.35; font-weight:400;">星辰班级</span>
+    <span class="top-title">星辰班级</span>
   </header>
 
   <main class="page-shell">
     <section class="page-hero">
-      <div class="hero-emoji">⚗️</div>
+      <span class="eyebrow">Chemistry · 化学</span>
       <h1>化学<em>小屋</em></h1>
       <p>
         玻璃烧杯里冒着细小的气泡，紫色石蕊试液悄然变色，火焰在坩埚下跳起蓝色的火苗 ——
         这里记录每一次实验的成功与失败，每一次"原来如此"的惊叹。
       </p>
       <div class="hero-rule"></div>
+
       <div class="chip-row">
-        <a class="chip" href="#finalreview">📘 期中复习</a>
-        <a class="chip" href="#quiz">✏️ 在线测试</a>
-        <a class="chip" href="#kejian">🎬 课堂课件</a>
-        <a class="chip" href="#redox">⚖️ 知识专题</a>
-        <a class="chip" href="#lab">🧪 实验记录</a>
-        <a class="chip" href="#equip">🔬 器材与安全</a>
-        <a class="chip" href="#tips">📓 学习锦囊</a>
+        <a class="chip" href="#kejian"><span class="n">01</span>课堂课件</a>
+        <a class="chip" href="#lianxi"><span class="n">02</span>在线练习</a>
+        <a class="chip" href="#jiangping"><span class="n">03</span>试题讲评</a>
+        <a class="chip" href="#zhuanti"><span class="n">04</span>专题与资料</a>
+        <a class="chip" href="#shiyan"><span class="n">05</span>实验与安全</a>
       </div>
     </section>
 
-    <!-- 第一次月考 -->
-    <section class="panel reveal" id="yuekao">
+    <section class="panel reveal" id="kejian">
       <div class="panel-head">
         <span class="panel-dot"></span>
-        <h2>第一次月考</h2>
-        <span class="sub">MONTHLY EXAM</span>
+        <h2>课堂课件</h2>
+        <span class="sub">Classware</span>
       </div>
       <div class="panel-body">
         <div class="act-grid">
-          <a class="act-card" href="chem_yuekao.html">
-            <div class="ai">📄</div>
-            <h3>第一次月考试卷 · 原卷 + 答案</h3>
-            <p>原卷图片 + 详细答案对照，公式 100% 保真，点击放大查看每一页。</p>
+          <a class="act-card" href="chemistry-na-lesson1.html">
+            <span class="no">01</span>
+            <h3>钠及其化合物 · 第1课时</h3>
+            <p>金属钠的物理性质、钠与非金属（O₂ / Cl₂ / S）的反应、钠与水（盐溶液）的反应。可点击"切钠""点燃""钠入水"等互动实验动画，"浮熔游响红"逐条点亮，附 4 道即时判分课堂小测。← → 键翻页。</p>
+          </a>
+          <a class="act-card" href="chemistry-cl2-lesson1.html">
+            <span class="no">02</span>
+            <h3>富集在海水中的元素 · 氯</h3>
+            <p>三册合一：性质与用途（1774 年舍勒发现氯气、"烟"与"雾"辨析、与金属 / 非金属 / 水 / 碱的反应）；氯水的成分探究；实验室制法（MnO₂ 与浓盐酸、KMnO₄、KClO₃ 三套装置对比与尾气处理）。配多组化学方程式与随堂判断题。</p>
+          </a>
+          <a class="act-card" href="chemistry-redox-midterm.html">
+            <span class="no">03</span>
+            <h3>氧化还原反应 · 高一期中复习</h3>
+            <p>五大考点串联：基本概念、电子转移表示与数目、氧化性还原性强弱比较、方程式配平、四大规律与综合应用。以各地 2024–2026 高一期中真题为主，17 道即时判分练习。主题字号加大，便于后排阅读。← → 键翻页。</p>
+          </a>
+          <a class="act-card" href="chemistry-mol.html">
+            <span class="no">04</span>
+            <h3>物质的量 · 五课时 + 综合复习</h3>
+            <p>第1–5课时：物质的量与阿伏加德罗常数、摩尔质量与气体摩尔体积、N<sub>A</sub> 应用、物质的量浓度、一定浓度溶液的配制；综合复习两课时：换算网络与应用配制。共 7 个独立课件，点击进入课时列表。</p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- 期中复习 -->
-    <section class="panel reveal" id="finalreview">
+    <section class="panel reveal" id="lianxi">
       <div class="panel-head">
         <span class="panel-dot"></span>
-        <h2>期中复习</h2>
-        <span class="sub">MIDTERM REVIEW</span>
+        <h2>在线练习</h2>
+        <span class="sub">Practice</span>
       </div>
       <div class="panel-body">
-        <div class="act-grid">
-          <a class="act-card" href="chemistry-final-review.html">
-            <div class="ai">📘</div>
-            <h3>高一化学期中考前复习 · 四节课试题讲评</h3>
-            <p>取自各地高一上期中试卷 15 套，精选 25 道难度较大的题，按考点顺序分 4 节课：物质的分类 / 离子反应 / 胶体 → 氧化还原反应 → 钠及其化合物（含 Na₂CO₃、NaHCO₃ 受热分解计算）→ 氯及其化合物（含氯气的实验室制法）。每题保留难度标注，答案与讲评点击展开，另附 8 道原创变式巩固题，可整节展开、可打印。</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 在线测试 -->
-    <section class="panel reveal" id="quiz">
-      <div class="panel-head">
-        <span class="panel-dot"></span>
-        <h2>在线测试</h2>
-        <span class="sub">ONLINE QUIZ</span>
-      </div>
-      <div class="panel-body">
-        <p style="margin:0 0 6px;">
+        <p>
           点开作业即可作答 —— 选择答案后提交，立刻看到对错；填空题为参考答案对照模式，做完自查。
         </p>
-        <p style="margin:8px 0 0;font-size:13px;line-height:1.9;color:var(--ink-soft);">
+        <p class="note">
           老师汇总：把学生发来的成绩码整段粘贴到
-          <a href="quiz-report.html" style="color:var(--accent-2);">答题汇总报表</a>
+          <a class="link" href="teacher.html">教师入口 → 答题汇总报表</a>
           ，即可看全班每题正确率与个人明细，可导出 Excel。
         </p>
 
         <div class="quiz-entry" id="quiz-entry">
           <div class="quiz-card" data-exam="chem3">
-            <div class="qc-ico">🧪</div>
             <h3>高一化学练习3 · 在线答题</h3>
-            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+            <p>
               14 道单选 ＋ 4 道填空（拆成 21 个判分小空）。交卷后只显示每题对错，不给答案；
               交卷会生成成绩码，复制发给老师即可汇总。
             </p>
@@ -108,17 +97,16 @@
               <span>需登录姓名学号</span>
             </div>
             <div class="qc-go">开始答题 →</div>
-            <p style="margin:8px 0 0;font-size:12.5px;line-height:1.8;color:var(--ink-faint);">
+            <p class="qc-note">
               交完卷忘了发成绩码？
-              <a href="chem3-card.html" style="color:var(--accent-2);" onclick="event.stopPropagation();">打开答题卡补录</a>
-              ，3 分钟重出一份。
+              <a class="link" href="chem3-card.html" onclick="event.stopPropagation();">打开答题卡补录</a>
+              ，凭印象重填，3 分钟重出一份成绩码。
             </p>
           </div>
 
           <div class="quiz-card" data-quiz="chem1020">
-            <div class="qc-ico">📝</div>
             <h3>2026年10月31日 化学作业</h3>
-            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+            <p>
               单选题 22 道（自动判分）＋ 填空题 3 道（对照参考答案自查）
             </p>
             <div class="qc-meta">
@@ -130,141 +118,105 @@
           </div>
         </div>
 
-        <div class="quiz" id="exam-chem3" style="margin-top:22px;"></div>
-        <div class="quiz" id="quiz-chem1020" style="margin-top:22px;"></div>
+        <div class="quiz" id="exam-chem3"></div>
+        <div class="quiz" id="quiz-chem1020"></div>
       </div>
     </section>
 
-    <!-- 课堂课件 -->
-    <section class="panel reveal" id="kejian">
+    <section class="panel reveal" id="jiangping">
       <div class="panel-head">
         <span class="panel-dot"></span>
-        <h2>课堂课件</h2>
-        <span class="sub">CLASSWARE</span>
+        <h2>试题讲评</h2>
+        <span class="sub">Exam Review</span>
       </div>
       <div class="panel-body">
         <div class="act-grid">
-          <a class="act-card" href="chemistry-na-lesson1.html">
-            <div class="ai">🧂</div>
-            <h3>钠及其化合物 · 第1课时（交互课件）</h3>
-            <p>金属钠的物理性质、钠与非金属（O₂ / Cl₂ / S）的反应、钠与水（盐溶液）的反应。可点击"切钠""点燃""钠入水"等互动实验动画，"浮熔游响红"逐条点亮，附 4 道即时判分课堂小测。← → 键翻页。</p>
+          <a class="act-card" href="chemistry-final-review.html">
+            <span class="no">01</span>
+            <h3>高一化学期中考前复习 · 四节课试题讲评</h3>
+            <p>取自各地高一上期中试卷 15 套，精选 25 道难度较大的题，按考点顺序分 4 节课：物质的分类 / 离子反应 / 胶体 → 氧化还原反应 → 钠及其化合物（含 Na₂CO₃、NaHCO₃ 受热分解计算）→ 氯及其化合物（含氯气的实验室制法）。每题保留难度标注，答案与讲评点击展开，另附 8 道原创变式巩固题，可整节展开、可打印。</p>
           </a>
-          <a class="act-card" href="chemistry-cl2-lesson1.html">
-            <div class="ai">🟢</div>
-            <h3>富集在海水中的元素 · 氯（三册合一交互课件）</h3>
-            <p>第一册 性质与用途：1774 年舍勒发现氯气、"烟"与"雾"辨析、与金属 / 非金属 / 水 / 碱的反应；第二册 氯水的成分探究：新制氯水的微粒组成、漂白性与见光分解；第三册 实验室制法：MnO₂ 与浓盐酸、KMnO₄、KClO₃ 三套装置对比与尾气处理。配多组化学方程式与随堂判断题。</p>
+          <a class="act-card" href="chem_yuekao.html">
+            <span class="no">02</span>
+            <h3>第一次月考试卷 · 原卷 + 答案</h3>
+            <p>原卷图片 + 详细答案对照，公式 100% 保真，点击放大查看每一页。</p>
           </a>
-          <a class="act-card" href="chemistry-redox-midterm.html">
-            <div class="ai">🔴</div>
-            <h3>氧化还原反应 · 高一期中复习（交互课件）</h3>
-            <p>五大考点串联：基本概念、电子转移表示与数目、氧化性还原性强弱比较、方程式配平、四大规律与综合应用。以各地 2024–2026 高一期中真题为主，17 道即时判分练习。主题字号加大，便于后排阅读。← → 键翻页。</p>
-          </a>
-          <div class="act-card" style="opacity:.72;">
-            <div class="ai">🎬</div>
-            <h3>更多课件</h3>
-            <p>后续课时课件陆续上线，敬请期待。</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="panel reveal" id="redox">
+    <section class="panel reveal" id="zhuanti">
       <div class="panel-head">
         <span class="panel-dot"></span>
-        <h2>知识专题</h2>
-        <span class="sub">KNOWLEDGE</span>
+        <h2>专题与资料</h2>
+        <span class="sub">Reference</span>
       </div>
       <div class="panel-body">
+        <h3 class="sec-label">知识专题</h3>
         <div class="act-grid">
           <a class="act-card" href="chemistry-redox.html">
-            <div class="ai">⚖️</div>
             <h3>氧化还原规律及其应用</h3>
             <p>一、价态规律；二、强弱规律（强制弱）；三、先后规律（竞争反应先后）；四、守恒规律（化合价升降相等、得失电子守恒、电荷守恒）。每章配实例与巩固练习，第四章三个小点各配一道题，可在线查看答案解析。</p>
           </a>
-          <div class="act-card" style="opacity:.72;">
-            <div class="ai">📝</div>
+          <div class="act-card is-muted">
             <h3>更多专题</h3>
             <p>离子方程式、元素周期律、化学计算专题陆续上线，敬请期待。</p>
           </div>
         </div>
+
+        <h3 class="sec-label">学习锦囊</h3>
+        <div class="placeholder">
+          <div class="t">错题本与心得待上传</div>
+          <div class="d">这里将整理化学方程式默写、实验易错点、元素周期律记忆方法等内容。</div>
+        </div>
       </div>
     </section>
 
-    <section class="panel reveal" id="lab">
+    <section class="panel reveal" id="shiyan">
       <div class="panel-head">
         <span class="panel-dot"></span>
-        <h2>实验记录</h2>
-        <span class="sub">LAB NOTES</span>
+        <h2>实验与安全</h2>
+        <span class="sub">Lab &amp; Safety</span>
       </div>
       <div class="panel-body">
+        <h3 class="sec-label">实验记录</h3>
         <div class="grid g3">
           <div class="tile">
-            <div class="ti">🧪</div>
             <h3>基础实验</h3>
             <p>物质的性质与变化、常见气体的制取与性质。</p>
           </div>
           <div class="tile">
-            <div class="ti">🔥</div>
             <h3>燃烧与反应</h3>
             <p>氧化还原反应、燃烧条件、反应热的探究。</p>
           </div>
           <div class="tile">
-            <div class="ti">⚖️</div>
             <h3>定量分析</h3>
             <p>溶液配制、物质的量计算、滴定实验。</p>
           </div>
         </div>
-        <div class="placeholder" style="margin-top:20px;">
-          <div class="ico">📷</div>
+        <div class="placeholder">
           <div class="t">实验照片与记录待上传</div>
           <div class="d">后续上传的实验照片、装置图、现象记录会显示在这里。</div>
         </div>
-      </div>
-    </section>
 
-    <section class="panel reveal" id="equip">
-      <div class="panel-head">
-        <span class="panel-dot"></span>
-        <h2>器材与安全</h2>
-        <span class="sub">SAFETY FIRST</span>
-      </div>
-      <div class="panel-body">
+        <h3 class="sec-label">器材与安全</h3>
         <div class="grid g4">
           <div class="tile">
-            <div class="ti">🥽</div>
             <h3>护目镜</h3>
             <p>进入实验室必须佩戴，保护双眼。</p>
           </div>
           <div class="tile">
-            <div class="ti">🧤</div>
             <h3>防化手套</h3>
             <p>接触腐蚀性试剂时佩戴。</p>
           </div>
           <div class="tile">
-            <div class="ti">🔥</div>
             <h3>酒精灯</h3>
             <p>熄灭用灯帽盖灭，禁止嘴吹。</p>
           </div>
           <div class="tile">
-            <div class="ti">🧯</div>
             <h3>应急处置</h3>
             <p>酸碱沾皮肤先用大量流水冲洗。</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel reveal" id="tips">
-      <div class="panel-head">
-        <span class="panel-dot"></span>
-        <h2>学习锦囊</h2>
-        <span class="sub">CHEM TIPS</span>
-      </div>
-      <div class="panel-body">
-        <div class="placeholder">
-          <div class="ico">📓</div>
-          <div class="t">错题本与心得待上传</div>
-          <div class="d">这里将整理化学方程式默写、实验易错点、元素周期律记忆方法等内容。</div>
         </div>
       </div>
     </section>
@@ -274,9 +226,9 @@
     </footer>
   </main>
 
-  <script src="assets/js/main.js?v=20261101"></script>
-  <script src="assets/js/quiz.js?v=20261118"></script>
-  <script src="assets/js/quiz-exam.js?v=20261120g"></script>
+  <script src="assets/js/main.js?v=20261201"></script>
+  <script src="assets/js/quiz.js?v=20261201"></script>
+  <script src="assets/js/quiz-exam.js?v=20261201"></script>
   <script>
     (function () {
       var specs = {
@@ -314,8 +266,7 @@
             })
             .catch(function () {
               card.innerHTML =
-                '<div class="placeholder"><div class="ico">😢</div>' +
-                '<div class="t">试卷加载失败</div>' +
+                '<div class="placeholder"><div class="t">试卷加载失败</div>' +
                 '<div class="d">请稍后重试，或确认网络连接正常。</div></div>';
             });
         });
@@ -403,8 +354,7 @@
           })
           .catch(function () {
             mount.innerHTML =
-              '<div class="placeholder"><div class="ico">😢</div>' +
-              '<div class="t">试卷加载失败</div>' +
+              '<div class="placeholder"><div class="t">试卷加载失败</div>' +
               '<div class="d">请检查网络后刷新页面重试。</div></div>';
           });
       }

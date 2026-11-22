@@ -3,130 +3,260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>化学小屋 · 课件导航</title>
+<title>星辰班级 · 学习资源总站</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --bg: #eef1f7;
+    --paper: #ffffff;
+    --paper-alt: #f7f8fa;
+    --ink: #14171c;
+    --ink-soft: #4a5361;
+    --ink-faint: #6b7480;
+    --line: #e3e6eb;
+    --accent: #14171c;
+    --radius: 12px;
+    --font: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB",
+      "Source Han Sans SC", system-ui, -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    font-family:"Microsoft YaHei","PingFang SC",sans-serif;
-    min-height:100vh; color:#1f2d3d;
-    background:radial-gradient(1200px 600px at 15% -10%, #e0f2fe 0%, transparent 60%),
-               radial-gradient(1000px 500px at 90% 0%, #d1fae5 0%, transparent 55%),
-               #f1f5f9;
+    font-family: var(--font);
+    color: var(--ink);
+    background-color: var(--bg);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(20, 23, 28, 0.055) 0 1px,
+      transparent 1px 14px
+    );
+    background-attachment: fixed;
+    line-height: 1.75;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
   }
-  /* 漂浮分子装饰 */
-  .blob { position:fixed; border-radius:50%; filter:blur(8px); opacity:.35; z-index:0; }
-  .b1 { width:160px;height:160px; background:#38bdf8; top:12%; left:6%; animation:float 9s ease-in-out infinite; }
-  .b2 { width:110px;height:110px; background:#34d399; bottom:14%; right:8%; animation:float 11s ease-in-out infinite reverse; }
-  .b3 { width:80px;height:80px; background:#a78bfa; top:60%; left:12%; animation:float 13s ease-in-out infinite; }
-  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-26px)} }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-  .wrap { position:relative; z-index:1; max-width:1080px; margin:0 auto; padding:54px 22px 60px; }
-  .head { text-align:center; margin-bottom:14px; }
-  .head .badge {
-    display:inline-block; padding:6px 18px; border-radius:30px; font-size:14px; letter-spacing:2px;
-    background:rgba(56,189,248,.15); color:#0369a1; border:1px solid rgba(56,189,248,.4); margin-bottom:14px;
+  .wrap { position: relative; max-width: 1120px; margin: 0 auto; padding: 76px 24px 56px; }
+
+  /* 星座装饰：扁平线稿 */
+  .constellation {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 340px;
+    height: auto;
+    color: var(--ink);
+    opacity: 0.24;
+    pointer-events: none;
   }
-  .head h1 { font-size:46px; letter-spacing:6px; background:linear-gradient(90deg,#0ea5e9,#10b981); -webkit-background-clip:text; background-clip:text; color:transparent; }
-  .head p { color:#64748b; font-size:17px; margin-top:10px; }
+  .constellation .spark {
+    fill: var(--ink);
+    opacity: 0.6;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: twinkle 5.5s ease-in-out infinite;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: .35; transform: scale(.9); }
+    50% { opacity: .85; transform: scale(1.1); }
+  }
 
-  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px; margin-top:38px; }
+  .eyebrow {
+    display: inline-block;
+    padding: 5px 12px 4px;
+    border-radius: 4px;
+    background: var(--ink);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #fff;
+    transform: rotate(-1.2deg);
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 7px;
+    background: #fff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    vertical-align: 1px;
+  }
+  h1 {
+    margin: 24px 0 0;
+    font-size: clamp(44px, 8vw, 88px);
+    font-weight: 800;
+    letter-spacing: .02em;
+    line-height: 1.04;
+  }
+  .lead {
+    margin-top: 22px;
+    max-width: 660px;
+    font-size: 15.5px;
+    line-height: 1.95;
+    color: var(--ink-soft);
+  }
+  .rule { position: relative; width: 76px; height: 5px; margin-top: 26px; background: var(--ink); }
+  .rule::after {
+    content: "";
+    position: absolute;
+    left: 88px;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: -7.5px;
+    background: var(--ink);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+
+  .grid {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
   .card {
-    position:relative; background:#fff; border-radius:18px; padding:26px 24px 22px; overflow:hidden;
-    box-shadow:0 6px 22px rgba(15,23,42,.08); border:1px solid #e2e8f0;
-    transition:transform .25s ease, box-shadow .25s ease; text-decoration:none; color:inherit; display:block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 26px 22px 22px;
+    background: var(--c1);
+    border: 0;
+    border-radius: 14px;
+    color: #fff;
+    transition: transform .18s ease, box-shadow .18s ease;
   }
-  .card:hover { transform:translateY(-6px); box-shadow:0 14px 32px rgba(14,165,233,.22); }
-  .card .ic {
-    width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center;
-    font-size:30px; margin-bottom:16px; background:linear-gradient(135deg,#e0f2fe,#d1fae5);
+  .card::before {
+    content: "";
+    position: absolute;
+    right: 22px; bottom: 22px;
+    width: 42px; height: 42px;
+    background: rgba(255,255,255,.3);
+    clip-path: polygon(50% 0%, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0% 50%, 42% 42%);
+    transition: transform .25s ease, background .25s ease;
   }
-  .card h3 { font-size:21px; color:#0f172a; margin-bottom:8px; }
-  .card .desc { font-size:14.5px; color:#64748b; line-height:1.6; min-height:44px; }
-  .card .go {
-    margin-top:16px; display:inline-flex; align-items:center; gap:6px; font-size:15px; font-weight:600; color:#0284c7;
+  .card:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 #cfd4dc; }
+  .card:hover::before { transform: rotate(45deg) scale(1.08); background: rgba(255,255,255,.55); }
+  .idx {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 16px;
   }
-  .card .tag {
-    position:absolute; top:18px; right:18px; font-size:12px; padding:3px 10px; border-radius:20px;
-    background:#f1f5f9; color:#94a3b8;
+  h2 { font-size: 24px; font-weight: 800; letter-spacing: .02em; }
+  .tag {
+    margin-top: 6px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.68);
   }
-  .card.ppt .ic { background:linear-gradient(135deg,#fef3c7,#fee2e2); }
-  .card.res .ic { background:linear-gradient(135deg,#ede9fe,#e0e7ff); }
+  .desc {
+    margin-top: 16px;
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: rgba(255,255,255,.86);
+  }
+  .meta {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.24);
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.72);
+  }
+  .go {
+    margin-top: auto;
+    padding-top: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    color: #fff;
+  }
 
-  .foot { text-align:center; color:#94a3b8; font-size:13.5px; margin-top:46px; line-height:1.8; }
-  .foot b { color:#475569; }
+  .foot {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 2px solid var(--ink);
+    font-size: 12.5px;
+    line-height: 1.9;
+    color: var(--ink-faint);
+  }
+  .foot b { color: var(--ink-soft); font-weight: 600; }
+
+  @media (max-width: 1020px) {
+    .constellation { display: none; }
+  }
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: 1fr; }
+    .card { min-height: 0; }
+  }
+  @media (max-width: 720px) {
+    .wrap { padding: 48px 16px 44px; }
+    .grid { margin-top: 32px; gap: 10px; }
+  }
 </style>
 </head>
 <body>
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-
   <div class="wrap">
-    <div class="head">
-      <div class="badge">CHEM HOUSE</div>
-      <h1>化 学 小 屋</h1>
-      <p>高一化学课件导航 · 点击卡片即可进入对应课件</p>
-    </div>
+    <svg class="constellation" viewBox="0 0 360 220" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M20 176 L80 130 L136 156 L196 84 L262 118 L318 52" />
+        <path d="M136 156 L180 196" />
+      </g>
+      <g fill="currentColor">
+        <circle cx="20" cy="176" r="2.6" />
+        <circle cx="80" cy="130" r="2" />
+        <circle cx="136" cy="156" r="3" />
+        <circle cx="196" cy="84" r="2.2" />
+        <circle cx="262" cy="118" r="2.4" />
+        <circle cx="318" cy="52" r="2" />
+        <circle cx="180" cy="196" r="1.8" />
+      </g>
+      <path class="spark" d="M300 148l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" />
+    </svg>
+
+    <span class="eyebrow">Xing Chen · Chem</span>
+    <h1>学习资源总站</h1>
+    <p class="lead">三个入口，互不重叠 —— 学生进班级站，课件直接投屏，老师用教师工具。</p>
+    <div class="rule"></div>
 
     <div class="grid">
-      <a class="card" href="./xingchen/">
-        <span class="tag">班级主页</span>
-        <div class="ic">✦</div>
-        <h3>星辰班级</h3>
-        <div class="desc">班级风采、化学小屋、数学加油站、英语角、物理之家，五大板块一站直达。</div>
+      <a class="card" href="./xingchen/" style="--c1:#14171c;">
+        <span class="idx">01</span>
+        <h2>星辰班级</h2>
+        <div class="tag">Student · 需登录</div>
+        <div class="desc">班级风采、化学小屋、数学加油站、英语角、物理之家五大板块；含课堂课件、在线练习、试题讲评与成绩汇总。</div>
+        <div class="meta">学生用姓名 + 完整学号登录 · 老师用科目名登录</div>
         <span class="go">进入班级主页 →</span>
       </a>
 
-      <a class="card" href="./氯气互动课件/index.html">
-        <span class="tag">互动网页</span>
-        <div class="ic">🟢</div>
-        <h3>氯气互动课件</h3>
-        <div class="desc">氯气三册合一互动课件：性质、实验室制法、用途，边学边练。</div>
-        <span class="go">进入课件 →</span>
+      <a class="card" href="./courseware/" style="--c1:#1c4ed8;">
+        <span class="idx">02</span>
+        <h2>化学课件库</h2>
+        <div class="tag">Courseware · 免登录</div>
+        <div class="desc">拿起来就能讲的独立成品课件：钠的化合物复习、第一次月考讲评（网页版 + PPT）。可直接投屏，不依赖账号。</div>
+        <div class="meta">配套课堂交互课件在「化学小屋 → 课堂课件」内</div>
+        <span class="go">进入课件库 →</span>
       </a>
 
-      <a class="card" href="./化学互动课堂/index.html">
-        <span class="tag">互动网页</span>
-        <div class="ic">🧪</div>
-        <h3>化学互动课堂</h3>
-        <div class="desc">通用化学互动课堂练习，含多章节随堂训练。</div>
-        <span class="go">进入课件 →</span>
-      </a>
-
-      <a class="card" href="./化学月考课件/index.html">
-        <span class="tag">互动网页</span>
-        <div class="ic">📝</div>
-        <h3>高一化学月考讲评（网页版）</h3>
-        <div class="desc">第一次月考试卷讲评：选择题逐题点按出答案，非选择题逐大题展开。</div>
-        <span class="go">进入课件 →</span>
-      </a>
-
-      <a class="card ppt" href="./化学月考课件PPT/高一化学第一次月考讲评.pptx">
-        <span class="tag">PPT 文件</span>
-        <div class="ic">📊</div>
-        <h3>高一化学月考讲评（PPT 版）</h3>
-        <div class="desc">可在 PowerPoint / WPS 中放映，含原卷图示与点击出现答案动画。</div>
-        <span class="go">下载 / 打开 PPT →</span>
-      </a>
-
-      <a class="card" href="./钠及其化合物互动课件/钠及其化合物-互动课件.html">
-        <span class="tag">互动网页</span>
-        <div class="ic">🔥</div>
-        <h3>钠及其化合物互动课件</h3>
-        <div class="desc">钠、氧化钠、过氧化钠、碳酸钠与碳酸氢钠的互动讲解。</div>
-        <span class="go">进入课件 →</span>
-      </a>
-
-      <a class="card res" href="./氯气课件/">
-        <span class="tag">素材库</span>
-        <div class="ic">📁</div>
-        <h3>氯气课件（素材库）</h3>
-        <div class="desc">氯气相关图片、文本等备课素材集合，便于二次加工。</div>
-        <span class="go">浏览素材 →</span>
+      <a class="card" href="./xingchen/teacher.html" style="--c1:#334155;">
+        <span class="idx">03</span>
+        <h2>教师工具</h2>
+        <div class="tag">Teacher · 需登录</div>
+        <div class="desc">答题汇总报表：粘贴学生发来的成绩码，出全班每题正确率、错题排行与逐人明细，可导出 Excel；另有网站维护使用说明。</div>
+        <div class="meta">学生日常不需要此页</div>
+        <span class="go">进入教师入口 →</span>
       </a>
     </div>
 
     <div class="foot">
-      <b>化学小屋</b> · 瑞昌一中 高一化学备课资源<br>
-      本页为课件总入口，建议收藏；课件内容版权归命题与整理者所有。
+      <b>星辰班级 · 化学小屋</b> · 瑞昌一中 高一化学备课资源<br>
+      本页为总入口，建议收藏；课件内容版权归命题与整理者所有。
     </div>
   </div>
 </body>
