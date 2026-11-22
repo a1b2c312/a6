@@ -70,6 +70,21 @@
         </p>
 
         <div class="quiz-entry" id="quiz-entry">
+          <div class="quiz-card" data-quiz="week1122">
+            <div class="qc-ico">📝</div>
+            <h3>周考试卷（六）· 高一数学</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-soft);">
+              瑞昌一中 2026~2027 学年度上学期周考试卷（六）· 高一数学（11月22日）
+            </p>
+            <div class="qc-meta">
+              <span>19 题</span>
+              <span>满分 150 分</span>
+              <span>清晰公式</span>
+              <span>含详细解析</span>
+            </div>
+            <div class="qc-go">开始作答 →</div>
+          </div>
+
           <div class="quiz-card" data-quiz="week1118">
             <div class="qc-ico">📝</div>
             <h3>练习试卷（八）· 高一数学（B 卷）</h3>
@@ -145,6 +160,7 @@
           </div>
         </div>
 
+        <div class="quiz" id="quiz-week1122" style="margin-top:22px;"></div>
         <div class="quiz" id="quiz-week1118" style="margin-top:22px;"></div>
         <div class="quiz" id="quiz-math" style="margin-top:22px;"></div>
         <div class="quiz" id="quiz-week1026" style="margin-top:22px;"></div>
@@ -260,6 +276,12 @@
   <script>
     (function () {
       var specs = {
+        week1122: {
+          json: "assets/papers/math_1122.json?v=20261122",
+          id: "week1122",
+          title: "周考试卷（六）· 高一数学",
+          dir: "assets/papers/math_1122/"
+        },
         week1118: {
           json: "assets/papers/math_1118B.json?v=20261118",
           id: "week1118",
